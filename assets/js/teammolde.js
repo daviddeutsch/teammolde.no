@@ -20,6 +20,9 @@ function ($stateProvider, $urlRouterProvider)
 			views: {
 				"main": {
 					templateUrl: '/partials/home.html'
+				},
+				"header": {
+					templateUrl: '/partials/header.html'
 				}
 			}
 		})
