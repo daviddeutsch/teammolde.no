@@ -3,7 +3,7 @@ body {
   background: #d1ecf7;
 }
 #team-logo {
-  margin: 20px 0 20px 84px;
+  margin: 18px 0 18px 94px;
 }
 ul.team-nav {
   font-family: 'Francois One', sans-serif;
@@ -16,7 +16,7 @@ ul.team-nav li {
   border-left: none;
   font-size: 150%;
   text-transform: uppercase;
-  padding: 6px 12px;
+  padding: 5px 9px;
 }
 ul.team-nav li:first-child {
   border-left: 1px solid #000;
@@ -25,7 +25,7 @@ ul.team-nav li a {
   color: #000;
 }
 ul.team-nav li a:hover {
-  color: #555;
+  color: #000;
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   text-decoration: none;
 }
