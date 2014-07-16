@@ -1388,12 +1388,12 @@ pre code {
 }
 @media (min-width: 992px) {
   .container {
-    width: 940px;
+    width: 970px;
   }
 }
 @media (min-width: 1200px) {
   .container {
-    width: 970px;
+    width: 1170px;
   }
 }
 .container-fluid {
