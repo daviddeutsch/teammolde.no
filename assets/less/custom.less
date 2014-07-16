@@ -6,5 +6,21 @@ ul.team-nav {
 		float: left;
 		list-style: none;
 		border: 1px solid #000;
+		border-left: none;
+		font-size: 160%;
+		text-transform: uppercase;
+		&:first-child {
+			border-left: 1px solid #000;
+		}
+		a {
+			color: #000;
+			&:hover {
+				color: #555;
+				text-shadow: 2px 0 2px rgba(0,0,0,0.2);
+			}
+			&:active {
+				color: #000;
+			}
+	}
 	}
 }

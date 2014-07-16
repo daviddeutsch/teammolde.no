@@ -1,0 +1,25 @@
+@import url("//fonts.googleapis.com/css?family=Francois+One|Source+Sans+Pro:400,300");
+ul.team-nav {
+  font-family: 'Francois One', sans-serif;
+}
+ul.team-nav li {
+  float: left;
+  list-style: none;
+  border: 1px solid #000;
+  border-left: none;
+  font-size: 160%;
+  text-transform: uppercase;
+}
+ul.team-nav li:first-child {
+  border-left: 1px solid #000;
+}
+ul.team-nav li a {
+  color: #000;
+}
+ul.team-nav li a:hover {
+  color: #555;
+  text-shadow: 2px 0 2px rgba(0, 0, 0, 0.2);
+}
+ul.team-nav li a:active {
+  color: #000;
+}
