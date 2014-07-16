@@ -6467,8 +6467,12 @@ label,
 .modal .close {
   color: #222222;
 }
+body {
+  background: #d1ecf7;
+}
 ul.team-nav {
   font-family: 'Francois One', sans-serif;
+  margin: 34px;
 }
 ul.team-nav li {
   float: left;
@@ -6477,7 +6481,7 @@ ul.team-nav li {
   border-left: none;
   font-size: 140%;
   text-transform: uppercase;
-  padding: 6px;
+  padding: 6px 12px;
 }
 ul.team-nav li:first-child {
   border-left: 1px solid #000;
