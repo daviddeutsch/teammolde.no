@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>TEAM Molde</title>
+
+	<link href="favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+
+	<link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="assets/css/team.css" rel="stylesheet">
+
+	<script type="text/javascript" src="assets/js/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="assets/js/angular.min.js"></script>
+	<script type="text/javascript" src="assets/js/angular-animate.min.js"></script>
+	<script type="text/javascript" src="assets/js/angular-ui-router.min.js"></script>
+	<script type="text/javascript" src="assets/js/teammolde.js"></script>
+
+</head>
+
+<body ng-app="teammoldeApp">
+	<div ui-view="header"></div>
+	<div id="main">
+		<div class="container">
+			<div class="row">
+				<div ui-view="main"></div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="container">
+		</div>
+	</footer>
+</body>
+
+</html>
