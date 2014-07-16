@@ -4,7 +4,8 @@ var teammoldeApp = angular.module(
 		'ngAnimate', 'ui.router'
 	]
 );
-mangroveServerApp
+
+teammoldeApp
 .config(
 [
 '$stateProvider', '$urlRouterProvider',
