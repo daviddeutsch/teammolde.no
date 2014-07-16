@@ -66,6 +66,19 @@ function ($stateProvider, $urlRouterProvider)
 			}
 		})
 
+		.state('elevside', {
+			abstract: true,
+			url: '/elevside',
+			views: {
+				"main": {
+					templateUrl: '/partials/elevside.html'
+				},
+				"header": {
+					templateUrl: '/partials/header.html'
+				}
+			}
+		})
+
 		.state('manedensbestatt', {
 			abstract: true,
 			url: '/manedensbestatt',
