@@ -8,9 +8,11 @@ var teammoldeApp = angular.module(
 teammoldeApp
 .config(
 [
-'$stateProvider', '$urlRouterProvider',
-function ($stateProvider, $urlRouterProvider)
+'$stateProvider', '$urlRouterProvider', '$sceProvider',
+function ($stateProvider, $urlRouterProvider, $sceProvider)
 {
+	$sceProvider.enabled(false);
+
 	$urlRouterProvider
 		.otherwise('/');
 
