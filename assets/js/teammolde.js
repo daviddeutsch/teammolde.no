@@ -111,7 +111,7 @@ teammoldeApp
 .filter('bstableizer',
 function () {
 	return function ( markup ) {
-		return markup.replace('<table', '<table class="table-hover">');
+		return markup.replace('<table>', '<table class="table table-hover">');
 	};
 }
 );
