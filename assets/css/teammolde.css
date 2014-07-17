@@ -6469,6 +6469,7 @@ label,
 }
 body {
   background: #d1ecf7;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 #team-logo {
   margin: 18px 0 18px 94px;
@@ -6500,14 +6501,22 @@ ul.team-nav li a:hover {
 ul.team-nav li a:active {
   color: #000;
 }
+h1 {
+  font-family: 'Francois One', sans-serif;
+  font-size: 300%;
+}
 table.table {
   border: 2px solid #000;
   border-collapse: collapse;
 }
 table.table th {
+  text-transform: uppercase;
   border: 2px solid #000;
 }
 table.table td {
   border: none;
   border-bottom: 1px solid #000;
+}
+table.table-hover {
+  background: rgba(255, 255, 255, 0.2);
 }
