@@ -109,7 +109,7 @@ teammoldeApp
 .controller('PriserCtrl',
 [
 '$scope', 'wpData',
-function($scope) {
+function($scope, wpData) {
 	$scope.pricelist = '';
 
 	wpData.getPage('?page_id=6')
