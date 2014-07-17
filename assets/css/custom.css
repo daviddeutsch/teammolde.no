@@ -8,7 +8,7 @@ body {
 }
 ul.team-nav {
   font-family: 'Francois One', sans-serif;
-  margin: 34px;
+  margin: 34px 0 34px 34px;
 }
 ul.team-nav li {
   float: left;
@@ -33,9 +33,14 @@ ul.team-nav li a:hover {
 ul.team-nav li a:active {
   color: #000;
 }
+#header {
+  margin-bottom: 24px;
+}
 h1 {
   font-family: 'Francois One', sans-serif;
-  font-size: 300%;
+  font-size: 700%;
+  text-transform: uppercase;
+  color: #fff;
 }
 table.table {
   border: 2px solid #000;
