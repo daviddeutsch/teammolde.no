@@ -1,14 +1,14 @@
 @import url("//fonts.googleapis.com/css?family=Francois+One|Source+Sans+Pro:900,700,400,300");
 body {
-  background: #d1ecf7;
+  background: #8ccee4;
   font-family: 'Source Sans Pro', sans-serif;
 }
 #team-logo {
-  margin: 18px 0 18px 94px;
+  margin: 20px 0px 18px 102px;
 }
 ul.team-nav {
   font-family: 'Francois One', sans-serif;
-  margin: 34px 0 34px 34px;
+  margin: 34px 14px 34px 34px;
 }
 ul.team-nav li {
   float: left;
@@ -41,23 +41,31 @@ h1 {
   font-size: 700%;
   text-transform: uppercase;
   color: #fff;
+  letter-spacing: 0.1em;
 }
 table.table {
   border: 2px solid #000;
   border-collapse: collapse;
+  margin: 20px 6px;
+  font-size: 175%;
 }
 table.table > thead > tr > th {
   border: 2px solid #000;
-  width: 50%;
+  width: 52%;
+  font-size: 120%;
 }
 table.table th {
   text-transform: uppercase;
-  font-weight: 900;
+  font-weight: 700;
+  letter-spacing: 0.075em;
+  padding: 8px 24px 6px;
 }
 table.table td {
   border: none;
   border-bottom: 1px solid #000;
+  padding: 6px 24px 2px;
+  letter-spacing: 0.075em;
 }
-table.table-hover {
+table.table-hover td:hover {
   background: rgba(255, 255, 255, 0.2);
 }
