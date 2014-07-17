@@ -6543,7 +6543,7 @@ table.table td {
   cursor: pointer;
 }
 table.table td:hover {
-  padding: 6px 4px 4px 32px !important;
+  padding: 6px 4px 4px 26px !important;
 }
 table.table-hover td:hover {
   background: rgba(255, 255, 255, 0.2);
