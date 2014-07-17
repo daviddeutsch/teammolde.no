@@ -45,7 +45,7 @@ h1 {
   letter-spacing: 0.075em;
 }
 .small-text {
-  text-size: 80%;
+  font-size: 60%;
 }
 table.table {
   border: 2px solid #000;
