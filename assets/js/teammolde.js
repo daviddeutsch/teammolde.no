@@ -28,7 +28,6 @@ function ($stateProvider, $urlRouterProvider)
 		})
 
 		.state('priser', {
-			abstract: true,
 			url: '/priser',
 			views: {
 				"main": {
@@ -41,7 +40,6 @@ function ($stateProvider, $urlRouterProvider)
 		})
 
 		.state('larere', {
-			abstract: true,
 			url: '/larere',
 			views: {
 				"main": {
@@ -54,7 +52,6 @@ function ($stateProvider, $urlRouterProvider)
 		})
 
 		.state('bestill', {
-			abstract: true,
 			url: '/bestill',
 			views: {
 				"main": {
@@ -67,7 +64,6 @@ function ($stateProvider, $urlRouterProvider)
 		})
 
 		.state('elevside', {
-			abstract: true,
 			url: '/elevside',
 			views: {
 				"main": {
@@ -80,7 +76,6 @@ function ($stateProvider, $urlRouterProvider)
 		})
 
 		.state('manedensbestatt', {
-			abstract: true,
 			url: '/manedensbestatt',
 			views: {
 				"main": {
@@ -111,26 +106,38 @@ function ($stateProvider, $urlRouterProvider)
 );
 
 teammoldeApp
-.controller('ContactCtrl',
+.controller('PriserCtrl',
 [
-'$scope',
+'$scope', 'wpData',
 function($scope) {
-	$scope.id = '';
+	$scope.pricelist = '';
 
-	$scope.change = function( name ) {
-		if ( $scope.id === name ) {
-			$scope.id = '';
-		} else {
-			$scope.id = name;
-		}
-	};
+	wpData.getPage('?page_id=6')
+		.then(function(html) {
+			$scope.pricelist = html;
+		});
+}
+]
+);
 
-	$scope.isDeselected = function ( name ) {
-		return $scope.id !== name && $scope.id != '';
-	};
+teammoldeApp
+.service('wpData',
+[
+'$q', '$http',
+function ( $q, $http )
+{
+	this.getPage = function( url ) {
+		var deferred = $q.defer();
 
-	$scope.isSelected = function ( name ) {
-		return $scope.id === name;
+		$http.get('wordpress/' + url + '&json=1')
+			.success(function(result) {
+				deferred.resolve(result.page.content);
+			})
+			.error(function(){
+				deferred.reject();
+			});
+
+		return deferred.promise;
 	};
 }
 ]
