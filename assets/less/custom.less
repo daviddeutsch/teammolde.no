@@ -1,4 +1,4 @@
-@import url("//fonts.googleapis.com/css?family=Francois+One|Source+Sans+Pro:400,300");
+@import url("//fonts.googleapis.com/css?family=Francois+One|Source+Sans+Pro:900,700,400,300");
 
 body {
 	background: #d1ecf7;
@@ -51,9 +51,13 @@ h1 {
 table.table {
 	border: 2px solid #000;
 	border-collapse: collapse;
+	&> thead > tr > th {
+		border: 2px solid #000;
+		width: 50%;
+	}
 	th {
 		text-transform: uppercase;
-		border: 2px solid #000;
+		font-weight: 900;
 	}
 	td {
 		border: none;
