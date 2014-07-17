@@ -140,7 +140,7 @@ function ( $q, $http )
 	this.getPage = function( url ) {
 		var deferred = $q.defer();
 
-		$http.get('wordpress/' + url + '&json=1')
+		$http.get('wordpress/' + url + '&json=1', {cache: true})
 			.success(function(result) {
 				deferred.resolve(result.page.content);
 			})
