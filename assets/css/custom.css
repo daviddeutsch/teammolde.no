@@ -44,6 +44,9 @@ h1 {
   color: #fff;
   letter-spacing: 0.075em;
 }
+.small-text {
+  text-size: 80%;
+}
 table.table {
   border: 2px solid #000;
   border-collapse: collapse;
@@ -75,7 +78,7 @@ table.table td {
   cursor: pointer;
 }
 table.table td:hover {
-  padding: 6px 4px 4px 26px !important;
+  padding: 2px 4px 4px 26px !important;
 }
 table.table-hover td:hover {
   background: rgba(255, 255, 255, 0.2);
