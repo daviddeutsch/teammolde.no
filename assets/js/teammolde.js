@@ -108,6 +108,15 @@ function ($stateProvider, $urlRouterProvider, $sceProvider)
 );
 
 teammoldeApp
+.filter('bstableizer',
+function () {
+	return function ( markup ) {
+		return markup.replace('<table', '<table class="table-hover">');
+	};
+}
+);
+
+teammoldeApp
 .controller('PriserCtrl',
 [
 '$scope', 'wpData',
