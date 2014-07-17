@@ -6470,6 +6470,7 @@ label,
 body {
   background: #8ccee4;
   font-family: 'Source Sans Pro', sans-serif;
+  color: #000;
 }
 #team-logo {
   margin: 20px 0px 18px 102px;
@@ -6502,19 +6503,19 @@ ul.team-nav li a:active {
   color: #000;
 }
 #header {
-  margin-bottom: 24px;
+  margin-bottom: 42px;
 }
 h1 {
   font-family: 'Francois One', sans-serif;
   font-size: 700%;
   text-transform: uppercase;
   color: #fff;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.075em;
 }
 table.table {
   border: 2px solid #000;
   border-collapse: collapse;
-  margin: 20px 6px;
+  margin: 18px 6px;
   font-size: 175%;
 }
 table.table > thead > tr > th {
@@ -6535,6 +6536,7 @@ table.table td {
   border: none;
   border-bottom: 1px solid #000;
   letter-spacing: 0.075em;
+  font-weight: 300;
 }
 table.table-hover td:hover {
   background: rgba(255, 255, 255, 0.2);
