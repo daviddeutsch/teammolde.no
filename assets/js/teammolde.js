@@ -119,13 +119,8 @@ function () {
 teammoldeApp
 .controller('homeCtrl',
 [
-'$scope',
-function($scope) {
-	var s = Snap("#background");
-
-	Snap.load("assets/svg/background.svg", function (f) {
-		s.append(f);
-	});
+'$scope', 'bgSVG',
+function($scope, bgSVG) {
 }
 ]
 );
@@ -135,12 +130,6 @@ teammoldeApp
 [
 '$scope', 'wpData',
 function($scope, wpData) {
-	var s = Snap("#background");
-
-	s.attr({
-		filter : s.filter(Snap.filter.blur(10, 10))
-	});
-
 	$scope.pricelist = '';
 
 	wpData.getPage('priser')
@@ -169,6 +158,25 @@ function ( $q, $http )
 			});
 
 		return deferred.promise;
+	};
+}
+]
+);
+
+teammoldeApp
+.service('bgSVG',
+[
+'$q',
+function ( $q )
+{
+	var s = Snap("#background");
+
+	Snap.load("assets/svg/background.svg", function (f) {
+		s.append(f);
+	});
+
+	this.blur = function( url ) {
+
 	};
 }
 ]
