@@ -124,7 +124,7 @@ function($scope) {
 	var s = Snap("#background");
 
 	Snap.load("assets/svg/background.svg", function (f) {
-
+		s.append(f);
 	});
 }
 ]
