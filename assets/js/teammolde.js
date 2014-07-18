@@ -171,8 +171,9 @@ teammoldeApp
 '$q',
 function ( $q )
 {
+	var x = Snap('svg');
 	var s = Snap("#background");
-	var f = s.filter(Snap.filter.blur(6, 3));
+	var f = x.filter(Snap.filter.blur(6, 3));
 
 	Snap.load("assets/svg/background.svg", function (f) {
 		s.append(f);
