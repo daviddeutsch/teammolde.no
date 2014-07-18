@@ -42,20 +42,22 @@ ul.team-nav {
 
 #header {
 	margin-bottom: 42px;
-	z-index: 1000;
 }
 
 #background {
 	position: absolute;
-	width: 100%;
 	z-index: 0;
 	svg {
 		width: 100%;
+		&:not(:root) {
+			overflow: visible !important;
+		}
 	}
 }
 
-#main {
-	z-index: 1000;
+#foreground {
+	position: relative;
+	z-index: 100;
 }
 
 h1 {
