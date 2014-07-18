@@ -25,20 +25,22 @@
 
 <body ng-app="teammoldeApp">
 	<div id="background"></div>
-	<div ui-view="header"></div>
-	<div id="main">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-11 col-md-offset-1">
-					<div ui-view="main"></div>
+	<div id="foreground">
+		<div ui-view="header"></div>
+		<div id="main">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-11 col-md-offset-1">
+						<div ui-view="main"></div>
+					</div>
 				</div>
 			</div>
 		</div>
+		<footer>
+			<div class="container">
+			</div>
+		</footer>
 	</div>
-	<footer>
-		<div class="container">
-		</div>
-	</footer>
 </body>
 
 </html>

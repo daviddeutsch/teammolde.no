@@ -36,18 +36,20 @@ ul.team-nav li a:active {
 }
 #header {
   margin-bottom: 42px;
-  z-index: 1000;
 }
 #background {
   position: absolute;
-  width: 100%;
   z-index: 0;
 }
 #background svg {
   width: 100%;
 }
-#main {
-  z-index: 1000;
+#background svg:not(:root) {
+  overflow: visible !important;
+}
+#foreground {
+  position: relative;
+  z-index: 100;
 }
 h1 {
   font-family: 'Francois One', sans-serif;
