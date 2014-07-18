@@ -137,7 +137,7 @@ function($scope, wpData, bgSVG) {
 			$scope.pricelist = html;
 		});
 
-	bgSVG.blur(true);
+	//bgSVG.blur(true);
 }
 ]
 );
@@ -171,9 +171,8 @@ teammoldeApp
 '$q',
 function ( $q )
 {
-	var x = Snap('svg');
 	var s = Snap("#background");
-	var f = x.filter(Snap.filter.blur(6, 3));
+	//var f = x.filter(Snap.filter.blur(6, 3));
 
 	Snap.load("assets/svg/background.svg", function (f) {
 		s.append(f);
