@@ -117,6 +117,20 @@ function () {
 );
 
 teammoldeApp
+.controller('homeCtrl',
+[
+'$scope', 'wpData',
+function($scope, wpData) {
+	var s = Snap("#background");
+
+	Snap.load("assets/svg/background.svg", function (f) {
+
+	});
+}
+]
+);
+
+teammoldeApp
 .controller('PriserCtrl',
 [
 '$scope', 'wpData',
