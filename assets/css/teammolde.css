@@ -6508,9 +6508,13 @@ ul.team-nav li a:active {
 #background {
   position: absolute;
   width: 100%;
+  z-index: 0;
 }
 #background svg {
   width: 100%;
+}
+#main {
+  z-index: 1;
 }
 h1 {
   font-family: 'Francois One', sans-serif;
