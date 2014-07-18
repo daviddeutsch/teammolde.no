@@ -6514,7 +6514,7 @@ ul.team-nav li a:active {
   width: 100%;
 }
 #main {
-  z-index: 1;
+  z-index: 1000;
 }
 h1 {
   font-family: 'Francois One', sans-serif;
