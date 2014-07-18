@@ -128,14 +128,16 @@ function($scope, bgSVG) {
 teammoldeApp
 .controller('PriserCtrl',
 [
-'$scope', 'wpData',
-function($scope, wpData) {
+'$scope', 'wpData', 'bgSVG',
+function($scope, wpData, bgSVG) {
 	$scope.pricelist = '';
 
 	wpData.getPage('priser')
 		.then(function(html) {
 			$scope.pricelist = html;
 		});
+
+	bgSVG.blur(true);
 }
 ]
 );
@@ -170,13 +172,16 @@ teammoldeApp
 function ( $q )
 {
 	var s = Snap("#background");
+	var f = s.filter(Snap.filter.blur(6, 3));
 
 	Snap.load("assets/svg/background.svg", function (f) {
 		s.append(f);
 	});
 
-	this.blur = function( url ) {
-
+	this.blur = function( blur ) {
+		s.attr({
+			filter: blur ? f : null
+		});
 	};
 }
 ]
