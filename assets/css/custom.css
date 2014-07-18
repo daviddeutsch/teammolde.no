@@ -37,6 +37,13 @@ ul.team-nav li a:active {
 #header {
   margin-bottom: 42px;
 }
+#background {
+  position: absolute;
+  width: 100%;
+}
+#background svg {
+  width: 100%;
+}
 h1 {
   font-family: 'Francois One', sans-serif;
   font-size: 700%;
