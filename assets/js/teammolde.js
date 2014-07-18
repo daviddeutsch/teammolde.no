@@ -123,7 +123,7 @@ teammoldeApp
 function($scope, wpData) {
 	$scope.pricelist = '';
 
-	wpData.getPage('?page_id=6')
+	wpData.getPage('priser')
 		.then(function(html) {
 			$scope.pricelist = html;
 		});
@@ -140,7 +140,7 @@ function ( $q, $http )
 	this.getPage = function( url ) {
 		var deferred = $q.defer();
 
-		$http.get('wordpress/' + url + '&json=1', {cache: true})
+		$http.get('wordpress/' + url + '/&json=1', {cache: true})
 			.success(function(result) {
 				deferred.resolve(result.page.content);
 			})
