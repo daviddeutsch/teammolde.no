@@ -36,6 +36,7 @@ ul.team-nav li a:active {
 }
 #header {
   margin-bottom: 42px;
+  z-index: 1000;
 }
 #background {
   position: absolute;
