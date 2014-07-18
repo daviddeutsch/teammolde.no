@@ -135,6 +135,12 @@ teammoldeApp
 [
 '$scope', 'wpData',
 function($scope, wpData) {
+	var s = Snap("#background");
+
+	s.attr({
+		filter : s.filter(Snap.filter.blur(10, 10))
+	});
+
 	$scope.pricelist = '';
 
 	wpData.getPage('priser')
