@@ -175,10 +175,7 @@ teammoldeApp
 function ( $q, Tween )
 {
 	var s,
-		cloud_left,
-		cloud_right,
-		personbil,
-		lett_lastebil,
+		objects = {},
 		self = this;
 
 	this.init = function() {
@@ -189,15 +186,19 @@ function ( $q, Tween )
 		Snap.load("assets/svg/background.svg", function (f) {
 			s.append(f);
 
-			cloud_left = Snap(s).select('#cloud-left');
-			cloud_right = Snap(s).select('#cloud-right');
+			objects.cloud_left = Snap(s).select('#cloud-left');
+			objects.cloud_right = Snap(s).select('#cloud-right');
 
-			cloud_left.attr({transform: 'translate(400,0)'});
-			cloud_right.attr({transform: 'translate(-400,0)'});
+			objects.cloud_left.attr({transform: 'translate(400,0)'});
+			objects.cloud_right.attr({transform: 'translate(-400,0)'});
 
-			personbil = Snap(s).select('#personbil');
+			objects.personbil = Snap(s).select('#personbil');
 
-			lett_lastebil = Snap(s).select('#lett-lastebil');
+			objects.lett_lastebil = Snap(s).select('#lett-lastebil');
+
+			objects.lastebil = Snap(s).select('#lastebil');
+
+			objects.buss = Snap(s).select('#buss');
 
 			deferred.resolve();
 		});
@@ -206,18 +207,18 @@ function ( $q, Tween )
 	};
 
 	this.go = function() {
-		Tween.get(cloud_left)
+		Tween.get(objects.cloud_left)
 			.animate({transform: 'translate(600,0)'},10000, mina.easeinout)
 			.animate({transform: 'translate(1000,0)'},7500, mina.easeinout)
 			.animate({transform: 'translate(1800,0)'},7500, mina.easeinout)
 			.animate({transform: 'translate(2200,0)'},7500, mina.easeinout)
 			.animate({transform: 'translate(2600,0)'},7500, mina.easeinout)
 			.action(function(){
-				cloud_left.attr({transform: 'translate(0,0)'});
+				objects.cloud_left.attr({transform: 'translate(0,0)'});
 			})
 		;
 
-		Tween.get(cloud_right)
+		Tween.get(objects.cloud_right)
 			.animate({transform: 'translate(-600,0)'},5000, mina.easeinout)
 			.animate({transform: 'translate(-1000,0)'},10000, mina.easeinout)
 			.animate({transform: 'translate(-1500,0)'},7500, mina.easeinout)
@@ -228,7 +229,7 @@ function ( $q, Tween )
 			})
 		;
 
-		Tween.get(personbil)
+		Tween.get(objects.personbil)
 			.animate({transform: 'translate(700,0)'}, 2000, mina.easeinout)
 			.animate({transform: 'translate(700,0)'}, 500, mina.linear)
 			.animate({transform: 'translate(900,0)'}, 4000, mina.easeinout)
@@ -244,7 +245,35 @@ function ( $q, Tween )
 			.animate({transform: 'translate(0,0) scale(1, 1)'}, 1000, mina.easeinout)
 		;
 
-		Tween.get(lett_lastebil)
+		Tween.get(objects.lett_lastebil)
+			.animate({transform: 'translate(-200,0)'}, 3000, mina.easeinout)
+			.animate({transform: 'translate(-200,0)'}, 500, mina.linear)
+			.animate({transform: 'translate(-400,0)'}, 4000, mina.easeinout)
+			.animate({transform: 'translate(-400,0)'}, 500, mina.linear)
+			.animate({transform: 'translate(-800,0)'}, 5000, mina.easeinout)
+			.animate({transform: 'translate(2000,0) scale(-1, 1)'}, 2000, mina.easeinout)
+			.animate({transform: 'translate(2000,0) scale(-1, 1)'}, 2500, mina.linear)
+			.animate({transform: 'translate(2400,0) scale(-1, 1)'}, 5000, mina.easeinout)
+			.animate({transform: 'translate(3000,0) scale(-1, 1)'}, 4000, mina.easeinout)
+			.animate({transform: 'translate(3200,0) scale(-1, 1)'}, 1000, mina.easeinout)
+			.animate({transform: 'translate(800,0) scale(1, 1)'}, 1000, mina.easeinout)
+		;
+
+		Tween.get(objects.lastebil)
+			.animate({transform: 'translate(-200,0)'}, 3000, mina.easeinout)
+			.animate({transform: 'translate(-200,0)'}, 500, mina.linear)
+			.animate({transform: 'translate(-400,0)'}, 4000, mina.easeinout)
+			.animate({transform: 'translate(-400,0)'}, 500, mina.linear)
+			.animate({transform: 'translate(-800,0)'}, 5000, mina.easeinout)
+			.animate({transform: 'translate(2000,0) scale(-1, 1)'}, 2000, mina.easeinout)
+			.animate({transform: 'translate(2000,0) scale(-1, 1)'}, 2500, mina.linear)
+			.animate({transform: 'translate(2400,0) scale(-1, 1)'}, 5000, mina.easeinout)
+			.animate({transform: 'translate(3000,0) scale(-1, 1)'}, 4000, mina.easeinout)
+			.animate({transform: 'translate(3200,0) scale(-1, 1)'}, 1000, mina.easeinout)
+			.animate({transform: 'translate(800,0) scale(1, 1)'}, 1000, mina.easeinout)
+		;
+
+		Tween.get(objects.buss)
 			.animate({transform: 'translate(-200,0)'}, 3000, mina.easeinout)
 			.animate({transform: 'translate(-200,0)'}, 500, mina.linear)
 			.animate({transform: 'translate(-400,0)'}, 4000, mina.easeinout)
