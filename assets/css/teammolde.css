@@ -6508,6 +6508,7 @@ ul.team-nav li a:active {
 #background {
   position: absolute;
   z-index: 0;
+  width: 100%;
 }
 #background svg {
   width: 100%;
