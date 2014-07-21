@@ -13,62 +13,7 @@
    height="2000"
    id="svg9305">
   <defs
-     id="defs9307">
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-</defs>
+     id="defs9307" />
   <metadata
      id="metadata9310">
     <rdf:RDF>
@@ -96,6 +41,239 @@
        d="m 1854.0705,502.12107 c -168.6399,-266.09 -445.5561,-238.35906 -445.5561,-238.35906 0,2.72488 -222.2823,11.4445 -337.1361,87.33245 l 33.7205,123.02844 28.2025,26.77197 z"
        id="path23087"
        style="fill:#bddeb3" />
+  </g>
+  <g
+     id="buss">
+    <g
+       id="g6100">
+      <path
+         d="m 1539.2505,483.91837 c -0.5,-0.5 -1.2,-0.5 -1.2,-0.5 h -88.3 c 0,0 -1.3,0.3 -1.7,0.9 -0.4,0.6 -0.4,1.9 -0.4,1.9 l 0,12.7 c 0,0 -0.4,0.4 -0.6,1.2 -0.3,1.1 -0.1,1.8 -0.1,1.8 v 6.8 c 0,0 -0.1,0.5 0.4,1.2 0.4,0.5 1.3,0.5 1.3,0.5 h 22 67 c 0,0 0.6,0.3 1.3,-0.5 0.7,-0.7 0.7,-1.4 0.7,-1.4 0,0 0.1,-24.1 -0.4,-24.6 z"
+         id="path13952"
+         style="fill:#43b0eb" />
+      <circle
+         cx="16.4"
+         cy="27.9"
+         r="5.6999998"
+         transform="matrix(-1,0,0,1,1539.6505,482.41837)"
+         id="circle13954"
+         style="fill:#190805" />
+      <circle
+         cx="16.4"
+         cy="27.9"
+         r="3.9000001"
+         transform="matrix(-1,0,0,1,1539.6505,482.41837)"
+         id="circle13956"
+         style="fill:#808080" />
+      <circle
+         cx="16.4"
+         cy="27.9"
+         r="1.9"
+         transform="matrix(-1,0,0,1,1539.6505,482.41837)"
+         id="circle13958"
+         style="fill:#cccccc" />
+      <circle
+         cx="68.400002"
+         cy="27.9"
+         r="5.6999998"
+         transform="matrix(-1,0,0,1,1539.6505,482.41837)"
+         id="circle13960"
+         style="fill:#190805" />
+      <circle
+         cx="68.400002"
+         cy="27.9"
+         r="3.9000001"
+         transform="matrix(-1,0,0,1,1539.6505,482.41837)"
+         id="circle13962"
+         style="fill:#808080" />
+      <circle
+         cx="68.400002"
+         cy="27.9"
+         r="1.9"
+         transform="matrix(-1,0,0,1,1539.6505,482.41837)"
+         id="circle13964"
+         style="fill:#cccccc" />
+      <rect
+         width="4"
+         height="13"
+         x="-1451.9506"
+         y="485.41837"
+         transform="scale(-1,1)"
+         id="rect13966"
+         style="fill:#163847" />
+      <rect
+         width="18"
+         height="13"
+         x="-1537.9504"
+         y="485.41837"
+         transform="scale(-1,1)"
+         id="rect13968"
+         style="fill:#163847" />
+      <rect
+         width="8"
+         height="13"
+         x="-1518.9504"
+         y="485.41837"
+         transform="scale(-1,1)"
+         id="rect13970"
+         style="fill:#163847" />
+      <rect
+         width="8"
+         height="13"
+         x="-1499.9504"
+         y="485.41837"
+         transform="scale(-1,1)"
+         id="rect13972"
+         style="fill:#163847" />
+      <rect
+         width="4"
+         height="23"
+         x="-1509.9504"
+         y="487.41837"
+         transform="scale(-1,1)"
+         id="rect13974"
+         style="fill:#163847" />
+      <rect
+         width="4"
+         height="23"
+         x="-1504.9504"
+         y="487.41837"
+         transform="scale(-1,1)"
+         id="rect13976"
+         style="fill:#163847" />
+      <rect
+         width="4"
+         height="22"
+         x="-1461.9506"
+         y="487.41837"
+         transform="scale(-1,1)"
+         id="rect13978"
+         style="fill:#163847" />
+      <rect
+         width="4"
+         height="22"
+         x="-1456.9506"
+         y="487.41837"
+         transform="scale(-1,1)"
+         id="rect13980"
+         style="fill:#163847" />
+      <circle
+         cx="91.699997"
+         cy="18.299999"
+         r="0.69999999"
+         transform="matrix(-1,0,0,1,1539.6505,482.41837)"
+         id="circle13982"
+         style="fill:#ffffff" />
+      <circle
+         cx="91.699997"
+         cy="20"
+         r="0.69999999"
+         transform="matrix(-1,0,0,1,1539.6505,482.41837)"
+         id="circle13984"
+         style="fill:#ffffff" />
+      <circle
+         cx="91.699997"
+         cy="21.799999"
+         r="0.69999999"
+         transform="matrix(-1,0,0,1,1539.6505,482.41837)"
+         id="circle13986"
+         style="fill:#ffffff" />
+      <circle
+         cx="1.3"
+         cy="18.299999"
+         r="0.69999999"
+         transform="matrix(-1,0,0,1,1539.6505,482.41837)"
+         id="circle13988"
+         style="fill:#ffffff" />
+      <circle
+         cx="1.3"
+         cy="20"
+         r="0.69999999"
+         transform="matrix(-1,0,0,1,1539.6505,482.41837)"
+         id="circle13990"
+         style="fill:#ffff00" />
+      <circle
+         cx="1.3"
+         cy="21.799999"
+         r="0.69999999"
+         transform="matrix(-1,0,0,1,1539.6505,482.41837)"
+         id="circle13992"
+         style="fill:#c1272d" />
+      <g
+         transform="matrix(-1,0,0,1,1539.6505,482.41837)"
+         id="g13994">
+        <rect
+           width="14"
+           height="13"
+           x="62.700001"
+           y="3"
+           id="rect13996"
+           style="fill:#163847" />
+        <rect
+           width="13"
+           height="13"
+           x="48.700001"
+           y="3"
+           id="rect13998"
+           style="fill:#163847" />
+      </g>
+      <polygon
+         points="18,1.4 20.3,0 27.7,0 27.7,1.5 "
+         transform="matrix(-1,0,0,1,1539.6505,482.41837)"
+         id="polygon14000"
+         style="fill:#43b0eb" />
+      <polygon
+         points="34.8,1.4 32.9,0 24.7,0 24.7,1.5 "
+         transform="matrix(-1,0,0,1,1539.6505,482.41837)"
+         id="polygon14002"
+         style="fill:#43b0eb" />
+      <polygon
+         points="56,1.4 58.3,0 65.7,0 65.7,1.5 "
+         transform="matrix(-1,0,0,1,1539.6505,482.41837)"
+         id="polygon14004"
+         style="fill:#43b0eb" />
+      <polygon
+         points="72.8,1.4 70.9,0 62.7,0 62.7,1.5 "
+         transform="matrix(-1,0,0,1,1539.6505,482.41837)"
+         id="polygon14006"
+         style="fill:#43b0eb" />
+    </g>
+    <g
+       id="g6064">
+      <path
+         d="m 1594.218,106.16561 -40.3935,0 0,38.09538 40.3935,0 -5.3917,-19.04769 z"
+         id="path5914"
+         style="fill:#379ecc;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+      <path
+         d="m 1492.2704,110.98744 0,372.81332"
+         id="path5916"
+         style="fill:#8b5310;fill-opacity:1;stroke:#225876;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <rect
+         width="23.380011"
+         height="38.524693"
+         x="-1680.77"
+         y="-470.26392"
+         transform="matrix(-0.9375662,-0.34780687,0,1,0,0)"
+         id="rect5918"
+         style="fill:#225876;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+      <rect
+         width="82.382385"
+         height="38.524689"
+         x="-1575.8903"
+         y="114.31931"
+         transform="scale(-1,1)"
+         id="rect5920"
+         style="fill:#43b0eb;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+      <text
+         x="1507.9569"
+         y="142.93155"
+         id="text5922"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Francois One;-inkscape-font-specification:Francois One"><tspan
+           x="1507.9569"
+           y="142.93155"
+           id="tspan5924"
+           style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;font-family:Francois One;-inkscape-font-specification:Francois One">BUSS</tspan></text>
+    </g>
   </g>
   <g
      transform="matrix(0.85958596,0,0,0.85958596,1131.2998,509.09243)"
@@ -1118,212 +1296,6 @@
       </g>
     </g>
   </g>
-  <g
-     id="lastebil">
-    <path
-       d="m 1654.8605,566.11363 c -0.6,-0.6 -1.5,0 -1.5,0 h -21.4 c 0,0 -0.8,-0.4 -1.6,0 -0.7,0.5 -1.1,0.8 -1.1,0.8 l 0.1,10.2 c 0,0 -0.5,0.4 -0.8,1.4 -0.4,1.2 -0.1,2 -0.1,2 v 15.9 c 0,0 0,1 0.5,1.8 0.4,0.6 1.6,1 1.6,1 h 23.4 62.1 c 0,0 0.7,-0.1 1.5,-0.9 0.8,-0.9 0.8,-2 0.8,-2 v -8.2 h -63 v -20.9 c 0.1,0 0,-0.6 -0.5,-1.1 z"
-       id="path14221"
-       style="fill:#ffff00" />
-    <g
-       transform="matrix(-1,0,0,1,1792.4605,555.11363)"
-       id="g14223">
-		<circle
-   cx="83.300003"
-   cy="43"
-   r="6.5"
-   id="circle14225"
-   style="fill:#190805" />
-
-		<circle
-   cx="83.300003"
-   cy="43"
-   r="4.5"
-   id="circle14227"
-   style="fill:#808080" />
-
-		<circle
-   cx="83.300003"
-   cy="43"
-   r="2.2"
-   id="circle14229"
-   style="fill:#cccccc" />
-
-	</g>
-    <g
-       transform="matrix(-1,0,0,1,1792.4605,555.11363)"
-       id="g14231">
-		<circle
-   cx="97.300003"
-   cy="43"
-   r="6.5"
-   id="circle14233"
-   style="fill:#190805" />
-
-		<circle
-   cx="97.300003"
-   cy="43"
-   r="4.5"
-   id="circle14235"
-   style="fill:#808080" />
-
-		<circle
-   cx="97.300003"
-   cy="43"
-   r="2.2"
-   id="circle14237"
-   style="fill:#cccccc" />
-
-	</g>
-    <circle
-       cx="145.89999"
-       cy="43"
-       r="6.5"
-       transform="matrix(-1,0,0,1,1792.4605,555.11363)"
-       id="circle14239"
-       style="fill:#190805" />
-    <circle
-       cx="145.89999"
-       cy="43"
-       r="4.5"
-       transform="matrix(-1,0,0,1,1792.4605,555.11363)"
-       id="circle14241"
-       style="fill:#808080" />
-    <circle
-       cx="145.89999"
-       cy="43"
-       r="2.2"
-       transform="matrix(-1,0,0,1,1792.4605,555.11363)"
-       id="circle14243"
-       style="fill:#cccccc" />
-    <polygon
-       points="139,22 163.1,22 163.2,14 139,14 "
-       transform="matrix(-1,0,0,1,1792.4605,555.11363)"
-       id="polygon14245"
-       style="fill:#73ddff" />
-    <rect
-       width="63"
-       height="33"
-       x="-1718.4606"
-       y="556.11365"
-       transform="scale(-1,1)"
-       id="rect14247"
-       style="fill:#ffffff" />
-    <rect
-       width="63"
-       height="1"
-       x="-1718.4606"
-       y="555.11365"
-       transform="scale(-1,1)"
-       id="rect14249" />
-    <rect
-       width="63"
-       height="1"
-       x="-1718.4606"
-       y="588.11365"
-       transform="scale(-1,1)"
-       id="rect14251" />
-    <path
-       d="m 1729.4605,597.21363 v -8.1 h 14.6 32.5 15.9 v 8.1 c 0,0 -0.2,1.1 -0.9,1.8 -0.8,0.9 -1.6,1.1 -1.6,1.1 h -13.4 -32.6 -13.9 c 0,0 0.2,-0.2 -0.6,-1.1 -0.7,-0.7 0,-1.8 0,-1.8 z"
-       id="path14253"
-       style="fill:#ffff00" />
-    <rect
-       width="64"
-       height="33"
-       x="-1792.4606"
-       y="556.11365"
-       transform="scale(-1,1)"
-       id="rect14255"
-       style="fill:#ffffff" />
-    <rect
-       width="64"
-       height="1"
-       x="-1792.4606"
-       y="555.11365"
-       transform="scale(-1,1)"
-       id="rect14257" />
-    <rect
-       width="64"
-       height="1"
-       x="-1792.4606"
-       y="588.11365"
-       transform="scale(-1,1)"
-       id="rect14259" />
-    <g
-       transform="matrix(-1,0,0,1,1792.4605,555.11363)"
-       id="g14261">
-		<circle
-   cx="7.3000002"
-   cy="43"
-   r="6.5"
-   id="circle14263"
-   style="fill:#190805" />
-
-		<circle
-   cx="7.3000002"
-   cy="43"
-   r="4.5"
-   id="circle14265"
-   style="fill:#808080" />
-
-		<circle
-   cx="7.3000002"
-   cy="43"
-   r="2.2"
-   id="circle14267"
-   style="fill:#cccccc" />
-
-	</g>
-    <g
-       transform="matrix(-1,0,0,1,1792.4605,555.11363)"
-       id="g14269">
-		<circle
-   cx="21.299999"
-   cy="43"
-   r="6.5"
-   id="circle14271"
-   style="fill:#190805" />
-
-		<circle
-   cx="21.299999"
-   cy="43"
-   r="4.5"
-   id="circle14273"
-   style="fill:#808080" />
-
-		<circle
-   cx="21.299999"
-   cy="43"
-   r="2.2"
-   id="circle14275"
-   style="fill:#cccccc" />
-
-	</g>
-    <g
-       transform="matrix(-1,0,0,1,1792.4605,555.11363)"
-       id="g14277">
-		<circle
-   cx="57.299999"
-   cy="43"
-   r="6.5"
-   id="circle14279"
-   style="fill:#190805" />
-
-		<circle
-   cx="57.299999"
-   cy="43"
-   r="4.5"
-   id="circle14281"
-   style="fill:#808080" />
-
-		<circle
-   cx="57.299999"
-   cy="43"
-   r="2.2"
-   id="circle14283"
-   style="fill:#cccccc" />
-
-	</g>
-  </g>
   <rect
      width="2937.0901"
      height="1453.4556"
@@ -1331,201 +1303,6 @@
      y="603.60388"
      id="rect14953"
      style="fill:#d1ecf7;fill-opacity:1;fill-rule:nonzero;stroke:none" />
-  <g
-     id="buss">
-    <path
-       d="m 1539.2505,483.91837 c -0.5,-0.5 -1.2,-0.5 -1.2,-0.5 h -88.3 c 0,0 -1.3,0.3 -1.7,0.9 -0.4,0.6 -0.4,1.9 -0.4,1.9 l 0,12.7 c 0,0 -0.4,0.4 -0.6,1.2 -0.3,1.1 -0.1,1.8 -0.1,1.8 v 6.8 c 0,0 -0.1,0.5 0.4,1.2 0.4,0.5 1.3,0.5 1.3,0.5 h 22 67 c 0,0 0.6,0.3 1.3,-0.5 0.7,-0.7 0.7,-1.4 0.7,-1.4 0,0 0.1,-24.1 -0.4,-24.6 z"
-       id="path13952"
-       style="fill:#43b0eb" />
-    <circle
-       cx="16.4"
-       cy="27.9"
-       r="5.6999998"
-       transform="matrix(-1,0,0,1,1539.6505,482.41837)"
-       id="circle13954"
-       style="fill:#190805" />
-    <circle
-       cx="16.4"
-       cy="27.9"
-       r="3.9000001"
-       transform="matrix(-1,0,0,1,1539.6505,482.41837)"
-       id="circle13956"
-       style="fill:#808080" />
-    <circle
-       cx="16.4"
-       cy="27.9"
-       r="1.9"
-       transform="matrix(-1,0,0,1,1539.6505,482.41837)"
-       id="circle13958"
-       style="fill:#cccccc" />
-    <circle
-       cx="68.400002"
-       cy="27.9"
-       r="5.6999998"
-       transform="matrix(-1,0,0,1,1539.6505,482.41837)"
-       id="circle13960"
-       style="fill:#190805" />
-    <circle
-       cx="68.400002"
-       cy="27.9"
-       r="3.9000001"
-       transform="matrix(-1,0,0,1,1539.6505,482.41837)"
-       id="circle13962"
-       style="fill:#808080" />
-    <circle
-       cx="68.400002"
-       cy="27.9"
-       r="1.9"
-       transform="matrix(-1,0,0,1,1539.6505,482.41837)"
-       id="circle13964"
-       style="fill:#cccccc" />
-    <rect
-       width="4"
-       height="13"
-       x="-1451.9506"
-       y="485.41837"
-       transform="scale(-1,1)"
-       id="rect13966"
-       style="fill:#163847" />
-    <rect
-       width="18"
-       height="13"
-       x="-1537.9504"
-       y="485.41837"
-       transform="scale(-1,1)"
-       id="rect13968"
-       style="fill:#163847" />
-    <rect
-       width="8"
-       height="13"
-       x="-1518.9504"
-       y="485.41837"
-       transform="scale(-1,1)"
-       id="rect13970"
-       style="fill:#163847" />
-    <rect
-       width="8"
-       height="13"
-       x="-1499.9504"
-       y="485.41837"
-       transform="scale(-1,1)"
-       id="rect13972"
-       style="fill:#163847" />
-    <rect
-       width="4"
-       height="23"
-       x="-1509.9504"
-       y="487.41837"
-       transform="scale(-1,1)"
-       id="rect13974"
-       style="fill:#163847" />
-    <rect
-       width="4"
-       height="23"
-       x="-1504.9504"
-       y="487.41837"
-       transform="scale(-1,1)"
-       id="rect13976"
-       style="fill:#163847" />
-    <rect
-       width="4"
-       height="22"
-       x="-1461.9506"
-       y="487.41837"
-       transform="scale(-1,1)"
-       id="rect13978"
-       style="fill:#163847" />
-    <rect
-       width="4"
-       height="22"
-       x="-1456.9506"
-       y="487.41837"
-       transform="scale(-1,1)"
-       id="rect13980"
-       style="fill:#163847" />
-    <circle
-       cx="91.699997"
-       cy="18.299999"
-       r="0.69999999"
-       transform="matrix(-1,0,0,1,1539.6505,482.41837)"
-       id="circle13982"
-       style="fill:#ffffff" />
-    <circle
-       cx="91.699997"
-       cy="20"
-       r="0.69999999"
-       transform="matrix(-1,0,0,1,1539.6505,482.41837)"
-       id="circle13984"
-       style="fill:#ffffff" />
-    <circle
-       cx="91.699997"
-       cy="21.799999"
-       r="0.69999999"
-       transform="matrix(-1,0,0,1,1539.6505,482.41837)"
-       id="circle13986"
-       style="fill:#ffffff" />
-    <circle
-       cx="1.3"
-       cy="18.299999"
-       r="0.69999999"
-       transform="matrix(-1,0,0,1,1539.6505,482.41837)"
-       id="circle13988"
-       style="fill:#ffffff" />
-    <circle
-       cx="1.3"
-       cy="20"
-       r="0.69999999"
-       transform="matrix(-1,0,0,1,1539.6505,482.41837)"
-       id="circle13990"
-       style="fill:#ffff00" />
-    <circle
-       cx="1.3"
-       cy="21.799999"
-       r="0.69999999"
-       transform="matrix(-1,0,0,1,1539.6505,482.41837)"
-       id="circle13992"
-       style="fill:#c1272d" />
-    <g
-       transform="matrix(-1,0,0,1,1539.6505,482.41837)"
-       id="g13994">
-		<rect
-   width="14"
-   height="13"
-   x="62.700001"
-   y="3"
-   id="rect13996"
-   style="fill:#163847" />
-
-		<rect
-   width="13"
-   height="13"
-   x="48.700001"
-   y="3"
-   id="rect13998"
-   style="fill:#163847" />
-
-	</g>
-    <polygon
-       points="27.7,0 27.7,1.5 18,1.4 20.3,0 "
-       transform="matrix(-1,0,0,1,1539.6505,482.41837)"
-       id="polygon14000"
-       style="fill:#43b0eb" />
-    <polygon
-       points="24.7,0 24.7,1.5 34.8,1.4 32.9,0 "
-       transform="matrix(-1,0,0,1,1539.6505,482.41837)"
-       id="polygon14002"
-       style="fill:#43b0eb" />
-    <polygon
-       points="65.7,0 65.7,1.5 56,1.4 58.3,0 "
-       transform="matrix(-1,0,0,1,1539.6505,482.41837)"
-       id="polygon14004"
-       style="fill:#43b0eb" />
-    <polygon
-       points="62.7,0 62.7,1.5 72.8,1.4 70.9,0 "
-       transform="matrix(-1,0,0,1,1539.6505,482.41837)"
-       id="polygon14006"
-       style="fill:#43b0eb" />
-  </g>
   <g
      transform="matrix(0.73475434,0,0,0.73475434,69.69724,363.77673)"
      id="g3889">
@@ -3413,7 +3190,7 @@
       <g
          id="g4365">
         <polygon
-           points="206.5,322.9 47.6,322.9 47.5,93.8 105.3,59.8 188.1,273.5 "
+           points="47.6,322.9 47.5,93.8 105.3,59.8 188.1,273.5 206.5,322.9 "
            id="polygon4367"
            style="fill:#cccccc" />
         <g
@@ -3421,7 +3198,7 @@
           <defs
              id="defs4371">
             <polygon
-               points="206.5,322.9 47.6,322.9 47.5,93.8 105.3,59.8 188.1,273.5 "
+               points="47.6,322.9 47.5,93.8 105.3,59.8 188.1,273.5 206.5,322.9 "
                id="SVGID_26_" />
           </defs>
           <clipPath
@@ -6349,171 +6126,437 @@
     </g>
   </g>
   <g
-     id="personbil">
-    <rect
-       width="3"
-       height="6"
-       x="203.10751"
-       y="597.19824"
-       id="rect14046" />
-    <path
-       d="m 138.10752,591.49826 v 5 c 0,0 -0.8,6.4 1.8,6.4 l 42,1.3 h 15.4 5 c 0,0 0.9,-0.3 2,-0.4 0.2,0 1.7,-0.3 1.7,-0.5 0,-1 -1.4,-0.6 -1.4,-1 0,-0.7 0.2,-1.7 0.4,-2.5 0.2,-0.9 1.5,-1.4 1.4,-1.8 -0.1,-0.2 -0.2,-0.4 -0.3,-0.6 -1.7,-2.9 -6.5,-6.6 -20.8,-6.6 0,0 -6.6,-7.4 -12.3,-7.4 h -19.3 c 0,0 -0.8,-0.4 -1.4,-0.2 -0.6,0.2 -1,0.3 -1,0.3 l -8.3,5.4 c 0,0 -4.9,-0.2 -4.9,2.6 z"
-       id="path14048"
-       style="fill:#aa1700" />
+     id="lastebil">
     <g
-       transform="translate(138.00752,583.09826)"
-       id="g14050">
-		<defs
-   id="defs14052">
-  <path
-     d="m 0.1,8.4 v 5 c 0,0 -0.8,6.4 1.8,6.4 l 42,1.3 h 15.4 5 c 0,0 4.6,0.5 4.6,-3.8 0,0 0.3,-9.6 -21.6,-9.6 0,0 -6.6,-7.6 -12.3,-7.6 H 14.3 L 5,6.1 C 5,6.1 0.1,5.6 0.1,8.4 z"
-     id="SVGID_34_" />
-</defs>
-
-		<clipPath
-   id="SVGID_2_-9">
-			<use
-   id="use14056"
-   style="overflow:visible"
-   x="0"
-   y="0"
-   width="1"
-   height="1"
-   xlink:href="#SVGID_34_" />
-
-		</clipPath>
-
-		<circle
-   cx="10"
-   cy="20"
-   r="6.9000001"
-   clip-path="url(#SVGID_2_-9)"
-   id="circle14058"
-   style="fill:#550c00" />
-
-		<circle
-   cx="51"
-   cy="20"
-   r="6.9000001"
-   clip-path="url(#SVGID_2_-9)"
-   id="circle14060"
-   style="fill:#550c00" />
-
-	</g>
-    <circle
-       cx="10"
-       cy="20"
-       r="5.6999998"
-       transform="translate(138.00752,583.09826)"
-       id="circle14062"
-       style="fill:#190805" />
-    <circle
-       cx="10"
-       cy="20"
-       r="3.9000001"
-       transform="translate(138.00752,583.09826)"
-       id="circle14064"
-       style="fill:#808080" />
-    <circle
-       cx="10"
-       cy="20"
-       r="1.9"
-       transform="translate(138.00752,583.09826)"
-       id="circle14066"
-       style="fill:#cccccc" />
-    <circle
-       cx="51"
-       cy="20"
-       r="5.6999998"
-       transform="translate(138.00752,583.09826)"
-       id="circle14068"
-       style="fill:#190805" />
-    <circle
-       cx="51"
-       cy="20"
-       r="3.9000001"
-       transform="translate(138.00752,583.09826)"
-       id="circle14070"
-       style="fill:#808080" />
-    <circle
-       cx="51"
-       cy="20"
-       r="1.9"
-       transform="translate(138.00752,583.09826)"
-       id="circle14072"
-       style="fill:#cccccc" />
-    <path
-       d="m 153.90752,583.19826 -7.2,6.8 38.5,0.2 c 0,0 -1.9,-2.3 -4.7,-4.4 -3,-2.3 -4.5,-2.7 -4.5,-2.7 h -22.1 z"
-       id="path14074"
-       style="fill:#73ddff" />
-    <rect
-       width="1"
-       height="7"
-       x="162.10751"
-       y="583.19824"
-       id="rect14076"
-       style="opacity:0.7" />
-    <polygon
-       points="15.1,7.1 15.1,0.5 16.1,0 16.1,7.1 "
-       transform="translate(138.00752,583.09826)"
-       id="polygon14078"
-       style="opacity:0.7" />
-    <polygon
-       points="47.3,7.3 8.6,7 8.9,6.7 47.1,7 "
-       transform="translate(138.00752,583.09826)"
-       id="polygon14080" />
-    <path
-       d="m 170.80752,583.19826 c 0,0 5.2,3 5.9,7 h 0.9 c -0.6,-4 -5.4,-7 -5.4,-7 h -1.4 z"
-       id="path14082"
-       style="opacity:0.7" />
-    <polygon
-       points="37.2,7.1 39.5,7.1 39.1,5.7 38.2,4.1 "
-       transform="translate(138.00752,583.09826)"
-       id="polygon14084" />
-    <path
-       d="m 185.20752,590.19826 c 0,0 0,0.9 1.1,1.5 1.1,0.6 5.2,1.7 7.9,1.9 2.7,0.2 8.5,0.2 8.5,0.2"
-       id="path14086"
-       style="opacity:0.16000001;fill:none;stroke:#000000;stroke-width:0.30000001;stroke-miterlimit:10" />
-    <path
-       d="m 205.80752,602.19826 h -9.7 v 1 h 9.7 c 0,0 0.4,0.1 0.4,-0.5 0,-0.6 -0.4,-0.5 -0.4,-0.5 z"
-       id="path14088"
-       style="fill:#801100" />
-    <polygon
-       points="44,20.7 44,19.7 16.7,19 16.7,20 "
-       transform="translate(138.00752,583.09826)"
-       id="polygon14090"
-       style="fill:#801100" />
-    <path
-       d="m 202.90752,593.99826 c 0,0 -3.6,3.2 3.1,3.4 0,0 -0.5,-1 -1.3,-1.8 -0.8,-0.8 -1.8,-1.6 -1.8,-1.6 z"
-       id="path14092"
-       style="fill:#ffffff" />
-    <rect
-       width="0.30000281"
-       height="5.4000506"
-       x="-56.139931"
-       y="613.42035"
-       transform="matrix(0.92759132,-0.3735965,0.3735965,0.92759132,0,0)"
-       id="rect14096"
-       style="opacity:0.3" />
-    <rect
-       width="1"
-       height="13"
-       x="153.10751"
-       y="590.19824"
-       id="rect14100"
-       style="opacity:0.3" />
-    <path
-       d="m 164.90752,592.79826 h -0.9 c -0.1,0 -0.3,-0.1 -0.3,-0.3 v 0 c 0,-0.1 0.1,-0.3 0.3,-0.3 h 0.9 c 0.1,0 0.3,0.1 0.3,0.3 v 0 c -0.1,0.2 -0.2,0.3 -0.3,0.3 z"
-       id="path14102"
-       style="opacity:0.7" />
-    <path
-       d="m 155.70752,592.79826 h -0.9 c -0.1,0 -0.3,-0.1 -0.3,-0.3 v 0 c 0,-0.1 0.1,-0.3 0.3,-0.3 h 0.9 c 0.1,0 0.3,0.1 0.3,0.3 v 0 c 0,0.2 -0.2,0.3 -0.3,0.3 z"
-       id="path14104"
-       style="opacity:0.7" />
-    <path
-       d="m 138.70752,603.19826 h 2.5 l 0.1,-1 h -2.6 c 0,0 -0.4,-0.1 -0.4,0.5 0,0.6 0.4,0.5 0.4,0.5 z"
-       id="path14106"
-       style="fill:#801100" />
+       id="g5988">
+      <path
+         d="m 1654.8605,566.11363 c -0.6,-0.6 -1.5,0 -1.5,0 h -21.4 c 0,0 -0.8,-0.4 -1.6,0 -0.7,0.5 -1.1,0.8 -1.1,0.8 l 0.1,10.2 c 0,0 -0.5,0.4 -0.8,1.4 -0.4,1.2 -0.1,2 -0.1,2 v 15.9 c 0,0 0,1 0.5,1.8 0.4,0.6 1.6,1 1.6,1 h 23.4 62.1 c 0,0 0.7,-0.1 1.5,-0.9 0.8,-0.9 0.8,-2 0.8,-2 v -8.2 h -63 v -20.9 c 0.1,0 0,-0.6 -0.5,-1.1 z"
+         id="path14221"
+         style="fill:#ffff00" />
+      <g
+         transform="matrix(-1,0,0,1,1792.4605,555.11363)"
+         id="g14223">
+        <circle
+           cx="83.300003"
+           cy="43"
+           r="6.5"
+           id="circle14225"
+           style="fill:#190805" />
+        <circle
+           cx="83.300003"
+           cy="43"
+           r="4.5"
+           id="circle14227"
+           style="fill:#808080" />
+        <circle
+           cx="83.300003"
+           cy="43"
+           r="2.2"
+           id="circle14229"
+           style="fill:#cccccc" />
+      </g>
+      <g
+         transform="matrix(-1,0,0,1,1792.4605,555.11363)"
+         id="g14231">
+        <circle
+           cx="97.300003"
+           cy="43"
+           r="6.5"
+           id="circle14233"
+           style="fill:#190805" />
+        <circle
+           cx="97.300003"
+           cy="43"
+           r="4.5"
+           id="circle14235"
+           style="fill:#808080" />
+        <circle
+           cx="97.300003"
+           cy="43"
+           r="2.2"
+           id="circle14237"
+           style="fill:#cccccc" />
+      </g>
+      <circle
+         cx="145.89999"
+         cy="43"
+         r="6.5"
+         transform="matrix(-1,0,0,1,1792.4605,555.11363)"
+         id="circle14239"
+         style="fill:#190805" />
+      <circle
+         cx="145.89999"
+         cy="43"
+         r="4.5"
+         transform="matrix(-1,0,0,1,1792.4605,555.11363)"
+         id="circle14241"
+         style="fill:#808080" />
+      <circle
+         cx="145.89999"
+         cy="43"
+         r="2.2"
+         transform="matrix(-1,0,0,1,1792.4605,555.11363)"
+         id="circle14243"
+         style="fill:#cccccc" />
+      <polygon
+         points="163.2,14 139,14 139,22 163.1,22 "
+         transform="matrix(-1,0,0,1,1792.4605,555.11363)"
+         id="polygon14245"
+         style="fill:#73ddff" />
+      <rect
+         width="63"
+         height="33"
+         x="-1718.4606"
+         y="556.11365"
+         transform="scale(-1,1)"
+         id="rect14247"
+         style="fill:#ffffff" />
+      <rect
+         width="63"
+         height="1"
+         x="-1718.4606"
+         y="555.11365"
+         transform="scale(-1,1)"
+         id="rect14249" />
+      <rect
+         width="63"
+         height="1"
+         x="-1718.4606"
+         y="588.11365"
+         transform="scale(-1,1)"
+         id="rect14251" />
+      <path
+         d="m 1729.4605,597.21363 v -8.1 h 14.6 32.5 15.9 v 8.1 c 0,0 -0.2,1.1 -0.9,1.8 -0.8,0.9 -1.6,1.1 -1.6,1.1 h -13.4 -32.6 -13.9 c 0,0 0.2,-0.2 -0.6,-1.1 -0.7,-0.7 0,-1.8 0,-1.8 z"
+         id="path14253"
+         style="fill:#ffff00" />
+      <rect
+         width="64"
+         height="33"
+         x="-1792.4606"
+         y="556.11365"
+         transform="scale(-1,1)"
+         id="rect14255"
+         style="fill:#ffffff" />
+      <rect
+         width="64"
+         height="1"
+         x="-1792.4606"
+         y="555.11365"
+         transform="scale(-1,1)"
+         id="rect14257" />
+      <rect
+         width="64"
+         height="1"
+         x="-1792.4606"
+         y="588.11365"
+         transform="scale(-1,1)"
+         id="rect14259" />
+      <g
+         transform="matrix(-1,0,0,1,1792.4605,555.11363)"
+         id="g14261">
+        <circle
+           cx="7.3000002"
+           cy="43"
+           r="6.5"
+           id="circle14263"
+           style="fill:#190805" />
+        <circle
+           cx="7.3000002"
+           cy="43"
+           r="4.5"
+           id="circle14265"
+           style="fill:#808080" />
+        <circle
+           cx="7.3000002"
+           cy="43"
+           r="2.2"
+           id="circle14267"
+           style="fill:#cccccc" />
+      </g>
+      <g
+         transform="matrix(-1,0,0,1,1792.4605,555.11363)"
+         id="g14269">
+        <circle
+           cx="21.299999"
+           cy="43"
+           r="6.5"
+           id="circle14271"
+           style="fill:#190805" />
+        <circle
+           cx="21.299999"
+           cy="43"
+           r="4.5"
+           id="circle14273"
+           style="fill:#808080" />
+        <circle
+           cx="21.299999"
+           cy="43"
+           r="2.2"
+           id="circle14275"
+           style="fill:#cccccc" />
+      </g>
+      <g
+         transform="matrix(-1,0,0,1,1792.4605,555.11363)"
+         id="g14277">
+        <circle
+           cx="57.299999"
+           cy="43"
+           r="6.5"
+           id="circle14279"
+           style="fill:#190805" />
+        <circle
+           cx="57.299999"
+           cy="43"
+           r="4.5"
+           id="circle14281"
+           style="fill:#808080" />
+        <circle
+           cx="57.299999"
+           cy="43"
+           r="2.2"
+           id="circle14283"
+           style="fill:#cccccc" />
+      </g>
+    </g>
+    <g
+       transform="translate(924.89567,0)"
+       id="g5948">
+      <path
+         d="m 900.11166,164.69961 -40.3935,0 0,38.09538 40.3935,0 -5.3917,-19.04769 z"
+         id="path5900"
+         style="fill:#cc7015;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+      <path
+         d="m 759.61146,168.94701 0,390.85375"
+         id="path5902"
+         style="fill:#8b5310;fill-opacity:1;stroke:#8b5310;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <rect
+         width="23.380011"
+         height="38.524693"
+         x="-940.44238"
+         y="-154.23906"
+         transform="matrix(-0.9375662,-0.34780687,0,1,0,0)"
+         id="rect5904"
+         style="fill:#8b5310;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+      <rect
+         width="120.88239"
+         height="38.524689"
+         x="-881.73126"
+         y="172.8533"
+         transform="scale(-1,1)"
+         id="rect5906"
+         style="fill:#f7931e;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+      <text
+         x="774.56152"
+         y="201.46556"
+         id="text5908"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Francois One;-inkscape-font-specification:Francois One"><tspan
+           x="774.56152"
+           y="201.46556"
+           id="tspan5910"
+           style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;font-family:Francois One;-inkscape-font-specification:Francois One">LASTEBIL</tspan></text>
+    </g>
+  </g>
+  <g
+     id="personbil">
+    <g
+       id="g6234">
+      <rect
+         width="3"
+         height="6"
+         x="203.10751"
+         y="597.19824"
+         id="rect14046" />
+      <path
+         d="m 138.10752,591.49826 v 5 c 0,0 -0.8,6.4 1.8,6.4 l 42,1.3 h 15.4 5 c 0,0 0.9,-0.3 2,-0.4 0.2,0 1.7,-0.3 1.7,-0.5 0,-1 -1.4,-0.6 -1.4,-1 0,-0.7 0.2,-1.7 0.4,-2.5 0.2,-0.9 1.5,-1.4 1.4,-1.8 -0.1,-0.2 -0.2,-0.4 -0.3,-0.6 -1.7,-2.9 -6.5,-6.6 -20.8,-6.6 0,0 -6.6,-7.4 -12.3,-7.4 h -19.3 c 0,0 -0.8,-0.4 -1.4,-0.2 -0.6,0.2 -1,0.3 -1,0.3 l -8.3,5.4 c 0,0 -4.9,-0.2 -4.9,2.6 z"
+         id="path14048"
+         style="fill:#aa1700" />
+      <g
+         transform="translate(138.00752,583.09826)"
+         id="g14050">
+        <defs
+           id="defs14052">
+          <path
+             d="m 0.1,8.4 v 5 c 0,0 -0.8,6.4 1.8,6.4 l 42,1.3 h 15.4 5 c 0,0 4.6,0.5 4.6,-3.8 0,0 0.3,-9.6 -21.6,-9.6 0,0 -6.6,-7.6 -12.3,-7.6 H 14.3 L 5,6.1 C 5,6.1 0.1,5.6 0.1,8.4 z"
+             id="SVGID_34_" />
+        </defs>
+        <clipPath
+           id="SVGID_2_-9">
+          <use
+             id="use14056"
+             style="overflow:visible"
+             x="0"
+             y="0"
+             width="1"
+             height="1"
+             xlink:href="#SVGID_34_" />
+        </clipPath>
+        <circle
+           cx="10"
+           cy="20"
+           r="6.9000001"
+           clip-path="url(#SVGID_2_-9)"
+           id="circle14058"
+           style="fill:#550c00" />
+        <circle
+           cx="51"
+           cy="20"
+           r="6.9000001"
+           clip-path="url(#SVGID_2_-9)"
+           id="circle14060"
+           style="fill:#550c00" />
+      </g>
+      <circle
+         cx="10"
+         cy="20"
+         r="5.6999998"
+         transform="translate(138.00752,583.09826)"
+         id="circle14062"
+         style="fill:#190805" />
+      <circle
+         cx="10"
+         cy="20"
+         r="3.9000001"
+         transform="translate(138.00752,583.09826)"
+         id="circle14064"
+         style="fill:#808080" />
+      <circle
+         cx="10"
+         cy="20"
+         r="1.9"
+         transform="translate(138.00752,583.09826)"
+         id="circle14066"
+         style="fill:#cccccc" />
+      <circle
+         cx="51"
+         cy="20"
+         r="5.6999998"
+         transform="translate(138.00752,583.09826)"
+         id="circle14068"
+         style="fill:#190805" />
+      <circle
+         cx="51"
+         cy="20"
+         r="3.9000001"
+         transform="translate(138.00752,583.09826)"
+         id="circle14070"
+         style="fill:#808080" />
+      <circle
+         cx="51"
+         cy="20"
+         r="1.9"
+         transform="translate(138.00752,583.09826)"
+         id="circle14072"
+         style="fill:#cccccc" />
+      <path
+         d="m 153.90752,583.19826 -7.2,6.8 38.5,0.2 c 0,0 -1.9,-2.3 -4.7,-4.4 -3,-2.3 -4.5,-2.7 -4.5,-2.7 h -22.1 z"
+         id="path14074"
+         style="fill:#73ddff" />
+      <rect
+         width="1"
+         height="7"
+         x="162.10751"
+         y="583.19824"
+         id="rect14076"
+         style="opacity:0.7" />
+      <polygon
+         points="15.1,0.5 16.1,0 16.1,7.1 15.1,7.1 "
+         transform="translate(138.00752,583.09826)"
+         id="polygon14078"
+         style="opacity:0.7" />
+      <polygon
+         points="8.6,7 8.9,6.7 47.1,7 47.3,7.3 "
+         transform="translate(138.00752,583.09826)"
+         id="polygon14080" />
+      <path
+         d="m 170.80752,583.19826 c 0,0 5.2,3 5.9,7 h 0.9 c -0.6,-4 -5.4,-7 -5.4,-7 h -1.4 z"
+         id="path14082"
+         style="opacity:0.7" />
+      <polygon
+         points="39.5,7.1 39.1,5.7 38.2,4.1 37.2,7.1 "
+         transform="translate(138.00752,583.09826)"
+         id="polygon14084" />
+      <path
+         d="m 185.20752,590.19826 c 0,0 0,0.9 1.1,1.5 1.1,0.6 5.2,1.7 7.9,1.9 2.7,0.2 8.5,0.2 8.5,0.2"
+         id="path14086"
+         style="opacity:0.16000001;fill:none;stroke:#000000;stroke-width:0.30000001;stroke-miterlimit:10" />
+      <path
+         d="m 205.80752,602.19826 h -9.7 v 1 h 9.7 c 0,0 0.4,0.1 0.4,-0.5 0,-0.6 -0.4,-0.5 -0.4,-0.5 z"
+         id="path14088"
+         style="fill:#801100" />
+      <polygon
+         points="44,19.7 16.7,19 16.7,20 44,20.7 "
+         transform="translate(138.00752,583.09826)"
+         id="polygon14090"
+         style="fill:#801100" />
+      <path
+         d="m 202.90752,593.99826 c 0,0 -3.6,3.2 3.1,3.4 0,0 -0.5,-1 -1.3,-1.8 -0.8,-0.8 -1.8,-1.6 -1.8,-1.6 z"
+         id="path14092"
+         style="fill:#ffffff" />
+      <rect
+         width="0.30000281"
+         height="5.4000506"
+         x="-56.139931"
+         y="613.42035"
+         transform="matrix(0.92759132,-0.3735965,0.3735965,0.92759132,0,0)"
+         id="rect14096"
+         style="opacity:0.3" />
+      <rect
+         width="1"
+         height="13"
+         x="153.10751"
+         y="590.19824"
+         id="rect14100"
+         style="opacity:0.3" />
+      <path
+         d="m 164.90752,592.79826 h -0.9 c -0.1,0 -0.3,-0.1 -0.3,-0.3 v 0 c 0,-0.1 0.1,-0.3 0.3,-0.3 h 0.9 c 0.1,0 0.3,0.1 0.3,0.3 v 0 c -0.1,0.2 -0.2,0.3 -0.3,0.3 z"
+         id="path14102"
+         style="opacity:0.7" />
+      <path
+         d="m 155.70752,592.79826 h -0.9 c -0.1,0 -0.3,-0.1 -0.3,-0.3 v 0 c 0,-0.1 0.1,-0.3 0.3,-0.3 h 0.9 c 0.1,0 0.3,0.1 0.3,0.3 v 0 c 0,0.2 -0.2,0.3 -0.3,0.3 z"
+         id="path14104"
+         style="opacity:0.7" />
+      <path
+         d="m 138.70752,603.19826 h 2.5 l 0.1,-1 h -2.6 c 0,0 -0.4,-0.1 -0.4,0.5 0,0.6 0.4,0.5 0.4,0.5 z"
+         id="path14106"
+         style="fill:#801100" />
+    </g>
+    <g
+       id="g6196">
+      <path
+         d="m 4.71029,291.96161 40.3935,0 0,38.09538 -40.3935,0 5.3917,-19.04769 z"
+         id="path5854"
+         style="fill:#931103;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+      <path
+         d="m 166.21589,295.1656 0,288.05179"
+         id="path5856"
+         style="fill:#6e0d02;fill-opacity:1;stroke:#6e0d02;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <rect
+         width="23.380011"
+         height="38.524693"
+         x="24.632956"
+         y="308.68283"
+         transform="matrix(0.9375662,-0.34780687,0,1,0,0)"
+         id="rect5858"
+         style="fill:#6f0d02;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+      <rect
+         width="141.88239"
+         height="38.524689"
+         x="23.096104"
+         y="300.1153"
+         id="rect5860"
+         style="fill:#aa1700;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+      <text
+         x="38.338108"
+         y="328.72757"
+         id="text5862"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Francois One;-inkscape-font-specification:Francois One"><tspan
+           x="38.338108"
+           y="328.72757"
+           id="tspan5864"
+           style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;font-family:Francois One;-inkscape-font-specification:Francois One">PERSONBIL</tspan></text>
+    </g>
   </g>
   <g
      transform="matrix(0.7292479,0,0,0.7292479,951.6518,501.87744)"
@@ -13161,6 +13204,160 @@
     </g>
   </g>
   <g
+     id="lett-lastebil">
+    <rect
+       width="55"
+       height="29"
+       x="-1310.2726"
+       y="559.80334"
+       transform="scale(-1,1)"
+       id="rect14150"
+       style="fill:#ffffff" />
+    <path
+       d="m 1254.7726,570.30335 c -0.5,-0.5 -1.3,-0.5 -1.3,-0.5 h -13.3 c 0,0 -0.4,0 -1.1,0.3 -0.8,0.3 -1.1,0.5 -1.1,0.5 l -3.1,2.2 h 2.2 l -6,7.4 c 0,0 -0.4,0.4 -0.6,1.3 -0.3,1.1 -0.1,1.8 -0.1,1.8 v 13.8 c 0,0 -0.1,0.5 0.4,1.2 0.3,0.5 1.2,0.5 1.2,0.5 h 22 54 c 0,0 0.7,0.3 1.5,-0.5 0.7,-0.7 0.8,-1.3 0.8,-1.3 v -8.2 h -55 v -17 c 0,0 0,-1 -0.5,-1.5 z"
+       id="path14152"
+       style="fill:#188619" />
+    <g
+       transform="matrix(-1,0,0,1,1310.2726,559.80335)"
+       id="g14154">
+      <defs
+         id="defs14156">
+        <path
+           d="M 55.5,10.5 C 56,10 56.8,10 56.8,10 h 13.3 c 0,0 0.4,0 1.1,0.3 0.8,0.3 1.1,0.5 1.1,0.5 l 3.1,2.2 h -2.2 l 6,7.4 c 0,0 0.4,0.4 0.6,1.3 0.3,1.1 0.1,1.8 0.1,1.8 v 13.8 c 0,0 0.1,0.5 -0.4,1.2 C 79.2,39 78.3,39 78.3,39 h -22 -54 C 2.3,39 1.6,39.3 0.8,38.5 0.1,37.8 0,37.2 0,37.2 V 29 H 55 V 12 c 0,0 0,-1 0.5,-1.5 z"
+           id="SVGID_32_" />
+      </defs>
+      <clipPath
+         id="SVGID_2_-2">
+        <use
+           id="use14160"
+           style="overflow:visible"
+           x="0"
+           y="0"
+           width="1"
+           height="1"
+           xlink:href="#SVGID_32_" />
+      </clipPath>
+      <circle
+         cx="12.7"
+         cy="38.900002"
+         r="6.9000001"
+         clip-path="url(#SVGID_2_-2)"
+         id="circle14162"
+         style="fill:#335e66" />
+      <circle
+         cx="62.700001"
+         cy="38.900002"
+         r="6.9000001"
+         clip-path="url(#SVGID_2_-2)"
+         id="circle14164"
+         style="fill:#335e66" />
+    </g>
+    <g
+       transform="matrix(-1,0,0,1,1310.2726,559.80335)"
+       id="g14166">
+      <circle
+         cx="12.7"
+         cy="38.900002"
+         r="5.6999998"
+         id="circle14168"
+         style="fill:#190805" />
+      <circle
+         cx="12.7"
+         cy="38.900002"
+         r="3.9000001"
+         id="circle14170"
+         style="fill:#808080" />
+      <circle
+         cx="12.7"
+         cy="38.900002"
+         r="1.9"
+         id="circle14172"
+         style="fill:#cccccc" />
+    </g>
+    <g
+       transform="matrix(-1,0,0,1,1310.2726,559.80335)"
+       id="g14174">
+      <circle
+         cx="62.700001"
+         cy="38.900002"
+         r="5.6999998"
+         id="circle14176"
+         style="fill:#190805" />
+      <circle
+         cx="62.700001"
+         cy="38.900002"
+         r="3.9000001"
+         id="circle14178"
+         style="fill:#808080" />
+      <circle
+         cx="62.700001"
+         cy="38.900002"
+         r="1.9"
+         id="circle14180"
+         style="fill:#cccccc" />
+    </g>
+    <rect
+       width="55"
+       height="1"
+       x="-1310.2726"
+       y="559.80334"
+       transform="scale(-1,1)"
+       id="rect14182" />
+    <rect
+       width="55"
+       height="1"
+       x="-1310.2726"
+       y="587.80334"
+       transform="scale(-1,1)"
+       id="rect14184" />
+    <path
+       d="m 1253.2726,572.80335 v 7 h -21.6 c 0,0 2.2,-4 6,-7 h 15.6 z"
+       id="path14186"
+       style="fill:#73ddff" />
+    <polyline
+       transform="matrix(-1,0,0,1,1310.2726,559.80335)"
+       id="polyline14188"
+       points="73,13 72.3,13 78.3,20 79,20  "
+       style="opacity:0.7" />
+    <g
+       id="g5719">
+      <path
+         d="m 1467.0929,220.91201 -40.3935,0 0,38.09538 40.3935,0 -5.3917,-19.04769 z"
+         id="rect21295"
+         style="fill:#188619;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+      <path
+         d="m 1277.5883,225.32846 0,334.4723"
+         id="path20521"
+         style="fill:none;stroke:#126513;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <rect
+         width="23.380011"
+         height="38.524693"
+         x="-1545.1796"
+         y="-308.3584"
+         transform="matrix(-0.9375662,-0.34780687,0,1,0,0)"
+         id="rect21293"
+         style="fill:#126513;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+      <rect
+         width="169.8824"
+         height="38.524693"
+         x="-1448.7081"
+         y="229.0657"
+         transform="scale(-1,1)"
+         id="rect21291"
+         style="fill:#188619;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+      <text
+         x="1291.1869"
+         y="257.67798"
+         id="text5715"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Francois One;-inkscape-font-specification:Francois One"><tspan
+           x="1291.1869"
+           y="257.67798"
+           id="tspan5717"
+           style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;font-family:Francois One;-inkscape-font-specification:Francois One">LETT LASTEBIL</tspan></text>
+    </g>
+  </g>
+  <g
      transform="matrix(0.81948473,0,0,0.81948473,1515.1721,478.75442)"
      id="g9853">
     <rect
@@ -13213,7 +13410,7 @@
        id="rect9867"
        style="fill:#a1a1a1" />
     <polygon
-       points="6,25 7,25 7,135 124,135 124,25 123.5,25 64.7,0 "
+       points="7,25 7,135 124,135 124,25 123.5,25 64.7,0 6,25 "
        id="polygon9869"
        style="fill:#d6d6d6" />
     <rect
@@ -13630,35 +13827,35 @@
        id="rect9987"
        style="fill:#605656" />
     <polygon
-       points="33,12.8 36,14.1 36,123.8 33,125.9 "
+       points="36,14.1 36,123.8 33,125.9 33,12.8 "
        id="polygon9989"
        style="opacity:0.43000004;fill:#605656" />
     <polygon
-       points="41,9.5 44,8.7 44,123.8 41,125.9 "
+       points="44,8.7 44,123.8 41,125.9 41,9.5 "
        id="polygon9991"
        style="opacity:0.43000004;fill:#605656" />
     <polygon
-       points="49,6.5 52,5.6 52,123.8 49,125.9 "
+       points="52,5.6 52,123.8 49,125.9 49,6.5 "
        id="polygon9993"
        style="opacity:0.43000004;fill:#605656" />
     <polygon
-       points="58,3 61,1.5 61,123.8 58,125.9 "
+       points="61,1.5 61,123.8 58,125.9 58,3 "
        id="polygon9995"
        style="opacity:0.43000004;fill:#605656" />
     <polygon
-       points="66,-0.5 69,2 69,123.8 66,125.9 "
+       points="69,2 69,123.8 66,125.9 66,-0.5 "
        id="polygon9997"
        style="opacity:0.43000004;fill:#605656" />
     <polygon
-       points="74,3 77,5.4 77,123.8 74,125.9 "
+       points="77,5.4 77,123.8 74,125.9 74,3 "
        id="polygon9999"
        style="opacity:0.43000004;fill:#605656" />
     <polygon
-       points="82,6.4 85,8.9 85,123.8 82,125.9 "
+       points="85,8.9 85,123.8 82,125.9 82,6.4 "
        id="polygon10001"
        style="opacity:0.43000004;fill:#605656" />
     <polygon
-       points="91,9.5 94,12.7 94,123.8 91,125.9 "
+       points="94,12.7 94,123.8 91,125.9 91,9.5 "
        id="polygon10003"
        style="opacity:0.43000004;fill:#605656" />
     <rect
@@ -13780,134 +13977,6 @@
        style="fill:#d6d6d6" />
   </g>
   <g
-     id="lett-lastebil">
-    <rect
-       width="55"
-       height="29"
-       x="-1310.2726"
-       y="559.80334"
-       transform="scale(-1,1)"
-       id="rect14150"
-       style="fill:#ffffff" />
-    <path
-       d="m 1254.7726,570.30335 c -0.5,-0.5 -1.3,-0.5 -1.3,-0.5 h -13.3 c 0,0 -0.4,0 -1.1,0.3 -0.8,0.3 -1.1,0.5 -1.1,0.5 l -3.1,2.2 h 2.2 l -6,7.4 c 0,0 -0.4,0.4 -0.6,1.3 -0.3,1.1 -0.1,1.8 -0.1,1.8 v 13.8 c 0,0 -0.1,0.5 0.4,1.2 0.3,0.5 1.2,0.5 1.2,0.5 h 22 54 c 0,0 0.7,0.3 1.5,-0.5 0.7,-0.7 0.8,-1.3 0.8,-1.3 v -8.2 h -55 v -17 c 0,0 0,-1 -0.5,-1.5 z"
-       id="path14152"
-       style="fill:#188619" />
-    <g
-       transform="matrix(-1,0,0,1,1310.2726,559.80335)"
-       id="g14154">
-		<defs
-   id="defs14156">
-  <path
-     d="M 55.5,10.5 C 56,10 56.8,10 56.8,10 h 13.3 c 0,0 0.4,0 1.1,0.3 0.8,0.3 1.1,0.5 1.1,0.5 l 3.1,2.2 h -2.2 l 6,7.4 c 0,0 0.4,0.4 0.6,1.3 0.3,1.1 0.1,1.8 0.1,1.8 v 13.8 c 0,0 0.1,0.5 -0.4,1.2 C 79.2,39 78.3,39 78.3,39 h -22 -54 C 2.3,39 1.6,39.3 0.8,38.5 0.1,37.8 0,37.2 0,37.2 V 29 H 55 V 12 c 0,0 0,-1 0.5,-1.5 z"
-     id="SVGID_32_" />
-</defs>
-
-		<clipPath
-   id="SVGID_2_-2">
-			<use
-   id="use14160"
-   style="overflow:visible"
-   x="0"
-   y="0"
-   width="1"
-   height="1"
-   xlink:href="#SVGID_32_" />
-
-		</clipPath>
-
-		<circle
-   cx="12.7"
-   cy="38.900002"
-   r="6.9000001"
-   clip-path="url(#SVGID_2_-2)"
-   id="circle14162"
-   style="fill:#335e66" />
-
-		<circle
-   cx="62.700001"
-   cy="38.900002"
-   r="6.9000001"
-   clip-path="url(#SVGID_2_-2)"
-   id="circle14164"
-   style="fill:#335e66" />
-
-	</g>
-    <g
-       transform="matrix(-1,0,0,1,1310.2726,559.80335)"
-       id="g14166">
-		<circle
-   cx="12.7"
-   cy="38.900002"
-   r="5.6999998"
-   id="circle14168"
-   style="fill:#190805" />
-
-		<circle
-   cx="12.7"
-   cy="38.900002"
-   r="3.9000001"
-   id="circle14170"
-   style="fill:#808080" />
-
-		<circle
-   cx="12.7"
-   cy="38.900002"
-   r="1.9"
-   id="circle14172"
-   style="fill:#cccccc" />
-
-	</g>
-    <g
-       transform="matrix(-1,0,0,1,1310.2726,559.80335)"
-       id="g14174">
-		<circle
-   cx="62.700001"
-   cy="38.900002"
-   r="5.6999998"
-   id="circle14176"
-   style="fill:#190805" />
-
-		<circle
-   cx="62.700001"
-   cy="38.900002"
-   r="3.9000001"
-   id="circle14178"
-   style="fill:#808080" />
-
-		<circle
-   cx="62.700001"
-   cy="38.900002"
-   r="1.9"
-   id="circle14180"
-   style="fill:#cccccc" />
-
-	</g>
-    <rect
-       width="55"
-       height="1"
-       x="-1310.2726"
-       y="559.80334"
-       transform="scale(-1,1)"
-       id="rect14182" />
-    <rect
-       width="55"
-       height="1"
-       x="-1310.2726"
-       y="587.80334"
-       transform="scale(-1,1)"
-       id="rect14184" />
-    <path
-       d="m 1253.2726,572.80335 v 7 h -21.6 c 0,0 2.2,-4 6,-7 h 15.6 z"
-       id="path14186"
-       style="fill:#73ddff" />
-    <polyline
-       transform="matrix(-1,0,0,1,1310.2726,559.80335)"
-       id="polyline14188"
-       points="73,13 72.3,13 78.3,20 79,20  "
-       style="opacity:0.7" />
-  </g>
-  <g
      transform="matrix(0.7627926,0,0,0.7627926,1609.1005,470.72194)"
      id="g10148">
     <rect
@@ -13967,7 +14036,7 @@
        id="rect10164"
        style="fill:#ffffff" />
     <polygon
-       points="9,47 246.5,47.7 246.1,173.6 18.6,172.9 18.7,133.1 8.7,130.1 "
+       points="246.5,47.7 246.1,173.6 18.6,172.9 18.7,133.1 8.7,130.1 9,47 "
        id="polygon10166"
        style="fill:#f9f2cf" />
     <rect
@@ -13992,11 +14061,11 @@
        id="rect10172"
        style="fill:#f48478" />
     <polygon
-       points="117.7,131.4 117.7,133 117.7,171.1 119.7,171.1 119.7,133.1 145.7,133.1 145.7,131.1 120,131.1 120,131.1 117.7,131.1 "
+       points="117.7,133 117.7,171.1 119.7,171.1 119.7,133.1 145.7,133.1 145.7,131.1 120,131.1 120,131.1 117.7,131.1 117.7,131.4 "
        id="polygon10174"
        style="opacity:0.2" />
     <polygon
-       points="149.7,131.4 149.7,133 149.7,171.1 151.7,171.1 151.7,133.1 177.7,133.1 177.7,131.1 152,131.1 152,131.1 149.7,131.1 "
+       points="149.7,133 149.7,171.1 151.7,171.1 151.7,133.1 177.7,133.1 177.7,131.1 152,131.1 152,131.1 149.7,131.1 149.7,131.4 "
        id="polygon10176"
        style="opacity:0.2" />
     <rect
@@ -14014,7 +14083,7 @@
        id="rect10180"
        style="opacity:0.32000002;fill:#56523f" />
     <polygon
-       points="231.1,171.1 245.3,171.1 243,150.7 "
+       points="245.3,171.1 243,150.7 231.1,171.1 "
        id="polygon10182"
        style="fill:#f9f2cf" />
     <rect
@@ -14169,7 +14238,7 @@
        id="rect10228"
        style="fill:#ffffff" />
     <polygon
-       points="14.9,49.1 0,49.1 130.4,3.4 262,49.1 "
+       points="0,49.1 130.4,3.4 262,49.1 14.9,49.1 "
        id="polygon10230"
        style="fill:#565656" />
     <rect
@@ -14181,11 +14250,11 @@
        id="rect10232"
        style="fill:#f9f2cf" />
     <polygon
-       points="90.9,23.1 85.8,23.1 130.8,0 176.2,23.1 "
+       points="85.8,23.1 130.8,0 176.2,23.1 90.9,23.1 "
        id="polygon10234"
        style="fill:#666666" />
     <polygon
-       points="181.7,131.4 181.7,133 181.7,171.1 183.7,171.1 183.7,133.1 209.7,133.1 209.7,131.1 184,131.1 184,131.1 181.7,131.1 "
+       points="181.7,133 181.7,171.1 183.7,171.1 183.7,133.1 209.7,133.1 209.7,131.1 184,131.1 184,131.1 181.7,131.1 181.7,131.4 "
        id="polygon10236"
        style="opacity:0.2" />
     <rect
@@ -15366,7 +15435,7 @@
        id="rect10582"
        style="fill:#f48478" />
     <polygon
-       points="26.7,138.8 26.7,140.4 26.7,173.1 28.7,173.1 28.7,140.1 69.7,140.1 69.7,138.1 29,138.1 29,138.1 26.7,138.1 "
+       points="26.7,140.4 26.7,173.1 28.7,173.1 28.7,140.1 69.7,140.1 69.7,138.1 29,138.1 29,138.1 26.7,138.1 26.7,138.8 "
        id="polygon10584"
        style="opacity:0.2" />
     <rect

@@ -225,7 +225,7 @@ function ( $q, Tween )
 			.animate({transform: 'translate(-2200,0)'},10000, mina.easeinout)
 			.animate({transform: 'translate(-2600,0)'},7500, mina.easeinout)
 			.action(function(){
-				cloud_right.attr({transform: 'translate(0,0)'});
+				objects.cloud_right.attr({transform: 'translate(0,0)'});
 			})
 		;
 
@@ -274,17 +274,18 @@ function ( $q, Tween )
 		;
 
 		Tween.get(objects.buss)
+			.animate({transform: 'translate(0,0)'}, 2500, mina.linear)
 			.animate({transform: 'translate(-200,0)'}, 3000, mina.easeinout)
 			.animate({transform: 'translate(-200,0)'}, 500, mina.linear)
 			.animate({transform: 'translate(-400,0)'}, 4000, mina.easeinout)
 			.animate({transform: 'translate(-400,0)'}, 500, mina.linear)
-			.animate({transform: 'translate(-800,0)'}, 5000, mina.easeinout)
-			.animate({transform: 'translate(2000,0) scale(-1, 1)'}, 2000, mina.easeinout)
-			.animate({transform: 'translate(2000,0) scale(-1, 1)'}, 2500, mina.linear)
-			.animate({transform: 'translate(2400,0) scale(-1, 1)'}, 5000, mina.easeinout)
-			.animate({transform: 'translate(3000,0) scale(-1, 1)'}, 4000, mina.easeinout)
-			.animate({transform: 'translate(3200,0) scale(-1, 1)'}, 1000, mina.easeinout)
-			.animate({transform: 'translate(800,0) scale(1, 1)'}, 1000, mina.easeinout)
+			.animate({transform: 'matrix(0.8660254,0.5,-0.5,0.8660254,-24.308937,-698.29248)'}, 5000, mina.easeinout)
+			.animate({transform: 'matrix(0.94967542,0.31323569,-0.31323569,0.94967542,-374.13056,-520.01597)'}, 5000, mina.easeinout)
+			.animate({transform: 'matrix(0.98814356,0.15353273,-0.15353273,0.98814356,-656.74677,-340.16701)'}, 2000, mina.easeinout)
+			.animate({transform: 'translate(-897,-131)'}, 2500, mina.linear)
+			.action(function(){
+				objects.buss.attr({transform: 'translate(0,0)'});
+			})
 		;
 	};
 
