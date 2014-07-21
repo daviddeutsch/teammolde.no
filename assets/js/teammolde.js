@@ -171,12 +171,13 @@ function ( $q, $http )
 teammoldeApp
 .service('bgSVG',
 [
-'$q',
-function ( $q )
+'$q', 'Tween',
+function ( $q, Tween )
 {
 	var s,
 		cloud_left,
 		cloud_right,
+		personbil,
 		self = this;
 
 	this.init = function() {
@@ -193,6 +194,8 @@ function ( $q )
 			cloud_left.attr({transform: 'translate(400,0)'});
 			cloud_right.attr({transform: 'translate(-400,0)'});
 
+			personbil = Snap(s).select('#personbil');
+
 			deferred.resolve();
 		});
 
@@ -200,26 +203,124 @@ function ( $q )
 	};
 
 	this.cloudcycle = function() {
-		cloud_left.animate({transform: 'translate(2600,0)'},40000, mina.linear);
+		Tween.get(cloud_left)
+			.animate({transform: 'translate(2600,0)'},40000, mina.linear)
+			.action(function(){
+				cloud_left.attr({transform: 'translate(0,0)'});
+			});
 
-		cloud_right.animate({transform: 'translate(-2600,0)'},40000, mina.linear, function(){self.cloudrecycle()});
+		Tween.get(cloud_right)
+			.animate({transform: 'translate(-2600,0)'},40000, mina.linear)
+			.action(function(){
+				cloud_right.attr({transform: 'translate(0,0)'});
+			});
 	};
 
-	this.cloudrecycle = function() {
-		cloud_left.attr({transform: 'translate(0,0)'});
-		cloud_right.attr({transform: 'translate(0,0)'});
-
-		this.cloudcycle();
+	// Range: 1700
+	this.personbilcycle = function() {
+		Tween.get(personbil)
+			.animate({transform: 'translate(700,0)'},2000, mina.easeinout)
+			.animate({transform: 'translate(700,0)'},500, mina.linear)
+			.animate({transform: 'translate(900,0)'},4000, mina.easeinout)
+			.animate({transform: 'translate(900,0)'},500, mina.linear)
+			.animate({transform: 'translate(1300,0)'},5000, mina.easeinout)
+			.animate({transform: 'translate(1300,0)'},500, mina.linear)
+			.animate({transform: 'translate(1700,0)'},5000, mina.easeinout)
+			.action(function(){
+				personbil.attr({transform: 'translate(0,0)'});
+			});
 	};
 
 	this.go = function() {
 		this.cloudcycle();
+		this.personbilcycle();
 	};
 
 	this.blur = function( blur ) {
 		s.attr({
 			filter: blur ? f : null
 		});
+	};
+}
+]
+);
+
+teammoldeApp
+.service('Tween',
+[
+'$q',
+function ( $q )
+{
+	var tween = function( element ) {
+		var el = element,
+			queue = [],
+			pointer = -1,
+			self = this,
+			run = false;
+
+		self.start = function() {
+			run = true;
+
+			self.next();
+		};
+
+		self.next = function() {
+			if ( pointer < queue.length-1 ) {
+				pointer++;
+			} else {
+				pointer = 0;
+			}
+
+			var step = queue[pointer];
+
+			if ( step.type == 'animation' ) {
+				el.animate(
+					step.ops,
+					step.duration,
+					step.easing,
+					function() {
+						self.next();
+					}
+				);
+			} else {
+				step.action();
+
+				self.next();
+			}
+		};
+
+		self.animate = function( ops, duration, easing ) {
+			return self.enqueue(
+				{
+					type: 'animation',
+					ops: ops,
+					duration: duration,
+					easing: easing
+				}
+			);
+		};
+
+		self.action = function( callback ) {
+			return self.enqueue(
+				{
+					type: 'action',
+					action: callback
+				}
+			);
+		};
+
+		self.enqueue = function( object )
+		{
+			queue.push(object);
+
+			if ( run == false ) self.start();
+
+			return self;
+		}
+	};
+
+	this.get = function( el ) {
+		return new tween(el);
 	};
 }
 ]
