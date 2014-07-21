@@ -45,7 +45,7 @@ function ($stateProvider, $urlRouterProvider, $sceProvider)
 			url: '/larere',
 			views: {
 				"main": {
-					templateUrl: '/partials/larere.html'
+					templateUrl: '/partials/laerere.html'
 				},
 				"header": {
 					templateUrl: '/partials/header.html'
