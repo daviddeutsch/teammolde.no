@@ -121,6 +121,9 @@ teammoldeApp
 [
 '$scope', 'bgSVG',
 function($scope, bgSVG) {
+	bgSVG.init().then(function(){
+		bgSVG.go();
+	});
 }
 ]
 );
@@ -171,12 +174,30 @@ teammoldeApp
 '$q',
 function ( $q )
 {
-	var s = Snap("#background");
-	//var f = x.filter(Snap.filter.blur(6, 3));
+	var s;
 
-	Snap.load("assets/svg/background.svg", function (f) {
-		s.append(f);
-	});
+	this.init = function() {
+		var deferred = $q.defer();
+
+		s = Snap("#background");
+
+		Snap.load("assets/svg/background.svg", function (f) {
+			s.append(f);
+
+			deferred.resolve();
+		});
+
+		return deferred.promise;
+	};
+
+	this.go = function() {
+		var cloud_left = Snap(s).select('#cloud-left'),
+			cloud_right = Snap(s).select('#cloud-right');
+
+		cloud_left.animate({transform: 'translate(1000,0)'},20000, mina.easeinout);
+
+		cloud_right.animate({transform: 'translate(-1000,0)'},20000, mina.easeinout);
+	};
 
 	this.blur = function( blur ) {
 		s.attr({
