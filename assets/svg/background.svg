@@ -13,7 +13,17 @@
    height="2000"
    id="svg9305">
   <defs
-     id="defs9307" />
+     id="defs9307">
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</defs>
   <metadata
      id="metadata9310">
     <rdf:RDF>
@@ -16452,23 +16462,22 @@
      id="rect14098"
      style="opacity:0.3" />
   <g
-     transform="translate(1340.616,559.80335)"
-     id="g14148">
-	<rect
-   width="55"
-   height="29"
-   x="0"
-   y="0"
-   id="rect14150"
-   style="fill:#ffffff" />
-
-	<path
-   d="M 55.5,10.5 C 56,10 56.8,10 56.8,10 h 13.3 c 0,0 0.4,0 1.1,0.3 0.8,0.3 1.1,0.5 1.1,0.5 l 3.1,2.2 h -2.2 l 6,7.4 c 0,0 0.4,0.4 0.6,1.3 0.3,1.1 0.1,1.8 0.1,1.8 v 13.8 c 0,0 0.1,0.5 -0.4,1.2 C 79.2,39 78.3,39 78.3,39 h -22 -54 C 2.3,39 1.6,39.3 0.8,38.5 0.1,37.8 0,37.2 0,37.2 V 29 H 55 V 12 c 0,0 0,-1 0.5,-1.5 z"
-   id="path14152"
-   style="fill:#188619" />
-
-	<g
-   id="g14154">
+     id="lett-lastebil">
+    <rect
+       width="55"
+       height="29"
+       x="-1310.2726"
+       y="559.80334"
+       transform="scale(-1,1)"
+       id="rect14150"
+       style="fill:#ffffff" />
+    <path
+       d="m 1254.7726,570.30335 c -0.5,-0.5 -1.3,-0.5 -1.3,-0.5 h -13.3 c 0,0 -0.4,0 -1.1,0.3 -0.8,0.3 -1.1,0.5 -1.1,0.5 l -3.1,2.2 h 2.2 l -6,7.4 c 0,0 -0.4,0.4 -0.6,1.3 -0.3,1.1 -0.1,1.8 -0.1,1.8 v 13.8 c 0,0 -0.1,0.5 0.4,1.2 0.3,0.5 1.2,0.5 1.2,0.5 h 22 54 c 0,0 0.7,0.3 1.5,-0.5 0.7,-0.7 0.8,-1.3 0.8,-1.3 v -8.2 h -55 v -17 c 0,0 0,-1 -0.5,-1.5 z"
+       id="path14152"
+       style="fill:#188619" />
+    <g
+       transform="matrix(-1,0,0,1,1310.2726,559.80335)"
+       id="g14154">
 		<defs
    id="defs14156">
   <path
@@ -16506,9 +16515,9 @@
    style="fill:#335e66" />
 
 	</g>
-
-	<g
-   id="g14166">
+    <g
+       transform="matrix(-1,0,0,1,1310.2726,559.80335)"
+       id="g14166">
 		<circle
    cx="12.7"
    cy="38.900002"
@@ -16531,9 +16540,9 @@
    style="fill:#cccccc" />
 
 	</g>
-
-	<g
-   id="g14174">
+    <g
+       transform="matrix(-1,0,0,1,1310.2726,559.80335)"
+       id="g14174">
 		<circle
    cx="62.700001"
    cy="38.900002"
@@ -16556,32 +16565,30 @@
    style="fill:#cccccc" />
 
 	</g>
-
-	<rect
-   width="55"
-   height="1"
-   x="0"
-   y="0"
-   id="rect14182" />
-
-	<rect
-   width="55"
-   height="1"
-   x="0"
-   y="28"
-   id="rect14184" />
-
-	<path
-   d="m 57,13 v 7 h 21.6 c 0,0 -2.2,-4 -6,-7 H 57 z"
-   id="path14186"
-   style="fill:#73ddff" />
-
-	<polyline
-   id="polyline14188"
-   points="73,13 72.3,13 78.3,20 79,20  "
-   style="opacity:0.7" />
-
-</g>
+    <rect
+       width="55"
+       height="1"
+       x="-1310.2726"
+       y="559.80334"
+       transform="scale(-1,1)"
+       id="rect14182" />
+    <rect
+       width="55"
+       height="1"
+       x="-1310.2726"
+       y="587.80334"
+       transform="scale(-1,1)"
+       id="rect14184" />
+    <path
+       d="m 1253.2726,572.80335 v 7 h -21.6 c 0,0 2.2,-4 6,-7 h 15.6 z"
+       id="path14186"
+       style="fill:#73ddff" />
+    <polyline
+       transform="matrix(-1,0,0,1,1310.2726,559.80335)"
+       id="polyline14188"
+       points="73,13 72.3,13 78.3,20 79,20  "
+       style="opacity:0.7" />
+  </g>
   <g
      transform="translate(1472.0819,555.11363)"
      id="g14219">

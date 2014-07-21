@@ -178,6 +178,7 @@ function ( $q, Tween )
 		cloud_left,
 		cloud_right,
 		personbil,
+		lett_lastebil,
 		self = this;
 
 	this.init = function() {
@@ -196,13 +197,15 @@ function ( $q, Tween )
 
 			personbil = Snap(s).select('#personbil');
 
+			lett_lastebil = Snap(s).select('#lett-lastebil');
+
 			deferred.resolve();
 		});
 
 		return deferred.promise;
 	};
 
-	this.cloudcycle = function() {
+	this.go = function() {
 		Tween.get(cloud_left)
 			.animate({transform: 'translate(600,0)'},10000, mina.easeinout)
 			.animate({transform: 'translate(1000,0)'},7500, mina.easeinout)
@@ -211,7 +214,8 @@ function ( $q, Tween )
 			.animate({transform: 'translate(2600,0)'},7500, mina.easeinout)
 			.action(function(){
 				cloud_left.attr({transform: 'translate(0,0)'});
-			});
+			})
+		;
 
 		Tween.get(cloud_right)
 			.animate({transform: 'translate(-600,0)'},5000, mina.easeinout)
@@ -221,11 +225,9 @@ function ( $q, Tween )
 			.animate({transform: 'translate(-2600,0)'},7500, mina.easeinout)
 			.action(function(){
 				cloud_right.attr({transform: 'translate(0,0)'});
-			});
-	};
+			})
+		;
 
-	// Range: 1700
-	this.personbilcycle = function() {
 		Tween.get(personbil)
 			.animate({transform: 'translate(700,0)'}, 2000, mina.easeinout)
 			.animate({transform: 'translate(700,0)'}, 500, mina.linear)
@@ -241,11 +243,20 @@ function ( $q, Tween )
 			.animate({transform: 'translate(250,0) scale(-1, 1)'}, 1000, mina.easeinout)
 			.animate({transform: 'translate(0,0) scale(1, 1)'}, 1000, mina.easeinout)
 		;
-	};
 
-	this.go = function() {
-		this.cloudcycle();
-		this.personbilcycle();
+		Tween.get(lett_lastebil)
+			.animate({transform: 'translate(-200,0)'}, 3000, mina.easeinout)
+			.animate({transform: 'translate(-200,0)'}, 500, mina.linear)
+			.animate({transform: 'translate(-400,0)'}, 4000, mina.easeinout)
+			.animate({transform: 'translate(-400,0)'}, 500, mina.linear)
+			.animate({transform: 'translate(-800,0)'}, 5000, mina.easeinout)
+			.animate({transform: 'translate(2000,0) scale(-1, 1)'}, 2000, mina.easeinout)
+			.animate({transform: 'translate(2000,0) scale(-1, 1)'}, 2500, mina.linear)
+			.animate({transform: 'translate(2400,0) scale(-1, 1)'}, 5000, mina.easeinout)
+			.animate({transform: 'translate(3000,0) scale(-1, 1)'}, 4000, mina.easeinout)
+			.animate({transform: 'translate(3200,0) scale(-1, 1)'}, 1000, mina.easeinout)
+			.animate({transform: 'translate(800,0) scale(1, 1)'}, 1000, mina.easeinout)
+		;
 	};
 
 	this.blur = function( blur ) {
