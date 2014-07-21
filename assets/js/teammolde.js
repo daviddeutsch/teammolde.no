@@ -174,7 +174,10 @@ teammoldeApp
 '$q',
 function ( $q )
 {
-	var s;
+	var s,
+		cloud_left,
+		cloud_right,
+		self = this;
 
 	this.init = function() {
 		var deferred = $q.defer();
@@ -184,19 +187,30 @@ function ( $q )
 		Snap.load("assets/svg/background.svg", function (f) {
 			s.append(f);
 
+			cloud_left = Snap(s).select('#cloud-left');
+			cloud_right = Snap(s).select('#cloud-right');
+
 			deferred.resolve();
 		});
 
 		return deferred.promise;
 	};
 
+	this.cloudcycle = function() {
+		cloud_left.animate({transform: 'translate(2600,0)'},20000, mina.linear);
+
+		cloud_right.animate({transform: 'translate(-2600,0)'},20000, mina.linear, function(){self.cloudrecycle()});
+	};
+
+	this.cloudrecycle = function() {
+		cloud_left.attr({transform: 'translate(0,0)'});
+		cloud_right.attr({transform: 'translate(0,0)'});
+
+		this.cloudcycle();
+	};
+
 	this.go = function() {
-		var cloud_left = Snap(s).select('#cloud-left'),
-			cloud_right = Snap(s).select('#cloud-right');
-
-		cloud_left.animate({transform: 'translate(1000,0)'},20000, mina.easeinout);
-
-		cloud_right.animate({transform: 'translate(-1000,0)'},20000, mina.easeinout);
+		this.cloudcycle();
 	};
 
 	this.blur = function( blur ) {
