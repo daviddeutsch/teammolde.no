@@ -204,13 +204,21 @@ function ( $q, Tween )
 
 	this.cloudcycle = function() {
 		Tween.get(cloud_left)
-			.animate({transform: 'translate(2600,0)'},40000, mina.linear)
+			.animate({transform: 'translate(600,0)'},10000, mina.easeinout)
+			.animate({transform: 'translate(1000,0)'},7500, mina.easeinout)
+			.animate({transform: 'translate(1800,0)'},7500, mina.easeinout)
+			.animate({transform: 'translate(2200,0)'},7500, mina.easeinout)
+			.animate({transform: 'translate(2600,0)'},7500, mina.easeinout)
 			.action(function(){
 				cloud_left.attr({transform: 'translate(0,0)'});
 			});
 
 		Tween.get(cloud_right)
-			.animate({transform: 'translate(-2600,0)'},40000, mina.linear)
+			.animate({transform: 'translate(-600,0)'},5000, mina.easeinout)
+			.animate({transform: 'translate(-1000,0)'},10000, mina.easeinout)
+			.animate({transform: 'translate(-1500,0)'},7500, mina.easeinout)
+			.animate({transform: 'translate(-2200,0)'},10000, mina.easeinout)
+			.animate({transform: 'translate(-2600,0)'},7500, mina.easeinout)
 			.action(function(){
 				cloud_right.attr({transform: 'translate(0,0)'});
 			});
@@ -219,16 +227,20 @@ function ( $q, Tween )
 	// Range: 1700
 	this.personbilcycle = function() {
 		Tween.get(personbil)
-			.animate({transform: 'translate(700,0)'},2000, mina.easeinout)
-			.animate({transform: 'translate(700,0)'},500, mina.linear)
-			.animate({transform: 'translate(900,0)'},4000, mina.easeinout)
-			.animate({transform: 'translate(900,0)'},500, mina.linear)
-			.animate({transform: 'translate(1300,0)'},5000, mina.easeinout)
-			.animate({transform: 'translate(1300,0)'},500, mina.linear)
-			.animate({transform: 'translate(1700,0)'},5000, mina.easeinout)
-			.action(function(){
-				personbil.attr({transform: 'translate(0,0)'});
-			});
+			.animate({transform: 'translate(700,0)'}, 2000, mina.easeinout)
+			.animate({transform: 'translate(700,0)'}, 500, mina.linear)
+			.animate({transform: 'translate(900,0)'}, 4000, mina.easeinout)
+			.animate({transform: 'translate(900,0)'}, 500, mina.linear)
+			.animate({transform: 'translate(1300,0)'}, 5000, mina.easeinout)
+			.animate({transform: 'translate(1300,0)'}, 500, mina.linear)
+			.animate({transform: 'translate(1600,0)'}, 5000, mina.easeinout)
+			.animate({transform: 'translate(1850,0) scale(-1, 1)'}, 1000, mina.easeinout)
+			.animate({transform: 'translate(1600,0) scale(-1, 1)'}, 2500, mina.linear)
+			.animate({transform: 'translate(1300,0) scale(-1, 1)'}, 5000, mina.easeinout)
+			.animate({transform: 'translate(700,0) scale(-1, 1)'}, 4000, mina.easeinout)
+			.animate({transform: 'translate(250,0) scale(-1, 1)'}, 1000, mina.easeinout)
+			.animate({transform: 'translate(0,0) scale(1, 1)'}, 1000, mina.easeinout)
+		;
 	};
 
 	this.go = function() {
