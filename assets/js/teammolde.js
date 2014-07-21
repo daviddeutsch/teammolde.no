@@ -190,6 +190,9 @@ function ( $q )
 			cloud_left = Snap(s).select('#cloud-left');
 			cloud_right = Snap(s).select('#cloud-right');
 
+			cloud_left.attr({transform: 'translate(400,0)'});
+			cloud_right.attr({transform: 'translate(-400,0)'});
+
 			deferred.resolve();
 		});
 
@@ -197,9 +200,9 @@ function ( $q )
 	};
 
 	this.cloudcycle = function() {
-		cloud_left.animate({transform: 'translate(2600,0)'},20000, mina.linear);
+		cloud_left.animate({transform: 'translate(2600,0)'},40000, mina.linear);
 
-		cloud_right.animate({transform: 'translate(-2600,0)'},20000, mina.linear, function(){self.cloudrecycle()});
+		cloud_right.animate({transform: 'translate(-2600,0)'},40000, mina.linear, function(){self.cloudrecycle()});
 	};
 
 	this.cloudrecycle = function() {
