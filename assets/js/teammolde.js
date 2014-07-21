@@ -179,58 +179,44 @@ function ( $q, Tween )
 		self = this;
 
 	this.init = function() {
-		var deferred = $q.defer();
+		Tween.setRoot('#background');
 
-		s = Snap("#background");
-
-		Snap.load("assets/svg/background.svg", function (f) {
-			s.append(f);
-
-			objects.cloud_left = Snap(s).select('#cloud-left');
-			objects.cloud_right = Snap(s).select('#cloud-right');
-
-			objects.cloud_left.attr({transform: 'translate(400,0)'});
-			objects.cloud_right.attr({transform: 'translate(-400,0)'});
-
-			objects.personbil = Snap(s).select('#personbil');
-
-			objects.lett_lastebil = Snap(s).select('#lett-lastebil');
-
-			objects.lastebil = Snap(s).select('#lastebil');
-
-			objects.buss = Snap(s).select('#buss');
-
-			deferred.resolve();
-		});
-
-		return deferred.promise;
+		return Tween.load('assets/svg/background.svg');
 	};
 
 	this.go = function() {
-		Tween.get(objects.cloud_left)
-			.animate({transform: 'translate(600,0)'},10000, mina.easeinout)
-			.animate({transform: 'translate(1000,0)'},7500, mina.easeinout)
-			.animate({transform: 'translate(1800,0)'},7500, mina.easeinout)
-			.animate({transform: 'translate(2200,0)'},7500, mina.easeinout)
-			.animate({transform: 'translate(2600,0)'},7500, mina.easeinout)
-			.action(function(){
-				objects.cloud_left.attr({transform: 'translate(0,0)'});
-			})
+		Tween.get('#cloud-left')
+			.animate({transform: 'translate(400,0)'}, 500, mina.easeinout)
+			.animate({transform: 'translate(600,0)'}, 10000, mina.easeinout)
+			.animate({transform: 'translate(1000,0)'}, 7500, mina.easeinout)
+			.animate({transform: 'translate(1800,0)'}, 7500, mina.easeinout)
+			.animate({transform: 'translate(2200,0)'}, 7500, mina.easeinout)
+			.animate({transform: 'translate(2600,0)'}, 7500, mina.easeinout)
+			.animate({transform: 'translate(2200,0)'}, 7500, mina.easeinout)
+			.animate({transform: 'translate(1800,0)'}, 7500, mina.easeinout)
+			.animate({transform: 'translate(1000,0)'}, 7500, mina.easeinout)
+			.animate({transform: 'translate(600,0)'}, 10000, mina.easeinout)
+			.animate({transform: 'translate(0,0)'}, 2000, mina.easeinout)
+			.hover()
 		;
 
-		Tween.get(objects.cloud_right)
-			.animate({transform: 'translate(-600,0)'},5000, mina.easeinout)
-			.animate({transform: 'translate(-1000,0)'},10000, mina.easeinout)
-			.animate({transform: 'translate(-1500,0)'},7500, mina.easeinout)
-			.animate({transform: 'translate(-2200,0)'},10000, mina.easeinout)
-			.animate({transform: 'translate(-2600,0)'},7500, mina.easeinout)
-			.action(function(){
-				objects.cloud_right.attr({transform: 'translate(0,0)'});
-			})
+		Tween.get('#cloud-right')
+			.animate({transform: 'translate(-400,0)'}, 500, mina.easeinout)
+			.animate({transform: 'translate(-600,0)'}, 5000, mina.easeinout)
+			.animate({transform: 'translate(-1000,0)'}, 10000, mina.easeinout)
+			.animate({transform: 'translate(-1500,0)'}, 7500, mina.easeinout)
+			.animate({transform: 'translate(-2200,0)'}, 10000, mina.easeinout)
+			.animate({transform: 'translate(-2600,0)'}, 7500, mina.easeinout)
+			.animate({transform: 'translate(-2200,0)'}, 10000, mina.easeinout)
+			.animate({transform: 'translate(-1500,0)'}, 7500, mina.easeinout)
+			.animate({transform: 'translate(-1000,0)'}, 10000, mina.easeinout)
+			.animate({transform: 'translate(-600,0)'}, 5000, mina.easeinout)
+			.animate({transform: 'translate(0,0)'}, 2000, mina.easeinout)
+			.hover()
 		;
 
-		Tween.get(objects.personbil)
-			.animate({transform: 'translate(700,0)'}, 2000, mina.easeinout)
+		Tween.get('#personbil')
+			.animate({transform: 'translate(700,0)'}, 3000, mina.easeinout)
 			.animate({transform: 'translate(700,0)'}, 500, mina.linear)
 			.animate({transform: 'translate(900,0)'}, 4000, mina.easeinout)
 			.animate({transform: 'translate(900,0)'}, 500, mina.linear)
@@ -243,9 +229,19 @@ function ( $q, Tween )
 			.animate({transform: 'translate(700,0) scale(-1, 1)'}, 4000, mina.easeinout)
 			.animate({transform: 'translate(250,0) scale(-1, 1)'}, 1000, mina.easeinout)
 			.animate({transform: 'translate(0,0) scale(1, 1)'}, 1000, mina.easeinout)
+			.hover()
 		;
 
-		Tween.get(objects.lett_lastebil)
+		var lettlastebil_text = Tween.get('#lett-lastebil text')
+			.animate({transform: 'translate(0,0)'}, 14000, mina.linear)
+			.animate({transform: 'translate(1640,0) scale(-1, 1)'}, 10, mina.linear)
+			.animate({transform: 'translate(1640,0) scale(-1, 1)'}, 14000, mina.linear)
+			.animate({transform: 'translate(0,0) scale(1, 1)'}, 10, mina.linear)
+			.animate({transform: 'translate(0,0) scale(1, 1)'}, 1000, mina.linear)
+		;
+
+		Tween.get('#lett-lastebil')
+			.sub(lettlastebil_text)
 			.animate({transform: 'translate(-200,0)'}, 3000, mina.easeinout)
 			.animate({transform: 'translate(-200,0)'}, 500, mina.linear)
 			.animate({transform: 'translate(-400,0)'}, 4000, mina.easeinout)
@@ -257,27 +253,32 @@ function ( $q, Tween )
 			.animate({transform: 'translate(3000,0) scale(-1, 1)'}, 4000, mina.easeinout)
 			.animate({transform: 'translate(3200,0) scale(-1, 1)'}, 1000, mina.easeinout)
 			.animate({transform: 'translate(800,0) scale(1, 1)'}, 1000, mina.easeinout)
+			.hover()
 		;
 
-		Tween.get(objects.lastebil)
+		var lastebil_text = Tween.get('#lastebil text')
+			.animate({transform: 'translate(0,0)'}, 13100, mina.linear)
+			.animate({transform: 'translate(1640,0) scale(-1, 1)'}, 10, mina.linear)
+			.animate({transform: 'translate(1640,0) scale(-1, 1)'}, 14000, mina.linear)
+			.animate({transform: 'translate(0,0) scale(1, 1)'}, 10, mina.linear)
+			.animate({transform: 'translate(0,0) scale(1, 1)'}, 1000, mina.linear)
+		;
+
+		Tween.get('#lastebil')
+			.sub(lastebil_text)
 			.animate({transform: 'translate(-200,0)'}, 3000, mina.easeinout)
 			.animate({transform: 'translate(-200,0)'}, 100, mina.linear)
 			.animate({transform: 'translate(-800,0)'}, 9000, mina.easeinout)
 			.animate({transform: 'translate(2000,0) scale(-1, 1)'}, 2000, mina.easeinout)
-			.action(function(){
-				Snap(s).select('#lastebil text').attr({transform:'translate(1640,0) scale(-1, 1)'});
-			})
 			.animate({transform: 'translate(2000,0) scale(-1, 1)'}, 2500, mina.linear)
 			.animate({transform: 'translate(2400,0) scale(-1, 1)'}, 5000, mina.easeinout)
 			.animate({transform: 'translate(3000,0) scale(-1, 1)'}, 4000, mina.easeinout)
 			.animate({transform: 'translate(3200,0) scale(-1, 1)'}, 1000, mina.easeinout)
-			.action(function(){
-				Snap(s).select('#lastebil text').attr({transform:'translate(0,0) scale(1, 1)'});
-			})
 			.animate({transform: 'translate(800,0) scale(1, 1)'}, 1000, mina.easeinout)
+			.hover()
 		;
 
-		Tween.get(objects.buss)
+		Tween.get('#buss')
 			.animate({transform: 'translate(0,0)'}, 2500, mina.linear)
 			.animate({transform: 'translate(-200,0)'}, 3000, mina.easeinout)
 			.animate({transform: 'translate(-200,0)'}, 500, mina.linear)
@@ -290,6 +291,7 @@ function ( $q, Tween )
 			.action(function(){
 				objects.buss.attr({transform: 'translate(0,0)'});
 			})
+			.hover()
 		;
 	};
 
@@ -308,12 +310,16 @@ teammoldeApp
 '$q',
 function ( $q )
 {
+	var root;
+
 	var tween = function( element ) {
-		var el = element,
-			queue = [],
+		var queue = [],
 			pointer = -1,
 			self = this,
-			run = false;
+			run = false,
+			sub = [];
+
+		self.el = element;
 
 		self.start = function() {
 			run = true;
@@ -331,19 +337,60 @@ function ( $q )
 			var step = queue[pointer];
 
 			if ( step.type == 'animation' ) {
-				el.animate(
-					step.ops,
-					step.duration,
-					step.easing,
-					function() {
-						self.next();
-					}
+				self.el.animate(
+					step.ops, step.duration, step.easing, function(){self.next();}
 				);
 			} else {
 				step.action();
 
 				self.next();
 			}
+		};
+
+		self.sub = function( el ) {
+			sub.push(el);
+
+			return self;
+		};
+
+		self.getAnims = function() {
+			var animations = [];
+
+			angular.forEach(self.el.anims, function(anim){
+				animations.push(anim);
+			});
+
+			if ( sub.length ) {
+				angular.forEach(sub, function(sub_el){
+					angular.forEach(sub_el.el.anims, function(anim){
+						animations.push(anim);
+					});
+				});
+			}
+
+			return animations;
+		};
+
+		self.hover = function()
+		{
+			self.el.hover(
+				function() {
+					var animations = self.getAnims();
+
+					for (var k in animations) {
+						if (animations.hasOwnProperty(k)) animations[k].pause();
+					}
+				},
+				function() {
+					var animations = self.getAnims();
+
+					for (var k in animations) {
+						if (animations.hasOwnProperty(k)) animations[k].resume();
+					}
+				}
+			);
+
+			return self;
 		};
 
 		self.animate = function( ops, duration, easing ) {
@@ -373,10 +420,31 @@ function ( $q )
 			if ( run == false ) self.start();
 
 			return self;
-		}
+		};
+	};
+
+	this.setRoot = function( newroot ) {
+		root = newroot;
+	};
+
+	this.load = function( path )
+	{
+		var deferred = $q.defer();
+
+		Snap.load(path, function (f) {
+			Snap(root).append(f);
+
+			deferred.resolve();
+		});
+
+		return deferred.promise;
 	};
 
 	this.get = function( el ) {
+		if ( typeof el === 'string' ) {
+			el = Snap(root).select(el);
+		}
+
 		return new tween(el);
 	};
 }
