@@ -264,10 +264,16 @@ function ( $q, Tween )
 			.animate({transform: 'translate(-200,0)'}, 100, mina.linear)
 			.animate({transform: 'translate(-800,0)'}, 9000, mina.easeinout)
 			.animate({transform: 'translate(2000,0) scale(-1, 1)'}, 2000, mina.easeinout)
+			.action(function(){
+				Snap(s).select('#lastebil text').attr({transform:'translate(1640,0) scale(-1, 1)'});
+			})
 			.animate({transform: 'translate(2000,0) scale(-1, 1)'}, 2500, mina.linear)
 			.animate({transform: 'translate(2400,0) scale(-1, 1)'}, 5000, mina.easeinout)
 			.animate({transform: 'translate(3000,0) scale(-1, 1)'}, 4000, mina.easeinout)
 			.animate({transform: 'translate(3200,0) scale(-1, 1)'}, 1000, mina.easeinout)
+			.action(function(){
+				Snap(s).select('#lastebil text').attr({transform:'translate(0,0) scale(1, 1)'});
+			})
 			.animate({transform: 'translate(800,0) scale(1, 1)'}, 1000, mina.easeinout)
 		;
 
