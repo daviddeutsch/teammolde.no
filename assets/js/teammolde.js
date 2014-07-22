@@ -293,8 +293,8 @@ function ( $q, Tween )
 			.animate({transform: 'matrix(0.94967542,0.31323569,-0.31323569,0.94967542,-374.13056,-520.01597)'}, 5000, mina.linear)
 			.animate({transform: 'matrix(0.98814356,0.15353273,-0.15353273,0.98814356,-656.74677,-340.16701)'}, 2500, mina.linear)
 			.animate({transform: 'translate(-897,-131)'}, 2500, mina.linear)
-			.action(function(){
-				objects.buss.attr({transform: 'translate(0,0)'});
+			.action(function(element){
+				element.attr({transform: 'translate(0,0)'});
 			})
 			.hover()
 		;
