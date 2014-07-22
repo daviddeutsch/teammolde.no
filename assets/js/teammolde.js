@@ -192,11 +192,9 @@ function ( $q, Tween )
 			.animate({transform: 'translate(1800,0)'}, 7500, mina.easeinout)
 			.animate({transform: 'translate(2200,0)'}, 7500, mina.easeinout)
 			.animate({transform: 'translate(2600,0)'}, 7500, mina.easeinout)
-			.animate({transform: 'translate(2200,0)'}, 7500, mina.easeinout)
-			.animate({transform: 'translate(1800,0)'}, 7500, mina.easeinout)
-			.animate({transform: 'translate(1000,0)'}, 7500, mina.easeinout)
-			.animate({transform: 'translate(600,0)'}, 10000, mina.easeinout)
-			.animate({transform: 'translate(0,0)'}, 2000, mina.easeinout)
+			.action(function(element){
+				element.attr({transform: 'translate(0,0)'});
+			})
 			.hover()
 		;
 
@@ -207,18 +205,16 @@ function ( $q, Tween )
 			.animate({transform: 'translate(-1500,0)'}, 7500, mina.easeinout)
 			.animate({transform: 'translate(-2200,0)'}, 10000, mina.easeinout)
 			.animate({transform: 'translate(-2600,0)'}, 7500, mina.easeinout)
-			.animate({transform: 'translate(-2200,0)'}, 10000, mina.easeinout)
-			.animate({transform: 'translate(-1500,0)'}, 7500, mina.easeinout)
-			.animate({transform: 'translate(-1000,0)'}, 10000, mina.easeinout)
-			.animate({transform: 'translate(-600,0)'}, 5000, mina.easeinout)
-			.animate({transform: 'translate(0,0)'}, 2000, mina.easeinout)
+			.action(function(element){
+				element.attr({transform: 'translate(0,0)'});
+			})
 			.hover()
 		;
 
 		var personbil_text = Tween.get('#personbil text')
 				.animate({transform: 'translate(0,0)'}, 19400, mina.linear)
 				.animate({transform: 'translate(190,0) scale(-1, 1)'}, 10, mina.linear)
-				.animate({transform: 'translate(190,0) scale(-1, 1)'}, 14390, mina.linear)
+				.animate({transform: 'translate(190,0) scale(-1, 1)'}, 14490, mina.linear)
 				.animate({transform: 'translate(0,0) scale(1, 1)'}, 10, mina.linear)
 				.animate({transform: 'translate(0,0) scale(1, 1)'}, 1190, mina.linear)
 			;
@@ -259,31 +255,31 @@ function ( $q, Tween )
 			.animate({transform: 'translate(2000,0) scale(-1, 1)'}, 2000, mina.easeinout)
 			.animate({transform: 'translate(2000,0) scale(-1, 1)'}, 2500, mina.linear)
 			.animate({transform: 'translate(2400,0) scale(-1, 1)'}, 5000, mina.easeinout)
-			.animate({transform: 'translate(3000,0) scale(-1, 1)'}, 4000, mina.easeinout)
-			.animate({transform: 'translate(3200,0) scale(-1, 1)'}, 1000, mina.easeinout)
-			.animate({transform: 'translate(800,0) scale(1, 1)'}, 1000, mina.easeinout)
+			.animate({transform: 'translate(2800,0) scale(-1, 1)'}, 4000, mina.easeinout)
+			.animate({transform: 'translate(2800,0) scale(-1, 1)'}, 1000, mina.easeinout)
+			.animate({transform: 'translate(200,0) scale(1, 1)'}, 1000, mina.easeinout)
 			.hover()
 		;
 
 		var lastebil_text = Tween.get('#lastebil text')
 			.animate({transform: 'translate(0,0)'}, 13100, mina.linear)
 			.animate({transform: 'translate(1640,0) scale(-1, 1)'}, 10, mina.linear)
-			.animate({transform: 'translate(1640,0) scale(-1, 1)'}, 13090, mina.linear)
+			.animate({transform: 'translate(1640,0) scale(-1, 1)'}, 14085, mina.linear)
 			.animate({transform: 'translate(0,0) scale(1, 1)'}, 10, mina.linear)
-			.animate({transform: 'translate(0,0) scale(1, 1)'}, 990, mina.linear)
+			.animate({transform: 'translate(0,0) scale(1, 1)'}, 395, mina.linear)
 		;
 
 		Tween.get('#lastebil')
 			.sub(lastebil_text)
 			.animate({transform: 'translate(-200,0)'}, 3000, mina.easeinout)
 			.animate({transform: 'translate(-200,0)'}, 100, mina.linear)
-			.animate({transform: 'translate(-800,0)'}, 9000, mina.easeinout)
+			.animate({transform: 'translate(-1400,0)'}, 9000, mina.easeinout)
 			.animate({transform: 'translate(2000,0) scale(-1, 1)'}, 2000, mina.easeinout)
 			.animate({transform: 'translate(2000,0) scale(-1, 1)'}, 2500, mina.linear)
-			.animate({transform: 'translate(2400,0) scale(-1, 1)'}, 5000, mina.easeinout)
-			.animate({transform: 'translate(3000,0) scale(-1, 1)'}, 4000, mina.easeinout)
-			.animate({transform: 'translate(3200,0) scale(-1, 1)'}, 1000, mina.easeinout)
-			.animate({transform: 'translate(800,0) scale(1, 1)'}, 1000, mina.easeinout)
+			.animate({transform: 'translate(2400,0) scale(-1, 1)'}, 4000, mina.easeinout)
+			.animate({transform: 'translate(2600,0) scale(-1, 1)'}, 3000, mina.easeinout)
+			.animate({transform: 'translate(3200,0) scale(-1, 1)'}, 3000, mina.easeinout)
+			.animate({transform: 'translate(0,0) scale(1, 1)'}, 1000, mina.easeinout)
 			.hover()
 		;
 
@@ -350,7 +346,7 @@ function ( $q )
 					step.ops, step.duration, step.easing, function(){self.next();}
 				);
 			} else {
-				step.action();
+				step.action(self.el);
 
 				self.next();
 			}
