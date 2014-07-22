@@ -6583,6 +6583,7 @@ table.table-hover td:hover {
 }
 #laerere .panel-header h3 {
   font-family: 'Source Sans Pro', sans-serif;
+  font-size: 140%;
   font-weight: 700;
   text-transform: uppercase;
   margin-left: 12px;
