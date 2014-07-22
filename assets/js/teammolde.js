@@ -130,7 +130,7 @@ function ($compile, $rootScope) {
 
 			child_el.removeAttr("href");
 
-			markup = markup.replace(new RegExp('&#8211', 'g'), '-');
+			markup = markup.replace(new RegExp('&#8211;', 'g'), '-');
 
 			markup = markup.replace(search, el.outerHTML);
 		});
