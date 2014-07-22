@@ -122,7 +122,7 @@ teammoldeApp
 function ($compile, $rootScope) {
 	return function ( markup ) {
 		angular.forEach( angular.element('td a', markup), function(el) {
-			var search = el.outerHTML;
+			var search = el.outerHTML.replace(new RegExp('&#8211;', 'g'), '-');
 
 			var child_el = angular.element(el);
 
@@ -132,7 +132,7 @@ function ($compile, $rootScope) {
 
 			markup = markup.replace(new RegExp('&#8211;', 'g'), '-');
 
-			markup = markup.replace(search, el.outerHTML);
+			markup = markup.replace(search, el.outerHTML.replace(new RegExp('&#8211;', 'g'), '-'));
 		});
 
 		return $compile(markup)($rootScope);
