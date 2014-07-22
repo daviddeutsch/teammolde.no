@@ -30,7 +30,7 @@ function ($stateProvider, $urlRouterProvider, $sceProvider)
 		})
 
 		.state('priser', {
-			url: '/priser{/:id}',
+			url: '/priser/:id',
 			views: {
 				"main": {
 					templateUrl: '/partials/priser.html'
