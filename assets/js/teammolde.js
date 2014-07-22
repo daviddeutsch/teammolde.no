@@ -90,7 +90,6 @@ function ($stateProvider, $urlRouterProvider, $sceProvider)
 		})
 
 		.state('kontakt', {
-			abstract: true,
 			url: '/kontakt',
 			views: {
 				"main": {
@@ -119,11 +118,38 @@ function () {
 teammoldeApp
 .controller('homeCtrl',
 [
-'$scope', 'bgSVG',
-function($scope, bgSVG) {
+'$scope', 'bgSVG', '$window',
+function($scope, bgSVG, $window) {
 	bgSVG.init().then(function(){
 		bgSVG.go();
 	});
+
+	var resize = function() {
+		var bg = angular.element('#background');
+
+		if ( $window.innerWidth > 1400 ) {
+			bg.attr('style', 'margin-left: 0' );
+		} else if ( $window.innerWidth < 1400 && $window.innerWidth > 1250 ) {
+			var dim = 1400 - $window.innerWidth;
+
+			bg.attr(
+				'style',
+				'margin-left: -'
+					+ dim + 'px;'
+					+ ' width: ' + ($window.innerWidth+dim-16) + 'px' );
+		} else {
+			bg.attr(
+				'style',
+				'margin-left: -150px;'
+					+ ' width: ' + ($window.innerWidth+134) + 'px' );
+		}
+	};
+
+	angular.element($window).bind("resize", function() {
+		resize();
+	});
+
+	resize();
 }
 ]
 );
