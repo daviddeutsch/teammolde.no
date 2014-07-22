@@ -146,6 +146,16 @@ function($scope, wpData, bgSVG) {
 );
 
 teammoldeApp
+.controller('StdCtrl',
+[
+'bgSVG',
+function(bgSVG) {
+	bgSVG.blur(true);
+}
+]
+);
+
+teammoldeApp
 .service('wpData',
 [
 '$q', '$http',
@@ -180,17 +190,11 @@ function ( $q, Tween )
 		blurred = false;
 
 	this.init = function() {
-		if ( Tween.getRoot() ) {
-			var deferred = $q.defer();
+		Tween.setRoot('#background');
 
-			deferred.reject();
+		angular.element('#background img').remove();
 
-			return deferred.promise;
-		} else {
-			Tween.setRoot('#background');
-
-			return Tween.load('assets/svg/background.svg');
-		}
+		return Tween.load('assets/svg/background.svg');
 	};
 
 	this.go = function() {
@@ -310,7 +314,8 @@ function ( $q, Tween )
 	};
 
 	this.blur = function( blur ) {
-		angular.element('#background svg' ).remove();
+		angular.element('#background svg').remove();
+		angular.element('#background').append('<img src="assets/img/blurredout_2.jpg" alt=""/>');
 	};
 }
 ]
