@@ -116,6 +116,27 @@ function () {
 );
 
 teammoldeApp
+.filter('priserlinker',
+function () {
+	return function ( markup ) {
+		angular.forEach( angular.element('td a', markup), function(el) {
+			var search = el.outerHTML;
+
+			var child_el = angular.element(el);
+
+			child_el.attr('data-ui-sref', '#/priser'+child_el.attr("href"));
+
+			child_el.removeAttr("href");
+
+			markup = markup.replace(search, el.outerHTML);
+		});
+
+		return markup;
+	};
+}
+);
+
+teammoldeApp
 .controller('homeCtrl',
 [
 '$scope', 'bgSVG', '$window',
@@ -157,17 +178,19 @@ function($scope, bgSVG, $window) {
 teammoldeApp
 .controller('PriserCtrl',
 [
-'$scope', 'wpData', 'bgSVG',
-function($scope, wpData, bgSVG) {
+'$scope', 'wpData', '$http', 'bgSVG', 'bstableizerFilter', 'priserlinkerFilter',
+function($scope, wpData, $http, bgSVG, bstableizerFilter, priserlinkerFilter) {
 	$scope.pricelist = '';
 
-	wpData.getPage('priser')
-		.then(function(html) {
-			$scope.pricelist = html;
-
-			angular.forEach( angular.element('#pricelist tr'), function(el){
-				var test = el;
-			});
+	//wpData.getPage('priser')
+	$http.get('partials/priser-static.html')
+		//.then(function(html) {
+		.success(function(html) {
+			$scope.pricelist = priserlinkerFilter(
+				bstableizerFilter(
+					html
+				)
+			);
 		});
 
 	bgSVG.blur(true);
