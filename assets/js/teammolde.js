@@ -186,7 +186,7 @@ function ( $q, Tween )
 
 	this.go = function() {
 		Tween.get('#cloud-left')
-			.animate({transform: 'translate(400,0)'}, 500, mina.easeinout)
+			.animate({transform: 'translate(400,0)'}, 1000, mina.easeinout)
 			.animate({transform: 'translate(600,0)'}, 10000, mina.easeinout)
 			.animate({transform: 'translate(1000,0)'}, 7500, mina.easeinout)
 			.animate({transform: 'translate(1800,0)'}, 7500, mina.easeinout)
@@ -201,7 +201,7 @@ function ( $q, Tween )
 		;
 
 		Tween.get('#cloud-right')
-			.animate({transform: 'translate(-400,0)'}, 500, mina.easeinout)
+			.animate({transform: 'translate(-400,0)'}, 1000, mina.easeinout)
 			.animate({transform: 'translate(-600,0)'}, 5000, mina.easeinout)
 			.animate({transform: 'translate(-1000,0)'}, 10000, mina.easeinout)
 			.animate({transform: 'translate(-1500,0)'}, 7500, mina.easeinout)
@@ -215,7 +215,16 @@ function ( $q, Tween )
 			.hover()
 		;
 
+		var personbil_text = Tween.get('#personbil text')
+				.animate({transform: 'translate(0,0)'}, 19400, mina.linear)
+				.animate({transform: 'translate(190,0) scale(-1, 1)'}, 10, mina.linear)
+				.animate({transform: 'translate(190,0) scale(-1, 1)'}, 14390, mina.linear)
+				.animate({transform: 'translate(0,0) scale(1, 1)'}, 10, mina.linear)
+				.animate({transform: 'translate(0,0) scale(1, 1)'}, 1190, mina.linear)
+			;
+
 		Tween.get('#personbil')
+			.sub(personbil_text)
 			.animate({transform: 'translate(700,0)'}, 3000, mina.easeinout)
 			.animate({transform: 'translate(700,0)'}, 500, mina.linear)
 			.animate({transform: 'translate(900,0)'}, 4000, mina.easeinout)
@@ -227,17 +236,17 @@ function ( $q, Tween )
 			.animate({transform: 'translate(1600,0) scale(-1, 1)'}, 2500, mina.linear)
 			.animate({transform: 'translate(1300,0) scale(-1, 1)'}, 5000, mina.easeinout)
 			.animate({transform: 'translate(700,0) scale(-1, 1)'}, 4000, mina.easeinout)
-			.animate({transform: 'translate(250,0) scale(-1, 1)'}, 1000, mina.easeinout)
-			.animate({transform: 'translate(0,0) scale(1, 1)'}, 1000, mina.easeinout)
+			.animate({transform: 'translate(600,0) scale(-1, 1)'}, 1000, mina.easeinout)
+			.animate({transform: 'translate(450,0) scale(1, 1)'}, 3000, mina.easeinout)
 			.hover()
 		;
 
 		var lettlastebil_text = Tween.get('#lett-lastebil text')
 			.animate({transform: 'translate(0,0)'}, 14000, mina.linear)
-			.animate({transform: 'translate(1640,0) scale(-1, 1)'}, 10, mina.linear)
-			.animate({transform: 'translate(1640,0) scale(-1, 1)'}, 14000, mina.linear)
+			.animate({transform: 'translate(2725,0) scale(-1, 1)'}, 10, mina.linear)
+			.animate({transform: 'translate(2725,0) scale(-1, 1)'}, 13090, mina.linear)
 			.animate({transform: 'translate(0,0) scale(1, 1)'}, 10, mina.linear)
-			.animate({transform: 'translate(0,0) scale(1, 1)'}, 1000, mina.linear)
+			.animate({transform: 'translate(0,0) scale(1, 1)'}, 990, mina.linear)
 		;
 
 		Tween.get('#lett-lastebil')
@@ -259,9 +268,9 @@ function ( $q, Tween )
 		var lastebil_text = Tween.get('#lastebil text')
 			.animate({transform: 'translate(0,0)'}, 13100, mina.linear)
 			.animate({transform: 'translate(1640,0) scale(-1, 1)'}, 10, mina.linear)
-			.animate({transform: 'translate(1640,0) scale(-1, 1)'}, 14000, mina.linear)
+			.animate({transform: 'translate(1640,0) scale(-1, 1)'}, 13090, mina.linear)
 			.animate({transform: 'translate(0,0) scale(1, 1)'}, 10, mina.linear)
-			.animate({transform: 'translate(0,0) scale(1, 1)'}, 1000, mina.linear)
+			.animate({transform: 'translate(0,0) scale(1, 1)'}, 990, mina.linear)
 		;
 
 		Tween.get('#lastebil')
