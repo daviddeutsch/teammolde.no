@@ -30,7 +30,7 @@ function ($stateProvider, $urlRouterProvider, $sceProvider)
 		})
 
 		.state('priser', {
-			url: '/priser',
+			url: '/priser{/:id}',
 			views: {
 				"main": {
 					templateUrl: '/partials/priser.html'
@@ -117,23 +117,26 @@ function () {
 
 teammoldeApp
 .filter('priserlinker',
-function () {
+[
+'$compile', '$rootScope',
+function ($compile, $rootScope) {
 	return function ( markup ) {
 		angular.forEach( angular.element('td a', markup), function(el) {
 			var search = el.outerHTML;
 
 			var child_el = angular.element(el);
 
-			child_el.attr('data-ui-sref', '#/priser'+child_el.attr("href"));
+			child_el.attr('ui-sref', 'priser({ id: "'+child_el.attr("href" ).substr(1)+'" })');
 
 			child_el.removeAttr("href");
 
 			markup = markup.replace(search, el.outerHTML);
 		});
 
-		return markup;
+		return $compile(markup)($rootScope);
 	};
 }
+]
 );
 
 teammoldeApp
@@ -178,15 +181,19 @@ function($scope, bgSVG, $window) {
 teammoldeApp
 .controller('PriserCtrl',
 [
-'$scope', 'wpData', '$http', 'bgSVG', 'bstableizerFilter', 'priserlinkerFilter',
-function($scope, wpData, $http, bgSVG, bstableizerFilter, priserlinkerFilter) {
-	$scope.pricelist = '';
+'$scope', 'wpData', '$http', 'bgSVG', '$stateParams', 'bstableizerFilter', 'priserlinkerFilter',
+function($scope, wpData, $http, bgSVG, $stateParams, bstableizerFilter, priserlinkerFilter) {
+	if ( $stateParams.id == null ) {
+		$stateParams.id = 'priser';
+	}
 
-	//wpData.getPage('priser')
-	$http.get('partials/priser-static.html')
-		//.then(function(html) {
-		.success(function(html) {
-			$scope.pricelist = priserlinkerFilter(
+	$scope.content = '';
+
+	wpData.getPage($stateParams.id)
+	//$http.get('partials/priser-static.html')
+		.then(function(html) {
+		//.success(function(html) {
+			$scope.content = priserlinkerFilter(
 				bstableizerFilter(
 					html
 				)
