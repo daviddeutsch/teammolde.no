@@ -98,10 +98,15 @@ table.table {
 		border-bottom: 1px solid #000;
 		letter-spacing: 0.075em;
 		font-weight: 300;
-		.transition(all 1000ms cubic-bezier(0,.87,.67,.99));
-		cursor: pointer;
+		.transition(all 400ms cubic-bezier(0,.87,.67,.99));
 		&:hover {
 			padding: 2px 4px 4px 26px !important;
+		}
+		a {
+			color: #000;
+			&:hover {
+				text-decoration: none;
+			}
 		}
 	}
 }
