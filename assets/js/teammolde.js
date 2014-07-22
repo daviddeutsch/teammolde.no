@@ -183,7 +183,7 @@ teammoldeApp
 [
 '$scope', 'wpData', '$http', 'bgSVG', '$stateParams', 'bstableizerFilter', 'priserlinkerFilter',
 function($scope, wpData, $http, bgSVG, $stateParams, bstableizerFilter, priserlinkerFilter) {
-	if ( $stateParams.id == null ) {
+	if ( $stateParams.id == "" ) {
 		$stateParams.id = 'priser';
 	}
 
