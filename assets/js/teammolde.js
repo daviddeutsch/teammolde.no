@@ -291,6 +291,7 @@ function ( $q, Tween )
 			;
 
 		objects.personbil = Tween.get('#personbil')
+			.addClass('hoverable')
 			.sub(objects.personbil_text)
 			.animate({transform: 'translate(700,0)'}, 3000, mina.easeinout)
 			.animate({transform: 'translate(700,0)'}, 500, mina.linear)
@@ -306,6 +307,7 @@ function ( $q, Tween )
 			.animate({transform: 'translate(600,0) scale(-1, 1)'}, 1000, mina.easeinout)
 			.animate({transform: 'translate(450,0) scale(1, 1)'}, 3000, mina.easeinout)
 			.hover()
+			.click('priser', {id:'klasse-b'})
 		;
 
 		objects.lettlastebil_text = Tween.get('#lett-lastebil text')
@@ -317,6 +319,7 @@ function ( $q, Tween )
 		;
 
 		objects.lettlastebil = Tween.get('#lett-lastebil')
+			.addClass('hoverable')
 			.sub(objects.lettlastebil_text)
 			.animate({transform: 'translate(-200,0)'}, 3000, mina.easeinout)
 			.animate({transform: 'translate(-200,0)'}, 500, mina.linear)
@@ -330,6 +333,7 @@ function ( $q, Tween )
 			.animate({transform: 'translate(2800,0) scale(-1, 1)'}, 1000, mina.easeinout)
 			.animate({transform: 'translate(200,0) scale(1, 1)'}, 1000, mina.easeinout)
 			.hover()
+			.click('priser', {id:'klasse-c'})
 		;
 
 		objects.lastebil_text = Tween.get('#lastebil text')
@@ -341,6 +345,7 @@ function ( $q, Tween )
 		;
 
 		objects.lastebil = Tween.get('#lastebil')
+			.addClass('hoverable')
 			.sub(objects.lastebil_text)
 			.animate({transform: 'translate(-200,0)'}, 3000, mina.easeinout)
 			.animate({transform: 'translate(-200,0)'}, 100, mina.linear)
@@ -352,9 +357,11 @@ function ( $q, Tween )
 			.animate({transform: 'translate(3200,0) scale(-1, 1)'}, 3000, mina.easeinout)
 			.animate({transform: 'translate(0,0) scale(1, 1)'}, 1000, mina.easeinout)
 			.hover()
+			.click('priser', {id:'klasse-c1'})
 		;
 
 		objects.buss = Tween.get('#buss')
+			.addClass('hoverable')
 			.animate({transform: 'translate(0,0)'}, 2500, mina.linear)
 			.animate({transform: 'translate(-200,0)'}, 3000, mina.easeinout)
 			.animate({transform: 'translate(-200,0)'}, 500, mina.linear)
@@ -368,6 +375,7 @@ function ( $q, Tween )
 				element.attr({transform: 'translate(0,0)'});
 			})
 			.hover()
+			.click('priser', {id:'klasse-d'})
 		;
 	};
 
@@ -382,8 +390,8 @@ function ( $q, Tween )
 teammoldeApp
 .service('Tween',
 [
-'$q',
-function ( $q )
+'$q', '$state',
+function ( $q, $state )
 {
 	var root;
 
@@ -446,8 +454,7 @@ function ( $q )
 			return animations;
 		};
 
-		self.hover = function()
-		{
+		self.hover = function() {
 			self.el.hover(
 				function() {
 					var animations = self.getAnims();
@@ -464,6 +471,20 @@ function ( $q )
 					}
 				}
 			);
+
+			return self;
+		};
+
+		self.addClass = function(name) {
+			self.el.addClass(name);
+
+			return self;
+		};
+
+		self.click = function(to, params) {
+			self.el.click(function(){
+				$state.go(to, params)
+			});
 
 			return self;
 		};

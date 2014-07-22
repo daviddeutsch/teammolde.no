@@ -6516,6 +6516,9 @@ ul.team-nav li a:active {
 #background svg:not(:root) {
   overflow: visible !important;
 }
+#background svg .hoverable {
+  cursor: pointer;
+}
 #foreground {
   position: relative;
   z-index: 100;

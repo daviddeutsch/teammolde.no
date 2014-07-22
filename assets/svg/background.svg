@@ -217,22 +217,22 @@
            style="fill:#163847" />
       </g>
       <polygon
-         points="18,1.4 20.3,0 27.7,0 27.7,1.5 "
+         points="20.3,0 27.7,0 27.7,1.5 18,1.4 "
          transform="matrix(-1,0,0,1,1539.6505,482.41837)"
          id="polygon14000"
          style="fill:#43b0eb" />
       <polygon
-         points="34.8,1.4 32.9,0 24.7,0 24.7,1.5 "
+         points="32.9,0 24.7,0 24.7,1.5 34.8,1.4 "
          transform="matrix(-1,0,0,1,1539.6505,482.41837)"
          id="polygon14002"
          style="fill:#43b0eb" />
       <polygon
-         points="56,1.4 58.3,0 65.7,0 65.7,1.5 "
+         points="58.3,0 65.7,0 65.7,1.5 56,1.4 "
          transform="matrix(-1,0,0,1,1539.6505,482.41837)"
          id="polygon14004"
          style="fill:#43b0eb" />
       <polygon
-         points="72.8,1.4 70.9,0 62.7,0 62.7,1.5 "
+         points="70.9,0 62.7,0 62.7,1.5 72.8,1.4 "
          transform="matrix(-1,0,0,1,1539.6505,482.41837)"
          id="polygon14006"
          style="fill:#43b0eb" />
@@ -6199,7 +6199,7 @@
          id="circle14243"
          style="fill:#cccccc" />
       <polygon
-         points="163.2,14 139,14 139,22 163.1,22 "
+         points="139,14 139,22 163.1,22 163.2,14 "
          transform="matrix(-1,0,0,1,1792.4605,555.11363)"
          id="polygon14245"
          style="fill:#73ddff" />
@@ -6460,12 +6460,12 @@
          id="rect14076"
          style="opacity:0.7" />
       <polygon
-         points="15.1,0.5 16.1,0 16.1,7.1 15.1,7.1 "
+         points="16.1,0 16.1,7.1 15.1,7.1 15.1,0.5 "
          transform="translate(138.00752,583.09826)"
          id="polygon14078"
          style="opacity:0.7" />
       <polygon
-         points="8.6,7 8.9,6.7 47.1,7 47.3,7.3 "
+         points="8.9,6.7 47.1,7 47.3,7.3 8.6,7 "
          transform="translate(138.00752,583.09826)"
          id="polygon14080" />
       <path
@@ -6473,7 +6473,7 @@
          id="path14082"
          style="opacity:0.7" />
       <polygon
-         points="39.5,7.1 39.1,5.7 38.2,4.1 37.2,7.1 "
+         points="39.1,5.7 38.2,4.1 37.2,7.1 39.5,7.1 "
          transform="translate(138.00752,583.09826)"
          id="polygon14084" />
       <path
@@ -6485,7 +6485,7 @@
          id="path14088"
          style="fill:#801100" />
       <polygon
-         points="44,19.7 16.7,19 16.7,20 44,20.7 "
+         points="16.7,19 16.7,20 44,20.7 44,19.7 "
          transform="translate(138.00752,583.09826)"
          id="polygon14090"
          style="fill:#801100" />
