@@ -164,6 +164,10 @@ function($scope, wpData, bgSVG) {
 	wpData.getPage('priser')
 		.then(function(html) {
 			$scope.pricelist = html;
+
+			angular.forEach( angular.element('#pricelist tr'), function(el){
+				var test = el;
+			});
 		});
 
 	bgSVG.blur(true);
