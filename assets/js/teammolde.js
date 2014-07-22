@@ -140,7 +140,7 @@ function($scope, wpData, bgSVG) {
 			$scope.pricelist = html;
 		});
 
-	//bgSVG.blur(true);
+	bgSVG.blur(true);
 }
 ]
 );
@@ -176,16 +176,25 @@ function ( $q, Tween )
 {
 	var s,
 		objects = {},
-		self = this;
+		self = this,
+		blurred = false;
 
 	this.init = function() {
-		Tween.setRoot('#background');
+		if ( Tween.getRoot() ) {
+			var deferred = $q.defer();
 
-		return Tween.load('assets/svg/background.svg');
+			deferred.reject();
+
+			return deferred.promise;
+		} else {
+			Tween.setRoot('#background');
+
+			return Tween.load('assets/svg/background.svg');
+		}
 	};
 
 	this.go = function() {
-		Tween.get('#cloud-left')
+		objects.cloud_left = Tween.get('#cloud-left')
 			.animate({transform: 'translate(400,0)'}, 1000, mina.easeinout)
 			.animate({transform: 'translate(600,0)'}, 10000, mina.easeinout)
 			.animate({transform: 'translate(1000,0)'}, 7500, mina.easeinout)
@@ -198,7 +207,7 @@ function ( $q, Tween )
 			.hover()
 		;
 
-		Tween.get('#cloud-right')
+		objects.cloud_right = Tween.get('#cloud-right')
 			.animate({transform: 'translate(-400,0)'}, 1000, mina.easeinout)
 			.animate({transform: 'translate(-600,0)'}, 5000, mina.easeinout)
 			.animate({transform: 'translate(-1000,0)'}, 10000, mina.easeinout)
@@ -211,7 +220,7 @@ function ( $q, Tween )
 			.hover()
 		;
 
-		var personbil_text = Tween.get('#personbil text')
+		objects.personbil_text = Tween.get('#personbil text')
 				.animate({transform: 'translate(0,0)'}, 19400, mina.linear)
 				.animate({transform: 'translate(190,0) scale(-1, 1)'}, 10, mina.linear)
 				.animate({transform: 'translate(190,0) scale(-1, 1)'}, 14490, mina.linear)
@@ -219,8 +228,8 @@ function ( $q, Tween )
 				.animate({transform: 'translate(0,0) scale(1, 1)'}, 1190, mina.linear)
 			;
 
-		Tween.get('#personbil')
-			.sub(personbil_text)
+		objects.personbil = Tween.get('#personbil')
+			.sub(objects.personbil_text)
 			.animate({transform: 'translate(700,0)'}, 3000, mina.easeinout)
 			.animate({transform: 'translate(700,0)'}, 500, mina.linear)
 			.animate({transform: 'translate(900,0)'}, 4000, mina.easeinout)
@@ -237,7 +246,7 @@ function ( $q, Tween )
 			.hover()
 		;
 
-		var lettlastebil_text = Tween.get('#lett-lastebil text')
+		objects.lettlastebil_text = Tween.get('#lett-lastebil text')
 			.animate({transform: 'translate(0,0)'}, 14000, mina.linear)
 			.animate({transform: 'translate(2725,0) scale(-1, 1)'}, 10, mina.linear)
 			.animate({transform: 'translate(2725,0) scale(-1, 1)'}, 13090, mina.linear)
@@ -245,8 +254,8 @@ function ( $q, Tween )
 			.animate({transform: 'translate(0,0) scale(1, 1)'}, 990, mina.linear)
 		;
 
-		Tween.get('#lett-lastebil')
-			.sub(lettlastebil_text)
+		objects.lettlastebil = Tween.get('#lett-lastebil')
+			.sub(objects.lettlastebil_text)
 			.animate({transform: 'translate(-200,0)'}, 3000, mina.easeinout)
 			.animate({transform: 'translate(-200,0)'}, 500, mina.linear)
 			.animate({transform: 'translate(-400,0)'}, 4000, mina.easeinout)
@@ -261,7 +270,7 @@ function ( $q, Tween )
 			.hover()
 		;
 
-		var lastebil_text = Tween.get('#lastebil text')
+		objects.lastebil_text = Tween.get('#lastebil text')
 			.animate({transform: 'translate(0,0)'}, 13100, mina.linear)
 			.animate({transform: 'translate(1640,0) scale(-1, 1)'}, 10, mina.linear)
 			.animate({transform: 'translate(1640,0) scale(-1, 1)'}, 14085, mina.linear)
@@ -269,8 +278,8 @@ function ( $q, Tween )
 			.animate({transform: 'translate(0,0) scale(1, 1)'}, 395, mina.linear)
 		;
 
-		Tween.get('#lastebil')
-			.sub(lastebil_text)
+		objects.lastebil = Tween.get('#lastebil')
+			.sub(objects.lastebil_text)
 			.animate({transform: 'translate(-200,0)'}, 3000, mina.easeinout)
 			.animate({transform: 'translate(-200,0)'}, 100, mina.linear)
 			.animate({transform: 'translate(-1400,0)'}, 9000, mina.easeinout)
@@ -283,7 +292,7 @@ function ( $q, Tween )
 			.hover()
 		;
 
-		Tween.get('#buss')
+		objects.buss = Tween.get('#buss')
 			.animate({transform: 'translate(0,0)'}, 2500, mina.linear)
 			.animate({transform: 'translate(-200,0)'}, 3000, mina.easeinout)
 			.animate({transform: 'translate(-200,0)'}, 500, mina.linear)
@@ -301,9 +310,7 @@ function ( $q, Tween )
 	};
 
 	this.blur = function( blur ) {
-		s.attr({
-			filter: blur ? f : null
-		});
+		angular.element('#background svg' ).remove();
 	};
 }
 ]
@@ -429,7 +436,11 @@ function ( $q )
 	};
 
 	this.setRoot = function( newroot ) {
-		root = newroot;
+		root = Snap(newroot);
+	};
+
+	this.getRoot = function( newroot ) {
+		return root;
 	};
 
 	this.load = function( path )
@@ -437,7 +448,7 @@ function ( $q )
 		var deferred = $q.defer();
 
 		Snap.load(path, function (f) {
-			Snap(root).append(f);
+			root.append(f);
 
 			deferred.resolve();
 		});
@@ -447,7 +458,7 @@ function ( $q )
 
 	this.get = function( el ) {
 		if ( typeof el === 'string' ) {
-			el = Snap(root).select(el);
+			el = root.select(el);
 		}
 
 		return new tween(el);
