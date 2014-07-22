@@ -183,13 +183,9 @@ teammoldeApp
 [
 '$scope', 'wpData', '$http', 'bgSVG', '$stateParams', 'bstableizerFilter', 'priserlinkerFilter',
 function($scope, wpData, $http, bgSVG, $stateParams, bstableizerFilter, priserlinkerFilter) {
-	if ( $stateParams.id == "" ) {
-		$stateParams.id = 'priser';
-	}
-
 	$scope.content = '';
 
-	wpData.getPage($stateParams.id)
+	wpData.getPage($stateParams.id ? $stateParams.id : 'priser')
 	//$http.get('partials/priser-static.html')
 		.then(function(html) {
 		//.success(function(html) {
