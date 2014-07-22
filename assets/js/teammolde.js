@@ -181,8 +181,8 @@ function($scope, bgSVG, $window) {
 teammoldeApp
 .controller('PriserCtrl',
 [
-'$scope', 'wpData', '$http', 'bgSVG', '$stateParams', 'bstableizerFilter', 'priserlinkerFilter',
-function($scope, wpData, $http, bgSVG, $stateParams, bstableizerFilter, priserlinkerFilter) {
+'$scope', '$window', 'wpData', '$http', 'bgSVG', '$stateParams', 'bstableizerFilter', 'priserlinkerFilter',
+function($scope, $window, wpData, $http, bgSVG, $stateParams, bstableizerFilter, priserlinkerFilter) {
 	$scope.content = '';
 
 	wpData.getPage($stateParams.id ? $stateParams.id : 'priser')
@@ -194,6 +194,8 @@ function($scope, wpData, $http, bgSVG, $stateParams, bstableizerFilter, priserli
 					html
 				)
 			);
+
+			$window.scrollTo(0,0);
 		});
 
 	bgSVG.blur(true);
