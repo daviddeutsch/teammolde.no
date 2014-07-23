@@ -6519,6 +6519,14 @@ ul.team-nav li a:active {
 #background svg .hoverable {
   cursor: pointer;
 }
+.bgblur {
+  background: url('../img/blurredout_2.jpg');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #8ccee4;
+}
 #foreground {
   position: relative;
   z-index: 100;

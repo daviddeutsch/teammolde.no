@@ -248,6 +248,10 @@ function ( $q, Tween )
 		blurred = false;
 
 	this.init = function() {
+		angular.element('body').removeClass('bgblur');
+
+		blurred = false;
+
 		Tween.setRoot('#background');
 
 		angular.element('#background img').remove();
@@ -380,8 +384,12 @@ function ( $q, Tween )
 	};
 
 	this.blur = function( blur ) {
-		angular.element('#background svg').remove();
-		angular.element('#background').append('<img src="assets/img/blurredout_2.jpg" alt=""/>');
+		if ( !blurred ) {
+			angular.element('#background svg').remove();
+			angular.element('body').addClass('bgblur');
+
+			blurred = true;
+		}
 	};
 }
 ]
