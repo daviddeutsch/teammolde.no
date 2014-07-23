@@ -359,18 +359,29 @@ function ( $q, Tween )
 
 		Tween.get('#buss')
 			.addClass('hoverable')
+			.sub('#buss text')
 			.animate({transform: 'translate(0,0)'}, 2500, mina.linear)
-			.animate({transform: 'translate(-200,0)'}, 3000, mina.easeinout)
-			.animate({transform: 'translate(-200,0)'}, 500, mina.linear)
-			.animate({transform: 'translate(-400,0)'}, 4000, mina.easeinout)
-			.animate({transform: 'translate(-400,0)'}, 500, mina.linear)
-			.animate({transform: 'matrix(0.8660254,0.5,-0.5,0.8660254,-24.308937,-698.29248)'}, 5000, mina.easeinout)
-			.animate({transform: 'matrix(0.94967542,0.31323569,-0.31323569,0.94967542,-374.13056,-520.01597)'}, 5000, mina.linear)
-			.animate({transform: 'matrix(0.98814356,0.15353273,-0.15353273,0.98814356,-656.74677,-340.16701)'}, 2500, mina.linear)
-			.animate({transform: 'translate(-897,-131)'}, 2500, mina.linear)
-			.action(function(element){
-				element.attr({transform: 'translate(0,0)'});
-			})
+			.animate({transform: 'translate(-280,0)'}, 4000, mina.easeinout)
+			.animate({transform: 'matrix(0.98554261,0.16942777,-0.16942777,0.98554261,-252.53082,-261.69727)'}, 5000, mina.easeinout)
+			.animate({transform: 'matrix(0.93870831,0.34471252,-0.34471252,0.93870831,-213.82664,-547.30635)'}, 3000, mina.linear)
+			.animate({transform: 'matrix(0.98020369,0.19799176,-0.19799176,0.98020369,-540.75624,-415.44484)'}, 2500, mina.linear)
+			.animate({transform: 'matrix(0.99794493,0.06407749,-0.06407749,0.99794493,-761.67881,-248.31587)'}, 1500, mina.linear)
+			.animate({transform: 'translate(-897,-152)'}, 2500, mina.linear)
+			.animate({transform: 'translate(-897,-152)'}, 1500, mina.linear)
+			.animate(
+				{transform: 'translate(2097,-152) scale(-1, 1)'}, 500, mina.linear,
+				{transform: 'translate(3070,0) scale(-1, 1)'}
+			)
+			.animate({transform: 'matrix(-0.98905174,-0.14756914,-0.14756914,0.98905174,2310.6042,89.791862)'}, 1500, mina.linear)
+			.animate({transform: 'matrix(-0.9666291,-0.25617997,-0.25617997,0.9666291,2488.4436,298.8061)'}, 2500, mina.linear)
+			.animate({transform: 'matrix(-0.94359213,-0.33111008,-0.33111008,0.94359213,2575.3005,471.84637)'}, 3000, mina.linear)
+			.animate({transform: 'matrix(-0.99386723,-0.11057993,-0.11057993,0.99386723,2675.8798,155.36451)'}, 2000, mina.easeinout)
+			.animate({transform: 'translate(-2850,0) scale(-1, 1)'}, 4000, mina.easeinout)
+			.animate({transform: 'translate(-2950,0) scale(-1, 1)'}, 500, mina.linear)
+			.animate(
+				{transform: 'translate(0,0) scale(-1, 1)'}, 500, mina.linear,
+				{transform: 'translate(0,0) scale(1, 1)'}
+			)
 			.hover()
 			.click('priser', {id:'klasse-d'})
 		;
