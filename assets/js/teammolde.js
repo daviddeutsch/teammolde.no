@@ -243,7 +243,6 @@ teammoldeApp
 function ( $q, Tween )
 {
 	var s,
-		objects = {},
 		self = this,
 		blurred = false;
 
@@ -260,7 +259,7 @@ function ( $q, Tween )
 	};
 
 	this.go = function() {
-		objects.cloud_left = Tween.get('#cloud-left')
+		Tween.get('#cloud-left')
 			.animate({transform: 'translate(400,0)'}, 1000, mina.easeinout)
 			.animate({transform: 'translate(600,0)'}, 10000, mina.easeinout)
 			.animate({transform: 'translate(1000,0)'}, 7500, mina.easeinout)
@@ -273,7 +272,7 @@ function ( $q, Tween )
 			.hover()
 		;
 
-		objects.cloud_right = Tween.get('#cloud-right')
+		Tween.get('#cloud-right')
 			.animate({transform: 'translate(-400,0)'}, 1000, mina.easeinout)
 			.animate({transform: 'translate(-600,0)'}, 5000, mina.easeinout)
 			.animate({transform: 'translate(-1000,0)'}, 10000, mina.easeinout)
@@ -286,17 +285,9 @@ function ( $q, Tween )
 			.hover()
 		;
 
-		objects.personbil_text = Tween.get('#personbil text')
-				.animate({transform: 'translate(0,0)'}, 19400, mina.linear)
-				.animate({transform: 'translate(190,0) scale(-1, 1)'}, 10, mina.linear)
-				.animate({transform: 'translate(190,0) scale(-1, 1)'}, 14490, mina.linear)
-				.animate({transform: 'translate(0,0) scale(1, 1)'}, 10, mina.linear)
-				.animate({transform: 'translate(0,0) scale(1, 1)'}, 1190, mina.linear)
-			;
-
-		objects.personbil = Tween.get('#personbil')
+		Tween.get('#personbil')
 			.addClass('hoverable')
-			.sub(objects.personbil_text)
+			.sub('#personbil text')
 			.animate({transform: 'translate(700,0)'}, 3000, mina.easeinout)
 			.animate({transform: 'translate(700,0)'}, 500, mina.linear)
 			.animate({transform: 'translate(900,0)'}, 4000, mina.easeinout)
@@ -304,67 +295,69 @@ function ( $q, Tween )
 			.animate({transform: 'translate(1300,0)'}, 5000, mina.easeinout)
 			.animate({transform: 'translate(1300,0)'}, 500, mina.linear)
 			.animate({transform: 'translate(1600,0)'}, 5000, mina.easeinout)
-			.animate({transform: 'translate(1850,0) scale(-1, 1)'}, 1000, mina.easeinout)
+			.animate(
+				{transform: 'translate(1850,0) scale(-1, 1)'}, 1000, mina.easeinout,
+				{transform: 'translate(190,0) scale(-1, 1)'}
+			)
 			.animate({transform: 'translate(1600,0) scale(-1, 1)'}, 2500, mina.linear)
 			.animate({transform: 'translate(1300,0) scale(-1, 1)'}, 5000, mina.easeinout)
 			.animate({transform: 'translate(700,0) scale(-1, 1)'}, 4000, mina.easeinout)
 			.animate({transform: 'translate(600,0) scale(-1, 1)'}, 1000, mina.easeinout)
-			.animate({transform: 'translate(450,0) scale(1, 1)'}, 3000, mina.easeinout)
+			.animate(
+				{transform: 'translate(450,0) scale(1, 1)'}, 3000, mina.easeinout,
+				{transform: 'translate(0,0) scale(1, 1)'}
+			)
 			.hover()
 			.click('priser', {id:'klasse-b'})
 		;
 
-		objects.lettlastebil_text = Tween.get('#lett-lastebil text')
-			.animate({transform: 'translate(0,0)'}, 14000, mina.linear)
-			.animate({transform: 'translate(2725,0) scale(-1, 1)'}, 10, mina.linear)
-			.animate({transform: 'translate(2725,0) scale(-1, 1)'}, 13090, mina.linear)
-			.animate({transform: 'translate(0,0) scale(1, 1)'}, 10, mina.linear)
-			.animate({transform: 'translate(0,0) scale(1, 1)'}, 990, mina.linear)
-		;
-
-		objects.lettlastebil = Tween.get('#lett-lastebil')
+		Tween.get('#lett-lastebil')
 			.addClass('hoverable')
-			.sub(objects.lettlastebil_text)
+			.sub('#lett-lastebil text')
 			.animate({transform: 'translate(-200,0)'}, 3000, mina.easeinout)
 			.animate({transform: 'translate(-200,0)'}, 500, mina.linear)
 			.animate({transform: 'translate(-400,0)'}, 4000, mina.easeinout)
 			.animate({transform: 'translate(-400,0)'}, 500, mina.linear)
 			.animate({transform: 'translate(-800,0)'}, 5000, mina.easeinout)
-			.animate({transform: 'translate(2000,0) scale(-1, 1)'}, 2000, mina.easeinout)
+			.animate(
+				{transform: 'translate(2000,0) scale(-1, 1)'}, 2000, mina.easeinout,
+				{transform: 'translate(2725,0) scale(-1, 1)'}
+			)
 			.animate({transform: 'translate(2000,0) scale(-1, 1)'}, 2500, mina.linear)
 			.animate({transform: 'translate(2400,0) scale(-1, 1)'}, 5000, mina.easeinout)
 			.animate({transform: 'translate(2800,0) scale(-1, 1)'}, 4000, mina.easeinout)
 			.animate({transform: 'translate(2800,0) scale(-1, 1)'}, 1000, mina.easeinout)
-			.animate({transform: 'translate(200,0) scale(1, 1)'}, 1000, mina.easeinout)
+			.animate(
+				{transform: 'translate(200,0) scale(1, 1)'}, 2000, mina.easeinout,
+				{transform: 'translate(0,0) scale(1, 1)'}
+			)
 			.hover()
 			.click('priser', {id:'klasse-c'})
 		;
 
-		objects.lastebil_text = Tween.get('#lastebil text')
-			.animate({transform: 'translate(0,0)'}, 13100, mina.linear)
-			.animate({transform: 'translate(1640,0) scale(-1, 1)'}, 10, mina.linear)
-			.animate({transform: 'translate(1640,0) scale(-1, 1)'}, 14085, mina.linear)
-			.animate({transform: 'translate(0,0) scale(1, 1)'}, 10, mina.linear)
-			.animate({transform: 'translate(0,0) scale(1, 1)'}, 395, mina.linear)
-		;
-
-		objects.lastebil = Tween.get('#lastebil')
+		Tween.get('#lastebil')
 			.addClass('hoverable')
-			.sub(objects.lastebil_text)
+			.sub('#lastebil text')
 			.animate({transform: 'translate(-200,0)'}, 3000, mina.easeinout)
 			.animate({transform: 'translate(-200,0)'}, 100, mina.linear)
 			.animate({transform: 'translate(-1400,0)'}, 9000, mina.easeinout)
-			.animate({transform: 'translate(2000,0) scale(-1, 1)'}, 2000, mina.easeinout)
+			.animate(
+				{transform: 'translate(2000,0) scale(-1, 1)'}, 2000, mina.easeinout,
+				{transform: 'translate(1640,0) scale(-1, 1)'}
+			)
 			.animate({transform: 'translate(2000,0) scale(-1, 1)'}, 2500, mina.linear)
 			.animate({transform: 'translate(2400,0) scale(-1, 1)'}, 4000, mina.easeinout)
 			.animate({transform: 'translate(2600,0) scale(-1, 1)'}, 3000, mina.easeinout)
 			.animate({transform: 'translate(3200,0) scale(-1, 1)'}, 3000, mina.easeinout)
-			.animate({transform: 'translate(0,0) scale(1, 1)'}, 1000, mina.easeinout)
+			.animate(
+				{transform: 'translate(0,0) scale(1, 1)'}, 1000, mina.easeinout,
+				{transform: 'translate(0,0) scale(1, 1)'}
+			)
 			.hover()
 			.click('priser', {id:'klasse-c1'})
 		;
 
-		objects.buss = Tween.get('#buss')
+		Tween.get('#buss')
 			.addClass('hoverable')
 			.animate({transform: 'translate(0,0)'}, 2500, mina.linear)
 			.animate({transform: 'translate(-200,0)'}, 3000, mina.easeinout)
@@ -425,9 +418,24 @@ function ( $q, $state )
 				pointer = 0;
 			}
 
+			angular.forEach(sub, function(sub_el) {
+				sub_el.clear();
+			});
+
 			var step = queue[pointer];
 
+			if ( typeof step == "undefined" ) return;
+
 			if ( step.type == 'animation' ) {
+				if ( sub.length ) {
+					if ( typeof step.piggyback !== "undefined" ) {
+						angular.forEach(sub, function(sub_el) {
+							sub_el.animate(step.piggyback, step.duration, step.easing
+							);
+						});
+					}
+				}
+
 				self.el.animate(
 					step.ops, step.duration, step.easing, function(){self.next();}
 				);
@@ -439,7 +447,7 @@ function ( $q, $state )
 		};
 
 		self.sub = function( el ) {
-			sub.push(el);
+			sub.push( new tween(root.select(el)) );
 
 			return self;
 		};
@@ -497,13 +505,14 @@ function ( $q, $state )
 			return self;
 		};
 
-		self.animate = function( ops, duration, easing ) {
+		self.animate = function( ops, duration, easing, piggyback ) {
 			return self.enqueue(
 				{
 					type: 'animation',
 					ops: ops,
 					duration: duration,
-					easing: easing
+					easing: easing,
+					piggyback: piggyback
 				}
 			);
 		};
@@ -517,14 +526,18 @@ function ( $q, $state )
 			);
 		};
 
-		self.enqueue = function( object )
-		{
+		self.enqueue = function( object ) {
 			queue.push(object);
 
 			if ( run == false ) self.start();
 
 			return self;
 		};
+
+		self.clear = function() {
+			queue = [];
+			run = false;
+		}
 	};
 
 	this.setRoot = function( newroot ) {
