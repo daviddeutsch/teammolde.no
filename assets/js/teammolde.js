@@ -375,11 +375,10 @@ function ( $q, Tween )
 			.animate({transform: 'matrix(-0.98905174,-0.14756914,-0.14756914,0.98905174,2310.6042,89.791862)'}, 1500, mina.linear)
 			.animate({transform: 'matrix(-0.9666291,-0.25617997,-0.25617997,0.9666291,2488.4436,298.8061)'}, 2500, mina.linear)
 			.animate({transform: 'matrix(-0.94359213,-0.33111008,-0.33111008,0.94359213,2575.3005,471.84637)'}, 3000, mina.linear)
-			.animate({transform: 'matrix(-0.99386723,-0.11057993,-0.11057993,0.99386723,2675.8798,155.36451)'}, 2000, mina.easeinout)
-			.animate({transform: 'translate(-2850,0) scale(-1, 1)'}, 4000, mina.easeinout)
-			.animate({transform: 'translate(-2950,0) scale(-1, 1)'}, 500, mina.linear)
+			.animate({transform: 'matrix(-0.99386723,-0.11057993,-0.11057993,0.99386723,2675.8798,155.36451)'}, 2000, mina.linear)
+			.animate({transform: 'matrix(-1,0,0,1,2872.1032,0)'}, 4000, mina.easeinout)
 			.animate(
-				{transform: 'translate(0,0) scale(-1, 1)'}, 500, mina.linear,
+				{transform: 'translate(0,0) scale(1, 1)'}, 1000, mina.linear,
 				{transform: 'translate(0,0) scale(1, 1)'}
 			)
 			.hover()
