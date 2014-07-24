@@ -200,8 +200,8 @@ function($scope, $window, wpData, $http, bgSVG, $stateParams, bstableizerFilter,
 teammoldeApp
 .controller('BestillCtrl',
 [
-'$scope', '$q', 'wpData',
-function($scope, $q, wpData) {
+'$scope', '$q', 'wpData', 'bgSVG',
+function($scope, $q, wpData, bgSVG) {
 	$scope.content = '';
 
 	$scope.list = [
