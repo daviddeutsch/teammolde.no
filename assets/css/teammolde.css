@@ -6626,7 +6626,7 @@ div.table-dock .table-head thead th {
   width: 20%;
 }
 div.table-dock .table-head thead th.large {
-  width: 30% !important;
+  width: 25% !important;
 }
 div.table-dock .table-head td {
   border-bottom: 1px solid #000 important;
