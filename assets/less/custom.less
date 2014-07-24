@@ -136,14 +136,17 @@ table.table {
 }
 
 div.table-dock {
+	.transition(margin 400ms cubic-bezier(0,.87,.67,.99));
 	table.table {
 		margin: -2px 6px;
 		td {
-			border-bottom: none;
+
 		}
-		&> tbody > tr > td {
+		& > tbody > tr > td {
 			border-top: none;
-			width: 50%;
+			&.half {
+				width: 50%;
+			}
 		}
 	}
 	&:last-child {
@@ -151,6 +154,29 @@ div.table-dock {
 	}
 	thead {
 		display: none;
+	}
+	.table-head {
+		font-size: 18px;
+		thead {
+			display: table-header-group !important;
+			th {
+				font-size: 22px;
+				border: none;
+				width: 20%;
+				&.large {
+					width: 30% !important;
+				}
+			}
+		}
+		td {
+			border-bottom: 1px solid #000 important;
+		}
+		tr {
+			border-bottom: 1px solid #000 important;
+		}
+		& > tbody > tr > td {
+			width: 10% !important;
+		}
 	}
 	&.expanded {
 		margin: 16px 0;
@@ -160,6 +186,9 @@ div.table-dock {
 table.table-hover {
 	td:hover {
 		background: rgba(255,255,255,0.2);
+	}
+	&.expanded {
+		background: rgba(255,255,255,0.9);
 	}
 }
 
