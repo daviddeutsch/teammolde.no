@@ -6591,6 +6591,9 @@ table.table td a {
 table.table td a:hover {
   text-decoration: none;
 }
+table.table-dock-below {
+  margin-bottom: -2px;
+}
 div.table-dock {
   -webkit-transition: margin 400ms cubic-bezier(0, 0.87, 0.67, 0.99);
   -o-transition: margin 400ms cubic-bezier(0, 0.87, 0.67, 0.99);
