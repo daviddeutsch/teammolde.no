@@ -6550,13 +6550,20 @@ table.table {
   border: 2px solid #000;
   border-collapse: collapse;
   margin: 18px 6px;
-  font-size: 170%;
+  font-size: 28px;
 }
 table.table > thead > tr > th {
   border: 2px solid #000;
   width: 52%;
-  font-size: 120%;
+  font-size: 33px;
   padding: 8px 24px 8px;
+}
+table.table tr.contracted {
+  -webkit-transition: max-height 400ms cubic-bezier(0, 0.87, 0.67, 0.99);
+  -o-transition: max-height 400ms cubic-bezier(0, 0.87, 0.67, 0.99);
+  transition: max-height 400ms cubic-bezier(0, 0.87, 0.67, 0.99);
+  max-height: 0;
+  display: none;
 }
 table.table th {
   text-transform: uppercase;
@@ -6583,6 +6590,25 @@ table.table td a {
 }
 table.table td a:hover {
   text-decoration: none;
+}
+div.table-dock table.table {
+  margin: -2px 6px;
+}
+div.table-dock table.table td {
+  border-bottom: none;
+}
+div.table-dock table.table > tbody > tr > td {
+  border-top: none;
+  width: 50%;
+}
+div.table-dock:last-child {
+  border-bottom: 2px solid #000 !important;
+}
+div.table-dock thead {
+  display: none;
+}
+div.table-dock.expanded {
+  margin: 16px 0;
 }
 table.table-hover td:hover {
   background: rgba(255, 255, 255, 0.2);

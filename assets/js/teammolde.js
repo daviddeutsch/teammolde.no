@@ -1,3 +1,16 @@
+if (!Object.keys) {
+	Object.keys = function (obj) {
+		var keys = [],
+			k;
+		for (k in obj) {
+			if (Object.prototype.hasOwnProperty.call(obj, k)) {
+				keys.push(k);
+			}
+		}
+		return keys;
+	};
+}
+
 var teammoldeApp = angular.module(
 	"teammoldeApp",
 	[
@@ -205,46 +218,90 @@ function($scope, $q, wpData, bgSVG) {
 	$scope.content = '';
 
 	$scope.list = [
-		{title: 'Trafikalt grunnkurs TG', klasse: '', kurs: []},
-		{title: 'Personbil m. henger (Opptil totalt 4250kg last)', klasse: 'Klasse B96', kurs: []},
-		{title: 'Personbil m. henger', klasse: 'Klasse BE', kurs: []},
-		{title: 'Stor lastebil', klasse: 'Klasse C', kurs: []},
-		{title: 'Liten lastebil', klasse: 'Klasse C1', kurs: []},
-		{title: 'Buss', klasse: 'Klasse D', kurs: []},
-		{title: 'Minibuss', klasse: 'Klasse D1', kurs: []},
-		{title: 'Minibuss m. henger', klasse: 'Klasse D1E', kurs: []},
-		{title: 'Buss m. henger', klasse: 'Klasse DE', kurs: []},
-		{title: 'Traktor', klasse: 'Klasse T', kurs: []},
-		{title: 'YSK etterutdanning godstransport', klasse: '', kurs: []},
-		{title: 'YSK etterutdanning persontransport', klasse: '', kurs: []},
-		{title: 'YSK Godstransport YDG', klasse: '', kurs: []}
+		{title: 'Trafikalt grunnkurs TG', klasse: '', kurs: [], expanded: false},
+		{title: 'Personbil m. henger <span class="small-text">(Opptil totalt 4250kg last)</span>', klasse: 'B96', kurs: [], expanded: false},
+		{title: 'Personbil m. henger', klasse: 'BE', kurs: [], expanded: false},
+		{title: 'Stor lastebil', klasse: 'C', kurs: [], expanded: false},
+		{title: 'Liten lastebil', klasse: 'C1', kurs: [], expanded: false},
+		{title: 'Buss', klasse: 'D', kurs: [], expanded: false},
+		{title: 'Minibuss', klasse: 'D1', kurs: [], expanded: false},
+		{title: 'Minibuss m. henger', klasse: 'D1E', kurs: [], expanded: false},
+		{title: 'Buss m. henger', klasse: 'DE', kurs: [], expanded: false},
+		{title: 'Traktor', klasse: 'T', kurs: [], expanded: false},
+		{title: 'YSK etterutdanning godstransport', klasse: '', kurs: [], expanded: false},
+		{title: 'YSK etterutdanning persontransport', klasse: '', kurs: [], expanded: false},
+		{title: 'YSK Godstransport YDG', klasse: '', kurs: [], expanded: false}
 	];
 
-	var prepare = function(content) {
+	var list_keys = Object.keys($scope.list);
+
+	$scope.map = {};
+
+	for ( var i = 0; i < list_keys.length; i++ ) {
+		if ( $scope.list[i].klasse !== '' ) {
+			$scope.map['Klasse '+$scope.list[i].klasse] = i;
+		} else {
+			$scope.map[$scope.list[i].title] = i;
+		}
+	}
+
+	$scope.kurs = [];
+
+	var convert = function(item) {
 		var deferred = $q.defer();
 
-		for ( var i = 0; i < content.length; i++ ) {
-			content.custom_fields = unserialize(content.custom_fields);
+		var keys = Object.keys(item.custom_fields);
+		var len = keys.length - 1;
+
+		for ( var i = 0; i < keys.length; i++ ) {
+			if (item.custom_fields[keys[i]][0].indexOf('{') != -1 ) {
+				item.custom_fields[keys[i]] = unserialize(item.custom_fields[keys[i]][0]);
+			} else {
+				item.custom_fields[keys[i]] = item.custom_fields[keys[i]][0];
+			}
 
 			if ( i === len ) {
-				deferred.resolve(content);
+				deferred.resolve(item);
 			}
 		}
 
 		return deferred.promise;
 	};
 
+	var prepare = function(content) {
+		var deferred = $q.defer();
+		var len = content.length - 1;
+
+		for ( var i = 0; i < len; i++ ) {
+			convert(content[i])
+				.then(function(item){
+					content[i] = item;
+
+					if ( i === len ) {
+						deferred.resolve(content);
+					}
+				});
+		}
+
+		return deferred.promise;
+	};
+
+	$scope.toggle = function(id) {
+		$scope.list[id].expanded = !$scope.list[id].expanded;
+	};
 
 	wpData.getPosts('kurs')
 		.then(function(list) {
 			prepare(list)
 				.then(function(prepared){
 					angular.forEach(prepared, function(kurs){
-
+						angular.forEach(kurs.custom_fields.klasse, function(klasse){
+							if ( typeof $scope.list[$scope.map[klasse]] != 'undefined' ) {
+								$scope.list[$scope.map[klasse]].kurs.push(kurs);
+							}
+						});
 					});
 				});
-
-			$window.scrollTo(0,0);
 		});
 
 	bgSVG.blur(true);
@@ -285,7 +342,8 @@ function ( $q, $http )
 	this.getPosts = function( type ) {
 		var deferred = $q.defer();
 
-		$http.get('wordpress/?json=get_recent_posts&post_type='+type+'&count=50', {cache: true})
+		//$http.get('wordpress/?json=get_recent_posts&post_type='+type+'&count=50', {cache: true})
+		$http.get('static.json', {cache: true})
 			.success(function(result) {
 				deferred.resolve(result.posts);
 			})

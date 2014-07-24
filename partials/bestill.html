@@ -7,12 +7,40 @@
 				<th>Klasse</th>
 			</tr>
 		</thead>
-		<tbody>
-			<tr ng-repeat="item in list">
-				<td>{{item.title}}</td>
-				<td>{{item.klasse}}</td>
-			</tr>
-		</tbody>
 	</table>
+	<div class="table-dock" ng-repeat="item in list" ng-class="{expanded: item.expanded}">
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>Kurs</th>
+					<th>Klasse</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-click="item.expanded = !item.expanded">
+					<td ng-bind-html="item.title"></td>
+					<td>{{item.klasse}} <span class="pull-right">{{item.kurs.length}}</span></td>
+				</tr>
+			</tbody>
+		</table>
+		<table class="table table-hover" ng-show="item.expanded">
+			<thead>
+			<tr>
+				<th>Kurstype</th>
+				<th>Ledige Pl.</th>
+				<th>Dato</th>
+				<th>Sted</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr ng-repeat="kurs in item.kurs">
+				<td>{{kurs.title}}</td>
+				<td>{{kurs.custom_fields.plasser}}</td>
+				<td>{{kurs.custom_fields.dato}}</td>
+				<td>{{kurs.custom_fields.sted}}</td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
 
 </div>
