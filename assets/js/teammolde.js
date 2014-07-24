@@ -152,6 +152,16 @@ function ($compile, $rootScope) {
 ]
 );
 
+
+teammoldeApp.filter('eurodate',
+function () {
+	return function ( d ) {
+		return d.match(/.{2}|.{1,2}/g ).join('.');
+	};
+}
+);
+
+
 teammoldeApp
 .controller('homeCtrl',
 [
@@ -194,13 +204,13 @@ function($scope, bgSVG, $window) {
 teammoldeApp
 .controller('PriserCtrl',
 [
-'$scope', '$window', 'wpData', '$http', 'bgSVG', '$stateParams', 'bstableizerFilter', 'priserlinkerFilter',
-function($scope, $window, wpData, $http, bgSVG, $stateParams, bstableizerFilter, priserlinkerFilter) {
+'$scope', '$window', 'wpData', '$http', 'bgSVG', '$stateParams', 'bstableizerFilter', 'wplinkerFilter',
+function($scope, $window, wpData, $http, bgSVG, $stateParams, bstableizerFilter, wplinkerFilter) {
 	$scope.content = '';
 
 	wpData.getPage($stateParams.id ? $stateParams.id : 'priser')
 		.then(function(html) {
-			$scope.content = wplinker( bstableizerFilter(html), 'priser' );
+			$scope.content = wplinkerFilter( bstableizerFilter(html), 'priser' );
 
 			$window.scrollTo(0,0);
 		});

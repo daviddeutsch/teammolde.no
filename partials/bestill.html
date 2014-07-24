@@ -35,8 +35,8 @@
 			<tbody>
 			<tr ng-repeat="kurs in item.kurs">
 				<td>{{kurs.title}}</td>
-				<td>{{kurs.custom_fields.plasser}}</td>
-				<td>{{kurs.custom_fields.dato}}</td>
+				<td class="text-center">{{kurs.custom_fields.plasser}}</td>
+				<td class="text-center">{{kurs.custom_fields.dato | eurodate}} - {{kurs.custom_fields.tid}}</td>
 				<td>{{kurs.custom_fields.sted}}</td>
 			</tr>
 			</tbody>
