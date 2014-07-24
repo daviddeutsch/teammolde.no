@@ -116,17 +116,17 @@ function () {
 );
 
 teammoldeApp
-.filter('priserlinker',
+.filter('wplinker',
 [
 '$compile', '$rootScope',
 function ($compile, $rootScope) {
-	return function ( markup ) {
+	return function ( markup, type ) {
 		angular.forEach( angular.element('td a', markup), function(el) {
 			var search = el.outerHTML;
 
 			var child_el = angular.element(el);
 
-			child_el.attr('ui-sref', 'priser({ id: "'+child_el.attr("href" ).substr(1)+'" })');
+			child_el.attr('ui-sref', type+'({ id: "'+child_el.attr("href" ).substr(1)+'" })');
 
 			child_el.removeAttr("href");
 
@@ -186,14 +186,63 @@ function($scope, $window, wpData, $http, bgSVG, $stateParams, bstableizerFilter,
 	$scope.content = '';
 
 	wpData.getPage($stateParams.id ? $stateParams.id : 'priser')
-	//$http.get('partials/priser-static.html')
 		.then(function(html) {
-		//.success(function(html) {
-			$scope.content = priserlinkerFilter(
-				bstableizerFilter(
-					html
-				)
-			);
+			$scope.content = wplinker( bstableizerFilter(html), 'priser' );
+
+			$window.scrollTo(0,0);
+		});
+
+	bgSVG.blur(true);
+}
+]
+);
+
+teammoldeApp
+.controller('BestillCtrl',
+[
+'$scope', '$q', 'wpData',
+function($scope, $q, wpData) {
+	$scope.content = '';
+
+	$scope.list = [
+		{title: 'Trafikalt grunnkurs TG', klasse: '', kurs: []},
+		{title: 'Personbil m. henger (Opptil totalt 4250kg last)', klasse: 'Klasse B96', kurs: []},
+		{title: 'Personbil m. henger', klasse: 'Klasse BE', kurs: []},
+		{title: 'Stor lastebil', klasse: 'Klasse C', kurs: []},
+		{title: 'Liten lastebil', klasse: 'Klasse C1', kurs: []},
+		{title: 'Buss', klasse: 'Klasse D', kurs: []},
+		{title: 'Minibuss', klasse: 'Klasse D1', kurs: []},
+		{title: 'Minibuss m. henger', klasse: 'Klasse D1E', kurs: []},
+		{title: 'Buss m. henger', klasse: 'Klasse DE', kurs: []},
+		{title: 'Traktor', klasse: 'Klasse T', kurs: []},
+		{title: 'YSK etterutdanning godstransport', klasse: '', kurs: []},
+		{title: 'YSK etterutdanning persontransport', klasse: '', kurs: []},
+		{title: 'YSK Godstransport YDG', klasse: '', kurs: []}
+	];
+
+	var prepare = function(content) {
+		var deferred = $q.defer();
+
+		for ( var i = 0; i < content.length; i++ ) {
+			content.custom_fields = unserialize(content.custom_fields);
+
+			if ( i === len ) {
+				deferred.resolve(content);
+			}
+		}
+
+		return deferred.promise;
+	};
+
+
+	wpData.getPosts('kurs')
+		.then(function(list) {
+			prepare(list)
+				.then(function(prepared){
+					angular.forEach(prepared, function(kurs){
+
+					});
+				});
 
 			$window.scrollTo(0,0);
 		});
@@ -225,6 +274,20 @@ function ( $q, $http )
 		$http.get('wordpress/' + url + '/?json=1', {cache: true})
 			.success(function(result) {
 				deferred.resolve(result.page.content);
+			})
+			.error(function(){
+				deferred.reject();
+			});
+
+		return deferred.promise;
+	};
+
+	this.getPosts = function( type ) {
+		var deferred = $q.defer();
+
+		$http.get('wordpress/?json=get_recent_posts&post_type='+type+'&count=50', {cache: true})
+			.success(function(result) {
+				deferred.resolve(result.posts);
 			})
 			.error(function(){
 				deferred.reject();

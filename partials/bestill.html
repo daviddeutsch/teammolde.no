@@ -1,0 +1,18 @@
+<div ng-controller="BestillCtrl">
+	<h1>Bestill Kurs</h1>
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th>Kurs</th>
+				<th>Klasse</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="item in list">
+				<td>{{item.title}}</td>
+				<td>{{item.klasse}}</td>
+			</tr>
+		</tbody>
+	</table>
+
+</div>
