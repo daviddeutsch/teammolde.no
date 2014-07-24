@@ -352,8 +352,8 @@ function ( $q, $http )
 	this.getPosts = function( type ) {
 		var deferred = $q.defer();
 
-		//$http.get('wordpress/?json=get_recent_posts&post_type='+type+'&count=50', {cache: true})
-		$http.get('static.json', {cache: true})
+		$http.get('wordpress/?json=get_recent_posts&post_type='+type+'&count=50', {cache: true})
+		//$http.get('static.json', {cache: true})
 			.success(function(result) {
 				deferred.resolve(result.posts);
 			})
