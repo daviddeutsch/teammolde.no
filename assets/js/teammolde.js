@@ -220,7 +220,11 @@ function($scope, $window, wpData, $http, bgSVG, $stateParams, backlinkerFilter, 
 
 	wpData.getPage($stateParams.id ? $stateParams.id : 'priser')
 		.then(function(html) {
-			$scope.content = wplinkerFilter( bstableizerFilter(backlinkerFilter(html)), 'priser' );
+			if ( $stateParams.id == 'priser' ) {
+				$scope.content = wplinkerFilter( bstableizerFilter(html), 'priser' );
+			} else {
+				$scope.content = wplinkerFilter( bstableizerFilter(backlinkerFilter(html)), 'priser' );
+			}
 
 			$window.scrollTo(0,0);
 		});
