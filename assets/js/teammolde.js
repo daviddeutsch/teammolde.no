@@ -443,13 +443,13 @@ function ( $q, Tween )
 			.animate({transform: 'translate(-400,0)'}, 500, mina.linear)
 			.animate({transform: 'translate(-800,0)'}, 5000, mina.easeinout)
 			.animate(
-				{transform: 'translate(2000,0) scale(-1, 1)'}, 2000, mina.easeinout,
+				{transform: 'translate(3200,0) scale(-1, 1)'}, 2000, mina.easeinout,
 				{transform: 'translate(2725,0) scale(-1, 1)'}
 			)
-			.animate({transform: 'translate(2000,0) scale(-1, 1)'}, 2500, mina.linear)
-			.animate({transform: 'translate(2400,0) scale(-1, 1)'}, 5000, mina.easeinout)
-			.animate({transform: 'translate(2800,0) scale(-1, 1)'}, 4000, mina.easeinout)
-			.animate({transform: 'translate(2800,0) scale(-1, 1)'}, 1000, mina.easeinout)
+			.animate({transform: 'translate(3200,0) scale(-1, 1)'}, 2500, mina.linear)
+			.animate({transform: 'translate(3700,0) scale(-1, 1)'}, 5000, mina.easeinout)
+			.animate({transform: 'translate(4200,0) scale(-1, 1)'}, 4000, mina.easeinout)
+			.animate({transform: 'translate(4200,0) scale(-1, 1)'}, 1000, mina.easeinout)
 			.animate(
 				{transform: 'translate(200,0) scale(1, 1)'}, 2000, mina.easeinout,
 				{transform: 'translate(0,0) scale(1, 1)'}
@@ -465,13 +465,13 @@ function ( $q, Tween )
 			.animate({transform: 'translate(-200,0)'}, 100, mina.linear)
 			.animate({transform: 'translate(-1400,0)'}, 9000, mina.easeinout)
 			.animate(
-				{transform: 'translate(2000,0) scale(-1, 1)'}, 2000, mina.easeinout,
+				{transform: 'translate(3750,0) scale(-1, 1)'}, 2000, mina.easeinout,
 				{transform: 'translate(1640,0) scale(-1, 1)'}
 			)
-			.animate({transform: 'translate(2000,0) scale(-1, 1)'}, 2500, mina.linear)
-			.animate({transform: 'translate(2400,0) scale(-1, 1)'}, 4000, mina.easeinout)
-			.animate({transform: 'translate(2600,0) scale(-1, 1)'}, 3000, mina.easeinout)
-			.animate({transform: 'translate(3200,0) scale(-1, 1)'}, 3000, mina.easeinout)
+			.animate({transform: 'translate(3700,0) scale(-1, 1)'}, 2500, mina.linear)
+			.animate({transform: 'translate(4100,0) scale(-1, 1)'}, 4000, mina.easeinout)
+			.animate({transform: 'translate(4300,0) scale(-1, 1)'}, 3000, mina.easeinout)
+			.animate({transform: 'translate(4900,0) scale(-1, 1)'}, 3000, mina.easeinout)
 			.animate(
 				{transform: 'translate(0,0) scale(1, 1)'}, 1000, mina.easeinout,
 				{transform: 'translate(0,0) scale(1, 1)'}
