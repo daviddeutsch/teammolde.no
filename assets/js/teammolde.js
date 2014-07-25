@@ -182,10 +182,27 @@ function($scope, bgSVG, $window) {
 	$scope.bgtype = '';
 
 	var centerbg = function() {
-		angular.element('#background svg').attr(
-			'style',
-			'margin-left: -' + ((3500 - $window.innerWidth) / 2) + 'px;'
-		);
+		if ( $window.innerWidth > 1600 ) {
+			angular.element('#background svg').attr({
+				style: 'margin-left: -' + ((3500 - $window.innerWidth) / 2) + 'px;',
+				transform: ''
+			});
+		} else if ( $window.innerWidth <= 1600 && $window.innerWidth > 1400 ) {
+			angular.element('#background svg').attr({
+				style: 'margin-left: -' + ((3500 - $window.innerWidth) / 2.4) + 'px;',
+				transform: 'scale(0.9, 0.9)'
+			});
+		} else if ( $window.innerWidth <= 1400 && $window.innerWidth > 1140 ) {
+			angular.element('#background svg').attr({
+				style: 'margin-left: -' + ((3500 - $window.innerWidth) / 3) + 'px;',
+				transform: 'scale(0.8, 0.8)'
+			});
+		} else if ( $window.innerWidth <= 1140 ) {
+			angular.element('#background svg').attr({
+				style: 'margin-left: -' + ((3500 - $window.innerWidth) / 3.5) + 'px;',
+				transform: 'scale(0.7, 0.7)'
+			});
+		}
 	};
 
 	var resize = function() {
