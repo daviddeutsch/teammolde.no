@@ -169,19 +169,25 @@ teammoldeApp
 function($scope, bgSVG, $window) {
 	$scope.bgtype = '';
 
-	var resize = function() {
-		if ( $scope.bgtype == '' ) {
-			bgSVG.init().then(function(){
-				bgSVG.go();
-			});
-
-			$scope.bgtype = 'svg';
-		}
-
+	var centerbg = function() {
 		angular.element('#background svg').attr(
 			'style',
 			'margin-left: -' + ((3500 - $window.innerWidth) / 2) + 'px;'
 		);
+	};
+
+	var resize = function() {
+		if ( $scope.bgtype == '' ) {
+			bgSVG.init().then(function(){
+				bgSVG.go();
+
+				$scope.bgtype = 'svg';
+
+				centerbg();
+			});
+		} else {
+			centerbg();
+		}
 	};
 
 	angular.element($window).bind("resize", function() {
