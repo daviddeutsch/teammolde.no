@@ -6689,10 +6689,9 @@ table.table-hover.expanded {
 }
 #laerere .panel-header h3 {
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 140%;
+  font-size: 24px;
   font-weight: 700;
   text-transform: uppercase;
-  margin-left: 12px;
 }
 #laerere .panel-body {
   padding-bottom: 0;
@@ -6715,7 +6714,7 @@ table.table-hover.expanded {
   vertical-align: middle;
 }
 #laerere .panel-body ul li i.fa-mobile {
-  padding: 6px 18.5px;
+  padding: 6px 18px;
 }
 #laerere .panel-body ul li:first-child {
   border-bottom: 2px solid #000;
