@@ -134,7 +134,7 @@ function () {
 	return function ( markup ) {
 		return markup.replace(
 			'<h1>',
-			'<h1><span><a ui-sref="priser({ id: \'priser\' })"><i class="fa fa-angle-double-left"></i></a></span>'
+			'<h1><span><a ui-sref="priser({ id: \'priser\' })"><i class="fa fa-chevron-left"></i></a></span>'
 		);
 	};
 }

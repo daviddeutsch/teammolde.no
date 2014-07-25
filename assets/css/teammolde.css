@@ -6550,6 +6550,7 @@ h1 span {
   height: 1.2em;
 }
 h1 a {
+  display: inline-block;
   color: #fff;
   -webkit-transition: all 400ms cubic-bezier(0, 0.87, 0.67, 0.99);
   -o-transition: all 400ms cubic-bezier(0, 0.87, 0.67, 0.99);
