@@ -14,7 +14,7 @@ if (!Object.keys) {
 var teammoldeApp = angular.module(
 	"teammoldeApp",
 	[
-		'ngAnimate', 'ui.router'
+		'ngAnimate', 'ui.router', 'mgcrea.ngStrap'
 	]
 );
 
@@ -182,26 +182,38 @@ function($scope, bgSVG, $window) {
 	$scope.bgtype = '';
 
 	var centerbg = function() {
-		if ( $window.innerWidth > 1600 ) {
-			angular.element('#background svg').attr({
-				style: 'margin-left: -' + ((3500 - $window.innerWidth) / 2) + 'px;',
-				transform: ''
-			});
-		} else if ( $window.innerWidth <= 1600 && $window.innerWidth > 1400 ) {
-			angular.element('#background svg').attr({
-				style: 'margin-left: -' + ((3500 - $window.innerWidth) / 2.4) + 'px;',
-				transform: 'scale(0.9, 0.9)'
-			});
-		} else if ( $window.innerWidth <= 1400 && $window.innerWidth > 1140 ) {
-			angular.element('#background svg').attr({
-				style: 'margin-left: -' + ((3500 - $window.innerWidth) / 3) + 'px;',
-				transform: 'scale(0.8, 0.8)'
-			});
-		} else if ( $window.innerWidth <= 1140 ) {
-			angular.element('#background svg').attr({
-				style: 'margin-left: -' + ((3500 - $window.innerWidth) / 3.5) + 'px;',
-				transform: 'scale(0.7, 0.7)'
-			});
+		if ( $window.innerWidth > 1620 ) {
+			angular.element('#background svg').attr(
+				'style', 'margin-left: -' + ((3500 - $window.innerWidth) / 2) + 'px;'
+			);
+
+			angular.element('#background svg #molde').attr(
+				'transform', ''
+			);
+		} else if ( $window.innerWidth <= 1620 && $window.innerWidth > 1380 ) {
+			angular.element('#background svg').attr(
+				'style', 'margin-left: -' + ((3500 - $window.innerWidth) / 3) + 'px;'
+			);
+
+			angular.element('#background svg #molde').attr(
+				'transform', 'scale(0.78, 0.78)'
+			);
+		} else if ( $window.innerWidth <= 1380 && $window.innerWidth > 1120 ) {
+			angular.element('#background svg').attr(
+				'style', 'margin-left: -' + ((3500 - $window.innerWidth) / 3.8) + 'px;'
+			);
+
+			angular.element('#background svg #molde').attr(
+				'transform', 'scale(0.68, 0.68)'
+			);
+		} else if ( $window.innerWidth <= 1120 ) {
+			angular.element('#background svg').attr(
+				'style', 'margin-left: -' + ((3500 - $window.innerWidth) / 5) + 'px;'
+			);
+
+			angular.element('#background svg #molde').attr(
+				'transform', 'scale(0.56, 0.56)'
+			);
 		}
 	};
 
