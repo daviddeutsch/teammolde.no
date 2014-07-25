@@ -211,10 +211,8 @@ function($scope, $window, wpData, $http, bgSVG, $stateParams, bstableizerFilter,
 			$scope.content = wplinkerFilter( bstableizerFilter(html), 'priser' );
 
 			if ( $stateParams.id != 'priser' ) {
-				$scope.content = $scope.content.replace(
-					'<h1>',
-					'<h1><span><a ui-sref="priser({ id: \'priser\' })"><i class="fa fa-angle-double-left"></i></a></span>'
-				);
+				angular.element('h1', $scope.content)
+					.prepend('<h1><span><a ui-sref="priser({ id: \'priser\' })"><i class="fa fa-angle-double-left"></i></a></span>');
 			}
 
 			$window.scrollTo(0,0);
