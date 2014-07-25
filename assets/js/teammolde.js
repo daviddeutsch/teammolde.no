@@ -334,6 +334,61 @@ function($scope, $q, wpData, bgSVG) {
 );
 
 teammoldeApp
+.controller('LaerereCtrl',
+[
+'$scope', 'bgSVG',
+function($scope, bgSVG) {
+	bgSVG.blur(true);
+
+	$scope.list = [
+		{
+			name: 'Geir Magne Pettersen',
+			email: 'geirmagne@teammolde.no',
+			profile: 'profile_geirmagne.jpg',
+			phone: '95 06 55 09'
+		},
+		{
+			name: 'Iselin Larsen',
+			email: 'iselin@teammolde.no',
+			profile: 'profile_iselin.jpg',
+			phone: '90 06 90 96'
+		},
+		{
+			name: 'Jørn H Sorthe',
+			email: 'jorn@teammolde.no',
+			profile: 'profile_jorn.jpg',
+			phone: '95 11 10 82'
+		},
+		{
+			name: 'Kristian Vaagen',
+			email: 'kristian@teammolde.no',
+			profile: 'profile_kristian.jpg',
+			phone: '48 15 07 75'
+		},
+		{
+			name: 'Leidulf Inderhaug',
+			email: 'leidulf@teammolde.no',
+			profile: 'profile_leidulf.jpg',
+			phone: '95 06 55 07'
+		},
+		{
+			name: 'Lisa Eikrem',
+			email: 'lisa@teammolde.no ',
+			profile: 'profile_lisa.jpg',
+			phone: '90 14 64 09'
+		},
+		{
+			name: 'Thomas Døving Bronnes',
+			email: 'thomas.bronnes@teammolde.no',
+			profile: 'profile_thomas.bronnes.jpg',
+			phone: '90 94 73 14'
+		}
+	];
+}
+]
+);
+
+teammoldeApp
 .controller('StdCtrl',
 [
 'bgSVG',
