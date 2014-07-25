@@ -165,7 +165,7 @@ div.table-dock table.table > tbody > tr > td {
   border-top: none;
 }
 div.table-dock table.table > tbody > tr > td.half {
-  width: 50%;
+  width: 70%;
 }
 div.table-dock:last-child {
   border-bottom: 2px solid #000 !important;
