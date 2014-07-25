@@ -6472,6 +6472,9 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   color: #000;
 }
+#main {
+  margin-bottom: 256px;
+}
 #team-logo {
   margin: 20px 0px;
 }
