@@ -45,115 +45,114 @@
   <g
      id="buss">
     <g
-       transform="translate(823.09091,12)"
-       id="g6100">
+       id="g7543">
       <path
-         d="m 1539.2505,483.91837 c -0.5,-0.5 -1.2,-0.5 -1.2,-0.5 h -88.3 c 0,0 -1.3,0.3 -1.7,0.9 -0.4,0.6 -0.4,1.9 -0.4,1.9 l 0,12.7 c 0,0 -0.4,0.4 -0.6,1.2 -0.3,1.1 -0.1,1.8 -0.1,1.8 v 6.8 c 0,0 -0.1,0.5 0.4,1.2 0.4,0.5 1.3,0.5 1.3,0.5 h 22 67 c 0,0 0.6,0.3 1.3,-0.5 0.7,-0.7 0.7,-1.4 0.7,-1.4 0,0 0.1,-24.1 -0.4,-24.6 z"
+         d="m 2362.3414,495.91837 c -0.5,-0.5 -1.2,-0.5 -1.2,-0.5 h -88.3 c 0,0 -1.3,0.3 -1.7,0.9 -0.4,0.6 -0.4,1.9 -0.4,1.9 l 0,12.7 c 0,0 -0.4,0.4 -0.6,1.2 -0.3,1.1 -0.1,1.8 -0.1,1.8 v 6.8 c 0,0 -0.1,0.5 0.4,1.2 0.4,0.5 1.3,0.5 1.3,0.5 h 22 67 c 0,0 0.6,0.3 1.3,-0.5 0.7,-0.7 0.7,-1.4 0.7,-1.4 0,0 0.1,-24.1 -0.4,-24.6 z"
          id="path13952"
          style="fill:#43b0eb" />
       <circle
          cx="16.4"
          cy="27.9"
          r="5.6999998"
-         transform="matrix(-1,0,0,1,1539.6505,482.41837)"
+         transform="matrix(-1,0,0,1,2362.7414,494.41837)"
          id="circle13954"
          style="fill:#190805" />
       <circle
          cx="16.4"
          cy="27.9"
          r="3.9000001"
-         transform="matrix(-1,0,0,1,1539.6505,482.41837)"
+         transform="matrix(-1,0,0,1,2362.7414,494.41837)"
          id="circle13956"
          style="fill:#808080" />
       <circle
          cx="16.4"
          cy="27.9"
          r="1.9"
-         transform="matrix(-1,0,0,1,1539.6505,482.41837)"
+         transform="matrix(-1,0,0,1,2362.7414,494.41837)"
          id="circle13958"
          style="fill:#cccccc" />
       <circle
          cx="68.400002"
          cy="27.9"
          r="5.6999998"
-         transform="matrix(-1,0,0,1,1539.6505,482.41837)"
+         transform="matrix(-1,0,0,1,2362.7414,494.41837)"
          id="circle13960"
          style="fill:#190805" />
       <circle
          cx="68.400002"
          cy="27.9"
          r="3.9000001"
-         transform="matrix(-1,0,0,1,1539.6505,482.41837)"
+         transform="matrix(-1,0,0,1,2362.7414,494.41837)"
          id="circle13962"
          style="fill:#808080" />
       <circle
          cx="68.400002"
          cy="27.9"
          r="1.9"
-         transform="matrix(-1,0,0,1,1539.6505,482.41837)"
+         transform="matrix(-1,0,0,1,2362.7414,494.41837)"
          id="circle13964"
          style="fill:#cccccc" />
       <rect
          width="4"
          height="13"
-         x="-1451.9506"
-         y="485.41837"
+         x="-2275.0415"
+         y="497.41837"
          transform="scale(-1,1)"
          id="rect13966"
          style="fill:#163847" />
       <rect
          width="18"
          height="13"
-         x="-1537.9504"
-         y="485.41837"
+         x="-2361.0413"
+         y="497.41837"
          transform="scale(-1,1)"
          id="rect13968"
          style="fill:#163847" />
       <rect
          width="8"
          height="13"
-         x="-1518.9504"
-         y="485.41837"
+         x="-2342.0413"
+         y="497.41837"
          transform="scale(-1,1)"
          id="rect13970"
          style="fill:#163847" />
       <rect
          width="8"
          height="13"
-         x="-1499.9504"
-         y="485.41837"
+         x="-2323.0413"
+         y="497.41837"
          transform="scale(-1,1)"
          id="rect13972"
          style="fill:#163847" />
       <rect
          width="4"
          height="23"
-         x="-1509.9504"
-         y="487.41837"
+         x="-2333.0413"
+         y="499.41837"
          transform="scale(-1,1)"
          id="rect13974"
          style="fill:#163847" />
       <rect
          width="4"
          height="23"
-         x="-1504.9504"
-         y="487.41837"
+         x="-2328.0413"
+         y="499.41837"
          transform="scale(-1,1)"
          id="rect13976"
          style="fill:#163847" />
       <rect
          width="4"
          height="22"
-         x="-1461.9506"
-         y="487.41837"
+         x="-2285.0415"
+         y="499.41837"
          transform="scale(-1,1)"
          id="rect13978"
          style="fill:#163847" />
       <rect
          width="4"
          height="22"
-         x="-1456.9506"
-         y="487.41837"
+         x="-2280.0415"
+         y="499.41837"
          transform="scale(-1,1)"
          id="rect13980"
          style="fill:#163847" />
@@ -161,46 +160,46 @@
          cx="91.699997"
          cy="18.299999"
          r="0.69999999"
-         transform="matrix(-1,0,0,1,1539.6505,482.41837)"
+         transform="matrix(-1,0,0,1,2362.7414,494.41837)"
          id="circle13982"
          style="fill:#ffffff" />
       <circle
          cx="91.699997"
          cy="20"
          r="0.69999999"
-         transform="matrix(-1,0,0,1,1539.6505,482.41837)"
+         transform="matrix(-1,0,0,1,2362.7414,494.41837)"
          id="circle13984"
          style="fill:#ffffff" />
       <circle
          cx="91.699997"
          cy="21.799999"
          r="0.69999999"
-         transform="matrix(-1,0,0,1,1539.6505,482.41837)"
+         transform="matrix(-1,0,0,1,2362.7414,494.41837)"
          id="circle13986"
          style="fill:#ffffff" />
       <circle
          cx="1.3"
          cy="18.299999"
          r="0.69999999"
-         transform="matrix(-1,0,0,1,1539.6505,482.41837)"
+         transform="matrix(-1,0,0,1,2362.7414,494.41837)"
          id="circle13988"
          style="fill:#ffffff" />
       <circle
          cx="1.3"
          cy="20"
          r="0.69999999"
-         transform="matrix(-1,0,0,1,1539.6505,482.41837)"
+         transform="matrix(-1,0,0,1,2362.7414,494.41837)"
          id="circle13990"
          style="fill:#ffff00" />
       <circle
          cx="1.3"
          cy="21.799999"
          r="0.69999999"
-         transform="matrix(-1,0,0,1,1539.6505,482.41837)"
+         transform="matrix(-1,0,0,1,2362.7414,494.41837)"
          id="circle13992"
          style="fill:#c1272d" />
       <g
-         transform="matrix(-1,0,0,1,1539.6505,482.41837)"
+         transform="matrix(-1,0,0,1,2362.7414,494.41837)"
          id="g13994">
         <rect
            width="14"
@@ -218,61 +217,60 @@
            style="fill:#163847" />
       </g>
       <polygon
-         points="27.7,0 27.7,1.5 18,1.4 20.3,0 "
-         transform="matrix(-1,0,0,1,1539.6505,482.41837)"
+         points="27.7,1.5 18,1.4 20.3,0 27.7,0 "
+         transform="matrix(-1,0,0,1,2362.7414,494.41837)"
          id="polygon14000"
          style="fill:#43b0eb" />
       <polygon
-         points="24.7,0 24.7,1.5 34.8,1.4 32.9,0 "
-         transform="matrix(-1,0,0,1,1539.6505,482.41837)"
+         points="24.7,1.5 34.8,1.4 32.9,0 24.7,0 "
+         transform="matrix(-1,0,0,1,2362.7414,494.41837)"
          id="polygon14002"
          style="fill:#43b0eb" />
       <polygon
-         points="65.7,0 65.7,1.5 56,1.4 58.3,0 "
-         transform="matrix(-1,0,0,1,1539.6505,482.41837)"
+         points="65.7,1.5 56,1.4 58.3,0 65.7,0 "
+         transform="matrix(-1,0,0,1,2362.7414,494.41837)"
          id="polygon14004"
          style="fill:#43b0eb" />
       <polygon
-         points="62.7,0 62.7,1.5 72.8,1.4 70.9,0 "
-         transform="matrix(-1,0,0,1,1539.6505,482.41837)"
+         points="62.7,1.5 72.8,1.4 70.9,0 62.7,0 "
+         transform="matrix(-1,0,0,1,2362.7414,494.41837)"
          id="polygon14006"
          style="fill:#43b0eb" />
     </g>
     <g
-       transform="translate(823.09091,12)"
-       id="g6064">
+       id="g7580">
       <path
-         d="m 1594.218,106.16561 -40.3935,0 0,38.09538 40.3935,0 -5.3917,-19.04769 z"
+         d="m 2417.3089,118.16561 -40.3935,0 0,38.09538 40.3935,0 -5.3917,-19.04769 z"
          id="path5914"
          style="fill:#379ecc;fill-opacity:1;fill-rule:nonzero;stroke:none" />
       <path
-         d="m 1492.2704,110.98744 0,372.81332"
+         d="m 2315.3613,122.98744 0,372.81332"
          id="path5916"
          style="fill:#8b5310;fill-opacity:1;stroke:#225876;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
       <rect
          width="23.380011"
          height="38.524693"
-         x="-1680.77"
-         y="-470.26392"
+         x="-2558.6716"
+         y="-763.60413"
          transform="matrix(-0.9375662,-0.34780687,0,1,0,0)"
          id="rect5918"
          style="fill:#225876;fill-opacity:1;fill-rule:nonzero;stroke:none" />
       <rect
          width="82.382385"
          height="38.524689"
-         x="-1575.8903"
-         y="114.31931"
+         x="-2398.9812"
+         y="126.31931"
          transform="scale(-1,1)"
          id="rect5920"
          style="fill:#43b0eb;fill-opacity:1;fill-rule:nonzero;stroke:none" />
       <text
-         x="1507.9569"
-         y="142.93155"
+         x="2331.0479"
+         y="154.93155"
          id="text5922"
          xml:space="preserve"
          style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Francois One;-inkscape-font-specification:Francois One"><tspan
-           x="1507.9569"
-           y="142.93155"
+           x="2331.0479"
+           y="154.93155"
            id="tspan5924"
            style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;font-family:Francois One;-inkscape-font-specification:Francois One">BUSS</tspan></text>
     </g>

@@ -485,21 +485,21 @@ function ( $q, Tween )
 			.sub('#buss text')
 			.animate({transform: 'translate(0,0)'}, 2500, mina.linear)
 			.animate({transform: 'translate(-280,0)'}, 4000, mina.easeinout)
-			.animate({transform: 'matrix(0.98554261,0.16942777,-0.16942777,0.98554261,-252.53082,-261.69727)'}, 5000, mina.easeinout)
-			.animate({transform: 'matrix(0.93870831,0.34471252,-0.34471252,0.93870831,-213.82664,-547.30635)'}, 3000, mina.linear)
-			.animate({transform: 'matrix(0.98020369,0.19799176,-0.19799176,0.98020369,-540.75624,-415.44484)'}, 2500, mina.linear)
-			.animate({transform: 'matrix(0.99794493,0.06407749,-0.06407749,0.99794493,-761.67881,-248.31587)'}, 1500, mina.linear)
+			.animate({transform: 'matrix(0.96700291,0.25476532,-0.25476532,0.96700291,-205.5497,-603.76466)'}, 5000, mina.easeinout)
+			.animate({transform: 'matrix(0.9612598,0.27564399,-0.27564399,0.9612598,-344.24358,-709.85583)'}, 3000, mina.linear)
+			.animate({transform: 'matrix(0.98220528,0.18781055,-0.18781055,0.98220528,-574.53991,-557.69096)'}, 2500, mina.linear)
+			.animate({transform: 'matrix(0.99780921,0.06615729,-0.06615729,0.99780921,-757.3202,-294.54153)'}, 1500, mina.linear)
 			.animate({transform: 'translate(-897,-152)'}, 2500, mina.linear)
 			.animate({transform: 'translate(-897,-152)'}, 1500, mina.linear)
 			.animate(
-				{transform: 'translate(2097,-152) scale(-1, 1)'}, 500, mina.linear,
-				{transform: 'translate(3070,0) scale(-1, 1)'}
+				{transform: 'translate(3750,-152) scale(-1, 1)'}, 500, mina.linear,
+				{transform: 'translate(4715,0) scale(-1, 1)'}
 			)
-			.animate({transform: 'matrix(-0.98905174,-0.14756914,-0.14756914,0.98905174,2310.6042,89.791862)'}, 1500, mina.linear)
-			.animate({transform: 'matrix(-0.9666291,-0.25617997,-0.25617997,0.9666291,2488.4436,298.8061)'}, 2500, mina.linear)
-			.animate({transform: 'matrix(-0.94359213,-0.33111008,-0.33111008,0.94359213,2575.3005,471.84637)'}, 3000, mina.linear)
-			.animate({transform: 'matrix(-0.99386723,-0.11057993,-0.11057993,0.99386723,2675.8798,155.36451)'}, 2000, mina.linear)
-			.animate({transform: 'matrix(-1,0,0,1,2872.1032,0)'}, 4000, mina.easeinout)
+			.animate({transform: 'matrix(-0.99138551,-0.13097621,-0.13097621,0.99138551,3924.1281,165.74468)'}, 1500, mina.linear)
+			.animate({transform: 'matrix(-0.96681011,-0.25549597,-0.25549597,0.96681011,4089.5422,504.11192)'}, 2500, mina.linear)
+			.animate({transform: 'matrix(-0.93323558,-0.359265,-0.359265,0.93323558,4206.0996,814.53922)'}, 3000, mina.linear)
+			.animate({transform: 'matrix(-0.99480413,-0.10180732,-0.10180732,0.99480413,4309.1536,223.59507)'}, 2000, mina.linear)
+			.animate({transform: 'matrix(-1,0,0,1,4465.285,0)'}, 4000, mina.easeinout)
 			.animate(
 				{transform: 'translate(0,0) scale(1, 1)'}, 1000, mina.linear,
 				{transform: 'translate(0,0) scale(1, 1)'}
