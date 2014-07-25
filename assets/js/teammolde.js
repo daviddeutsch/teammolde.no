@@ -129,6 +129,18 @@ function () {
 );
 
 teammoldeApp
+.filter('backlinker',
+function () {
+	return function ( markup ) {
+		return markup.replace(
+			'<h1>',
+			'<h1><span><a ui-sref="priser({ id: \'priser\' })"><i class="fa fa-angle-double-left"></i></a></span>'
+		);
+	};
+}
+);
+
+teammoldeApp
 .filter('wplinker',
 [
 '$compile', '$rootScope',
@@ -202,18 +214,13 @@ function($scope, bgSVG, $window) {
 teammoldeApp
 .controller('PriserCtrl',
 [
-'$scope', '$window', 'wpData', '$http', 'bgSVG', '$stateParams', 'bstableizerFilter', 'wplinkerFilter',
-function($scope, $window, wpData, $http, bgSVG, $stateParams, bstableizerFilter, wplinkerFilter) {
+'$scope', '$window', 'wpData', '$http', 'bgSVG', '$stateParams', 'backlinkerFilter', 'bstableizerFilter', 'wplinkerFilter',
+function($scope, $window, wpData, $http, bgSVG, $stateParams, backlinkerFilter, bstableizerFilter, wplinkerFilter) {
 	$scope.content = '';
 
 	wpData.getPage($stateParams.id ? $stateParams.id : 'priser')
 		.then(function(html) {
-			if ( $stateParams.id != 'priser' ) {
-				angular.element('h1', html)
-					.prepend('<span><a ui-sref="priser({ id: \'priser\' })"><i class="fa fa-angle-double-left"></i></a></span>');
-			}
-
-			$scope.content = wplinkerFilter( bstableizerFilter(html), 'priser' );
+			$scope.content = wplinkerFilter( bstableizerFilter(backlinker(html)), 'priser' );
 
 			$window.scrollTo(0,0);
 		});
