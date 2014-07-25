@@ -85,14 +85,22 @@ h1 {
 	text-transform: uppercase;
 	color: #fff;
 	letter-spacing: 0.075em;
+	span {
+		float: left;
+		position: relative;
+		height: 1.2em;
+	}
 	a {
 		color: #fff;
+		.transition(all 400ms cubic-bezier(0,.87,.67,.99));
 		&:hover {
 			color: #fff;
+			margin-top: -4px;
 			text-shadow: 0 4px 0 rgba(255,255,255,0.5);
 		}
 		&:active {
 			color: #fff;
+			margin-top: -4px;
 			text-shadow: 0 4px 0 rgba(255,255,255,0.5);
 		}
 	}
