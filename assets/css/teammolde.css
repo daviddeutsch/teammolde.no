@@ -6706,6 +6706,7 @@ table.table-hover.expanded {
 #laerere .panel-body ul li {
   list-style: none;
   margin-left: -40px;
+  font-size: 17px;
 }
 #laerere .panel-body ul li i {
   color: #fff;
@@ -6714,7 +6715,7 @@ table.table-hover.expanded {
   vertical-align: middle;
 }
 #laerere .panel-body ul li i.fa-mobile {
-  padding: 6px 17.5px;
+  padding: 6px 18.5px;
 }
 #laerere .panel-body ul li:first-child {
   border-bottom: 2px solid #000;
