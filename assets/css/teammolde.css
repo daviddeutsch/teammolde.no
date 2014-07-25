@@ -6514,9 +6514,10 @@ ul.team-nav li a:active {
   position: absolute;
   z-index: 0;
   width: 100%;
+  overflow: hidden;
 }
 #background svg {
-  width: 100%;
+  width: 3500px;
 }
 #background svg:not(:root) {
   overflow: visible !important;
