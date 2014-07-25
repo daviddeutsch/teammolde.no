@@ -14,11 +14,11 @@
 					<ul>
 						<li>
 							<i class="fa fa-2x fa-envelope"></i>
-							<span>{{laerer.email}}</span>
+							<span><a href="mailto:{{laerer.email}}">{{laerer.email}}</a></span>
 						</li>
 						<li>
 							<i class="fa fa-3x fa-mobile"></i>
-							<span>{{laerer.phone}}</span>
+							<span><a href="tel:{{laerer.phone | removewhitespace}}">{{laerer.phone}}</a></span>
 						</li>
 					</ul>
 				</div>

@@ -164,13 +164,20 @@ function ($compile, $rootScope) {
 ]
 );
 
-
 teammoldeApp.filter('eurodate',
 function () {
 	return function ( d ) {
 		return d.match(/.{2}|.{1,2}/g ).join('.');
 	};
 }
+);
+
+teammoldeApp.filter('removewhitespace',
+	function () {
+		return function ( d ) {
+			return d.replace(/ /g,'');
+		};
+	}
 );
 
 
