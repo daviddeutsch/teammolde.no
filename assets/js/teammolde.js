@@ -208,12 +208,12 @@ function($scope, $window, wpData, $http, bgSVG, $stateParams, bstableizerFilter,
 
 	wpData.getPage($stateParams.id ? $stateParams.id : 'priser')
 		.then(function(html) {
-			$scope.content = wplinkerFilter( bstableizerFilter(html), 'priser' );
-
 			if ( $stateParams.id != 'priser' ) {
-				angular.element('h1', $scope.content)
-					.prepend('<h1><span><a ui-sref="priser({ id: \'priser\' })"><i class="fa fa-angle-double-left"></i></a></span>');
+				angular.element('h1', html)
+					.prepend('<span><a ui-sref="priser({ id: \'priser\' })"><i class="fa fa-angle-double-left"></i></a></span>');
 			}
+
+			$scope.content = wplinkerFilter( bstableizerFilter(html), 'priser' );
 
 			$window.scrollTo(0,0);
 		});
