@@ -80,6 +80,7 @@ h1 span {
   float: left;
   position: relative;
   height: 1.2em;
+  padding: 0 16px 0 0;
 }
 h1 a {
   display: block;
@@ -109,7 +110,7 @@ table.table {
 }
 table.table > thead > tr > th {
   border: 2px solid #000;
-  width: 52%;
+  width: 70%;
   font-size: 33px;
   padding: 8px 24px 8px;
 }
