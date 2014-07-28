@@ -1,11 +1,33 @@
 @import url("//fonts.googleapis.com/css?family=Francois+One|Source+Sans+Pro:900,700,400,300");
+html {
+  height: 100%;
+}
 body {
   background: #8ccee4;
   font-family: 'Source Sans Pro', sans-serif;
   color: #000;
+  min-height: 100%;
 }
 #main {
-  margin-bottom: 256px;
+  min-height: 100%;
+}
+#push {
+  width: 100%;
+  height: 256px;
+}
+#imedias {
+  padding: 24px;
+  text-align: center;
+  color: #555;
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+}
+#imedias a {
+  color: #555;
+}
+#imedias a:hover {
+  text-decoration: none;
 }
 #team-logo {
   margin: 20px 0px;
@@ -70,8 +92,9 @@ ul.team-nav li a:active {
   background-color: #8ccee4;
 }
 #foreground {
-  position: relative;
+  position: inherit;
   z-index: 100;
+  min-height: 100%;
 }
 h1 {
   font-family: 'Francois One', sans-serif;
@@ -143,7 +166,7 @@ table.table td {
   transition: all 400ms cubic-bezier(0, 0.87, 0.67, 0.99);
 }
 table.table td:hover {
-  padding: 2px 4px 4px 26px !important;
+  padding: 2px 4px 4px 24px !important;
 }
 table.table td a {
   color: #000;
