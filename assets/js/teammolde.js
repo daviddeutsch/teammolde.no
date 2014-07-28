@@ -358,7 +358,7 @@ function($scope, $q, $state, $stateParams, wpData, bgSVG) {
 
 		for ( var i = 0; i <= len; i++ ) {
 			convert(content[i])
-				.then(function(item){
+				.then(function(item, i){
 					content[i] = item;
 
 					if ( i === len ) {
