@@ -67,7 +67,7 @@ function ($stateProvider, $urlRouterProvider, $sceProvider)
 		})
 
 		.state('bestill', {
-			url: '/bestill',
+			url: '/bestill/:id',
 			views: {
 				"main": {
 					templateUrl: '/partials/bestill.html'
@@ -273,18 +273,30 @@ function($scope, $window, wpData, $http, bgSVG, $stateParams, backlinkerFilter, 
 teammoldeApp
 .controller('BestillCtrl',
 [
-'$scope', '$q', 'wpData', 'bgSVG',
-function($scope, $q, wpData, bgSVG) {
+'$scope', '$q', '$stateParams', 'wpData', 'bgSVG',
+function($scope, $q, $stateParams, wpData, bgSVG) {
 	$scope.content = '';
 
 	$scope.focus = 'unset';
 
-	$scope.set = function( id ) {
+	var itemhash = function(item) {
+		if ( item.klasse !== '' ) {
+			return item.klasse.toLowerCase().replace(/[^a-z0-9]/gi,'');
+		} else {
+			return item.title.toLowerCase().replace(/[^a-z0-9]/gi,'');
+		}
+	};
+
+	$scope.set = function( id, item ) {
+		var name = itemhash(item);
+
 		if ( $scope.focus == id ) {
 			$scope.focus = 'unset';
 		} else {
 			$scope.focus = id
 		}
+
+		$location.hash(name);
 	};
 
 	$scope.list = [
@@ -356,22 +368,34 @@ function($scope, $q, wpData, bgSVG) {
 		return deferred.promise;
 	};
 
+	var enlist = function(list) {
+		prepare(list)
+			.then(function(prepared){
+				angular.forEach(prepared, function(kurs){
+					angular.forEach(kurs.custom_fields.klasse, function(klasse){
+						if ( typeof $scope.list[$scope.map[klasse]] != 'undefined' ) {
+							$scope.list[$scope.map[klasse]].kurs.push(kurs);
+						}
+					});
+				});
+			});
+	};
+
 	$scope.toggle = function(id) {
 		$scope.list[id].expanded = !$scope.list[id].expanded;
 	};
 
 	wpData.getPosts('kurs')
 		.then(function(list) {
-			prepare(list)
-				.then(function(prepared){
-					angular.forEach(prepared, function(kurs){
-						angular.forEach(kurs.custom_fields.klasse, function(klasse){
-							if ( typeof $scope.list[$scope.map[klasse]] != 'undefined' ) {
-								$scope.list[$scope.map[klasse]].kurs.push(kurs);
-							}
-						});
-					});
+			enlist(list);
+
+			if ( $stateParams.id ) {
+				angular.forEach($scope.list, function(item){
+					if ( $stateParams.id == itemhash(item, key) ) {
+						$scope.focus = $stateParams.id;
+					}
 				});
+			}
 		});
 
 	bgSVG.blur(true);
