@@ -114,10 +114,16 @@ ul.team-nav {
 
 h1 {
 	font-family: 'Francois One', sans-serif;
-	font-size: 700%;
+	font-size: 105px;
 	text-transform: uppercase;
 	color: #fff;
 	letter-spacing: 0.075em;
+	@media (max-width: @screen-md-min) {
+		font-size: 68px;
+	}
+	@media (max-width: @screen-xs-min) {
+		font-size: 48px;
+	}
 	span {
 		float: left;
 		position: relative;

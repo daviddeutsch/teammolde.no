@@ -6566,10 +6566,20 @@ ul.team-nav li a:active {
 }
 h1 {
   font-family: 'Francois One', sans-serif;
-  font-size: 700%;
+  font-size: 105px;
   text-transform: uppercase;
   color: #fff;
   letter-spacing: 0.075em;
+}
+@media (max-width: 992px) {
+  h1 {
+    font-size: 68px;
+  }
+}
+@media (max-width: 480px) {
+  h1 {
+    font-size: 48px;
+  }
 }
 h1 span {
   float: left;
