@@ -356,7 +356,7 @@ function($scope, $q, $state, $stateParams, wpData, bgSVG) {
 		var deferred = $q.defer();
 		var promises = [];
 
-		angular.forEach( content, function(item, key){
+		angular.forEach(content, function(item, key){
 			promises.push(function(){
 				var deferred = $q.defer();
 
@@ -405,7 +405,7 @@ function($scope, $q, $state, $stateParams, wpData, bgSVG) {
 			.then(function(prepared){
 				pushCourses(prepared)
 					.then(function(){
-						deferred.resolve(content);
+						deferred.resolve();
 					});
 			});
 
