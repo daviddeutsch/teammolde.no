@@ -357,19 +357,16 @@ function($scope, $q, $state, $stateParams, wpData, bgSVG) {
 		var promises = [];
 
 		angular.forEach(content, function(item, key){
-			promises.push((function(){
-				var deferred = $q.defer();
+			var deferred = $q.defer();
 
-				convert(item)
-					.then(function(item){
-						content[key] = item;
+			convert(item)
+				.then(function(item){
+					content[key] = item;
 
-						deferred.resolve(content);
-					});
+					deferred.resolve(content);
+				});
 
-				return deferred.promise;
-			}));
-
+			promises.push(deferred.promise);
 		});
 
 		$q.all(promises).then(function(item){
