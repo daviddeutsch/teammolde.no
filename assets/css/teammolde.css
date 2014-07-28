@@ -6789,6 +6789,14 @@ table.table-hover.expanded {
 .modal-content p {
   font-size: 18px;
 }
+.modal-content table.table {
+  border: none;
+  font-size: 22px;
+  margin: 6px 6px 6px -2px;
+}
+.modal-content table.table td {
+  border: none;
+}
 .modal-header {
   border-bottom: 2px solid #000;
 }

@@ -13,7 +13,7 @@
 			<div class="modal-body">
 				<p>Klasse {{item.klasse}}</p>
 				<h3>{{kurs.title}}</h3>
-				<table>
+				<table class="table">
 					<tr>
 						<td><strong>Plasser:</strong></td>
 						<td>{{kurs.custom_fields.plasser}}</td>
@@ -31,6 +31,30 @@
 						<td>{{kurs.custom_fields.dato | eurodate}} - {{kurs.custom_fields.tid}}</td>
 					</tr>
 				</table>
+				<hr/>
+				<form class="form-inline" role="form">
+					<div class="form-group">
+						<label class="sr-only" for="fornavn">Fornavn</label>
+						<input type="text" class="form-control" id="fornavn" placeholder="">
+					</div>
+					<div class="form-group">
+						<label class="sr-only" for="etternavn">Etternavn</label>
+						<input type="text" class="form-control" id="etternavn" placeholder="">
+					</div>
+					<div class="form-group">
+						<label class="sr-only" for="fodselsdato">Fødselsdato</label>
+						<input type="text" class="form-control" id="fodselsdato" placeholder="DDMMAA">
+					</div>
+					<div class="form-group">
+						<label class="sr-only" for="telefon">Telefon</label>
+						<input type="text" class="form-control" id="telefon" placeholder="">
+					</div>
+					<div class="form-group">
+						<label class="sr-only" for="epost">Epost</label>
+						<input type="text" class="form-control" id="epost" placeholder="">
+					</div>
+
+				</form>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-primary">Send Bestilling</button>
