@@ -277,20 +277,30 @@ teammoldeApp
 function($scope, $q, wpData, bgSVG) {
 	$scope.content = '';
 
+	$scope.focus = 'unset';
+
+	$scope.set = function( id ) {
+		if ( $scope.focus == id ) {
+			$scope.focus = 'unset';
+		} else {
+			$scope.focus = id
+		}
+	};
+
 	$scope.list = [
-		{title: 'Trafikalt grunnkurs TG', klasse: '', kurs: [], expanded: false},
-		{title: 'Personbil m. henger <span class="small-text">(Opptil totalt 4250kg last)</span>', klasse: 'B96', kurs: [], expanded: false},
-		{title: 'Personbil m. henger', klasse: 'BE', kurs: [], expanded: false},
-		{title: 'Stor lastebil', klasse: 'C', kurs: [], expanded: false},
-		{title: 'Liten lastebil', klasse: 'C1', kurs: [], expanded: false},
-		{title: 'Buss', klasse: 'D', kurs: [], expanded: false},
-		{title: 'Minibuss', klasse: 'D1', kurs: [], expanded: false},
-		{title: 'Minibuss m. henger', klasse: 'D1E', kurs: [], expanded: false},
-		{title: 'Buss m. henger', klasse: 'DE', kurs: [], expanded: false},
-		{title: 'Traktor', klasse: 'T', kurs: [], expanded: false},
-		{title: 'YSK etterutdanning godstransport', klasse: '', kurs: [], expanded: false},
-		{title: 'YSK etterutdanning persontransport', klasse: '', kurs: [], expanded: false},
-		{title: 'YSK Godstransport YDG', klasse: '', kurs: [], expanded: false}
+		{title: 'Trafikalt grunnkurs TG', klasse: '', kurs: []},
+		{title: 'Personbil m. henger <span class="small-text">(Opptil totalt 4250kg last)</span>', klasse: 'B96', kurs: []},
+		{title: 'Personbil m. henger', klasse: 'BE', kurs: []},
+		{title: 'Stor lastebil', klasse: 'C', kurs: []},
+		{title: 'Liten lastebil', klasse: 'C1', kurs: []},
+		{title: 'Buss', klasse: 'D', kurs: []},
+		{title: 'Minibuss', klasse: 'D1', kurs: []},
+		{title: 'Minibuss m. henger', klasse: 'D1E', kurs: []},
+		{title: 'Buss m. henger', klasse: 'DE', kurs: []},
+		{title: 'Traktor', klasse: 'T', kurs: []},
+		{title: 'YSK etterutdanning godstransport', klasse: '', kurs: []},
+		{title: 'YSK etterutdanning persontransport', klasse: '', kurs: []},
+		{title: 'YSK Godstransport YDG', klasse: '', kurs: []}
 	];
 
 	var list_keys = Object.keys($scope.list);

@@ -8,8 +8,8 @@
 			</tr>
 		</thead>
 	</table>
-	<div class="table-dock" ng-repeat="item in list" ng-class="{expanded: item.expanded}">
-		<table class="table table-hover" ng-class="{expanded: item.expanded}">
+	<div class="table-dock" ng-repeat="item in list" ng-class="{expanded: $index == focus}">
+		<table class="table table-hover" ng-class="{expanded: $index == focus}">
 			<thead>
 				<tr>
 					<th>Kurs</th>
@@ -17,13 +17,13 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr class="hoverable" ng-click="item.expanded = !item.expanded">
+				<tr class="hoverable" ng-click="set($index)">
 					<td ng-bind-html="item.title" class="half"></td>
 					<td class="half">{{item.klasse}}</td>
 				</tr>
 			</tbody>
 		</table>
-		<table class="table table-hover table-condensed table-head" ng-show="item.expanded">
+		<table class="table table-hover table-condensed table-head" ng-show="$index == focus">
 			<thead>
 			<tr>
 				<th class="large">Kurstype</th>
