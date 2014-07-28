@@ -6730,33 +6730,43 @@ table.table-hover.expanded {
   font-size: 24px;
   font-weight: 700;
   text-transform: uppercase;
+  margin-bottom: 21px;
 }
 #laerere .panel-body {
-  padding-bottom: 0;
+  padding: 0;
 }
-#laerere .panel-body ul {
+#laerere .panel-body table {
   border-top: 2px solid #000;
-  margin-left: -16px;
-  margin-right: -16px;
+  margin-right: -18px;
   margin-bottom: 0;
+  width: 100%;
 }
-#laerere .panel-body ul li {
-  list-style: none;
-  margin-left: -40px;
+#laerere .panel-body table tr {
   font-size: 17px;
 }
-#laerere .panel-body ul li i {
-  color: #fff;
+#laerere .panel-body table tr td {
+  padding: 10px;
+}
+#laerere .panel-body table tr td.black-icon {
   background: #000;
-  padding: 12px;
+  width: 60px;
+}
+#laerere .panel-body table tr td.black-icon i {
+  display: inline-block;
+  color: #fff;
   vertical-align: middle;
+  margin: 0 2px;
 }
-#laerere .panel-body ul li i.fa-mobile {
-  padding: 6px 18px;
+#laerere .panel-body table tr td.black-icon i.fa-mobile {
+  margin: -8px 8px;
 }
-#laerere .panel-body ul li:first-child {
+#laerere .panel-body table tr:first-child {
   border-bottom: 2px solid #000;
 }
-#laerere .panel-body ul li span {
-  margin-left: 12px;
+#laerere .panel-body table a {
+  color: #000;
+}
+#laerere .panel-body table a:hover {
+  text-decoration: none;
+  color: #444;
 }

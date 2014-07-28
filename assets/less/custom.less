@@ -282,33 +282,43 @@ table.table-hover {
 			font-size: 24px;
 			font-weight: 700;
 			text-transform: uppercase;
+			margin-bottom: 21px;
 		}
 	}
 	.panel-body {
-		padding-bottom: 0;
-		ul {
+		padding: 0;
+		table {
 			border-top: 2px solid #000;
-			margin-left: -16px;
-			margin-right: -16px;
+			margin-right: -18px;
 			margin-bottom: 0;
-			li {
-				list-style: none;
-				margin-left: -40px;
+			width: 100%;
+			tr {
 				font-size: 17px;
-				i {
-					color: #fff;
+				td {
+					padding: 10px;
+				}
+				td.black-icon {
 					background: #000;
-					padding: 12px;
-					vertical-align: middle;
-					&.fa-mobile {
-						padding: 6px 18px;
+					width: 60px;
+					i {
+						display: inline-block;
+						color: #fff;
+						vertical-align: middle;
+						margin: 0 2px;
+						&.fa-mobile {
+							margin: -8px 8px;
+						}
 					}
 				}
 				&:first-child {
 					border-bottom: 2px solid #000;
 				}
-				span {
-					margin-left: 12px;
+			}
+			a {
+				color: #000;
+				&:hover {
+					text-decoration: none;
+					color: #444;
 				}
 			}
 		}
