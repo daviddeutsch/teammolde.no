@@ -321,6 +321,9 @@ table.table-hover.expanded {
 .modal-content p {
   font-size: 18px;
 }
+.modal-content .form-inline .form-group {
+  margin-bottom: 4px;
+}
 .modal-content table.table {
   border: none;
   font-size: 22px;
