@@ -11,12 +11,26 @@
 				</h4>
 			</div>
 			<div class="modal-body">
-				<p>{{item.klasse}}</p>
+				<p>Klasse {{item.klasse}}</p>
 				<h3>{{kurs.title}}</h3>
-				<p><strong>Plasser:</strong>{{kurs.custom_fields.plasser}}</p>
-				<p><strong>Instruktør:</strong>{{kurs.custom_fields.instruktor}}</p>
-				<p><strong>Sted:</strong>{{kurs.custom_fields.sted}}</p>
-				<p><strong>Tid:</strong>{{kurs.custom_fields.dato | eurodate}} - {{kurs.custom_fields.tid}}</p>
+				<table>
+					<tr>
+						<td><strong>Plasser:</strong></td>
+						<td>{{kurs.custom_fields.plasser}}</td>
+					</tr>
+					<tr>
+						<td><strong>Instruktør:</strong></td>
+						<td>{{kurs.custom_fields.instruktor}}</td>
+					</tr>
+					<tr>
+						<td><strong>Sted:</strong></td>
+						<td>{{kurs.custom_fields.sted}}</td>
+					</tr>
+					<tr>
+						<td><strong>Tid:</strong></td>
+						<td>{{kurs.custom_fields.dato | eurodate}} - {{kurs.custom_fields.tid}}</td>
+					</tr>
+				</table>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-primary">Send Bestilling</button>
