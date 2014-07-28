@@ -6786,6 +6786,9 @@ table.table-hover.expanded {
 .modal-content {
   border: 2px solid #000;
 }
+.modal-content p {
+  font-size: 18px;
+}
 .modal-header {
   border-bottom: 2px solid #000;
 }
