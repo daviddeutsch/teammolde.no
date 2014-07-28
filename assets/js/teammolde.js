@@ -358,13 +358,15 @@ function($scope, $q, $state, $stateParams, wpData, bgSVG) {
 
 		for ( var i = 0; i <= len; i++ ) {
 			convert(content[i])
-				.then(function(item, i){
-					content[i] = item;
+				.then(
+					(function(item){
+						content[i] = item;
 
-					if ( i === len ) {
-						deferred.resolve(content);
-					}
-				});
+						if ( i === len ) {
+							deferred.resolve(content);
+						}
+					})(i)
+				);
 		}
 
 		return deferred.promise;
