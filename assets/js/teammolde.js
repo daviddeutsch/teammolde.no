@@ -385,8 +385,8 @@ function($scope, $q, $state, $stateParams, wpData, bgSVG) {
 
 		for ( var i = 0; i <= len; i++ ) {
 			angular.forEach(courses[i].custom_fields.klasse, function(klasse){
-				if ( typeof $scope.list[$scope.map[courses[i]]] != 'undefined' ) {
-					$scope.list[$scope.map[courses[i]]].kurs.push(courses[i]);
+				if ( typeof $scope.list[$scope.map[klasse]] != 'undefined' ) {
+					$scope.list[$scope.map[klasse]].kurs.push(courses[i]);
 				}
 			});
 
