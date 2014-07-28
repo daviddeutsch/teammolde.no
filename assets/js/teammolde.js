@@ -296,7 +296,7 @@ function($scope, $q, $state, $stateParams, wpData, bgSVG) {
 			$scope.focus = id
 		}
 
-		$state.go( '/bestill/'+name, {id: name});
+		$state.go( '/'+name, {id: name});
 	};
 
 	$scope.list = [
