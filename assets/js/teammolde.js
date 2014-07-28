@@ -273,8 +273,8 @@ function($scope, $window, wpData, $http, bgSVG, $stateParams, backlinkerFilter, 
 teammoldeApp
 .controller('BestillCtrl',
 [
-'$scope', '$q', '$stateParams', 'wpData', 'bgSVG',
-function($scope, $q, $stateParams, wpData, bgSVG) {
+'$scope', '$q', '$state', '$stateParams', 'wpData', 'bgSVG',
+function($scope, $q, $state, $stateParams, wpData, bgSVG) {
 	$scope.content = '';
 
 	$scope.focus = 'unset';
@@ -296,7 +296,7 @@ function($scope, $q, $stateParams, wpData, bgSVG) {
 			$scope.focus = id
 		}
 
-		$location.hash(name);
+		$state.go( '/bestill/'+name, {id: name});
 	};
 
 	$scope.list = [
