@@ -33,7 +33,12 @@
 			</tr>
 			</thead>
 			<tbody>
-			<tr ng-repeat="kurs in item.kurs" data-animation="am-fade-and-slide-top" data-template="partials/modal.bestill.html" bs-modal="modal">
+			<tr ng-repeat="kurs in item.kurs"
+				data-placement="center"
+				data-animation="am-fade-and-scale"
+				data-template="partials/modal.bestill.html"
+				bs-modal="modal"
+				>
 				<td>{{kurs.title}}</td>
 				<td class="text-center">{{kurs.custom_fields.plasser}}</td>
 				<td class="text-center">{{kurs.custom_fields.dato | eurodate}} - {{kurs.custom_fields.tid}}</td>
