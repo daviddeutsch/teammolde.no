@@ -8,44 +8,45 @@
 			</tr>
 		</thead>
 	</table>
-	<div class="table-dock" ng-repeat="item in list" ng-class="{expanded: $index == focus}">
-		<table class="table table-hover" ng-class="{expanded: $index == focus}">
-			<thead>
+	<div ng-if="loaded">
+		<div class="table-dock" ng-repeat="item in list" ng-class="{expanded: $index == focus}">
+			<table class="table table-hover" ng-class="{expanded: $index == focus}">
+				<thead>
+					<tr>
+						<th>Kurs</th>
+						<th>Klasse</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="hoverable" ng-click="set($index, item)">
+						<td ng-bind-html="item.title" class="half"></td>
+						<td class="half">{{item.klasse}}</td>
+					</tr>
+				</tbody>
+			</table>
+			<table class="table table-hover table-condensed table-head" ng-show="$index == focus">
+				<thead>
 				<tr>
-					<th>Kurs</th>
-					<th>Klasse</th>
+					<th class="large">Kurstype</th>
+					<th class="text-center">Ledige Pl.</th>
+					<th class="large">Dato</th>
+					<th class="large">Sted</th>
 				</tr>
-			</thead>
-			<tbody>
-				<tr class="hoverable" ng-click="set($index, item)">
-					<td ng-bind-html="item.title" class="half"></td>
-					<td class="half">{{item.klasse}}</td>
+				</thead>
+				<tbody>
+				<tr ng-repeat="kurs in item.kurs"
+					data-placement="center"
+					data-animation="am-fade-and-scale"
+					data-template="partials/modal.bestill.html"
+					bs-modal="modal"
+					>
+					<td>{{kurs.title}}</td>
+					<td class="text-center">{{kurs.custom_fields.plasser}}</td>
+					<td class="text-center">{{kurs.custom_fields.dato | eurodate}} - {{kurs.custom_fields.tid}}</td>
+					<td>{{kurs.custom_fields.sted}}</td>
 				</tr>
-			</tbody>
-		</table>
-		<table class="table table-hover table-condensed table-head" ng-show="$index == focus">
-			<thead>
-			<tr>
-				<th class="large">Kurstype</th>
-				<th class="text-center">Ledige Pl.</th>
-				<th class="large">Dato</th>
-				<th class="large">Sted</th>
-			</tr>
-			</thead>
-			<tbody>
-			<tr ng-repeat="kurs in item.kurs"
-				data-placement="center"
-				data-animation="am-fade-and-scale"
-				data-template="partials/modal.bestill.html"
-				bs-modal="modal"
-				>
-				<td>{{kurs.title}}</td>
-				<td class="text-center">{{kurs.custom_fields.plasser}}</td>
-				<td class="text-center">{{kurs.custom_fields.dato | eurodate}} - {{kurs.custom_fields.tid}}</td>
-				<td>{{kurs.custom_fields.sted}}</td>
-			</tr>
-			</tbody>
-		</table>
+				</tbody>
+			</table>
+		</div>
 	</div>
-
 </div>

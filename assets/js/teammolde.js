@@ -279,6 +279,8 @@ function($scope, $q, $state, $stateParams, wpData, bgSVG) {
 
 	$scope.focus = 'unset';
 
+	$scope.loaded = false;
+
 	var itemhash = function(item) {
 		if ( item.klasse !== '' ) {
 			return item.klasse.toLowerCase().replace(/[^a-z0-9]/gi,'');
@@ -368,17 +370,37 @@ function($scope, $q, $state, $stateParams, wpData, bgSVG) {
 		return deferred.promise;
 	};
 
+	var pushCourses = function(courses) {
+		var deferred = $q.defer();
+		var len = courses.length - 1;
+
+		for ( var i = 0; i < len; i++ ) {
+			angular.forEach(courses[i].custom_fields.klasse, function(klasse){
+				if ( typeof $scope.list[$scope.map[courses[i]]] != 'undefined' ) {
+					$scope.list[$scope.map[courses[i]]].kurs.push(courses[i]);
+				}
+			});
+
+			if ( i === len ) {
+				deferred.resolve();
+			}
+		}
+
+		return deferred.promise;
+	};
+
 	var enlist = function(list) {
+		var deferred = $q.defer();
+
 		prepare(list)
 			.then(function(prepared){
-				angular.forEach(prepared, function(kurs){
-					angular.forEach(kurs.custom_fields.klasse, function(klasse){
-						if ( typeof $scope.list[$scope.map[klasse]] != 'undefined' ) {
-							$scope.list[$scope.map[klasse]].kurs.push(kurs);
-						}
+				pushCourses(prepared)
+					.then(function(){
+						deferred.resolve(content);
 					});
-				});
 			});
+
+		return deferred.promise;
 	};
 
 	$scope.toggle = function(id) {
@@ -387,15 +409,18 @@ function($scope, $q, $state, $stateParams, wpData, bgSVG) {
 
 	wpData.getPosts('kurs')
 		.then(function(list) {
-			enlist(list);
-
-			if ( $stateParams.id ) {
-				angular.forEach($scope.list, function(item, key){
-					if ( $stateParams.id == itemhash(item) ) {
-						$scope.focus = key;
+			enlist(list)
+				.then(function(){
+					if ( $stateParams.id ) {
+						angular.forEach($scope.list, function(item, key){
+							if ( $stateParams.id == itemhash(item) ) {
+								$scope.focus = key;
+							}
+						});
 					}
+
+					$scope.loaded = true;
 				});
-			}
 		});
 
 	bgSVG.blur(true);
