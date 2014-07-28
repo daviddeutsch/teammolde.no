@@ -354,20 +354,27 @@ function($scope, $q, $state, $stateParams, wpData, bgSVG) {
 
 	var prepare = function(content) {
 		var deferred = $q.defer();
-		var len = content.length - 1;
+		var promises = [];
 
-		for ( var i = 0; i <= len; i++ ) {
-			convert(content[i])
-				.then(
-					(function(item){
-						content[i] = item;
+		angular.forEach( content, function(item, key){
+			promises.push(function(){
+				var deferred = $q.defer();
 
-						if ( i === len ) {
-							deferred.resolve(content);
-						}
-					})(i)
-				);
-		}
+				convert(item)
+					.then(function(item){
+						content[key] = item;
+
+						deferred.resolve(content);
+					});
+
+				return deferred.promise;
+			});
+
+		});
+
+		$q.all(promises).then(function(item){
+			deferred.resolve(content);
+		});
 
 		return deferred.promise;
 	};
