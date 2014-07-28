@@ -357,7 +357,7 @@ function($scope, $q, $state, $stateParams, wpData, bgSVG) {
 		var promises = [];
 
 		angular.forEach(content, function(item, key){
-			promises.push(function(){
+			promises.push((function(){
 				var deferred = $q.defer();
 
 				convert(item)
@@ -368,7 +368,7 @@ function($scope, $q, $state, $stateParams, wpData, bgSVG) {
 					});
 
 				return deferred.promise;
-			});
+			}));
 
 		});
 
