@@ -356,7 +356,7 @@ function($scope, $q, $state, $stateParams, wpData, bgSVG) {
 		var deferred = $q.defer();
 		var len = content.length - 1;
 
-		for ( var i = 0; i < len; i++ ) {
+		for ( var i = 0; i <= len; i++ ) {
 			convert(content[i])
 				.then(function(item){
 					content[i] = item;
@@ -374,7 +374,7 @@ function($scope, $q, $state, $stateParams, wpData, bgSVG) {
 		var deferred = $q.defer();
 		var len = courses.length - 1;
 
-		for ( var i = 0; i < len; i++ ) {
+		for ( var i = 0; i <= len; i++ ) {
 			angular.forEach(courses[i].custom_fields.klasse, function(klasse){
 				if ( typeof $scope.list[$scope.map[courses[i]]] != 'undefined' ) {
 					$scope.list[$scope.map[courses[i]]].kurs.push(courses[i]);
