@@ -390,9 +390,9 @@ function($scope, $q, $stateParams, wpData, bgSVG) {
 			enlist(list);
 
 			if ( $stateParams.id ) {
-				angular.forEach($scope.list, function(item){
-					if ( $stateParams.id == itemhash(item, key) ) {
-						$scope.focus = $stateParams.id;
+				angular.forEach($scope.list, function(item, key){
+					if ( $stateParams.id == itemhash(item) ) {
+						$scope.focus = key;
 					}
 				});
 			}
