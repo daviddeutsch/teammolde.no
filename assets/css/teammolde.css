@@ -6800,6 +6800,10 @@ table.table-hover.expanded {
 .modal-content table.table td {
   border: none;
 }
+.modal-content .col-md-12 {
+  float: inherit;
+  clear: both;
+}
 .modal-header {
   border-bottom: 2px solid #000;
 }
