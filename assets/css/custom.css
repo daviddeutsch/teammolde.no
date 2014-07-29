@@ -170,7 +170,8 @@ p {
 }
 .btn-primary:link,
 .btn-primary:hover,
-.btn-primary:active {
+.btn-primary:active,
+.btn-primary:focus {
   background: #333;
 }
 .btn-primary:visited {
