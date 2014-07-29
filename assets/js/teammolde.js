@@ -150,7 +150,7 @@ function () {
 
 			modified += '<a ui-sref="'
 				+ 'bestill({ id: \''+bestill+'\' })'
-				+ '" class="btn btn-primary">Bestill Time</a>'
+				+ '" class="btn btn-primary pull-right">Bestill Time</a>'
 			+ '</div>';
 		}
 
