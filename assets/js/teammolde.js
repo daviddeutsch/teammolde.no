@@ -562,7 +562,9 @@ function ( $q, $http )
 
 		$http.get('wordpress/' + url + '/?json=1', {cache: true})
 			.success(function(result) {
-				deferred.resolve(result.page.content);
+				var nonce = angular.element('input[name*=\'_wpnonce\']', result.page.content);
+
+				deferred.resolve(nonce);
 			})
 			.error(function(){
 				deferred.reject();
