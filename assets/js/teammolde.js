@@ -633,7 +633,7 @@ function ( $q, $http )
 		$http({
 			method: 'POST',
 			url: 'wordpress/kontakt/',
-			params: data,
+			data: jQuery.param(data),
 			headers: {'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'}
 		})
 			.success(function() {
