@@ -624,7 +624,7 @@ function ( $q, $http )
 	this.sendForm = function( data ) {
 		var deferred = $q.defer();
 
-		$http.post('wordpress/kontakt/?json=1', data)
+		$http.post('wordpress/kontakt/#wpcf7-f157-p161-o1', data)
 			.success(function() {
 				deferred.resolve();
 			})
