@@ -542,11 +542,34 @@ teammoldeApp
 '$scope', 'wpData',
 function($scope, wpData) {
 	$scope.nonce = '';
+	$scope.sending = false;
 
 	wpData.getNonce()
 		.then(function(nonce){
 			$scope.nonce = nonce;
 		});
+
+	$scope.submit = function() {
+		$scope.sending = true;
+
+		var data = {
+			'_wpcf7': '157',
+			'_wpcf7_version': '3.9',
+			'_wpcf7_locale': 'en-US',
+			'_wpcf7_unit_tag': 'wpcf7-f157-p161-o1',
+			'_wpnonce': $scope.nonce,
+			'_wpcf7_is_ajax_call': 1,
+			name: this.name,
+			email: this.epost,
+			subject: 'Kontakt ' + "" + this.name,
+			message: this.message
+		};
+
+		wpData.sendForm(data)
+			.then(function(){
+				$scope.sending = false;
+			});
+	};
 }
 ]
 );

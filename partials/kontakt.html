@@ -7,35 +7,20 @@
 	</div>
 	<div class="col-md-6">
 		<div ng-controller="ContactCtrl">
-			<form action="/wordpress/kontakt/#wpcf7-f157-p161-o1" method="post" novalidate="novalidate">
-				<div style="display: none;">
-					<input name="_wpcf7" value="157" type="hidden">
-					<input name="_wpcf7_version" value="3.9" type="hidden">
-					<input name="_wpcf7_locale" value="en_US" type="hidden">
-					<input name="_wpcf7_unit_tag" value="wpcf7-f157-p161-o1" type="hidden">
-					<input name="_wpnonce" value="{{nonce}}" type="hidden">
+			<form method="post" id="KontaktForm" ng-submit="submit(item, kurs)" role=form" novalidate="novalidate">
+				<div class="form-group">
+					<label for="name" class="sr-only">Ditt navn</label>
+					<input type="text" class="form-control" ng-model="name" id="name" name="name" placeholder="Ditt navn">
 				</div>
-				<p>Your Name (required)<br>
-					<span class="form-control-wrap name">
-						<input name="name" size="40" class="form-control wpcf7-text required" aria-required="true" aria-invalid="false" type="text">
-					</span>
-				</p>
-				<p>Your Email (required)<br>
-					<span class="form-control-wrap email"><input name="email" size="40" class="form-control wpcf7-text wpcf7-email wpcf7-validates-as-email" aria-invalid="false" type="email">
-					</span>
-				</p>
-				<p>Subject<br>
-					<span class="form-control-wrap subject"><input name="subject" size="40" class="form-control wpcf7-text required" aria-required="true" aria-invalid="false" type="text">
-					</span>
-				</p>
-				<p>Your Message<br>
-					<span class="form-control-wrap message"><textarea name="message" cols="40" rows="10" class="form-control wpcf7-textarea required" aria-required="true" aria-invalid="false"></textarea>
-					</span>
-				</p>
-				<p>
-					<input value="Send" class="form-control wpcf7-submit" type="submit">
-					<img style="visibility: hidden;" alt="Sending ..." src="http://teammolde.imedias.no/wordpress/wp-content/plugins/contact-form-7/images/ajax-loader.gif" class="ajax-loader"></p>
-				<div class="wpcf7-response-output wpcf7-display-none"></div>
+				<div class="form-group">
+					<label for="epost" class="sr-only">Epost</label>
+					<input type="text" class="form-control" ng-model="epost" id="epost" name="epost" placeholder="Din e-postadresse">
+				</div>
+				<div class="form-group">
+					<label for="message" class="sr-only">Text</label>
+					<textarea class="form-control" rows="3" ng-model="message" id="message" name="message" placeholder="Text"></textarea>
+				</div>
+				<button type="submit" class="btn btn-primary" ng-disabled="sending || KontaktForm.$invalid"><i class="fa fa-spinner fa-spin" ng-show="sending"></i>Send Bestilling</button>
 			</form>
 		</div>
 	</div>
