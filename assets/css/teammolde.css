@@ -6517,7 +6517,7 @@ ul.team-nav li:first-child {
 ul.team-nav li:hover {
   background: rgba(255, 255, 255, 0.2);
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   ul.team-nav li {
     border-left: 1px solid #000;
     margin: -1px 0 0 0;
@@ -6540,14 +6540,14 @@ ul.team-nav li a:active {
   color: #000;
   text-decoration: none;
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   ul.team-nav li {
     display: block;
     float: right;
     clear: both;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   ul.team-nav {
     position: absolute;
     top: 45px;
@@ -6556,6 +6556,11 @@ ul.team-nav li a:active {
 }
 .navbar-collapse {
   border: none;
+}
+@media (max-width: 1200px) {
+  .navbar-nav > li > a {
+    padding: 8px 12px;
+  }
 }
 @media (max-width: 992px) {
   .navbar-nav > li > a {
