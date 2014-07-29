@@ -562,9 +562,7 @@ function ( $q, $http )
 
 		$http.get('wordpress/' + url + '/?json=1', {cache: true})
 			.success(function(result) {
-				var nonce = angular.element('input[name*=\'_wpnonce\']', result.page.content);
-
-				deferred.resolve(nonce);
+				deferred.resolve(result.page.content);
 			})
 			.error(function(){
 				deferred.reject();
@@ -576,9 +574,11 @@ function ( $q, $http )
 	this.getNonce = function( url ) {
 		var deferred = $q.defer();
 
-		$http.get('wordpress/kontakt/?json=1', {cache: true})
+		$http.get('wordpress/kontakt/?json=1', {cache: false})
 			.success(function(result) {
-				deferred.resolve(result.page.content);
+				var nonce = angular.element('input[name*=\'_wpnonce\']', result.page.content);
+
+				deferred.resolve(nonce);
 			})
 			.error(function(){
 				deferred.reject();
