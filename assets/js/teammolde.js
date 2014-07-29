@@ -285,6 +285,8 @@ teammoldeApp
 function($scope, $window, wpData, $http, bgSVG, $stateParams, backlinkerFilter, bstableizerFilter, wplinkerFilter) {
 	$scope.content = '';
 
+	$scope.loading = true;
+
 	wpData.getPage($stateParams.id ? $stateParams.id : 'priser')
 		.then(function(html) {
 			if ( $stateParams.id == 'priser' ) {
@@ -298,6 +300,8 @@ function($scope, $window, wpData, $http, bgSVG, $stateParams, backlinkerFilter, 
 					'priser'
 				);
 			}
+
+			$scope.loading = false;
 
 			$window.scrollTo(0,0);
 		});
