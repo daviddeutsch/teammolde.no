@@ -24,7 +24,7 @@
 					</tr>
 				</tbody>
 			</table>
-			<table class="table table-hover table-head" ng-show="$index == focus" ng-if="item.kurs.length">
+			<table class="table table-hover table-head" ng-show="$index == focus">
 				<thead>
 					<tr>
 						<th class="large">Kurstype</th>
@@ -45,9 +45,13 @@
 						<td class="text-center">{{kurs.custom_fields.dato | eurodate}} - {{kurs.custom_fields.tid}}</td>
 						<td>{{kurs.custom_fields.sted}}</td>
 					</tr>
+					<tr ng-show="loading">
+						<td colspan="4">
+							<p ng-if="loading" class="text-center"><i class="fa fa-spinner fa-spin" ng-show="sending"></i></p>
+						</td>
+					</tr>
 				</tbody>
 			</table>
-			<p ng-if="loading" class="text-center"><i class="fa fa-spinner fa-spin" ng-show="sending"></i></p>
 		</div>
 	</div>
 </div>
