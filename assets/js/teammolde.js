@@ -568,6 +568,12 @@ function($scope, wpData) {
 		$scope.sending = true;
 
 		var data = {
+			'_wpcf7': '157',
+			'_wpcf7_version': '3.9',
+			'_wpcf7_locale': 'en-US',
+			'_wpcf7_unit_tag': 'wpcf7-f157-p161-o1',
+			'_wpnonce': $scope.nonce,
+			'_wpcf7_is_ajax_call': 1,
 			name: this.fornavn + " " + this.etternavn,
 			email: this.epost,
 			subject: 'Bestill kurs',
