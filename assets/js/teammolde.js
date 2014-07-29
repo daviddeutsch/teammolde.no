@@ -122,7 +122,7 @@ function ($stateProvider, $urlRouterProvider, $sceProvider)
 teammoldeApp
 .filter('bstableizer',
 function () {
-	return function ( markup ) {
+	return function ( markup, bestill ) {
 		var modified = '';
 		var split = markup.split('<h4>Budsjett</h4>');
 
