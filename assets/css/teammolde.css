@@ -6634,6 +6634,11 @@ p {
   letter-spacing: 0.075em;
   margin-top: 24px;
   font-weight: 700;
+  border: none;
+}
+.btn-primary:hover,
+.btn-primary:active {
+  background: #111;
 }
 .small-text {
   font-size: 60%;
