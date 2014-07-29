@@ -144,8 +144,10 @@ function () {
 					;
 			}
 
+			//<a ui-sref="bestill({ id: " klasse-b"="" })"="" class="btn btn-primary"></a>
+
 			modified += '<a ui-sref="'
-				+ 'bestill({ id: "'+bestill+'" })'
+				+ 'bestill({ id: \''+bestill+'\' })'
 				+ '" class="btn btn-primary"></a>'
 			+ '</div>';
 		}
