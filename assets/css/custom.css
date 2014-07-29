@@ -84,6 +84,7 @@ ul.team-nav li a:active {
     position: absolute;
     top: 45px;
     right: 15px;
+    z-index: 1000;
   }
 }
 .navbar-collapse {
