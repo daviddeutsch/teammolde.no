@@ -1,71 +1,80 @@
-<div class="modal">
+<div class="modal" ng-controller="BestillCtrl">
 	<div class="modal-dialog">
 		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" ng-click="$hide()">
-					<span aria-hidden="true">&times;</span>
-					<span class="sr-only">Close</span>
-				</button>
-				<h4 class="modal-title">
-					Påmelding kurs
-				</h4>
-			</div>
-			<div class="modal-body">
-				<p>Klasse {{item.klasse}}</p>
-				<h3>{{kurs.title}}</h3>
-				<table class="table">
-					<tr>
-						<td><strong>Plasser:</strong></td>
-						<td>{{kurs.custom_fields.plasser}}</td>
-					</tr>
-					<tr>
-						<td><strong>Instruktør:</strong></td>
-						<td>{{kurs.custom_fields.instruktor}}</td>
-					</tr>
-					<tr>
-						<td><strong>Sted:</strong></td>
-						<td>{{kurs.custom_fields.sted}}</td>
-					</tr>
-					<tr>
-						<td><strong>Tid:</strong></td>
-						<td>{{kurs.custom_fields.dato | eurodate}} - {{kurs.custom_fields.tid}}</td>
-					</tr>
-				</table>
-				<hr/>
-				<form role="form">
-					<div class="col-md-6">
-						<div class="form-group">
-							<label for="fornavn">Fornavn</label>
-							<input type="text" class="form-control" id="fornavn" name="fornavn" placeholder="Fornavn">
+			<form action="/wordpress/kontakt/#wpcf7-f157-p161-o1" method="post" ng-submit="submit(item, kurs)" role=form" novalidate="novalidate">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" ng-click="$hide()">
+						<span aria-hidden="true">&times;</span>
+						<span class="sr-only">Close</span>
+					</button>
+					<h4 class="modal-title">
+						Påmelding kurs
+					</h4>
+				</div>
+				<div class="modal-body">
+					<p>Klasse {{item.klasse}}</p>
+					<h3>{{kurs.title}}</h3>
+					<table class="table">
+						<tr>
+							<td><strong>Plasser:</strong></td>
+							<td>{{kurs.custom_fields.plasser}}</td>
+						</tr>
+						<tr>
+							<td><strong>Instruktør:</strong></td>
+							<td>{{kurs.custom_fields.instruktor}}</td>
+						</tr>
+						<tr>
+							<td><strong>Sted:</strong></td>
+							<td>{{kurs.custom_fields.sted}}</td>
+						</tr>
+						<tr>
+							<td><strong>Tid:</strong></td>
+							<td>{{kurs.custom_fields.dato | eurodate}} - {{kurs.custom_fields.tid}}</td>
+						</tr>
+					</table>
+					<hr/>
+
+						<div style="display: none;">
+							<input name="_wpcf7" value="157" type="hidden">
+							<input name="_wpcf7_version" value="3.9" type="hidden">
+							<input name="_wpcf7_locale" value="en_US" type="hidden">
+							<input name="_wpcf7_unit_tag" value="wpcf7-f157-p161-o1" type="hidden">
+							<input name="_wpnonce" value="{{nonce}}" type="hidden">
+							<input name="subject" value="Bestill - " type="hidden">
 						</div>
-						<div class="form-group">
-							<label for="etternavn">Etternavn</label>
-							<input type="text" class="form-control" id="etternavn" name="etternavn" placeholder="Etternavn">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="fornavn">Fornavn</label>
+								<input type="text" class="form-control" ng-model="fornavn" id="fornavn" name="fornavn" placeholder="Fornavn">
+							</div>
+							<div class="form-group">
+								<label for="etternavn">Etternavn</label>
+								<input type="text" class="form-control" ng-model="etternavn" id="etternavn" name="etternavn" placeholder="Etternavn">
+							</div>
+							<div class="form-group">
+								<label for="fodselsdato">Fødselsdato</label>
+								<input type="text" class="form-control" ng-model="fodselsdato" id="fodselsdato" name="fodselsdato" placeholder="DDMMAA">
+							</div>
 						</div>
-						<div class="form-group">
-							<label for="fodselsdato">Fødselsdato</label>
-							<input type="text" class="form-control" id="fodselsdato" name="fodselsdato" placeholder="DDMMAA">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="telefon">Telefon</label>
+								<input type="text" class="form-control" ng-model="telefon" id="telefon" name="telefon" placeholder="Telefon">
+							</div>
+							<div class="form-group">
+								<label for="epost">Epost</label>
+								<input type="text" class="form-control" ng-model="epost" id="epost" name="epost" placeholder="Epost">
+							</div>
 						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="form-group">
-							<label for="telefon">Telefon</label>
-							<input type="text" class="form-control" id="telefon" name="telefon" placeholder="Telefon">
+						<div class="col-md-12">
+							<label for="annet">Annet</label>
+							<textarea class="form-control" rows="3" ng-model="annet" id="annet" name="annet" placeholder="Annet"></textarea>
 						</div>
-						<div class="form-group">
-							<label for="epost">Epost</label>
-							<input type="text" class="form-control" id="epost" name="epost" placeholder="Epost">
-						</div>
-					</div>
-					<div class="col-md-12">
-						<label for="annet">Annet</label>
-						<textarea class="form-control" rows="3" id="annet" name="annet" placeholder="Annet"></textarea>
-					</div>
-				</form>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-primary">Send Bestilling</button>
-			</div>
+				</div>
+				<div class="modal-footer">
+					<button type="submit" class="btn btn-primary">Send Bestilling</button>
+				</div>
+			</form>
 		</div>
 	</div>
 </div>

@@ -552,6 +552,30 @@ function($scope, wpData) {
 );
 
 teammoldeApp
+.controller('BestillCtrl',
+[
+'$scope', 'wpData',
+function($scope, wpData) {
+	$scope.nonce = '';
+
+	wpData.getNonce()
+		.then(function(nonce){
+			$scope.nonce = nonce;
+		});
+
+	$scope.submit = function(item, kurs) {
+		var form = this;
+
+		wpData.sendForm(this)
+			.then(function(){
+
+			});
+	};
+}
+]
+);
+
+teammoldeApp
 .service('wpData',
 [
 '$q', '$http',
@@ -575,6 +599,22 @@ function ( $q, $http )
 		var deferred = $q.defer();
 
 		$http.get('wordpress/kontakt/?json=1', {cache: false})
+			.success(function(result) {
+				var nonce = angular.element('input[name*=\'_wpnonce\']', result.page.content ).val();
+
+				deferred.resolve(nonce);
+			})
+			.error(function(){
+				deferred.reject();
+			});
+
+		return deferred.promise;
+	};
+
+	this.sendForm = function( data ) {
+		var deferred = $q.defer();
+
+		$http.post('wordpress/kontakt/?json=1', {cache: false})
 			.success(function(result) {
 				var nonce = angular.element('input[name*=\'_wpnonce\']', result.page.content ).val();
 
