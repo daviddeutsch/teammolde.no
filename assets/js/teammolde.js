@@ -576,7 +576,7 @@ function($scope, wpData) {
 				+ "\n\n" + this.annet
 		};
 
-		wpData.sendForm(this)
+		wpData.sendForm(data)
 			.then(function(){
 				$scope.sending = false;
 			});
@@ -624,7 +624,15 @@ function ( $q, $http )
 	this.sendForm = function( data ) {
 		var deferred = $q.defer();
 
-		$http.post('wordpress/kontakt/#wpcf7-f157-p161-o1', data)
+		$http.post(
+				'wordpress/kontakt/#wpcf7-f157-p161-o1',
+				data,
+				{
+					headers: {
+						"Content-Type": 'application/x-www-form-urlencoded; charset=UTF-8'
+					}
+				}
+			)
 			.success(function() {
 				deferred.resolve();
 			})
