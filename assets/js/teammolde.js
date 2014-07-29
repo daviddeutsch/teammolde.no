@@ -131,7 +131,7 @@ function () {
 		);
 
 		if ( typeof split[1] != 'undefined' ) {
-			modified += '<div class="col-md-6 col-md-offset-6"></div>'
+			modified += '<div class="col-md-6 col-md-offset-6">'
 				+ '<h4>Budsjett</h4>'
 				+ split[1].replace(
 					new RegExp('<table>', 'g'), '<table class="table table-hover table-condensed">'
