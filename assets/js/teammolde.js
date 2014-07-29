@@ -557,6 +557,7 @@ teammoldeApp
 '$scope', 'wpData',
 function($scope, wpData) {
 	$scope.nonce = '';
+	$scope.sending = false;
 
 	wpData.getNonce()
 		.then(function(nonce){
@@ -564,11 +565,20 @@ function($scope, wpData) {
 		});
 
 	$scope.submit = function(item, kurs) {
-		var form = this;
+		$scope.sending = true;
+
+		var data = {
+			name: this.fornavn + " " + this.etternavn,
+			email: this.epost,
+			subject: 'Bestill kurs',
+			message: ''
+				+ "" + this.fornavn + " " + this.etternavn
+				+ "\n\n" + this.annet
+		};
 
 		wpData.sendForm(this)
 			.then(function(){
-
+				$scope.sending = false;
 			});
 	};
 }
@@ -614,11 +624,9 @@ function ( $q, $http )
 	this.sendForm = function( data ) {
 		var deferred = $q.defer();
 
-		$http.post('wordpress/kontakt/?json=1', {cache: false})
-			.success(function(result) {
-				var nonce = angular.element('input[name*=\'_wpnonce\']', result.page.content ).val();
-
-				deferred.resolve(nonce);
+		$http.post('wordpress/kontakt/?json=1', data)
+			.success(function() {
+				deferred.resolve();
 			})
 			.error(function(){
 				deferred.reject();

@@ -1,7 +1,7 @@
 <div class="modal" ng-controller="BestillModalCtrl">
 	<div class="modal-dialog">
 		<div class="modal-content">
-			<form action="/wordpress/kontakt/#wpcf7-f157-p161-o1" method="post" ng-submit="submit(item, kurs)" role=form" novalidate="novalidate">
+			<form action="/wordpress/kontakt/#wpcf7-f157-p161-o1" method="post" id="BestillForm" ng-submit="submit(item, kurs)" role=form" novalidate="novalidate">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" ng-click="$hide()">
 						<span aria-hidden="true">&times;</span>
@@ -72,7 +72,7 @@
 						</div>
 				</div>
 				<div class="modal-footer">
-					<button type="submit" class="btn btn-primary">Send Bestilling</button>
+					<button type="submit" class="btn btn-primary" ng-disabled="sending || BestillForm.$invalid"><i class="fa fa-spinner fa-spin" ng-show="sending"></i>Send Bestilling</button>
 				</div>
 			</form>
 		</div>
