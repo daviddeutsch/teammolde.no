@@ -552,7 +552,7 @@ function($scope, wpData) {
 );
 
 teammoldeApp
-.controller('BestillCtrl',
+.controller('BestillModalCtrl',
 [
 '$scope', 'wpData',
 function($scope, wpData) {
