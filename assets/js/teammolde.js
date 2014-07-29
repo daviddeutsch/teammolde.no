@@ -332,7 +332,7 @@ function($scope, $q, $state, $stateParams, wpData, bgSVG) {
 		if ( $scope.focus == id ) {
 			$scope.focus = 'unset';
 		} else {
-			$scope.focus = id
+			$scope.focus = id;
 		}
 
 		$state.go('bestill', {id: name});
@@ -450,18 +450,18 @@ function($scope, $q, $state, $stateParams, wpData, bgSVG) {
 		$scope.list[id].expanded = !$scope.list[id].expanded;
 	};
 
+	if ( $stateParams.id ) {
+		angular.forEach($scope.list, function(item, key){
+			if ( $stateParams.id == itemhash(item) ) {
+				$scope.focus = key;
+			}
+		});
+	}
+
 	wpData.getPosts('kurs')
 		.then(function(list) {
 			enlist(list)
 				.then(function(){
-					if ( $stateParams.id ) {
-						angular.forEach($scope.list, function(item, key){
-							if ( $stateParams.id == itemhash(item) ) {
-								$scope.focus = key;
-							}
-						});
-					}
-
 					$scope.loading = false;
 				});
 		});
