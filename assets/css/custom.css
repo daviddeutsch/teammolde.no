@@ -168,9 +168,13 @@ p {
   font-weight: 700;
   border: none;
 }
+.btn-primary:link,
 .btn-primary:hover,
 .btn-primary:active {
-  background: #111;
+  background: #333;
+}
+.btn-primary:visited {
+  background: #000;
 }
 .small-text {
   font-size: 60%;
