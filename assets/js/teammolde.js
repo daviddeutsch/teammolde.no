@@ -130,16 +130,24 @@ function () {
 			new RegExp('<table>', 'g'), '<table class="table table-hover">'
 		);
 
-		if ( typeof split[1] != 'undefined' ) {
-			modified += '<div class="col-md-8 col-md-offset-4">'
-					+ '<h4>Budsjett</h4>'
+		if ( bestill != 'priser' ) {
+			modified += '<div class="col-md-8 col-md-offset-4">';
+
+			if ( typeof split[1] != 'undefined' ) {
+				modified += '<h4>Budsjett</h4>'
 					+ '<div class="table-wrap">'
 						+ split[1].replace(
 							new RegExp('<table>', 'g'),
 							'<table class="table table-condensed">'
 						)
 					+ '</div>'
-				+ '</div>';
+					;
+			}
+
+			modified += '<a ui-sref="'
+				+ 'bestill({ id: "'+bestill+'" })'
+				+ '" class="btn btn-primary"></a>'
+			+ '</div>';
 		}
 
 		return modified;
@@ -276,9 +284,15 @@ function($scope, $window, wpData, $http, bgSVG, $stateParams, backlinkerFilter, 
 	wpData.getPage($stateParams.id ? $stateParams.id : 'priser')
 		.then(function(html) {
 			if ( $stateParams.id == 'priser' ) {
-				$scope.content = wplinkerFilter( bstableizerFilter(html), 'priser' );
+				$scope.content = wplinkerFilter(
+					bstableizerFilter(html, $stateParams.id),
+					'priser'
+				);
 			} else {
-				$scope.content = wplinkerFilter( bstableizerFilter(backlinkerFilter(html)), 'priser' );
+				$scope.content = wplinkerFilter(
+					bstableizerFilter(backlinkerFilter(html), $stateParams.id),
+					'priser'
+				);
 			}
 
 			$window.scrollTo(0,0);
