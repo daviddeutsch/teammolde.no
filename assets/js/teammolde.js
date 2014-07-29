@@ -539,8 +539,8 @@ function(bgSVG) {
 teammoldeApp
 .controller('ContactCtrl',
 [
-'wpData',
-function(wpData) {
+'$scope', 'wpData',
+function($scope, wpData) {
 	$scope.nonce = '';
 
 	wpData.getNonce()
