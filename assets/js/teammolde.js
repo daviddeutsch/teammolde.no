@@ -132,10 +132,13 @@ function () {
 
 		if ( typeof split[1] != 'undefined' ) {
 			modified += '<div class="col-md-8 col-md-offset-4">'
-				+ '<h4>Budsjett</h4>'
-				+ split[1].replace(
-					new RegExp('<table>', 'g'), '<table class="table table-hover table-condensed">'
-				)
+					+ '<h4>Budsjett</h4>'
+					+ '<div class="table-wrap">'
+						+ split[1].replace(
+							new RegExp('<table>', 'g'),
+							'<table class="table table-condensed">'
+						)
+					+ '</div>'
 				+ '</div>';
 		}
 
