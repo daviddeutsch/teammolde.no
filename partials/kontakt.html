@@ -1,6 +1,42 @@
 <div ng-controller="StdCtrl">
-	<h3>Postadresse</h3>Team Trafikkskole AS, Rektor Brinchmannsgt. 1, 6413, MOLDE
-	<h3>Besøksadresse</h3>Rektor Brinchmannsgt. 1
-	<h3>Telefon</h3>71 25 63 69<a class="fb_link icon" href="https://www.facebook.com/TeamTrafikkskoleAS?fref=ts" target="_blank">Følg oss på facebook</a>
-	<div class="map_url"><a target="_blank" rel="external" href="https://maps.google.com?q=62.737165,7.162977">Større kart</a></div>
+	<div class="col-md-6">
+		<h3>Postadresse</h3>Team Trafikkskole AS, Rektor Brinchmannsgt. 1, 6413, MOLDE
+		<h3>Besøksadresse</h3>Rektor Brinchmannsgt. 1
+		<h3>Telefon</h3>71 25 63 69<a class="fb_link icon" href="https://www.facebook.com/TeamTrafikkskoleAS?fref=ts" target="_blank">Følg oss på facebook</a>
+		<div class="map_url"><a target="_blank" rel="external" href="https://maps.google.com?q=62.737165,7.162977">Større kart</a></div>
+	</div>
+	<div class="col-md-6">
+		<div ng-controller="ContactCtrl">
+			<form action="/wordpress/kontakt/#wpcf7-f157-p161-o1" method="post" novalidate="novalidate">
+				<div style="display: none;">
+					<input name="_wpcf7" value="157" type="hidden">
+					<input name="_wpcf7_version" value="3.9" type="hidden">
+					<input name="_wpcf7_locale" value="en_US" type="hidden">
+					<input name="_wpcf7_unit_tag" value="wpcf7-f157-p161-o1" type="hidden">
+					<input name="_wpnonce" value="{{nonce}}" type="hidden">
+				</div>
+				<p>Your Name (required)<br>
+					<span class="form-control-wrap name">
+						<input name="name" size="40" class="form-control wpcf7-text required" aria-required="true" aria-invalid="false" type="text">
+					</span>
+				</p>
+				<p>Your Email (required)<br>
+					<span class="form-control-wrap email"><input name="email" size="40" class="form-control wpcf7-text wpcf7-email wpcf7-validates-as-email" aria-invalid="false" type="email">
+					</span>
+				</p>
+				<p>Subject<br>
+					<span class="form-control-wrap subject"><input name="subject" size="40" class="form-control wpcf7-text required" aria-required="true" aria-invalid="false" type="text">
+					</span>
+				</p>
+				<p>Your Message<br>
+					<span class="form-control-wrap message"><textarea name="message" cols="40" rows="10" class="form-control wpcf7-textarea required" aria-required="true" aria-invalid="false"></textarea>
+					</span>
+				</p>
+				<p>
+					<input value="Send" class="form-control wpcf7-submit" type="submit">
+					<img style="visibility: hidden;" alt="Sending ..." src="http://teammolde.imedias.no/wordpress/wp-content/plugins/contact-form-7/images/ajax-loader.gif" class="ajax-loader"></p>
+				<div class="wpcf7-response-output wpcf7-display-none"></div>
+			</form>
+		</div>
+	</div>
 </div>

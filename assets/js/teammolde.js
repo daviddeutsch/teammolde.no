@@ -537,6 +537,21 @@ function(bgSVG) {
 );
 
 teammoldeApp
+.controller('ContactCtrl',
+[
+'wpData',
+function(wpData) {
+	$scope.nonce = '';
+
+	wpData.getNonce()
+		.then(function(nonce){
+			$scope.nonce = nonce;
+		});
+}
+]
+);
+
+teammoldeApp
 .service('wpData',
 [
 '$q', '$http',
@@ -546,6 +561,20 @@ function ( $q, $http )
 		var deferred = $q.defer();
 
 		$http.get('wordpress/' + url + '/?json=1', {cache: true})
+			.success(function(result) {
+				deferred.resolve(result.page.content);
+			})
+			.error(function(){
+				deferred.reject();
+			});
+
+		return deferred.promise;
+	};
+
+	this.getNonce = function( url ) {
+		var deferred = $q.defer();
+
+		$http.get('wordpress/kontakt/?json=1', {cache: true})
 			.success(function(result) {
 				deferred.resolve(result.page.content);
 			})
