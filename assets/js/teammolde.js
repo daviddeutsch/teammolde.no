@@ -316,7 +316,7 @@ function($scope, $q, $state, $stateParams, wpData, bgSVG) {
 
 	$scope.focus = 'unset';
 
-	$scope.loaded = false;
+	$scope.loading = false;
 
 	var itemhash = function(item) {
 		if ( item.klasse !== '' ) {
@@ -450,6 +450,8 @@ function($scope, $q, $state, $stateParams, wpData, bgSVG) {
 		$scope.list[id].expanded = !$scope.list[id].expanded;
 	};
 
+	$scope.loading = true;
+
 	wpData.getPosts('kurs')
 		.then(function(list) {
 			enlist(list)
@@ -462,7 +464,7 @@ function($scope, $q, $state, $stateParams, wpData, bgSVG) {
 						});
 					}
 
-					$scope.loaded = true;
+					$scope.loading = false;
 				});
 		});
 

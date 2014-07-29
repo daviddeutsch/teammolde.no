@@ -8,7 +8,7 @@
 			</tr>
 		</thead>
 	</table>
-	<div ng-if="loaded">
+	<div>
 		<div class="table-dock" ng-repeat="item in list" ng-class="{expanded: $index == focus}">
 			<table class="table table-hover" ng-class="{expanded: $index == focus}">
 				<thead>
@@ -24,29 +24,30 @@
 					</tr>
 				</tbody>
 			</table>
-			<table class="table table-hover table-head" ng-show="$index == focus">
+			<table class="table table-hover table-head" ng-show="$index == focus" ng-if="item.kurs.length">
 				<thead>
-				<tr>
-					<th class="large">Kurstype</th>
-					<th class="text-center">Ledige Pl.</th>
-					<th class="large">Dato</th>
-					<th class="large">Sted</th>
-				</tr>
+					<tr>
+						<th class="large">Kurstype</th>
+						<th class="text-center">Ledige Pl.</th>
+						<th class="large">Dato</th>
+						<th class="large">Sted</th>
+					</tr>
 				</thead>
 				<tbody>
-				<tr ng-repeat="kurs in item.kurs"
-					data-placement="center"
-					data-animation="am-fade-and-scale"
-					data-template="partials/modal.bestill.html"
-					bs-modal="modal"
-					>
-					<td>{{kurs.title}}</td>
-					<td class="text-center">{{kurs.custom_fields.plasser}}</td>
-					<td class="text-center">{{kurs.custom_fields.dato | eurodate}} - {{kurs.custom_fields.tid}}</td>
-					<td>{{kurs.custom_fields.sted}}</td>
-				</tr>
+					<tr ng-repeat="kurs in item.kurs"
+						data-placement="center"
+						data-animation="am-fade-and-scale"
+						data-template="partials/modal.bestill.html"
+						bs-modal="modal"
+						>
+						<td>{{kurs.title}}</td>
+						<td class="text-center">{{kurs.custom_fields.plasser}}</td>
+						<td class="text-center">{{kurs.custom_fields.dato | eurodate}} - {{kurs.custom_fields.tid}}</td>
+						<td>{{kurs.custom_fields.sted}}</td>
+					</tr>
 				</tbody>
 			</table>
+			<p ng-if="loading" class="text-center"><i class="fa fa-spinner fa-spin" ng-show="sending"></i></p>
 		</div>
 	</div>
 </div>
