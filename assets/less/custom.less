@@ -29,7 +29,6 @@ body {
 	color: #555;
 	bottom: 0;
 	width: 100%;
-	position: absolute;
 	a {
 		color: #555;
 		&:hover {
@@ -63,7 +62,7 @@ ul.team-nav {
 			margin: -1px 0 0 0;
 			width: 75%;
 			text-align: center;
-			background: rgba(255,255,255,0.6);
+			background: #fff;
 		}
 		a {
 			color: #000;
@@ -88,7 +87,9 @@ ul.team-nav {
 	}
 
 	@media (max-width: @screen-sm-min) {
-		margin: 79px -42px 34px 34px;
+		position: absolute;
+		top: 45px;
+		right: 15px;
 	}
 }
 
@@ -110,7 +111,7 @@ ul.team-nav {
 	button {
 		border: 1px solid #000;
 		padding: 5px 9px;
-		background: rgba(255,255,255,0.6);
+		background: #fff;
 	}
 	float: right;
 	border: none;
