@@ -576,7 +576,7 @@ function ( $q, $http )
 
 		$http.get('wordpress/kontakt/?json=1', {cache: false})
 			.success(function(result) {
-				var nonce = angular.element('input[name*=\'_wpnonce\']', result.page.content);
+				var nonce = angular.element('input', result.page.content);
 
 				deferred.resolve(nonce);
 			})
