@@ -43,13 +43,21 @@ ul.team-nav li {
   border-left: none;
   font-size: 150%;
   text-transform: uppercase;
-  padding: 5px 9px;
 }
 ul.team-nav li:first-child {
   border-left: 1px solid #000;
 }
 ul.team-nav li:hover {
   background: rgba(255, 255, 255, 0.2);
+}
+@media (max-width: 768px) {
+  ul.team-nav li {
+    border-left: 1px solid #000;
+    margin: -1px 0 0 0;
+    width: 75%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.6);
+  }
 }
 ul.team-nav li a {
   color: #000;
@@ -64,6 +72,41 @@ ul.team-nav li a:focus {
 ul.team-nav li a:active {
   color: #000;
   text-decoration: none;
+}
+@media (max-width: 768px) {
+  ul.team-nav li {
+    display: block;
+    float: right;
+    clear: both;
+  }
+}
+@media (max-width: 768px) {
+  ul.team-nav {
+    margin: 79px -42px 34px 34px;
+  }
+}
+.navbar-collapse {
+  border: none;
+}
+@media (max-width: 992px) {
+  .navbar-nav > li > a {
+    padding: 6px 10px;
+  }
+}
+@media (max-width: 768px) {
+  .navbar-nav > li > a {
+    padding: 4px 8px;
+  }
+}
+.navbar-header {
+  margin: 34px 14px 0 0;
+  float: right;
+  border: none;
+}
+.navbar-header button {
+  border: 1px solid #000;
+  padding: 5px 9px;
+  background: rgba(255, 255, 255, 0.6);
 }
 #header {
   margin-bottom: 42px;

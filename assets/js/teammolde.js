@@ -527,6 +527,18 @@ function($scope, bgSVG) {
 );
 
 teammoldeApp
+.controller('NavCtrl',
+[
+'$scope',
+function($scope) {
+	$scope.toggle = function(id) {
+		angular.element('#' + id ).toggleClass('collapse');
+	};
+}
+]
+);
+
+teammoldeApp
 .controller('StdCtrl',
 [
 'bgSVG',

@@ -7,26 +7,36 @@
 		</div>
 
 		<div class="col-lg-9 col-md-11">
-			<ul class="team-nav pull-right">
-				<li>
-					<a ui-sref="priser({ id: 'priser' })" ui-sref-active="active">Priser</a>
-				</li>
-				<li>
-					<a ui-sref="larere" ui-sref-active="active">Lærere</a>
-				</li>
-				<li>
-					<a ui-sref="bestill" ui-sref-active="active">Bestill</a>
-				</li>
-				<li>
-					<a ui-sref="elevside" ui-sref-active="active">Elevside</a>
-				</li>
-				<li>
-					<a ui-sref="manedensbestatt" ui-sref-active="active">Månedens bestått</a>
-				</li>
-				<li>
-					<a ui-sref="kontakt" ui-sref-active="active">Kontakt</a>
-				</li>
-			</ul>
+			<nav class="navbar" role="navigation" ng-controller="NavCtrl">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" ng-click="toggle('team-navbar-collapse')">
+						<i class="fa fa-2x fa-bars"></i>
+						<span class="sr-only">Toggle navigation</span>
+					</button>
+				</div>
+				<div id="team-navbar-collapse" class="collapse navbar-collapse am-fade">
+					<ul class="team-nav nav navbar-nav pull-right">
+						<li>
+							<a ui-sref="priser({ id: 'priser' })" ui-sref-active="active">Priser</a>
+						</li>
+						<li>
+							<a ui-sref="larere" ui-sref-active="active">Lærere</a>
+						</li>
+						<li>
+							<a ui-sref="bestill" ui-sref-active="active">Bestill</a>
+						</li>
+						<li>
+							<a ui-sref="elevside" ui-sref-active="active">Elevside</a>
+						</li>
+						<li>
+							<a ui-sref="manedensbestatt" ui-sref-active="active">Månedens bestått</a>
+						</li>
+						<li>
+							<a ui-sref="kontakt" ui-sref-active="active">Kontakt</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
 		</div>
 
 	</div>
