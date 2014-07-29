@@ -123,7 +123,23 @@ teammoldeApp
 .filter('bstableizer',
 function () {
 	return function ( markup ) {
-		return markup.replace(new RegExp('<table>', 'g'), '<table class="table table-hover">');
+		var modified = '';
+		var split = markup.split('<h4>Budsjett</h4>');
+
+		modified += split[0].replace(
+			new RegExp('<table>', 'g'), '<table class="table table-hover">'
+		);
+
+		if ( typeof split[1] != 'undefined' ) {
+			modified += '<div class="col-md-6 col-md-offset-6"></div>'
+				+ '<h4>Budsjett</h4>'
+				+ split[1].replace(
+					new RegExp('<table>', 'g'), '<table class="table table-hover table-condensed">'
+				)
+				+ '</div>';
+		}
+
+		return modified;
 	};
 }
 );
