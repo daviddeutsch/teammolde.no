@@ -316,7 +316,7 @@ function($scope, $q, $state, $stateParams, wpData, bgSVG) {
 
 	$scope.focus = 'unset';
 
-	$scope.loading = false;
+	$scope.loading = true;
 
 	var itemhash = function(item) {
 		if ( item.klasse !== '' ) {
@@ -449,8 +449,6 @@ function($scope, $q, $state, $stateParams, wpData, bgSVG) {
 	$scope.toggle = function(id) {
 		$scope.list[id].expanded = !$scope.list[id].expanded;
 	};
-
-	$scope.loading = true;
 
 	wpData.getPosts('kurs')
 		.then(function(list) {
