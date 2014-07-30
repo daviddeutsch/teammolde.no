@@ -338,6 +338,27 @@ function($scope, $window, wpData, $http, bgSVG, $stateParams, backlinkerFilter, 
 );
 
 teammoldeApp
+.controller('ManedensBestattCtrl',
+[
+'$scope', 'wpData', 'bgSVG',
+function($scope, wpData, bgSVG) {
+	$scope.content = '';
+
+	$scope.loading = true;
+
+	wpData.getPage('manedens-bestatt')
+		.then(function(html) {
+			$scope.loading = false;
+
+			$scope.content = html;
+		});
+
+	bgSVG.blur(true);
+}
+]
+);
+
+teammoldeApp
 .controller('BestillCtrl',
 [
 '$scope', '$q', '$state', '$stateParams', 'wpData', 'bgSVG',
