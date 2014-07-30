@@ -215,9 +215,10 @@ teammoldeApp.filter('removewhitespace',
 teammoldeApp
 .controller('homeCtrl',
 [
-'$scope', 'bgSVG', '$window',
-function($scope, bgSVG, $window) {
+'$scope', '$timeout', 'bgSVG', '$window',
+function($scope, $timeout, bgSVG, $window) {
 	$scope.bgtype = '';
+	$scope.mobile = false;
 
 	var centerbg = function() {
 		if ( $window.innerWidth > 1620 ) {
@@ -255,18 +256,33 @@ function($scope, bgSVG, $window) {
 		}
 	};
 
+	var makeMobile = function( value ) {
+		$scope.mobile = value;
+	};
+
 	var resize = function() {
-		if ( $scope.bgtype == '' ) {
-			bgSVG.init().then(function(){
-				bgSVG.go();
+		if ( $window.innerWidth <= 720 ) {
+			$scope.bgtype = '';
 
-				$scope.bgtype = 'svg';
+			bgSVG.mobile();
 
-				centerbg();
-			});
+			$timeout(makeMobile(true), 100);
 		} else {
-			centerbg();
+			if ( $scope.bgtype == '' ) {
+				bgSVG.init().then(function(){
+					bgSVG.go();
+
+					$scope.bgtype = 'svg';
+
+					centerbg();
+				});
+			} else {
+				centerbg();
+			}
+
+			$timeout(makeMobile(false), 100);
 		}
+
 	};
 
 	angular.element($window).bind("resize", function() {
@@ -734,6 +750,12 @@ function ( $q, Tween )
 	var s,
 		self = this,
 		blurred = false;
+
+	this.mobile = function() {
+		angular.element('#background svg').remove();
+
+		angular.element('body').removeClass('bgblur');
+	};
 
 	this.init = function() {
 		angular.element('body').removeClass('bgblur');
