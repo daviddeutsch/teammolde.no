@@ -524,7 +524,9 @@ table.table-condensed tfoot td {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 700;
   font-size: 24px;
-  margin-top: -12px;
+  margin-top: -6px;
+  margin-bottom: 18px;
+  text-indent: 12px;
 }
 .modal-content .form-inline .form-group {
   margin-bottom: 4px;
@@ -537,12 +539,15 @@ table.table-condensed tfoot td {
   font-size: 22px;
   width: 100%;
   margin: 0;
-  border-bottom: 1px solid #666 !important;
+  border-bottom: 1px solid #888 !important;
 }
 .modal-content table.table td {
   border: none;
-  border-top: 1px solid #666 !important;
-  padding: 6px 4px 8px 24px;
+  border-top: 1px solid #888 !important;
+  padding: 6px 4px 8px 36px;
+}
+.modal-content form {
+  margin-top: 12px;
 }
 .modal-content hr {
   margin: 12px -20px;
@@ -556,10 +561,10 @@ table.table-condensed tfoot td {
   border-bottom: 2px solid #000;
 }
 .modal-header button {
-  font-size: 36px;
+  font-size: 42px;
   border-left: 2px solid #000;
   color: #000;
-  padding: 12px 6px 14px 24px;
+  padding: 10px 2px 9px 20px;
   margin-top: -51px !important;
 }
 .modal-header .close {
