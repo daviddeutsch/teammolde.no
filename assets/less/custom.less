@@ -39,6 +39,12 @@ body {
 
 #team-logo {
 	margin: 20px 0px;
+	@media (max-width: @screen-md-min) {
+		width: 200px;
+	}
+	@media (max-width: @screen-sm-min) {
+		width: 140px;
+	}
 }
 
 ul.team-nav {
@@ -49,7 +55,7 @@ ul.team-nav {
 		list-style: none;
 		border: 1px solid #000;
 		border-left: none;
-		font-size: 150%;
+		font-size: 20px;
 		text-transform: uppercase;
 		&:first-child {
 			border-left: 1px solid #000;
@@ -88,8 +94,8 @@ ul.team-nav {
 
 	@media (max-width: @screen-md-min) {
 		position: absolute;
-		top: 45px;
-		right: 15px;
+		top: 23px;
+		right: 0;
 		z-index: 1000;
 	}
 }
@@ -99,19 +105,20 @@ ul.team-nav {
 }
 
 .navbar-nav > li > a {
+	padding: 10px;
 	@media (max-width: @screen-lg-min) {
-		padding: 8px 12px;
+		padding: 8px;
 	}
 	@media (max-width: @screen-md-min) {
-		padding: 6px 10px;
+		padding: 6px;
 	}
 	@media (max-width: @screen-sm-min) {
-		padding: 4px 8px;
+		padding: 4px;
 	}
 }
 
 .navbar-header {
-	margin: 34px 14px 0 0;
+	margin: 18px 14px 0 0;
 	button {
 		border: 1px solid #000;
 		padding: 5px 9px;
@@ -119,6 +126,10 @@ ul.team-nav {
 	}
 	float: right;
 	border: none;
+}
+
+.navbar-toggle {
+	margin: 0;
 }
 
 #header {

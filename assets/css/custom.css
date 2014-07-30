@@ -31,6 +31,16 @@ body {
 #team-logo {
   margin: 20px 0px;
 }
+@media (max-width: 992px) {
+  #team-logo {
+    width: 200px;
+  }
+}
+@media (max-width: 768px) {
+  #team-logo {
+    width: 140px;
+  }
+}
 ul.team-nav {
   font-family: 'Francois One', sans-serif;
   margin: 34px 14px 34px 34px;
@@ -40,7 +50,7 @@ ul.team-nav li {
   list-style: none;
   border: 1px solid #000;
   border-left: none;
-  font-size: 150%;
+  font-size: 20px;
   text-transform: uppercase;
 }
 ul.team-nav li:first-child {
@@ -82,31 +92,34 @@ ul.team-nav li a:active {
 @media (max-width: 992px) {
   ul.team-nav {
     position: absolute;
-    top: 45px;
-    right: 15px;
+    top: 23px;
+    right: 0;
     z-index: 1000;
   }
 }
 .navbar-collapse {
   border: none;
 }
+.navbar-nav > li > a {
+  padding: 10px;
+}
 @media (max-width: 1200px) {
   .navbar-nav > li > a {
-    padding: 8px 12px;
+    padding: 8px;
   }
 }
 @media (max-width: 992px) {
   .navbar-nav > li > a {
-    padding: 6px 10px;
+    padding: 6px;
   }
 }
 @media (max-width: 768px) {
   .navbar-nav > li > a {
-    padding: 4px 8px;
+    padding: 4px;
   }
 }
 .navbar-header {
-  margin: 34px 14px 0 0;
+  margin: 18px 14px 0 0;
   float: right;
   border: none;
 }
@@ -114,6 +127,9 @@ ul.team-nav li a:active {
   border: 1px solid #000;
   padding: 5px 9px;
   background: #fff;
+}
+.navbar-toggle {
+  margin: 0;
 }
 #header {
   margin-bottom: 42px;
