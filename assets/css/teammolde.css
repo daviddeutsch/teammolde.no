@@ -6880,7 +6880,7 @@ table.table {
 }
 @media (max-width: 480px) {
   table.table {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 table.table > thead > tr > th {
@@ -6896,7 +6896,7 @@ table.table > thead > tr > th {
 }
 @media (max-width: 480px) {
   table.table > thead > tr > th {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 table.table tr.contracted {
@@ -6912,7 +6912,8 @@ table.table th {
   letter-spacing: 0.075em;
 }
 table.table > tbody > tr > td {
-  padding: 2px 4px 4px 24px;
+  padding: 8px 4px 8px 24px;
+  line-height: 1.2;
 }
 table.table td {
   border: none;
