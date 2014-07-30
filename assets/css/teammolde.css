@@ -6619,6 +6619,7 @@ a:hover {
 hr {
   border-top: none;
   border-bottom: 1px solid #555;
+  clear: both;
 }
 #mobilehome hr {
   margin: 0 -15px 10px;
