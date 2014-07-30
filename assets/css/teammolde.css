@@ -6939,3 +6939,7 @@ table.table-condensed tfoot td {
 .aside-backdrop.am-fade {
   background: rgba(255, 255, 255, 0.5);
 }
+.text-clear {
+  clear: both;
+  margin: 24px 0;
+}

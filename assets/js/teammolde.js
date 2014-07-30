@@ -478,11 +478,17 @@ function($scope, $q, $state, $stateParams, wpData, bgSVG) {
 teammoldeApp
 .controller('LaerereCtrl',
 [
-'$scope', 'bgSVG',
-function($scope, bgSVG) {
+'$scope', '$timeout', 'bgSVG',
+function($scope, $timeout, bgSVG) {
 	bgSVG.blur(true);
 
-	$scope.list = [
+	var keepalive;
+
+	$scope.loading = true;
+
+	var id = 0;
+
+	var list = [
 		{
 			name: 'Geir Magne Pettersen',
 			email: 'geirmagne@teammolde.no',
@@ -526,6 +532,22 @@ function($scope, bgSVG) {
 			phone: '90 94 73 14'
 		}
 	];
+
+	$scope.list = [];
+
+	var tick = function () {
+		$scope.list.push(list[id]);
+
+		id++;
+
+		if ( list.length > id ) {
+			keepalive = $timeout(tick, 240);
+		} else {
+			$scope.loading = false;
+		}
+	};
+
+	keepalive = $timeout(tick, 140);
 }
 ]
 );

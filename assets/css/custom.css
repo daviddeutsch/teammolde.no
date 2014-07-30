@@ -473,4 +473,5 @@ table.table-condensed tfoot td {
 }
 .text-clear {
   clear: both;
+  margin: 24px 0;
 }
