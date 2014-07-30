@@ -338,7 +338,7 @@ function($scope, $window, wpData, $http, bgSVG, $stateParams, backlinkerFilter, 
 );
 
 teammoldeApp
-.controller('ManedensBestattCtrl',
+.controller('ManedensCtrl',
 [
 '$scope', 'wpData', 'bgSVG',
 function($scope, wpData, bgSVG) {
