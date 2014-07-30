@@ -6975,7 +6975,7 @@ table.table-condensed tfoot td {
   margin-bottom: 4px;
 }
 .modal-content .tablewrap {
-  margin: -2px -20px !important;
+  margin: -2px -14px 24px -26px !important;
 }
 .modal-content table.table {
   border: none;
@@ -6996,12 +6996,14 @@ table.table-condensed tfoot td {
   clear: both;
 }
 .modal-header {
-  padding: 0;
+  padding: 10px 20px;
   border-bottom: 2px solid #000;
 }
 .modal-header button {
   font-size: 36px;
   color: #000;
+  padding: 12px 6px 14px 24px;
+  margin-top: -51px;
 }
 .modal-header .close {
   opacity: 1 !important;
