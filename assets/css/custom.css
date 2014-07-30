@@ -78,6 +78,14 @@ ul.team-nav li a:focus {
   text-shadow: 1px 2px 0 #fff;
   text-decoration: none;
 }
+ul.team-nav li a.active::after {
+  border-bottom: 5px solid #000;
+  content: "";
+  left: 8%;
+  position: absolute;
+  right: 8%;
+  top: 45%;
+}
 ul.team-nav li a:active {
   color: #000;
   text-decoration: none;
