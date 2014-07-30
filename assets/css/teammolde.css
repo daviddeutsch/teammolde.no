@@ -6813,11 +6813,31 @@ table.table {
   margin: 18px 6px;
   font-size: 28px;
 }
+@media (max-width: 992px) {
+  table.table {
+    font-size: 20px;
+  }
+}
+@media (max-width: 480px) {
+  table.table {
+    font-size: 14px;
+  }
+}
 table.table > thead > tr > th {
   border: 2px solid #000;
   width: 70%;
   font-size: 33px;
   padding: 8px 24px 8px;
+}
+@media (max-width: 992px) {
+  table.table > thead > tr > th {
+    font-size: 24px;
+  }
+}
+@media (max-width: 480px) {
+  table.table > thead > tr > th {
+    font-size: 16px;
+  }
 }
 table.table tr.contracted {
   -webkit-transition: max-height 400ms cubic-bezier(0, 0.87, 0.67, 0.99);
