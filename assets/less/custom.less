@@ -532,10 +532,14 @@ table.table-condensed {
 	table.table {
 		border: none;
 		font-size: 22px;
-		margin: 6px 6px 6px -2px;
+		margin: -2px -20px !important;
 		td {
 			border: none;
+			border-top: 1px solid #666 !important;
 		}
+	}
+	hr {
+		margin: 12px -15px;
 	}
 	.col-md-12 {
 		float: inherit;
@@ -545,10 +549,14 @@ table.table-condensed {
 
 .modal-header {
 	border-bottom: 2px solid #000;
+	button {
+		font-size: 36px;
+		color: #000;
+	}
 }
 
 .modal-footer {
-	border-top: 2px solid #000;
+	border-top: none;
 }
 
 .modal-backdrop.am-fade,

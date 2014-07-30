@@ -6971,10 +6971,14 @@ table.table-condensed tfoot td {
 .modal-content table.table {
   border: none;
   font-size: 22px;
-  margin: 6px 6px 6px -2px;
+  margin: -2px -20px !important;
 }
 .modal-content table.table td {
   border: none;
+  border-top: 1px solid #666 !important;
+}
+.modal-content hr {
+  margin: 12px -15px;
 }
 .modal-content .col-md-12 {
   float: inherit;
@@ -6983,8 +6987,12 @@ table.table-condensed tfoot td {
 .modal-header {
   border-bottom: 2px solid #000;
 }
+.modal-header button {
+  font-size: 36px;
+  color: #000;
+}
 .modal-footer {
-  border-top: 2px solid #000;
+  border-top: none;
 }
 .modal-backdrop.am-fade,
 .aside-backdrop.am-fade {
