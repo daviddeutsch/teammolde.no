@@ -283,7 +283,7 @@ p {
   padding-left: 16px;
   font-weight: 300;
 }
-.btn-primary {
+.btn-primary-black {
   background: #000;
   color: #fff;
   font-family: 'Source Sans Pro', sans-serif;
@@ -294,13 +294,13 @@ p {
   font-weight: 700;
   border: none;
 }
-.btn-primary:link,
-.btn-primary:hover,
-.btn-primary:active,
-.btn-primary:focus {
+.btn-primary-black:link,
+.btn-primary-black:hover,
+.btn-primary-black:active,
+.btn-primary-black:focus {
   background: #333;
 }
-.btn-primary:visited {
+.btn-primary-black:visited {
   background: #000;
 }
 .small-text {
@@ -491,6 +491,9 @@ table.table-condensed tfoot td {
   text-decoration: none;
   color: #444;
 }
+.modal-body {
+  padding: 20px 20px 0;
+}
 .modal-content {
   border: 2px solid #000;
 }
@@ -519,6 +522,7 @@ table.table-condensed tfoot td {
 .modal-content table.table td {
   border: none;
   border-top: 1px solid #666 !important;
+  padding: 6px 4px 8px 24px;
 }
 .modal-content hr {
   margin: 12px -20px;
@@ -543,6 +547,7 @@ table.table-condensed tfoot td {
 }
 .modal-footer {
   border-top: none;
+  padding: 2px 0 40px 0;
 }
 .modal-backdrop.am-fade,
 .aside-backdrop.am-fade {

@@ -144,13 +144,11 @@ function () {
 					;
 			}
 
-			//<a ui-sref="bestill({ id: " klasse-b"="" })"="" class="btn btn-primary"></a>
-
 			bestill = bestill.replace('klasse-', '');
 
 			modified += '<a ui-sref="'
 				+ 'bestill({ id: \''+bestill+'\' })'
-				+ '" class="btn btn-primary pull-right">Bestill Time</a>'
+				+ '" class="btn btn-primary-black pull-right">Bestill Time</a>'
 			+ '</div>';
 		}
 
