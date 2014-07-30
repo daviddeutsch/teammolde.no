@@ -1,13 +1,10 @@
 <div id="header" class="container">
 	<div class="row">
-		<div class="col-lg-2 col-md-1">
-			<a ui-sref="home">
-				<img src="assets/img/team-logo.png" id="team-logo" class="pull-left"/>
+		<div class="col-md-12">
+			<a ui-sref="home" id="team-logo" class="pull-left">
+				<img src="assets/img/team-logo.png"/>
 			</a>
-		</div>
-
-		<div class="col-lg-10 col-md-11">
-			<nav class="navbar" role="navigation" ng-controller="NavCtrl">
+			<nav class="navbar pull-right" role="navigation" ng-controller="NavCtrl">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" ng-click="toggle('team-navbar-collapse')">
 						<i class="fa fa-2x fa-bars"></i>
@@ -15,7 +12,7 @@
 					</button>
 				</div>
 				<div id="team-navbar-collapse" class="collapse navbar-collapse am-fade">
-					<ul class="team-nav nav navbar-nav pull-right">
+					<ul class="team-nav nav navbar-nav">
 						<li>
 							<a ui-sref="priser({ id: 'priser' })" ui-sref-active="active">Priser</a>
 						</li>

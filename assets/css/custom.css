@@ -49,12 +49,12 @@ body {
   margin: 20px 0px;
 }
 @media (max-width: 992px) {
-  #team-logo {
+  #team-logo img {
     width: 200px;
   }
 }
 @media (max-width: 768px) {
-  #team-logo {
+  #team-logo img {
     width: 140px;
   }
 }

@@ -6517,12 +6517,12 @@ body {
   margin: 20px 0px;
 }
 @media (max-width: 992px) {
-  #team-logo {
+  #team-logo img {
     width: 200px;
   }
 }
 @media (max-width: 768px) {
-  #team-logo {
+  #team-logo img {
     width: 140px;
   }
 }
@@ -6935,7 +6935,7 @@ table.table-condensed tfoot td {
 }
 #laerere .panel-header h3 {
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 21px;
