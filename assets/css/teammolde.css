@@ -6545,12 +6545,18 @@ ul.team-nav li:hover {
   background: rgba(255, 255, 255, 0.2);
 }
 @media (max-width: 992px) {
+  ul.team-nav li:hover {
+    background: #fff;
+  }
+}
+@media (max-width: 992px) {
   ul.team-nav li {
     border-left: 1px solid #000;
     margin: -1px 0 0 0;
-    width: 75%;
+    width: 150%;
     text-align: center;
     background: #fff;
+    padding: 2px 12px;
   }
 }
 ul.team-nav li a {
@@ -6562,6 +6568,13 @@ ul.team-nav li a:focus {
   color: #000;
   text-shadow: 1px 2px 0 #fff;
   text-decoration: none;
+}
+@media (max-width: 992px) {
+  ul.team-nav li a:hover,
+  ul.team-nav li a.active,
+  ul.team-nav li a:focus {
+    background: #fff;
+  }
 }
 ul.team-nav li a.active::after {
   border-bottom: 5px solid #000;
