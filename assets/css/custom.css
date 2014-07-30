@@ -528,11 +528,18 @@ table.table-condensed tfoot td {
   clear: both;
 }
 .modal-header {
+  padding: 0;
   border-bottom: 2px solid #000;
 }
 .modal-header button {
   font-size: 36px;
   color: #000;
+}
+.modal-header .close {
+  opacity: 1 !important;
+}
+.modal-title {
+  margin: 12px 16px;
 }
 .modal-footer {
   border-top: none;
