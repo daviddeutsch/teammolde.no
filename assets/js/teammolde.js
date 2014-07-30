@@ -787,13 +787,13 @@ function ( $q, Tween )
 			.animate({transform: 'translate(-400,0)'}, 500, mina.linear)
 			.animate({transform: 'translate(-800,0)'}, 5000, mina.easeinout)
 			.animate(
-				{transform: 'translate(3200,0) scale(-1, 1)'}, 2000, mina.easeinout,
+				{transform: 'translate(3500,0) scale(-1, 1)'}, 2000, mina.easeinout,
 				{transform: 'translate(2725,0) scale(-1, 1)'}
 			)
-			.animate({transform: 'translate(3200,0) scale(-1, 1)'}, 2500, mina.linear)
+			.animate({transform: 'translate(3500,0) scale(-1, 1)'}, 2500, mina.linear)
 			.animate({transform: 'translate(3700,0) scale(-1, 1)'}, 5000, mina.easeinout)
-			.animate({transform: 'translate(4200,0) scale(-1, 1)'}, 4000, mina.easeinout)
-			.animate({transform: 'translate(4200,0) scale(-1, 1)'}, 1000, mina.easeinout)
+			.animate({transform: 'translate(4500,0) scale(-1, 1)'}, 4000, mina.easeinout)
+			.animate({transform: 'translate(4500,0) scale(-1, 1)'}, 1000, mina.easeinout)
 			.animate(
 				{transform: 'translate(200,0) scale(1, 1)'}, 2000, mina.easeinout,
 				{transform: 'translate(0,0) scale(1, 1)'}
