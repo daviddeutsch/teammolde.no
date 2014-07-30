@@ -13,25 +13,26 @@
 				</div>
 				<div class="modal-body">
 					<h3>KLASSE {{item.klasse}} - {{kurs.title}}</h3>
-					<table class="table">
-						<tr>
-							<td><strong>Plasser:</strong></td>
-							<td>{{kurs.custom_fields.plasser}}</td>
-						</tr>
-						<tr>
-							<td><strong>Instruktør:</strong></td>
-							<td>{{kurs.custom_fields.instruktor}}</td>
-						</tr>
-						<tr>
-							<td><strong>Sted:</strong></td>
-							<td>{{kurs.custom_fields.sted}}</td>
-						</tr>
-						<tr>
-							<td><strong>Tid:</strong></td>
-							<td>{{kurs.custom_fields.dato | eurodate}} - {{kurs.custom_fields.tid}}</td>
-						</tr>
-					</table>
-					<hr/>
+					<div class="tablewrap">
+						<table class="table">
+							<tr>
+								<td><strong>Plasser:</strong></td>
+								<td>{{kurs.custom_fields.plasser}}</td>
+							</tr>
+							<tr>
+								<td><strong>Instruktør:</strong></td>
+								<td>{{kurs.custom_fields.instruktor}}</td>
+							</tr>
+							<tr>
+								<td><strong>Sted:</strong></td>
+								<td>{{kurs.custom_fields.sted}}</td>
+							</tr>
+							<tr>
+								<td><strong>Tid:</strong></td>
+								<td>{{kurs.custom_fields.dato | eurodate}} - {{kurs.custom_fields.tid}}</td>
+							</tr>
+						</table>
+					</div>
 					<div class="col-md-6">
 						<div class="form-group">
 							<label for="fornavn" class="sr-only">Fornavn</label>

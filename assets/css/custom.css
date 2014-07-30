@@ -497,20 +497,31 @@ table.table-condensed tfoot td {
 .modal-content p {
   font-size: 18px;
 }
+.modal-content h3 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  margin-top: -12px;
+}
 .modal-content .form-inline .form-group {
   margin-bottom: 4px;
+}
+.modal-content .tablewrap {
+  margin: -2px -20px !important;
 }
 .modal-content table.table {
   border: none;
   font-size: 22px;
-  margin: -2px -20px !important;
+  width: 100%;
+  margin: 0;
+  border-bottom: 1px solid #666 !important;
 }
 .modal-content table.table td {
   border: none;
   border-top: 1px solid #666 !important;
 }
 .modal-content hr {
-  margin: 12px -15px;
+  margin: 12px -20px;
 }
 .modal-content .col-md-12 {
   float: inherit;
