@@ -6507,12 +6507,6 @@ body {
 #imedias a:hover {
   text-decoration: none;
 }
-@media (max-width: 768px) {
-  #imedias {
-    height: 0;
-    display: none;
-  }
-}
 #team-logo {
   margin: 20px 0px;
 }

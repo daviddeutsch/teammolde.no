@@ -276,7 +276,7 @@ function($scope, $timeout, bgSVG, $window) {
 
 			bgSVG.mobile();
 
-			$timeout(makeMobile(true), 100);
+			makeMobile(true);
 		} else {
 			if ( $scope.bgtype == '' ) {
 				bgSVG.init().then(function(){
@@ -290,13 +290,13 @@ function($scope, $timeout, bgSVG, $window) {
 				centerbg();
 			}
 
-			$timeout(makeMobile(false), 100);
+			makeMobile(false);
 		}
 
 	};
 
 	angular.element($window).bind("resize", function() {
-		resize();
+		$timeout(resize, 200);
 	});
 
 	resize();
@@ -797,6 +797,8 @@ function ( $q, Tween )
 
 		angular.element('#background img').remove();
 
+		angular.element('#imedias').addClass('hidden-xs');
+
 		return Tween.load('assets/svg/background.svg');
 	};
 
@@ -932,6 +934,7 @@ function ( $q, Tween )
 		if ( !blurred ) {
 			angular.element('#background svg').remove();
 			angular.element('body').addClass('bgblur');
+			angular.element('#imedias').removeClass('hidden-xs');
 
 			blurred = true;
 		}
