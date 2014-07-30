@@ -6751,6 +6751,26 @@ p {
   padding-left: 16px;
   font-weight: 300;
 }
+.btn-primary {
+  background: #53cff6;
+  color: #fff;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 28px;
+  text-transform: uppercase;
+  letter-spacing: 0.075em;
+  margin-top: 24px;
+  font-weight: 700;
+  border: none;
+}
+.btn-primary:link,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+  background: #6fd7f7;
+}
+.btn-primary:visited {
+  background: #53cff6;
+}
 .btn-primary-black {
   background: #000;
   color: #fff;
