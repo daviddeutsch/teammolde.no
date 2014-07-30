@@ -170,6 +170,18 @@ function () {
 );
 
 teammoldeApp
+	.filter('emailbreak',
+	function () {
+		return function ( markup ) {
+			return markup.replace(
+				'@',
+				' @ '
+			);
+		};
+	}
+);
+
+teammoldeApp
 .filter('wplinker',
 [
 '$compile', '$rootScope',
