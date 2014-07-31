@@ -24,10 +24,26 @@
 	<script type="text/javascript" src="assets/js/snap.svg-min.js"></script>
 	<script type="text/javascript" src="assets/js/unserialize.js"></script>
 	<script type="text/javascript" src="assets/js/teammolde.js"></script>
+	<!--[if lte IE 7]>
+		<script src="assets/js/json3.min.js"></script>
+	<![endif]-->
+	<!--[if lt IE 9]>
+		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	<![endif]-->
+
+	<!-- html5.js -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- respond.js -->
+	<!--[if lt IE 9]>
+		<script type='text/javascript' src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+	<![endif]-->
 
 </head>
 
-<body ng-app="teammoldeApp">
+<body ng-app="teammoldeApp" id="ng-app">
 	<div id="background"></div>
 	<div id="foreground">
 		<div ui-view="header"></div>
