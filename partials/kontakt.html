@@ -8,18 +8,68 @@
 	<div class="col-md-6">
 		<p>Fyll ut skjemaet om du vil komme i kontakt med oss</p>
 		<div ng-controller="ContactCtrl">
-			<form method="post" id="KontaktForm" ng-submit="submit(item, kurs)" role=form" novalidate="novalidate">
-				<div class="form-group">
+			<form method="post" name="KontaktForm" ng-submit="submit(item, kurs)" role=form" novalidate="novalidate">
+				<div
+					class="form-group"
+					ng-class="{'has-error': KontaktForm.name.$invalid && KontaktForm.name.$dirty,
+							  'has-success': KontaktForm.name.$valid && KontaktForm.name.$dirty}"
+					>
 					<label for="name" class="sr-only">Ditt navn</label>
-					<input type="text" class="form-control" ng-model="name" id="name" name="name" placeholder="Ditt navn">
+					<input
+						type="text"
+						class="form-control"
+						ng-model="name"
+						id="name"
+						name="name"
+						placeholder="Ditt navn"
+						ng-minlength="3"
+						required
+						/>
+					<span ng-show="KontaktForm.name.$invalid && KontaktForm.name.$dirty" class="am-fade">
+						<span class="label label-warning" ng-show="KontaktForm.name.$error.required">Don't forget this field!</span>
+						<span class="label label-warning" ng-show="KontaktForm.name.$error.minlength">This field is too short.</span>
+					</span>
 				</div>
-				<div class="form-group">
+				<div
+					class="form-group"
+					ng-class="{'has-error': KontaktForm.epost.$invalid && KontaktForm.epost.$dirty,
+							  'has-success': KontaktForm.epost.$valid && KontaktForm.epost.$dirty}"
+					>
 					<label for="epost" class="sr-only">Epost</label>
-					<input type="text" class="form-control" ng-model="epost" id="epost" name="epost" placeholder="Din e-postadresse">
+					<input
+						type="email"
+						class="form-control"
+						ng-model="epost"
+						id="epost"
+						name="epost"
+						placeholder="Din e-postadresse"
+						required
+						/>
+					<span ng-show="KontaktForm.epost.$invalid && KontaktForm.epost.$dirty" class="am-fade-and-slide-top">
+						<span class="label label-warning" ng-show="KontaktForm.epost.$error.required">Don't forget this field!</span>
+						<span class="label label-warning" ng-show="KontaktForm.epost.$error.email">Please use a valid email address.</span>
+					</span>
 				</div>
-				<div class="form-group">
+				<div
+					class="form-group"
+					ng-class="{'has-error': KontaktForm.message.$invalid && KontaktForm.message.$dirty,
+							  'has-success': KontaktForm.message.$valid && KontaktForm.message.$dirty}"
+					>
 					<label for="message" class="sr-only">Text</label>
-					<textarea class="form-control" rows="3" ng-model="message" id="message" name="message" placeholder="Text"></textarea>
+					<textarea
+						class="form-control"
+						rows="6"
+						ng-model="message"
+						id="message"
+						name="message"
+						placeholder="Text"
+						ng-minlength="3"
+						required
+						></textarea>
+					<span ng-show="KontaktForm.message.$invalid && KontaktForm.message.$dirty" class="am-fade-and-slide-top">
+						<span class="label label-warning" ng-show="KontaktForm.message.$error.required">Don't forget this field!</span>
+						<span class="label label-warning" ng-show="KontaktForm.message.$error.minlength">This field is too short.</span>
+					</span>
 				</div>
 				<button type="submit" class="btn btn-primary" ng-disabled="sending || KontaktForm.$invalid"><i class="fa fa-circle-o-notch fa-spin" ng-show="sending"></i>Send</button>
 			</form>

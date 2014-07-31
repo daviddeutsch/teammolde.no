@@ -7267,3 +7267,10 @@ table.table-condensed tfoot td {
   clear: both;
   margin: 24px 0;
 }
+.label {
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  margin-top: 12px;
+  margin-left: 12px;
+}
