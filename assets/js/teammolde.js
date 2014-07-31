@@ -236,13 +236,18 @@ function() {
 				}, function(value) {
 					ctrl.$parsers.unshift(function(viewValue) {
 						if ( ctrl.$name == 'telefon' ) {
-							ctrl.$setValidity('eitherThisOr', false);
+							if ( viewValue !== '' ) {
+								ctrl.$setValidity('eitherThisOr', !scope.$parent.BestillForm.epost.$isValid);
+							} else {
+								ctrl.$setValidity('eitherThisOr', !scope.$parent.BestillForm.telefon.$isEmpty);
+							}
 
-							return !scope.$parent.BestillForm.epost.$isEmpty;
 						} else {
-							ctrl.$setValidity('eitherThisOr', false);
-
-							return !scope.$parent.BestillForm.telefon.$isEmpty;
+							if ( viewValue !== '' ) {
+								ctrl.$setValidity('eitherThisOr', !scope.$parent.BestillForm.telefon.$isValid);
+							} else {
+								ctrl.$setValidity('eitherThisOr', !scope.$parent.BestillForm.epost.$isEmpty);
+							}
 						}
 					});
 				});
