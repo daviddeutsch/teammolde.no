@@ -235,7 +235,7 @@ function() {
 					return ctrl.$viewValue;
 				}, function(value) {
 					ctrl.$parsers.unshift(function(viewValue) {
-						if ( $ctrl.$name == 'telefon' ) {
+						if ( ctrl.$name == 'telefon' ) {
 							ctrl.$setValidity('eitherThisOr', false);
 
 							return !scope.$parent.BestillForm.epost.$isEmpty;
