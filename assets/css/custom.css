@@ -135,26 +135,39 @@ a {
 a:hover {
   text-decoration: none;
 }
+#mobilehome hr {
+  margin: 0 -15px 10px;
+}
 .col-xs-6 {
   margin-bottom: 12px;
+  vertical-align: middle;
+  padding-top: 5%;
 }
 .col-xs-6 img {
   width: 100%;
+  margin-top: -20%;
+}
+.col-xs-6 div {
+  display: inline-block;
+  vertical-align: middle;
 }
 .col-xs-6 h3 {
   font-family: 'Francois One', sans-serif;
   font-size: 28px !important;
   text-transform: uppercase;
-  margin-top: 24px;
   font-weight: 700;
+  margin: 0;
+}
+.col-xs-6:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
 }
 hr {
   border-top: none;
   border-bottom: 1px solid #555;
   clear: both;
-}
-#mobilehome hr {
-  margin: 0 -15px 10px;
 }
 .imgfooter {
   margin-left: -15px;
