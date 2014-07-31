@@ -127,7 +127,10 @@ function () {
 		var split = markup.split('<h4>Budsjett</h4>');
 
 		modified += split[0].replace(
-			new RegExp('<table>', 'g'), '<table class="table table-hover">'
+			new RegExp('<table>', 'g'),
+			'<table class="table table-hover'
+				+ ((bestill != 'priser') ? ' table-x-responsive' : '')
+				+'">'
 		);
 
 		if ( bestill != 'priser' ) {

@@ -142,6 +142,8 @@ a:hover {
   margin-bottom: 12px;
   vertical-align: middle;
   padding-top: 5%;
+  padding-right: 0;
+  padding-left: 8px;
 }
 .col-xs-6 img {
   width: 100%;
@@ -424,6 +426,7 @@ table.table {
 @media (max-width: 480px) {
   table.table {
     font-size: 16px;
+    max-width: 95%;
   }
 }
 table.table > thead > tr > th {
@@ -593,6 +596,12 @@ table.table-condensed tfoot td {
 @media (max-width: 480px) {
   table.table-condensed tfoot td {
     font-size: 16px;
+  }
+}
+@media (max-width: 480px) {
+  .table-x-responsive td:nth-child(2),
+  .table-x-responsive th:nth-child(2) {
+    display: none;
   }
 }
 #laerere .panel {
@@ -777,12 +786,14 @@ table.table-condensed tfoot td {
 }
 @media (max-width: 992px) {
   .modal-header .close {
+    margin-top: -45px;
     font-size: 32px;
-    padding: 12px 2px 11px 20px;
+    padding: 12px 2px 12px 20px;
   }
 }
 @media (max-width: 480px) {
   .modal-header .close {
+    margin-top: -38px;
     font-size: 24px;
   }
 }

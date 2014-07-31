@@ -144,6 +144,8 @@ a {
 	margin-bottom: 12px;
 	vertical-align: middle;
 	padding-top: 5%;
+	padding-right: 0;
+	padding-left: 8px;
 	img {
 		width: 100%;
 		margin-top: -20%;
@@ -406,6 +408,7 @@ table.table {
 	}
 	@media (max-width: @screen-xs-min) {
 		font-size: 16px;
+		max-width: 95%;
 	}
 
 	&> thead > tr > th {
@@ -569,6 +572,15 @@ table.table-condensed {
 			@media (max-width: @screen-xs-min) {
 				font-size: 16px;
 			}
+		}
+	}
+}
+
+.table-x-responsive {
+	td:nth-child(2),
+	th:nth-child(2) {
+		@media (max-width: @screen-xs-min) {
+			display: none;
 		}
 	}
 }
@@ -740,10 +752,12 @@ table.table-condensed {
 		margin-top: -51px;
 		padding: 10px 2px 9px 20px;
 		@media (max-width: @screen-md-min) {
+			margin-top: -45px;
 			font-size: 32px;
-			padding: 12px 2px 11px 20px;
+			padding: 12px 2px 12px 20px;
 		}
 		@media (max-width: @screen-xs-min) {
+			margin-top: -38px;
 			font-size: 24px;
 		}
 	}
