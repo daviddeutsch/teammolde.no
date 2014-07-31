@@ -7074,6 +7074,12 @@ table.table-condensed tfoot td {
     display: none;
   }
 }
+@media (max-width: 768px) {
+  .table-x-responsive td:nth-child(4),
+  .table-x-responsive th:nth-child(4) {
+    display: none;
+  }
+}
 #laerere .panel {
   background: none;
 }
