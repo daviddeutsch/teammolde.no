@@ -237,8 +237,11 @@ function() {
 				if ( value !== '' ) {
 					valid = true;
 				} else {
-					valid = !scope.$parent.BestillForm[attrs.eitherThisOr].$isEmpty()
-						&& scope.$parent.BestillForm[attrs.eitherThisOr].$isValid();
+					if ( scope.$parent.BestillForm[attrs.eitherThisOr].$isEmpty() ) {
+						valid = false;
+					} else {
+						valid = scope.$parent.BestillForm[attrs.eitherThisOr].$isValid();
+					}
 				}
 
 				ctrl.$setValidity('eitheror', valid);
