@@ -34,7 +34,11 @@
 						</table>
 					</div>
 					<div class="col-md-6">
-						<div class="form-group">
+						<div
+							class="form-group"
+							ng-class="{'has-error': BestillForm.fornavn.$invalid && BestillForm.fornavn.$dirty,
+							  'has-success': BestillForm.fornavn.$valid && BestillForm.fornavn.$dirty}"
+							>
 							<label for="fornavn" class="sr-only">Fornavn</label>
 							<input
 								type="text"
@@ -46,7 +50,11 @@
 								   required
 								>
 						</div>
-						<div class="form-group">
+						<div
+							class="form-group"
+							ng-class="{'has-error': BestillForm.etternavn.$invalid && BestillForm.etternavn.$dirty,
+							  'has-success': BestillForm.etternavn.$valid && BestillForm.etternavn.$dirty}"
+							>
 							<label for="etternavn" class="sr-only">Etternavn</label>
 							<input
 								type="text"
@@ -58,7 +66,11 @@
 								   required
 								>
 						</div>
-						<div class="form-group">
+						<div
+							class="form-group"
+							ng-class="{'has-error': BestillForm.fodselsdato.$invalid && BestillForm.fodselsdato.$dirty,
+							  'has-success': BestillForm.fodselsdato.$valid && BestillForm.fodselsdato.$dirty}"
+							>
 							<label for="fodselsdato" class="sr-only">Fødselsdato</label>
 							<input
 								type="text"
@@ -72,7 +84,11 @@
 						</div>
 					</div>
 					<div class="col-md-6">
-						<div class="form-group">
+						<div
+							class="form-group"
+							ng-class="{'has-error': BestillForm.telefon.$invalid && BestillForm.telefon.$dirty,
+							  'has-success': BestillForm.telefon.$valid && BestillForm.telefon.$dirty}"
+							>
 							<label for="telefon" class="sr-only">Telefon</label>
 							<input
 								type="text"
@@ -84,7 +100,11 @@
 								either-this-or="epost"
 								>
 						</div>
-						<div class="form-group">
+						<div
+							class="form-group"
+							ng-class="{'has-error': BestillForm.epost.$invalid && BestillForm.epost.$dirty,
+							  'has-success': BestillForm.epost.$valid && BestillForm.epost.$dirty}"
+							>
 							<label for="epost" class="sr-only">Epost</label>
 							<input
 								type="email"
@@ -98,15 +118,21 @@
 						</div>
 					</div>
 					<div class="col-md-12">
-						<label for="annet" class="sr-only">Annet</label>
-						<textarea
-							class="form-control"
-							rows="3"
-							ng-model="annet"
-							id="annet"
-							name="annet"
-							placeholder="Annet"
-							></textarea>
+						<div
+							class="form-group"
+							ng-class="{'has-error': BestillForm.annet.$invalid && BestillForm.annet.$dirty,
+							  'has-success': BestillForm.annet.$valid && BestillForm.annet.$dirty}"
+							>
+							<label for="annet" class="sr-only">Annet</label>
+							<textarea
+								class="form-control"
+								rows="3"
+								ng-model="annet"
+								id="annet"
+								name="annet"
+								placeholder="Annet"
+								></textarea>
+						</div>
 					</div>
 				</div>
 				<div class="modal-footer">
