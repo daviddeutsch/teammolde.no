@@ -231,26 +231,13 @@ function() {
 			eitherThisOr: '=eitherThisOr'
 		},
 		link: function(scope, element, attrs, ctrl) {
-			scope.$watch(
-				attrs.eitherThisOr,
-				function(value) {
-					ctrl.$parsers.unshift(function(viewValue) {
-						if ( ctrl.$name == 'telefon' ) {
-							if ( viewValue !== '' ) {
-								ctrl.$setValidity('eitherThisOr', !scope.$parent.BestillForm.epost.$isValid);
-							} else {
-								ctrl.$setValidity('eitherThisOr', !scope.$parent.BestillForm.telefon.$isEmpty);
-							}
+			ctrl.$parsers.unshift(function(value) {
+				var valid = blacklist.indexOf(value) === -1;
 
-						} else {
-							if ( viewValue !== '' ) {
-								ctrl.$setValidity('eitherThisOr', !scope.$parent.BestillForm.telefon.$isValid);
-							} else {
-								ctrl.$setValidity('eitherThisOr', !scope.$parent.BestillForm.epost.$isEmpty);
-							}
-						}
-					});
-				});
+				ngModel.$setValidity('blacklist', valid);
+
+				return valid ? value : undefined;
+			});
 		}
 	};
 });
