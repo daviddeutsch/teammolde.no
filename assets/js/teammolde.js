@@ -237,14 +237,8 @@ function() {
 				if ( value !== '' ) {
 					valid = true;
 				} else {
-					if ( ctrl.$name == 'telefon' ) {
-						valid = scope.$parent.BestillForm.epost.$isEmpty()
-						|| !scope.$parent.BestillForm.epost.$isValid();
-					} else {
-						valid = scope.$parent.BestillForm.telefon.$isEmpty()
-							|| !scope.$parent.BestillForm.telefon.$isValid();
-					}
-
+					valid = !scope.$parent.BestillForm[attrs.eitherThisOr].$isEmpty()
+						&& scope.$parent.BestillForm[attrs.eitherThisOr].$isValid();
 				}
 
 				ctrl.$setValidity('eitheror', valid);
