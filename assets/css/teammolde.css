@@ -7068,15 +7068,21 @@ table.table-condensed tfoot td {
 }
 @media (max-width: 480px) {
   .table-x-responsive > tbody > tr td:nth-child(2),
+  .table-x-responsive > thead > tr td:nth-child(2),
   .table-x-responsive > tbody > tr th:nth-child(2),
+  .table-x-responsive > thead > tr th:nth-child(2),
   .table-x-responsive > tbody > tr td:nth-child(4),
-  .table-x-responsive > tbody > tr th:nth-child(4) {
+  .table-x-responsive > thead > tr td:nth-child(4),
+  .table-x-responsive > tbody > tr th:nth-child(4),
+  .table-x-responsive > thead > tr th:nth-child(4) {
     display: none;
   }
 }
 @media (max-width: 768px) {
   .table-x-responsive > tbody > tr td:nth-child(4),
-  .table-x-responsive > tbody > tr th:nth-child(4) {
+  .table-x-responsive > thead > tr td:nth-child(4),
+  .table-x-responsive > tbody > tr th:nth-child(4),
+  .table-x-responsive > thead > tr th:nth-child(4) {
     display: none;
   }
 }
