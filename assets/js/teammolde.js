@@ -231,8 +231,6 @@ function() {
 			eitherThisOr: '=eitherThisOr'
 		},
 		link: function(scope, element, attrs, ctrl) {
-			scope.eitherThisOr = element.val('either-this-or');
-
 			scope.$watch(
 				scope.value,
 				function(value) {
