@@ -228,12 +228,13 @@ function() {
 		require: "ngModel",
 		restrict: 'A',
 		scope: {
-			eitherThisOr: '=eitherThisOr',
-			value: '=value'
+			eitherThisOr: '=eitherThisOr'
 		},
 		link: function(scope, element, attrs, ctrl) {
+			scope.eitherThisOr = element.val('either-this-or');
+
 			scope.$watch(
-				scope.eitherThisOr,
+				scope.value,
 				function(value) {
 					ctrl.$parsers.unshift(function(viewValue) {
 						if ( ctrl.$name == 'telefon' ) {
