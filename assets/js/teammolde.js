@@ -226,14 +226,15 @@ teammoldeApp.directive('eitherThisOr',
 function() {
 	return {
 		require: "ngModel",
+		restrict: 'A',
 		scope: {
-			eitherThisOr: '='
+			eitherThisOr: '=eitherThisOr',
+			value: '=value'
 		},
 		link: function(scope, element, attrs, ctrl) {
 			scope.$watch(
-				function() {
-					return ctrl.$viewValue;
-				}, function(value) {
+				scope.eitherThisOr,
+				function(value) {
 					ctrl.$parsers.unshift(function(viewValue) {
 						if ( ctrl.$name == 'telefon' ) {
 							if ( viewValue !== '' ) {
