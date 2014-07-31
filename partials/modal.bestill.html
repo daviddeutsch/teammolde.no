@@ -36,33 +36,84 @@
 					<div class="col-md-6">
 						<div class="form-group">
 							<label for="fornavn" class="sr-only">Fornavn</label>
-							<input type="text" class="form-control" ng-model="fornavn" id="fornavn" name="fornavn" placeholder="Fornavn">
+							<input
+								type="text"
+								   class="form-control"
+								   ng-model="fornavn"
+								   id="fornavn"
+								   name="fornavn"
+								   placeholder="Fornavn"
+								   required
+								>
 						</div>
 						<div class="form-group">
 							<label for="etternavn" class="sr-only">Etternavn</label>
-							<input type="text" class="form-control" ng-model="etternavn" id="etternavn" name="etternavn" placeholder="Etternavn">
+							<input
+								type="text"
+								   class="form-control"
+								   ng-model="etternavn"
+								   id="etternavn"
+								   name="etternavn"
+								   placeholder="Etternavn"
+								   required
+								>
 						</div>
 						<div class="form-group">
 							<label for="fodselsdato" class="sr-only">Fødselsdato</label>
-							<input type="text" class="form-control" ng-model="fodselsdato" id="fodselsdato" name="fodselsdato" placeholder="Fødselsdato - DDMMAA">
+							<input
+								type="text"
+								   class="form-control"
+								   ng-model="fodselsdato"
+								   id="fodselsdato"
+								   name="fodselsdato"
+								   placeholder="Fødselsdato - DDMMAA"
+								   required
+								>
 						</div>
 					</div>
 					<div class="col-md-6">
 						<div class="form-group">
 							<label for="telefon" class="sr-only">Telefon</label>
-							<input type="text" class="form-control" ng-model="telefon" id="telefon" name="telefon" placeholder="Telefon">
+							<input
+								type="text"
+								class="form-control"
+								ng-model="telefon"
+								id="telefon"
+								name="telefon"
+								placeholder="Telefon"
+								either-this-or="epost"
+								>
 						</div>
 						<div class="form-group">
 							<label for="epost" class="sr-only">Epost</label>
-							<input type="text" class="form-control" ng-model="epost" id="epost" name="epost" placeholder="Epost">
+							<input
+								type="email"
+								class="form-control"
+								ng-model="epost"
+								id="epost"
+								name="epost"
+								placeholder="Epost"
+								either-this-or="telefon"
+								>
 						</div>
 					</div>
 					<div class="col-md-12">
 						<label for="annet" class="sr-only">Annet</label>
-						<textarea class="form-control" rows="3" ng-model="annet" id="annet" name="annet" placeholder="Annet"></textarea>
+						<textarea
+							class="form-control"
+							rows="3"
+							ng-model="annet"
+							id="annet"
+							name="annet"
+							placeholder="Annet"
+							></textarea>
 					</div>
 				</div>
 				<div class="modal-footer">
+					<span ng-show="BestillForm.epost.$invalid && BestillForm.epost.$dirty">
+						<span class="label label-warning" ng-show="BestillForm.epost.$error.required">Please fill out all required fields!</span>
+						<span class="label label-warning" ng-show="BestillForm.epost.$error.email">Please use a valid email address.</span>
+					</span>
 					<button type="submit" class="btn btn-primary" ng-disabled="sending || BestillForm.$invalid"><i class="fa fa-circle-o-notch fa-spin" ng-show="sending"></i>Send Bestilling</button>
 				</div>
 			</form>

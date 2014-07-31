@@ -170,15 +170,15 @@ function () {
 );
 
 teammoldeApp
-	.filter('emailbreak',
-	function () {
-		return function ( markup ) {
-			return markup.replace(
-				'@',
-				' @ '
-			);
-		};
-	}
+.filter('emailbreak',
+function () {
+	return function ( markup ) {
+		return markup.replace(
+			'@',
+			' @ '
+		);
+	};
+}
 );
 
 teammoldeApp
@@ -214,12 +214,49 @@ function () {
 );
 
 teammoldeApp.filter('removewhitespace',
-	function () {
-		return function ( d ) {
-			return d.replace(/ /g,'');
-		};
-	}
+function () {
+	return function ( d ) {
+		return d.replace(/ /g,'');
+	};
+}
 );
+
+
+teammoldeApp.directive('eitherThisOr',
+function() {
+	return {
+		require: "ngModel",
+		scope: {
+			eitherThisOr: '='
+		},
+		link: function(scope, element, attrs, ctrl) {
+			scope.$watch(
+				function() {
+					var combined;
+
+					if (scope.eitherThisOr || ctrl.$viewValue) {
+						combined = scope.eitherThisOr + '_' + ctrl.$viewValue;
+					}
+
+					return combined;
+				}, function(value) {
+					if (value) {
+						ctrl.$parsers.unshift(function(viewValue) {
+							var origin = scope.eitherThisOr;
+
+							if (origin !== viewValue) {
+								ctrl.$setValidity('eitheror', false);
+								return undefined;
+							} else {
+								ctrl.$setValidity('eitheror', true);
+								return viewValue;
+							}
+						});
+					}
+				});
+		}
+	};
+});
 
 
 teammoldeApp
