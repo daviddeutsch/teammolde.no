@@ -232,7 +232,7 @@ function() {
 		},
 		link: function(scope, element, attrs, ctrl) {
 			scope.$watch(
-				scope.value,
+				attrs.eitherThisOr,
 				function(value) {
 					ctrl.$parsers.unshift(function(viewValue) {
 						if ( ctrl.$name == 'telefon' ) {
