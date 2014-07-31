@@ -232,27 +232,18 @@ function() {
 		link: function(scope, element, attrs, ctrl) {
 			scope.$watch(
 				function() {
-					var combined;
-
-					if (scope.eitherThisOr || ctrl.$viewValue) {
-						combined = scope.eitherThisOr + '_' + ctrl.$viewValue;
-					}
-
-					return combined;
+					return ctrl.$viewValue;
 				}, function(value) {
-					if (value) {
-						ctrl.$parsers.unshift(function(viewValue) {
-							var origin = scope.eitherThisOr;
+					ctrl.$parsers.unshift(function(viewValue) {
+						if ( $ctrl.$name == 'telefon' ) {
+							ctrl.$setValidity('eitherThisOr', false);
 
-							if (origin !== viewValue) {
-								ctrl.$setValidity('eitheror', false);
-								return undefined;
-							} else {
-								ctrl.$setValidity('eitheror', true);
-								return viewValue;
-							}
-						});
-					}
+							return !scope.$parent.BestillForm.epost.$isEmpty;
+						} else {
+							ctrl.$setValidity('eitherThisOr', false);
+
+							return !scope.$parent.BestillForm.telefon.$isEmpty;
+						}
 				});
 		}
 	};
