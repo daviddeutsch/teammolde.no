@@ -7066,14 +7066,10 @@ table.table-condensed tfoot td {
     font-size: 16px;
   }
 }
-.table-x-responsive td:nth-child(2),
-.table-x-responsive th:nth-child(2) {
-  display: none;
-}
 @media (max-width: 480px) {
   .table-x-responsive td:nth-child(2),
   .table-x-responsive th:nth-child(2) {
-    font-size: 16px;
+    display: none;
   }
 }
 #laerere .panel {
