@@ -7068,7 +7068,9 @@ table.table-condensed tfoot td {
 }
 @media (max-width: 480px) {
   .table-x-responsive td:nth-child(2),
-  .table-x-responsive th:nth-child(2) {
+  .table-x-responsive th:nth-child(2),
+  .table-x-responsive td:nth-child(4),
+  .table-x-responsive th:nth-child(4) {
     display: none;
   }
 }
