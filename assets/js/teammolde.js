@@ -237,10 +237,10 @@ function() {
 				if ( value !== '' ) {
 					valid = true;
 				} else {
-					if ( scope.$parent.BestillForm[attrs.eitherThisOr].$isEmpty() ) {
+					if ( scope.$parent.BestillForm[attrs.eitherThisOr].$viewValue == '' ) {
 						valid = false;
 					} else {
-						valid = scope.$parent.BestillForm[attrs.eitherThisOr].$isValid();
+						valid = scope.$parent.BestillForm[attrs.eitherThisOr].$valid;
 					}
 				}
 
