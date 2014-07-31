@@ -136,10 +136,16 @@
 					</div>
 				</div>
 				<div class="modal-footer">
-					<span ng-show="BestillForm.epost.$invalid && BestillForm.epost.$dirty">
-						<span class="label label-warning" ng-show="BestillForm.epost.$error.required">Please fill out all required fields!</span>
-						<span class="label label-warning" ng-show="BestillForm.epost.$error.email">Please use a valid email address.</span>
-					</span>
+					<div class="clearfix">
+						<span ng-show="BestillForm.epost.$invalid && BestillForm.epost.$dirty">
+							<span class="label label-warning" ng-show="BestillForm.epost.$error.required">Please fill out all required fields!</span>
+							<span class="label label-warning" ng-show="BestillForm.epost.$error.email">Please use a valid email address.</span>
+						</span>
+
+						<span ng-show="(BestillForm.epost.$invalid && BestillForm.epost.$dirty) || (BestillForm.telefon.$invalid && BestillForm.telefon.$dirty)">
+							<span class="label label-warning" ng-show="BestillForm.epost.$error.eitheror || BestillForm.epost.$error.eitheror">Please fill in either an email address or a telephone number!</span>
+						</span>
+					</div>
 					<button type="submit" class="btn btn-primary" ng-disabled="sending || BestillForm.$invalid"><i class="fa fa-circle-o-notch fa-spin" ng-show="sending"></i>Send Bestilling</button>
 				</div>
 			</form>
