@@ -232,10 +232,26 @@ function() {
 		},
 		link: function(scope, element, attrs, ctrl) {
 			ctrl.$parsers.unshift(function(value) {
+				var valid;
+
+				if ( value !== '' ) {
+					valid = true;
+				} else {
+					if ( ctrl.$name == 'telefon' ) {
+						valid = scope.$parent.BestillForm.epost.$isEmpty
+						|| !scope.$parent.BestillForm.epost.$isValid;
+					} else {
+						valid = scope.$parent.BestillForm.telefon.$isEmpty
+							|| !scope.$parent.BestillForm.telefon.$isValid;
+					}
+
+				}
+
 				ctrl.$setValidity('eitheror', valid);
 
 				return valid ? value : undefined;
 			});
+
 		}
 	};
 });
