@@ -232,9 +232,7 @@ function() {
 		},
 		link: function(scope, element, attrs, ctrl) {
 			ctrl.$parsers.unshift(function(value) {
-				var valid = blacklist.indexOf(value) === -1;
-
-				ngModel.$setValidity('blacklist', valid);
+				ctrl.$setValidity('eitheror', valid);
 
 				return valid ? value : undefined;
 			});
