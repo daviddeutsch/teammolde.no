@@ -244,7 +244,7 @@ function() {
 
 							return !scope.$parent.BestillForm.telefon.$isEmpty;
 						}
-					}
+					});
 				});
 		}
 	};
