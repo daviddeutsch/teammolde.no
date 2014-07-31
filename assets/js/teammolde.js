@@ -243,6 +243,8 @@ function() {
 
 				ctrl.$setValidity('eitheror', valid);
 
+				scope.$parent.BestillForm[attrs.eitherThisOr].$setValidity('eitheror', valid);
+
 				return valid ? value : undefined;
 			});
 
