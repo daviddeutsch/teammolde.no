@@ -1,12 +1,5 @@
 <div ng-controller="StdCtrl">
 	<div class="col-md-6">
-		<h3>Postadresse</h3>Team Trafikkskole AS, Rektor Brinchmannsgt. 1, 6413, MOLDE
-		<h3>Besøksadresse</h3>Rektor Brinchmannsgt. 1
-		<h3>Telefon</h3>71 25 63 69<a class="fb_link icon" href="https://www.facebook.com/TeamTrafikkskoleAS?fref=ts" target="_blank">Følg oss på facebook</a>
-		<div class="map_url"><a target="_blank" rel="external" href="https://maps.google.com?q=62.737165,7.162977">Større kart</a></div>
-	</div>
-	<div class="col-md-6">
-		<p>Fyll ut skjemaet om du vil komme i kontakt med oss</p>
 		<div ng-controller="ContactCtrl">
 			<form method="post" name="KontaktForm" ng-submit="submit(item, kurs)" role=form" novalidate="novalidate">
 				<div
@@ -74,6 +67,20 @@
 				</div>
 				<button type="submit" class="btn btn-primary" ng-disabled="sending || KontaktForm.$invalid"><i class="fa fa-circle-o-notch fa-spin" ng-show="sending"></i>Send</button>
 			</form>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<h1>Adresse</h1>
+				<p>
+					Team Trafikkskole AS<br/>
+					Rektor Brinchmannsgt. 1<br/>
+					6413, MOLDE
+				</p>
+				<h1>Telefon</h1>
+				<p>71 25 63 69</p>
+			</div>
 		</div>
 	</div>
 </div>

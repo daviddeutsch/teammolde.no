@@ -7107,22 +7107,34 @@ table.table-condensed tfoot td {
     display: none;
   }
 }
-#laerere .panel {
+.panel {
   background: none;
 }
-#laerere .panel-default {
+.panel h1 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+  border: 2px solid #000;
+  color: #000;
+  font-size: 36px;
+  padding: 12px 24px;
+  margin-top: -2px;
+}
+.panel p {
+  padding: 16px 32px;
+}
+.panel-default {
   border: 2px solid #000;
 }
-#laerere .panel-header .img-container {
+.panel-header .img-container {
   width: 100%;
   height: 260px;
   overflow: hidden;
 }
-#laerere .panel-header .img-container img {
+.panel-header .img-container img {
   width: 100%;
   background: #000;
 }
-#laerere .panel-header h3 {
+.panel-header h3 {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 22px;
   font-weight: 700;
@@ -7130,61 +7142,61 @@ table.table-condensed tfoot td {
   margin-bottom: 21px;
 }
 @media (max-width: 992px) {
-  #laerere .panel-header h3 {
+  .panel-header h3 {
     font-size: 20px;
   }
 }
 @media (max-width: 480px) {
-  #laerere .panel-header h3 {
+  .panel-header h3 {
     font-size: 18px;
   }
 }
-#laerere .panel-body {
+.panel-body {
   padding: 0;
 }
-#laerere .panel-body table {
+.panel-body table {
   border-top: 2px solid #000;
   margin-right: -18px;
   margin-bottom: 0;
   width: 100%;
 }
-#laerere .panel-body table tr {
+.panel-body table tr {
   font-size: 17px;
 }
 @media (max-width: 992px) {
-  #laerere .panel-body table tr {
+  .panel-body table tr {
     font-size: 15px;
   }
 }
 @media (max-width: 480px) {
-  #laerere .panel-body table tr {
+  .panel-body table tr {
     font-size: 13px;
   }
 }
-#laerere .panel-body table tr td {
+.panel-body table tr td {
   padding: 10px;
 }
-#laerere .panel-body table tr td.black-icon {
+.panel-body table tr td.black-icon {
   background: #000;
   width: 60px;
 }
-#laerere .panel-body table tr td.black-icon i {
+.panel-body table tr td.black-icon i {
   display: inline-block;
   color: #fff;
   vertical-align: middle;
   margin: 0 2px;
 }
-#laerere .panel-body table tr td.black-icon i.fa-mobile {
+.panel-body table tr td.black-icon i.fa-mobile {
   margin: -8px 8px;
 }
-#laerere .panel-body table tr:first-child {
+.panel-body table tr:first-child {
   border-bottom: 2px solid #000;
 }
-#laerere .panel-body table a {
+.panel-body table a {
   color: #000;
 }
-#laerere .panel-body table a:hover,
-#laerere .panel-body table a:focus {
+.panel-body table a:hover,
+.panel-body table a:focus {
   text-decoration: none;
   color: #444;
 }
