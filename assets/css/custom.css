@@ -39,6 +39,9 @@ body {
 #imedias a:hover {
   text-decoration: none;
 }
+.page-home #imedias {
+  display: none;
+}
 #team-logo {
   margin: 20px 0px;
 }

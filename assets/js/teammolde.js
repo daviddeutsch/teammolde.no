@@ -19,6 +19,17 @@ var teammoldeApp = angular.module(
 );
 
 teammoldeApp
+.run(
+[
+'$rootScope', '$state',
+function ($rootScope, $state)
+{
+	$rootScope.$state = $state;
+}
+]
+);
+
+teammoldeApp
 .config(
 [
 '$stateProvider', '$urlRouterProvider', '$sceProvider',

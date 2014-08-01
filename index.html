@@ -39,7 +39,7 @@
 
 <body ng-app="teammoldeApp" id="ng-app">
 	<div id="background"></div>
-	<div id="foreground">
+	<div id="foreground" class="page-{{$state.$current.name}}">
 		<div ui-view="header"></div>
 		<div id="main">
 			<div class="container">
