@@ -156,16 +156,28 @@ a {
 	}
 	h3 {
 		font-family: 'Francois One', sans-serif;
-		font-size: 28px !important;
+		font-size: 28px;
 		text-transform: uppercase;
 		font-weight: 700;
 		margin: 0;
+		@media (max-width: @screen-xxs-min) {
+			margin-top: 6px;
+			font-size: 24px;
+		}
+		@media (max-width: @screen-xxxs-min) {
+			margin-top: 10px;
+			font-size: 18px;
+		}
 	}
 	&:before {
 		content: '';
 		display: inline-block;
 		height: 100%;
 		vertical-align: middle;
+	}
+	@media (max-width: @screen-xxs-min) {
+		padding-top: 4%;
+		padding-left: 4px;
 	}
 }
 
