@@ -25,6 +25,12 @@ teammoldeApp
 function ($rootScope, $state)
 {
 	$rootScope.$state = $state;
+
+	$rootScope.$on(
+		'$stateChangeStart',
+		function(event, toState, toParams, fromState, fromParams){
+			$rootScope.loading = true;
+		});
 }
 ]
 );
@@ -276,8 +282,8 @@ function() {
 teammoldeApp
 .controller('homeCtrl',
 [
-'$scope', '$timeout', 'bgSVG', '$window',
-function($scope, $timeout, bgSVG, $window) {
+'$rootScope', '$scope', '$timeout', 'bgSVG', '$window',
+function($rootScope, $scope, $timeout, bgSVG, $window) {
 	$scope.bgtype = '';
 	$scope.mobile = false;
 
@@ -328,9 +334,13 @@ function($scope, $timeout, bgSVG, $window) {
 			bgSVG.mobile();
 
 			makeMobile(true);
+
+			$rootScope.loading = false;
 		} else {
 			if ( $scope.bgtype == '' ) {
 				bgSVG.init().then(function(){
+					$rootScope.loading = false;
+
 					bgSVG.go();
 
 					$scope.bgtype = 'svg';
@@ -339,6 +349,8 @@ function($scope, $timeout, bgSVG, $window) {
 				});
 			} else {
 				centerbg();
+
+				$rootScope.loading = false;
 			}
 
 			makeMobile(false);
@@ -358,15 +370,13 @@ function($scope, $timeout, bgSVG, $window) {
 teammoldeApp
 .controller('PriserCtrl',
 [
-'$scope', '$window', 'wpData', '$http', 'bgSVG', '$stateParams', 'backlinkerFilter', 'bstableizerFilter', 'wplinkerFilter',
-function($scope, $window, wpData, $http, bgSVG, $stateParams, backlinkerFilter, bstableizerFilter, wplinkerFilter) {
+'$scope', '$rootScope', '$window', 'wpData', '$http', 'bgSVG', '$stateParams', 'backlinkerFilter', 'bstableizerFilter', 'wplinkerFilter',
+function($scope, $rootScope, $window, wpData, $http, bgSVG, $stateParams, backlinkerFilter, bstableizerFilter, wplinkerFilter) {
 	$scope.content = '';
-
-	$scope.loading = true;
 
 	wpData.getPage($stateParams.id ? $stateParams.id : 'priser')
 		.then(function(html) {
-			$scope.loading = false;
+			$rootScope.loading = false;
 
 			if ( $stateParams.id == 'priser' ) {
 				$scope.content = wplinkerFilter(
@@ -391,15 +401,13 @@ function($scope, $window, wpData, $http, bgSVG, $stateParams, backlinkerFilter, 
 teammoldeApp
 .controller('ManedensCtrl',
 [
-'$scope', 'wpData', 'bgSVG',
-function($scope, wpData, bgSVG) {
+'$scope', '$rootScope', 'wpData', 'bgSVG',
+function($scope, $rootScope, wpData, bgSVG) {
 	$scope.content = '';
-
-	$scope.loading = true;
 
 	wpData.getPage('manedens-bestatt')
 		.then(function(html) {
-			$scope.loading = false;
+			$rootScope.loading = false;
 
 			$scope.content = html;
 		});
@@ -412,13 +420,12 @@ function($scope, wpData, bgSVG) {
 teammoldeApp
 .controller('BestillCtrl',
 [
-'$scope', '$q', '$state', '$stateParams', 'wpData', 'bgSVG',
-function($scope, $q, $state, $stateParams, wpData, bgSVG) {
+'$scope', '$rootScope', '$q', '$state', '$stateParams', 'wpData', 'bgSVG',
+function($scope, $rootScope, $q, $state, $stateParams, wpData, bgSVG) {
 	$scope.content = '';
 
 	$scope.focus = 'unset';
-
-	$scope.loading = true;
+	$scope.viewloading = true;
 
 	var itemhash = function(item) {
 		if ( item.klasse !== '' ) {
@@ -562,9 +569,11 @@ function($scope, $q, $state, $stateParams, wpData, bgSVG) {
 
 	wpData.getPosts('kurs')
 		.then(function(list) {
+			$rootScope.loading = false;
+
 			enlist(list)
 				.then(function(){
-					$scope.loading = false;
+					$scope.viewloading = false;
 				});
 		});
 
@@ -576,13 +585,11 @@ function($scope, $q, $state, $stateParams, wpData, bgSVG) {
 teammoldeApp
 .controller('LaerereCtrl',
 [
-'$scope', '$timeout', 'bgSVG',
-function($scope, $timeout, bgSVG) {
+'$scope', '$rootScope', '$timeout', 'bgSVG',
+function($scope, $rootScope, $timeout, bgSVG) {
 	bgSVG.blur(true);
 
 	var keepalive;
-
-	$scope.loading = true;
 
 	var id = 0;
 
@@ -641,7 +648,7 @@ function($scope, $timeout, bgSVG) {
 		if ( list.length > id ) {
 			keepalive = $timeout(tick, 240);
 		} else {
-			$scope.loading = false;
+			$rootScope.loading = false;
 		}
 	};
 
@@ -665,9 +672,11 @@ function($scope) {
 teammoldeApp
 .controller('StdCtrl',
 [
-'bgSVG',
-function(bgSVG) {
+'$rootScope', 'bgSVG',
+function($rootScope, bgSVG) {
 	bgSVG.blur(true);
+
+	$rootScope.loading = false;
 }
 ]
 );

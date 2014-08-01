@@ -45,9 +45,9 @@
 						<td class="text-center">{{kurs.custom_fields.dato | eurodate}} - {{kurs.custom_fields.tid}}</td>
 						<td>{{kurs.custom_fields.sted}}</td>
 					</tr>
-					<tr ng-show="loading">
+					<tr ng-show="viewloading">
 						<td colspan="4">
-							<p class="text-center text-clear am-fade" ng-show="loading"><i class="fa fa-circle-o-notch fa-2x fa-spin"></i></p>
+							<p class="text-center text-clear am-fade" ng-show="viewloading"><i class="fa fa-circle-o-notch fa-2x fa-spin"></i></p>
 						</td>
 					</tr>
 				</tbody>
