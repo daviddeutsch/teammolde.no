@@ -7107,10 +7107,6 @@ table.table-condensed tfoot td {
     display: none;
   }
 }
-.page-kontakt .panel p {
-  font-size: 22px;
-  padding-left: 16px;
-}
 .panel {
   background: none;
 }
@@ -7126,7 +7122,7 @@ table.table-condensed tfoot td {
 }
 .panel p {
   font-size: 22px;
-  padding: 24px 16px;
+  padding: 8px 32px;
 }
 .panel-default {
   border: 2px solid #000;
