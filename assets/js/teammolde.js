@@ -823,6 +823,8 @@ function ( $q, Tween )
 		angular.element('#background svg').remove();
 
 		angular.element('body').removeClass('bgblur');
+
+		blurred = false;
 	};
 
 	this.init = function() {
