@@ -645,7 +645,8 @@ table.table-condensed tfoot td {
 .panel h1 {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 700;
-  border: 2px solid #000;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
   color: #000;
   font-size: 36px;
   padding: 12px 24px;
