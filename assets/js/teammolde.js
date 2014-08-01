@@ -39,7 +39,10 @@ function ($stateProvider, $urlRouterProvider, $sceProvider)
 				"header": {
 					templateUrl: '/partials/header.html'
 				}
-			}
+			},
+			onExit: ['$window',function($window){
+				angular.element($window).unbind("resize");
+			}]
 		})
 
 		.state('priser', {
