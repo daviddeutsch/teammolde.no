@@ -437,7 +437,7 @@ function($scope, $q, $state, $stateParams, wpData, bgSVG) {
 			$scope.focus = id;
 		}
 
-		$state.go('bestill', {id: name});
+		$state.go('^', {id: name});
 	};
 
 	$scope.list = [
