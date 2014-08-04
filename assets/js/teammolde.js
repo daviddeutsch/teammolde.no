@@ -497,10 +497,10 @@ function($scope, $rootScope, $q, $state, $stateParams, appData, bgSVG) {
 	}
 
 	appData.getFile('bestill.json')
-		.then(function(list){
+		.then(function(json){
 			$rootScope.loading = false;
 
-			$scope.list = list;
+			$scope.list = json;
 
 			appData.getPosts('kurs')
 				.then(function(list) {
