@@ -7317,7 +7317,13 @@ table.table-condensed tfoot td {
   border-color: none;
 }
 .datepicker .btn {
-  padding: 1px;
+  padding: 8px !important;
+}
+.datepicker td {
+  width: 5%;
+}
+.datepicker th {
+  font-size: 12px;
 }
 .modal-header {
   padding: 10px 20px;
