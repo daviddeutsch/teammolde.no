@@ -764,15 +764,15 @@ function($scope, $timeout, wpData) {
 		}
 	};
 
-	scope.$watch('fodselsdato_d', function(newVal, oldVal) {
+	$scope.$watch('fodselsdato_d', function(newVal, oldVal) {
 		if (newVal !== oldVal) scope.fodselsdato_d = leadingzero(newVal);
 	});
 
-	scope.$watch('fodselsdato_m', function(newVal, oldVal) {
+	$scope.$watch('fodselsdato_m', function(newVal, oldVal) {
 		if (newVal !== oldVal) scope.fodselsdato_m = leadingzero(newVal);
 	});
 
-	scope.$watch('fodselsdato_a', function(newVal, oldVal) {
+	$scope.$watch('fodselsdato_a', function(newVal, oldVal) {
 		if (newVal !== oldVal) scope.fodselsdato_a = leadingzero(newVal);
 	});
 
