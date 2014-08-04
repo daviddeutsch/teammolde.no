@@ -841,9 +841,16 @@ table.table-condensed tfoot td {
   font-align: center;
 }
 .errorbox .label {
-  margin: 0;
-  margin-bottom: 12px;
+  float: left;
+  margin: 0 25% 12px;
+  width: 50%;
   clear: both;
+}
+@media (max-width: 768px) {
+  .errorbox .label {
+    margin: 0 0 12px;
+    width: 100%;
+  }
 }
 .has-success .form-control {
   border-color: none;

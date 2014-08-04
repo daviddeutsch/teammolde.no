@@ -805,9 +805,14 @@ table.table-condensed {
 	overflow: hidden;
 	font-align: center;
 	.label {
-		margin: 0;
-		margin-bottom: 12px;
+		float: left;
+		margin: 0 25% 12px;
+		width: 50%;
 		clear: both;
+		@media (max-width: @screen-sm-min) {
+			margin: 0 0 12px;
+			width: 100%;
+		}
 	}
 }
 
