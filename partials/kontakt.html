@@ -54,8 +54,8 @@
 				</div>
 				<div class="errorbox">
 					<span class="am-flip-x" ng-show="(KontaktForm.name.$invalid && KontaktForm.name.$dirty) || (KontaktForm.epost.$invalid && KontaktForm.epost.$dirty) || (KontaktForm.message.$invalid && KontaktForm.message.$dirty)">
-						<span class="label label-warning am-fade" ng-show="KontaktForm.name.$error.required || KontaktForm.epost.$error.required || KontaktForm.message.$error.required">Make sure to fill out all fields!</span>
 						<span class="label label-warning am-fade" ng-show="KontaktForm.epost.$error.email || KontaktForm.epost.$error.pattern">Please use a valid email address.</span>
+						<span class="label label-warning am-fade" ng-show="KontaktForm.name.$error.required || KontaktForm.epost.$error.required || KontaktForm.message.$error.required">Make sure to fill out all fields!</span>
 					</span>
 				</div>
 				<button type="submit" class="btn btn-primary" ng-disabled="sending || KontaktForm.$invalid">

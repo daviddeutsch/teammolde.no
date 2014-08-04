@@ -7303,6 +7303,9 @@ table.table-condensed tfoot td {
   color: #555;
   margin-bottom: 0;
 }
+form {
+  margin-bottom: 12px;
+}
 .errorbox {
   height: 2em;
   overflow: hidden;
@@ -7319,6 +7322,15 @@ table.table-condensed tfoot td {
     margin: 0 0 12px;
     width: 100%;
   }
+}
+.label {
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 0;
+}
+.label-warning {
+  padding-top: 4px;
+  background-color: #000;
 }
 .has-success .form-control {
   border-color: none;
@@ -7384,15 +7396,4 @@ table.table-condensed tfoot td {
 .text-clear {
   clear: both;
   margin: 24px 0;
-}
-.label {
-  display: inline-block;
-  font-size: 16px;
-  border-radius: 0;
-  margin-top: 12px;
-  margin-left: 12px;
-}
-.label-warning {
-  padding-top: 4px;
-  background-color: #000;
 }
