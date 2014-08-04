@@ -698,6 +698,8 @@ function($scope, $timeout, wpData) {
 		$scope.name = '';
 		$scope.epost = '';
 		$scope.message = '';
+
+		$scope.KontaktForm.$setPristine(true)
 	};
 
 	$scope.submit = function() {
