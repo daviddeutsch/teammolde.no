@@ -58,9 +58,11 @@
 						<span class="label label-warning am-fade" ng-show="KontaktForm.name.$error.required || KontaktForm.epost.$error.required || KontaktForm.message.$error.required">Make sure to fill out all fields!</span>
 					</span>
 				</div>
-				<button type="submit" class="btn btn-primary" ng-disabled="sending || KontaktForm.$invalid">
-					<i class="fa fa-circle-o-notch fa-spin" ng-show="sending"></i>
-					<span ng-hide="sending">Send</span>
+				<button type="submit" class="btn btn-primary" ng-disabled="(formstatus == 'sending') || KontaktForm.$invalid">
+					<i class="fa fa-circle-o-notch fa-spin am-fade" ng-show="formstatus == 'sending'"></i>
+					<i class="fa fa-check" ng-show="formstatus == 'sent'"></i>
+					<i class="fa fa-times" ng-show="formstatus == 'error'"></i>
+					<span ng-hide="formstatus != ''">Send</span>
 				</button>
 			</form>
 		</div>

@@ -684,18 +684,24 @@ function($rootScope, bgSVG) {
 teammoldeApp
 .controller('ContactCtrl',
 [
-'$scope', 'wpData',
-function($scope, wpData) {
+'$scope', '$timeout', 'wpData',
+function($scope, $timeout, wpData) {
 	$scope.nonce = '';
-	$scope.sending = false;
+	$scope.formstatus = '';
 
 	wpData.getNonce()
 		.then(function(nonce){
 			$scope.nonce = nonce;
 		});
 
+	$scope.eraseForm = function() {
+		$scope.name = '';
+		$scope.epost = '';
+		$scope.message = '';
+	};
+
 	$scope.submit = function() {
-		$scope.sending = true;
+		$scope.formstatus = 'sending';
 
 		var data = {
 			'_wpcf7': '157',
@@ -712,7 +718,19 @@ function($scope, wpData) {
 
 		wpData.sendForm(data)
 			.then(function(){
-				$scope.sending = false;
+				$scope.formstatus = 'sent';
+
+				$scope.eraseForm();
+
+				$timeout(function() {
+					$scope.formstatus = '';
+				}, 3000);
+			}, function() {
+				$scope.formstatus = 'error';
+
+				$timeout(function() {
+					$scope.formstatus = '';
+				}, 3000);
 			});
 	};
 }
@@ -725,7 +743,7 @@ teammoldeApp
 '$scope', 'wpData',
 function($scope, wpData) {
 	$scope.nonce = '';
-	$scope.sending = false;
+	$scope.formstatus = '';
 
 	wpData.getNonce()
 		.then(function(nonce){
@@ -733,7 +751,7 @@ function($scope, wpData) {
 		});
 
 	$scope.submit = function(item, kurs) {
-		$scope.sending = true;
+		$scope.formstatus = 'sending';
 
 		var data = {
 			'_wpcf7': '157',
@@ -752,7 +770,17 @@ function($scope, wpData) {
 
 		wpData.sendForm(data)
 			.then(function(){
-				$scope.sending = false;
+				$scope.formstatus = 'sent';
+
+				$timeout(function() {
+					$scope.$close();
+				}, 3000);
+			}, function() {
+				$scope.formstatus = 'error';
+
+				$timeout(function() {
+					$scope.formstatus = '';
+				}, 3000);
 			});
 	};
 }

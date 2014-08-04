@@ -153,7 +153,12 @@
 							</span>
 						</div>
 					</div>
-					<button type="submit" class="btn btn-primary" ng-disabled="sending || BestillForm.$invalid"><i class="fa fa-circle-o-notch fa-spin" ng-show="sending"></i>Send Bestilling</button>
+					<button type="submit" class="btn btn-primary" ng-disabled="(formstatus == 'sending') || BestillForm.$invalid">
+						<i class="fa fa-circle-o-notch fa-spin am-fade" ng-show="formstatus == 'sending'"></i>
+						<i class="fa fa-check" ng-show="formstatus == 'sent'"></i>
+						<i class="fa fa-times" ng-show="formstatus == 'error'"></i>
+						<span ng-hide="formstatus != ''">Send Bestilling</span>
+					</button>
 				</div>
 			</form>
 		</div>
