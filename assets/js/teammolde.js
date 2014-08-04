@@ -756,6 +756,14 @@ function($scope, $timeout, wpData) {
 			$scope.nonce = nonce;
 		});
 
+	$scope.leadingzero = function(name) {
+		if ( $scope[name] < 10 ) {
+			if ( $scope[name].substr(0,1) !== '0' ) {
+				$scope[name] = '0' + $scope[name];
+			}
+		}
+	};
+
 	$scope.submit = function(item, kurs) {
 		$scope.formstatus = 'sending';
 
