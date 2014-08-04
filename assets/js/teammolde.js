@@ -742,8 +742,8 @@ function($scope, $timeout, wpData) {
 teammoldeApp
 .controller('BestillModalCtrl',
 [
-'$scope', 'wpData',
-function($scope, wpData) {
+'$scope', '$timeout', 'wpData',
+function($scope, $timeout, wpData) {
 	$scope.nonce = '';
 	$scope.formstatus = '';
 
