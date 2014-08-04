@@ -390,9 +390,7 @@ function($scope, $rootScope, $q, $state, $stateParams, appData, bgSVG) {
 		$state.go('^', {id: name});
 	};
 
-
-
-	var list_keys = Object.keys($scope.list);
+	var list_keys;
 
 	$scope.map = {};
 
@@ -501,6 +499,8 @@ function($scope, $rootScope, $q, $state, $stateParams, appData, bgSVG) {
 			$rootScope.loading = false;
 
 			$scope.list = json;
+
+			list_keys = Object.keys($scope.list);
 
 			appData.getPosts('kurs')
 				.then(function(list) {
