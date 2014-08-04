@@ -84,37 +84,41 @@
 						</div>
 					</div>
 					<div class="col-md-6">
-						<div
-							class="form-group"
-							ng-class="{'has-error': BestillForm.telefon.$invalid && BestillForm.telefon.$dirty,
-							  'has-success': BestillForm.telefon.$valid && BestillForm.telefon.$dirty}"
-							>
-							<label for="telefon" class="sr-only">Telefon</label>
-							<input
-								type="text"
-								class="form-control"
-								ng-model="telefon"
-								id="telefon"
-								name="telefon"
-								placeholder="Telefon"
-								either-this-or="epost"
+						<div class="formbox">
+							<div
+								class="form-group"
+								ng-class="{'has-error': BestillForm.telefon.$invalid && BestillForm.telefon.$dirty,
+								  'has-success': BestillForm.telefon.$valid && BestillForm.telefon.$dirty}"
 								>
-						</div>
-						<div
-							class="form-group"
-							ng-class="{'has-error': BestillForm.epost.$invalid && BestillForm.epost.$dirty,
-							  'has-success': BestillForm.epost.$valid && BestillForm.epost.$dirty}"
-							>
-							<label for="epost" class="sr-only">Epost</label>
-							<input
-								type="email"
-								class="form-control"
-								ng-model="epost"
-								id="epost"
-								name="epost"
-								placeholder="Epost"
-								either-this-or="telefon"
+								<label for="telefon" class="sr-only">Telefon</label>
+								<input
+									type="text"
+									class="form-control"
+									ng-model="telefon"
+									id="telefon"
+									name="telefon"
+									placeholder="Telefon"
+									either-this-or="epost"
+									>
+							</div>
+							<p class="text-center">eller</p>
+							<div
+								class="form-group"
+								ng-class="{'has-error': BestillForm.epost.$invalid && BestillForm.epost.$dirty,
+								  'has-success': BestillForm.epost.$valid && BestillForm.epost.$dirty}"
 								>
+								<label for="epost" class="sr-only">Epost</label>
+								<input
+									type="email"
+									class="form-control"
+									ng-model="epost"
+									id="epost"
+									name="epost"
+									placeholder="Epost"
+									ng-pattern="/^[a-z0-9!#$%&'*+/=?^_`{|}~.-]+@[a-z0-9-]+.[a-z0-9-]/"
+									either-this-or="telefon"
+									>
+							</div>
 						</div>
 					</div>
 					<div class="col-md-12">
@@ -143,7 +147,7 @@
 						</span>
 
 						<span ng-show="(BestillForm.epost.$invalid && BestillForm.epost.$dirty) || (BestillForm.telefon.$invalid && BestillForm.telefon.$dirty)">
-							<span class="label label-warning" ng-show="BestillForm.epost.$error.eitheror || BestillForm.epost.$error.eitheror">Please fill in either an email address or a telephone number!</span>
+							<span class="label label-warning" ng-show="BestillForm.epost.$error.eitherthisor || BestillForm.epost.$error.eitherthisor">Please fill in either an email address or a telephone number!</span>
 						</span>
 					</div>
 					<button type="submit" class="btn btn-primary" ng-disabled="sending || BestillForm.$invalid"><i class="fa fa-circle-o-notch fa-spin" ng-show="sending"></i>Send Bestilling</button>

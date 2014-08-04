@@ -267,9 +267,9 @@ function() {
 					}
 				}
 
-				ctrl.$setValidity('eitheror', valid);
+				ctrl.$setValidity('eitherthisor', valid);
 
-				scope.$parent.BestillForm[attrs.eitherThisOr].$setValidity('eitheror', valid);
+				scope.$parent.BestillForm[attrs.eitherThisOr].$setValidity('eitherthisor', valid);
 
 				return valid ? value : undefined;
 			});
