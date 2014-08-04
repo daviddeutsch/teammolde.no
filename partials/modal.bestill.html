@@ -66,23 +66,21 @@
 								   required
 								>
 						</div>
-						<div class="form-inline">
-							<div
-								class="form-group"
-								ng-class="{'has-error': BestillForm.fodselsdato.$invalid && BestillForm.fodselsdato.$dirty,
-								  'has-success': BestillForm.fodselsdato.$valid && BestillForm.fodselsdato.$dirty}"
+						<div
+							class="form-group"
+							ng-class="{'has-error': BestillForm.fodselsdato.$invalid && BestillForm.fodselsdato.$dirty,
+							  'has-success': BestillForm.fodselsdato.$valid && BestillForm.fodselsdato.$dirty}"
+							>
+							<label for="fodselsdato" class="sr-only">Fødselsdato - AAAA-MM-DD</label>
+							<input
+								type="date"
+								   class="form-control"
+								   ng-model="fodselsdato"
+								   id="fodselsdato"
+								   name="fodselsdato"
+								   placeholder="Fødselsdato"
+								   required
 								>
-								<label for="fodselsdato" class="sr-only">Fødselsdato</label>
-								<input
-									type="date"
-									class="form-control"
-									ng-model="fodselsdato"
-									id="fodselsdato"
-									name="fodselsdato"
-									placeholder="Fødselsdato"
-									required
-									>
-							</div>
 						</div>
 					</div>
 					<div class="col-md-6">
