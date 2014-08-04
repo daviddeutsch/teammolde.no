@@ -850,6 +850,8 @@ table.table-condensed tfoot td {
 }
 .datepicker .btn {
   padding: 4px !important;
+  margin: 0;
+  font-size: 16px;
 }
 .datepicker td {
   width: 5%;
