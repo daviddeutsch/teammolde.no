@@ -74,7 +74,7 @@
 								  'has-success': BestillForm.fodselsdato_d.$valid && BestillForm.fodselsdato_d.$dirty}"
 								>
 								<input
-									type="date"
+									type="number"
 									   class="form-control"
 									   ng-model="fodselsdato_d"
 									   id="fodselsdato_d"
@@ -83,6 +83,8 @@
 									   size="2"
 									   min="01"
 									   max="31"
+									   ng-minlength="2"
+									   ng-maxlength="2"
 									   required
 									>
 							</div>
@@ -92,16 +94,18 @@
 								  'has-success': BestillForm.fodselsdato_m.$valid && BestillForm.fodselsdato_m.$dirty}"
 								>
 								<input
-									type="date"
-									class="form-control"
-									ng-model="fodselsdato_m"
-									id="fodselsdato_m"
-									name="fodselsdato_m"
-									placeholder="MM"
-									size="2"
-									min="01"
-									max="12"
-									required
+									type="number"
+									   class="form-control"
+									   ng-model="fodselsdato_m"
+									   id="fodselsdato_m"
+									   name="fodselsdato_m"
+									   placeholder="MM"
+									   size="2"
+									   min="01"
+									   max="12"
+									   ng-minlength="2"
+									   ng-maxlength="2"
+									   required
 									>
 							</div>
 							<div
@@ -110,16 +114,18 @@
 								  'has-success': BestillForm.fodselsdato_a.$valid && BestillForm.fodselsdato_a.$dirty}"
 								>
 								<input
-									type="date"
-									class="form-control"
-									ng-model="fodselsdato_a"
-									id="fodselsdato_a"
-									name="fodselsdato_a"
-									placeholder="AA"
-									size="2"
-									min="00"
-									max="99"
-									required
+									type="number"
+									   class="form-control"
+									   ng-model="fodselsdato_a"
+									   id="fodselsdato_a"
+									   name="fodselsdato_a"
+									   placeholder="AA"
+									   size="2"
+									   min="00"
+									   max="99"
+									   ng-minlength="2"
+									   ng-maxlength="2"
+									   required
 									>
 							</div>
 						</div>
@@ -187,6 +193,7 @@
 								<span class="label label-warning am-fade" ng-show="BestillForm.fornavn.$error.required || BestillForm.etternavn.$error.required || BestillForm.fodselsdato_d.$error.required || BestillForm.fodselsdato_m.$error.required || BestillForm.fodselsdato_a.$error.required">Make sure to fill out all fields!</span>
 								<span class="label label-warning am-fade" ng-show="BestillForm.epost.$error.email || BestillForm.epost.$error.pattern">Please use a valid email address.</span>
 								<span class="label label-warning" ng-show="BestillForm.epost.$error.eitherthisor || BestillForm.epost.$error.eitherthisor">Please fill in either an email address or a telephone number!</span>
+								<span class="label label-warning" ng-show="BestillForm.fodselsdato_d.$error.minlength || BestillForm.fodselsdato_d.$error.maxlength || BestillForm.fodselsdato_m.$error.minlength || BestillForm.fodselsdato_m.$error.maxlength || BestillForm.fodselsdato_a.$error.minlength || BestillForm.fodselsdato_a.$error.maxlength">The date should be in the format AA-MM-DD.</span>
 							</span>
 						</div>
 					</div>
