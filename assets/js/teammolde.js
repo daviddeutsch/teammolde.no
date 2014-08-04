@@ -427,6 +427,8 @@ function($scope, $rootScope, $q, $state, $stateParams, wpData, bgSVG) {
 	$scope.focus = 'unset';
 	$scope.viewloading = true;
 
+	$scope.fodselsdato = new Date();
+
 	var itemhash = function(item) {
 		if ( item.klasse !== '' ) {
 			return item.klasse.toLowerCase().replace(/[^a-z0-9]/gi,'');
