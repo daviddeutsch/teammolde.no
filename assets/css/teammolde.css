@@ -7251,6 +7251,9 @@ table.table-condensed tfoot td {
     margin-bottom: 16px;
   }
 }
+.modal-content .form-inline {
+  margin-bottom: 24px;
+}
 .modal-content .form-inline .form-group {
   margin-bottom: 4px;
 }
