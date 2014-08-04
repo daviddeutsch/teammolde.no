@@ -40,12 +40,12 @@
 <body ng-app="teammoldeApp" id="ng-app">
 	<div id="background"></div>
 	<div id="foreground" class="page-{{$state.$current.name}}">
-		<div ui-view="header"></div>
+		<div ng-include="'/partials/header.html'"></div>
 		<div id="main">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-						<div ui-view="main" class="am-fade"></div>
+						<div ui-view class="am-fade"></div>
 						<p class="text-center text-clear am-fade" ng-show="loading"><i class="fa fa-circle-o-notch fa-2x fa-spin"></i></p>
 					</div>
 				</div>

@@ -49,14 +49,7 @@ function ($stateProvider, $urlRouterProvider, $sceProvider)
 	$stateProvider
 		.state('home', {
 			url: '/',
-			views: {
-				"main": {
-					templateUrl: '/partials/home.html'
-				},
-				"header": {
-					templateUrl: '/partials/header.html'
-				}
-			},
+			templateUrl: '/partials/home.html',
 			onExit: ['$window',function($window){
 				angular.element($window).unbind("resize");
 			}]
@@ -64,74 +57,32 @@ function ($stateProvider, $urlRouterProvider, $sceProvider)
 
 		.state('priser', {
 			url: '/priser/:id',
-			views: {
-				"main": {
-					templateUrl: '/partials/priser.html'
-				},
-				"header": {
-					templateUrl: '/partials/header.html'
-				}
-			}
+			templateUrl: '/partials/priser.html'
 		})
 
 		.state('larere', {
 			url: '/larere',
-			views: {
-				"main": {
-					templateUrl: '/partials/laerere.html'
-				},
-				"header": {
-					templateUrl: '/partials/header.html'
-				}
-			}
+			templateUrl: '/partials/laerere.html'
 		})
 
 		.state('bestill', {
 			url: '/bestill/:id',
-			views: {
-				"main": {
-					templateUrl: '/partials/bestill.html'
-				},
-				"header": {
-					templateUrl: '/partials/header.html'
-				}
-			}
+			templateUrl: '/partials/bestill.html'
 		})
 
 		.state('elevside', {
 			url: '/elevside',
-			views: {
-				"main": {
-					templateUrl: '/partials/elevside.html'
-				},
-				"header": {
-					templateUrl: '/partials/header.html'
-				}
-			}
+			templateUrl: '/partials/elevside.html'
 		})
 
 		.state('manedensbestatt', {
 			url: '/manedensbestatt',
-			views: {
-				"main": {
-					templateUrl: '/partials/manedensbestatt.html'
-				},
-				"header": {
-					templateUrl: '/partials/header.html'
-				}
-			}
+			templateUrl: '/partials/manedensbestatt.html'
 		})
 
 		.state('kontakt', {
 			url: '/kontakt',
-			views: {
-				"main": {
-					templateUrl: '/partials/kontakt.html'
-				},
-				"header": {
-					templateUrl: '/partials/header.html'
-				}
-			}
+			templateUrl: '/partials/kontakt.html'
 		})
 	;
 
@@ -195,12 +146,7 @@ function () {
 teammoldeApp
 .filter('emailbreak',
 function () {
-	return function ( markup ) {
-		return markup.replace(
-			'@',
-			' @ '
-		);
-	};
+	return function ( markup ) { return markup.replace('@', ' @ '); };
 }
 );
 
@@ -230,17 +176,13 @@ function ($compile, $rootScope) {
 
 teammoldeApp.filter('eurodate',
 function () {
-	return function ( d ) {
-		return d.match(/.{2}|.{1,2}/g ).join('.');
-	};
+	return function ( d ) { return d.match(/.{2}|.{1,2}/g ).join('.'); };
 }
 );
 
 teammoldeApp.filter('removewhitespace',
 function () {
-	return function ( d ) {
-		return d.replace(/ /g,'');
-	};
+	return function ( d ) { return d.replace(/ /g,''); };
 }
 );
 
@@ -370,11 +312,11 @@ function($rootScope, $scope, $timeout, bgSVG, $window) {
 teammoldeApp
 .controller('PriserCtrl',
 [
-'$scope', '$rootScope', '$window', 'wpData', '$http', 'bgSVG', '$stateParams', 'backlinkerFilter', 'bstableizerFilter', 'wplinkerFilter',
-function($scope, $rootScope, $window, wpData, $http, bgSVG, $stateParams, backlinkerFilter, bstableizerFilter, wplinkerFilter) {
+'$scope', '$rootScope', '$window', 'appData', 'bgSVG', '$stateParams', 'backlinkerFilter', 'bstableizerFilter', 'wplinkerFilter',
+function($scope, $rootScope, $window, appData, bgSVG, $stateParams, backlinkerFilter, bstableizerFilter, wplinkerFilter) {
 	$scope.content = '';
 
-	wpData.getPage($stateParams.id ? $stateParams.id : 'priser')
+	appData.getPage($stateParams.id ? $stateParams.id : 'priser')
 		.then(function(html) {
 			$rootScope.loading = false;
 
@@ -401,11 +343,11 @@ function($scope, $rootScope, $window, wpData, $http, bgSVG, $stateParams, backli
 teammoldeApp
 .controller('ManedensCtrl',
 [
-'$scope', '$rootScope', 'wpData', 'bgSVG',
-function($scope, $rootScope, wpData, bgSVG) {
+'$scope', '$rootScope', 'appData', 'bgSVG',
+function($scope, $rootScope, appData, bgSVG) {
 	$scope.content = '';
 
-	wpData.getPage('manedens-bestatt')
+	appData.getPage('manedens-bestatt')
 		.then(function(html) {
 			$rootScope.loading = false;
 
@@ -420,8 +362,9 @@ function($scope, $rootScope, wpData, bgSVG) {
 teammoldeApp
 .controller('BestillCtrl',
 [
-'$scope', '$rootScope', '$q', '$state', '$stateParams', 'wpData', 'bgSVG',
-function($scope, $rootScope, $q, $state, $stateParams, wpData, bgSVG) {
+'$scope', '$rootScope', '$q', '$state', '$stateParams', 'appData', 'bgSVG',
+function($scope, $rootScope, $q, $state, $stateParams, appData, bgSVG) {
+	$scope.list = [];
 	$scope.content = '';
 
 	$scope.focus = 'unset';
@@ -447,25 +390,7 @@ function($scope, $rootScope, $q, $state, $stateParams, wpData, bgSVG) {
 		$state.go('^', {id: name});
 	};
 
-	$scope.list = [
-		{title: 'Trafikalt grunnkurs TG', klasse: '', kurs: []},
-		{title: 'Traktor', klasse: 'T', kurs: []},
-		{title: 'Moped/scooter', klasse: 'AM146', kurs: []},
-		{title: 'Personbil', klasse: 'B', kurs: []},
-		{title: 'Personbil - Automat', klasse: 'B - Automat', kurs: []},
-		{title: 'Personbil m. henger <span class="small-text">(Opptil totalt 4250kg last)</span>', klasse: 'B96', kurs: []},
-		{title: 'Personbil m. henger', klasse: 'BE', kurs: []},
-		{title: 'Liten lastebil', klasse: 'C1', kurs: []},
-		{title: 'Liten lastebil m. henger', klasse: 'C1E', kurs: []},
-		{title: 'Stor lastebil', klasse: 'C', kurs: []},
-		{title: 'Minibuss', klasse: 'D1', kurs: []},
-		{title: 'Minibuss m. henger', klasse: 'D1E', kurs: []},
-		{title: 'Buss', klasse: 'D', kurs: []},
-		{title: 'Buss m. henger', klasse: 'DE', kurs: []},
-		{title: 'YSK etterutdanning godstransport', klasse: '', kurs: []},
-		{title: 'YSK etterutdanning persontransport', klasse: '', kurs: []},
-		{title: 'YSK Godstransport YDG', klasse: '', kurs: []}
-	];
+
 
 	var list_keys = Object.keys($scope.list);
 
@@ -571,13 +496,18 @@ function($scope, $rootScope, $q, $state, $stateParams, wpData, bgSVG) {
 		});
 	}
 
-	wpData.getPosts('kurs')
-		.then(function(list) {
+	appData.getFile('bestill.json')
+		.then(function(list){
 			$rootScope.loading = false;
 
-			enlist(list)
-				.then(function(){
-					$scope.viewloading = false;
+			$scope.list = list;
+
+			appData.getPosts('kurs')
+				.then(function(list) {
+					enlist(list)
+						.then(function(){
+							$scope.viewloading = false;
+						});
 				});
 		});
 
@@ -589,58 +519,11 @@ function($scope, $rootScope, $q, $state, $stateParams, wpData, bgSVG) {
 teammoldeApp
 .controller('LaerereCtrl',
 [
-'$scope', '$rootScope', '$timeout', 'bgSVG',
-function($scope, $rootScope, $timeout, bgSVG) {
-	bgSVG.blur(true);
-
-	var keepalive;
-
-	var id = 0;
-
-	var list = [
-		{
-			name: 'Geir Magne Pettersen',
-			email: 'geirmagne@teammolde.no',
-			profile: 'profile_geirmagne.jpg',
-			phone: '95 06 55 09'
-		},
-		{
-			name: 'Iselin Larsen',
-			email: 'iselin@teammolde.no',
-			profile: 'profile_iselin.jpg',
-			phone: '90 06 90 96'
-		},
-		{
-			name: 'Jørn H Sorthe',
-			email: 'jorn@teammolde.no',
-			profile: 'profile_jorn.jpg',
-			phone: '95 11 10 82'
-		},
-		{
-			name: 'Kristian Vaagen',
-			email: 'kristian@teammolde.no',
-			profile: 'profile_kristian.jpg',
-			phone: '48 15 07 75'
-		},
-		{
-			name: 'Leidulf Inderhaug',
-			email: 'leidulf@teammolde.no',
-			profile: 'profile_leidulf.jpg',
-			phone: '95 06 55 07'
-		},
-		{
-			name: 'Lisa Eikrem',
-			email: 'lisa@teammolde.no ',
-			profile: 'profile_lisa.jpg',
-			phone: '90 14 64 09'
-		},
-		{
-			name: 'Thomas Døving Bronnes',
-			email: 'thomas.bronnes@teammolde.no',
-			profile: 'profile_thomas.bronnes.jpg',
-			phone: '90 94 73 14'
-		}
-	];
+'$scope', '$rootScope', '$timeout', 'appData', 'bgSVG',
+function($scope, $rootScope, $timeout, appData, bgSVG) {
+	var keepalive,
+		id = 0,
+		list;
 
 	$scope.list = [];
 
@@ -656,7 +539,14 @@ function($scope, $rootScope, $timeout, bgSVG) {
 		}
 	};
 
-	keepalive = $timeout(tick, 140);
+	bgSVG.blur(true);
+
+	appData.getFile('laerere.json')
+		.then(function(json){
+			list = json;
+
+			keepalive = $timeout(tick, 200);
+		});
 }
 ]
 );
@@ -688,12 +578,12 @@ function($rootScope, bgSVG) {
 teammoldeApp
 .controller('ContactCtrl',
 [
-'$scope', '$timeout', 'wpData',
-function($scope, $timeout, wpData) {
+'$scope', '$timeout', 'appData',
+function($scope, $timeout, appData) {
 	$scope.nonce = '';
 	$scope.formstatus = '';
 
-	wpData.getNonce()
+	appData.getNonce()
 		.then(function(nonce){
 			$scope.nonce = nonce;
 		});
@@ -722,7 +612,7 @@ function($scope, $timeout, wpData) {
 			message: this.message
 		};
 
-		wpData.sendForm(data)
+		appData.sendForm(data)
 			.then(function(){
 				$scope.formstatus = 'sent';
 
@@ -746,12 +636,12 @@ function($scope, $timeout, wpData) {
 teammoldeApp
 .controller('BestillModalCtrl',
 [
-'$scope', '$timeout', 'wpData',
-function($scope, $timeout, wpData) {
+'$scope', '$timeout', 'appData',
+function($scope, $timeout, appData) {
 	$scope.nonce = '';
 	$scope.formstatus = '';
 
-	wpData.getNonce()
+	appData.getNonce()
 		.then(function(nonce){
 			$scope.nonce = nonce;
 		});
@@ -794,7 +684,7 @@ function($scope, $timeout, wpData) {
 				+ "\n\n" + this.annet
 		};
 
-		wpData.sendForm(data)
+		appData.sendForm(data)
 			.then(function(){
 				$scope.formstatus = 'sent';
 
@@ -814,11 +704,25 @@ function($scope, $timeout, wpData) {
 );
 
 teammoldeApp
-.service('wpData',
+.service('appData',
 [
 '$q', '$http',
 function ( $q, $http )
 {
+	this.getFile = function( url ) {
+		var deferred = $q.defer();
+
+		$http.get(url, {cache: true})
+			.success(function(result) {
+				deferred.resolve(result);
+			})
+			.error(function(){
+				deferred.reject();
+			});
+
+		return deferred.promise;
+	};
+
 	this.getPage = function( url ) {
 		var deferred = $q.defer();
 
@@ -892,9 +796,7 @@ teammoldeApp
 '$q', 'Tween',
 function ( $q, Tween )
 {
-	var s,
-		self = this,
-		blurred = false;
+	var blurred = false;
 
 	this.mobile = function() {
 		angular.element('#background svg').remove();
