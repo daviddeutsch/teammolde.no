@@ -756,7 +756,7 @@ function($scope, $timeout, wpData) {
 			$scope.nonce = nonce;
 		});
 
-	var leadinzero = function(newVal) {
+	var leadingzero = function(newVal) {
 		if ( newVal < 10 && (newVal.substr(0,1) !== '0') ) {
 			return '0' + newVal;
 		} else {
