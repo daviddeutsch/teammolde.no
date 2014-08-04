@@ -7306,11 +7306,11 @@ table.table-condensed tfoot td {
 .errorbox {
   height: 2em;
   overflow: hidden;
+  font-align: center;
 }
 .errorbox .label {
   margin: 0;
   margin-bottom: 12px;
-  float: left;
   clear: both;
 }
 .has-success .form-control {
