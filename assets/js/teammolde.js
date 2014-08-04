@@ -873,7 +873,7 @@ function ( $q, Tween )
 			.animate({transform: 'translate(2200,0)'}, 7500, mina.easeinout)
 			.animate({transform: 'translate(2600,0)'}, 7500, mina.easeinout)
 			.action(function(element){
-				element.attr({transform: 'translate(0,0)', opacity: 0});
+				element.attr({transform: 'translate(0,100)', opacity: 0});
 			})
 			.hover()
 		;
@@ -886,7 +886,7 @@ function ( $q, Tween )
 			.animate({transform: 'translate(-2200,0)'}, 10000, mina.easeinout)
 			.animate({transform: 'translate(-2600,0)'}, 7500, mina.easeinout)
 			.action(function(element){
-				element.attr({transform: 'translate(0,0)', opacity: 0});
+				element.attr({transform: 'translate(0,100)', opacity: 0});
 			})
 			.hover()
 		;
@@ -982,7 +982,7 @@ function ( $q, Tween )
 			.animate({transform: 'matrix(-0.96681011,-0.25549597,-0.25549597,0.96681011,4089.5422,504.11192)'}, 2500, mina.linear)
 			.animate({transform: 'matrix(-0.93323558,-0.359265,-0.359265,0.93323558,4206.0996,814.53922)'}, 3000, mina.linear)
 			.animate({transform: 'matrix(-0.99480413,-0.10180732,-0.10180732,0.99480413,4309.1536,223.59507)'}, 2000, mina.linear)
-			.animate({transform: 'matrix(-1,0,0,1,4465.285,0)'}, 4000, mina.easeinout)
+			.animate({transform: 'matrix(-1,0,0,1,4540.285,0)'}, 4000, mina.easeinout)
 			.animate(
 				{transform: 'translate(0,0) scale(1, 1)'}, 1000, mina.linear,
 				{transform: 'translate(0,0) scale(1, 1)'}
