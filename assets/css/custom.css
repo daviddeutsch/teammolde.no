@@ -849,13 +849,14 @@ table.table-condensed tfoot td {
   border-color: none;
 }
 .datepicker .btn {
-  padding: 8px !important;
+  padding: 4px !important;
 }
 .datepicker td {
   width: 5%;
 }
 .datepicker th {
-  font-size: 12px;
+  font-size: 15px !important;
+  width: auto !important;
 }
 .modal-header {
   padding: 10px 20px;
