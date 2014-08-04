@@ -7239,6 +7239,14 @@ table.table-condensed tfoot td {
     font-size: 16px;
   }
 }
+.modal-content .form-group {
+  margin-bottom: 24px;
+}
+@media (max-width: 992px) {
+  .modal-content .form-group {
+    margin-bottom: 16px;
+  }
+}
 .modal-content .form-inline .form-group {
   margin-bottom: 4px;
 }
@@ -7278,8 +7286,20 @@ table.table-condensed tfoot td {
   clear: both;
 }
 .formbox {
-  padding: 6px;
-  border: 1px solid #999;
+  margin: -8px;
+  margin-bottom: 8px;
+  padding: 8px;
+  border: 1px dashed #999;
+}
+.formbox .form-group {
+  margin-bottom: 0;
+}
+.formbox p {
+  font-size: 16px;
+  color: #555;
+}
+.errorbox {
+  height: 2em;
 }
 .modal-header {
   padding: 10px 20px;

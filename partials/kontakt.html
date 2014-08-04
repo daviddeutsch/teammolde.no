@@ -16,13 +16,8 @@
 						id="name"
 						name="name"
 						placeholder="Ditt navn"
-						ng-minlength="3"
 						required
 						/>
-					<span ng-show="KontaktForm.name.$invalid && KontaktForm.name.$dirty" class="am-fade">
-						<span class="label label-warning" ng-show="KontaktForm.name.$error.required">Don't forget this field!</span>
-						<span class="label label-warning" ng-show="KontaktForm.name.$error.minlength">This field is too short.</span>
-					</span>
 				</div>
 				<div
 					class="form-group"
@@ -40,11 +35,6 @@
 						ng-pattern="/^[a-z0-9!#$%&'*+/=?^_`{|}~.-]+@[a-z0-9-]+.[a-z0-9-]/"
 						required
 						/>
-					<span ng-show="KontaktForm.epost.$invalid && KontaktForm.epost.$dirty" class="am-fade-and-slide-top">
-						<span class="label label-warning" ng-show="KontaktForm.epost.$error.required">Don't forget this field!</span>
-						<span class="label label-warning" ng-show="KontaktForm.epost.$error.email">Please use a valid email address.</span>
-						<span class="label label-warning" ng-show="KontaktForm.epost.$error.pattern">Please use a valid email address.</span>
-					</span>
 				</div>
 				<div
 					class="form-group"
@@ -59,12 +49,15 @@
 						id="message"
 						name="message"
 						placeholder="Text"
-						ng-minlength="3"
 						required
 						></textarea>
-					<span ng-show="KontaktForm.message.$invalid && KontaktForm.message.$dirty" class="am-fade-and-slide-top">
-						<span class="label label-warning" ng-show="KontaktForm.message.$error.required">Don't forget this field!</span>
-						<span class="label label-warning" ng-show="KontaktForm.message.$error.minlength">This field is too short.</span>
+				</div>
+				<div class="errorbox">
+					<span ng-show="(KontaktForm.name.$invalid && KontaktForm.name.$dirty) || (KontaktForm.epost.$invalid && KontaktForm.epost.$dirty) || (KontaktForm.message.$invalid && KontaktForm.message.$dirty)">
+						<span class="label label-warning" ng-show="KontaktForm.name.$error.required || KontaktForm.epost.$error.required || KontaktForm.message.$error.required">Make sure to fill out all fields!</span>
+					</span>
+					<span ng-show="KontaktForm.epost.$invalid && KontaktForm.epost.$dirty">
+						<span class="label label-warning" ng-show="KontaktForm.epost.$error.email || KontaktForm.epost.$error.pattern">Please use a valid email address.</span>
 					</span>
 				</div>
 				<button type="submit" class="btn btn-primary" ng-disabled="sending || KontaktForm.$invalid"><i class="fa fa-circle-o-notch fa-spin" ng-show="sending"></i>Send</button>
