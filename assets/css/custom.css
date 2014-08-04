@@ -787,7 +787,9 @@ table.table-condensed tfoot td {
   margin-bottom: 24px;
 }
 .modal-content .form-inline input[type=number] {
-  width: 4em;
+  width: 3em;
+  padding-right: 0;
+  padding-left: 8px;
 }
 .modal-content .form-inline .form-group {
   margin-bottom: 4px;
