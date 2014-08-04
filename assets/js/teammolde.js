@@ -449,15 +449,19 @@ function($scope, $rootScope, $q, $state, $stateParams, wpData, bgSVG) {
 
 	$scope.list = [
 		{title: 'Trafikalt grunnkurs TG', klasse: '', kurs: []},
+		{title: 'Traktor', klasse: 'T', kurs: []},
+		{title: 'Moped/scooter', klasse: 'AM146', kurs: []},
+		{title: 'Personbil', klasse: 'B', kurs: []},
+		{title: 'Personbil - Automat', klasse: 'B - Automat', kurs: []},
 		{title: 'Personbil m. henger <span class="small-text">(Opptil totalt 4250kg last)</span>', klasse: 'B96', kurs: []},
 		{title: 'Personbil m. henger', klasse: 'BE', kurs: []},
-		{title: 'Stor lastebil', klasse: 'C', kurs: []},
 		{title: 'Liten lastebil', klasse: 'C1', kurs: []},
-		{title: 'Buss', klasse: 'D', kurs: []},
+		{title: 'Liten lastebil m. henger', klasse: 'C1E', kurs: []},
+		{title: 'Stor lastebil', klasse: 'C', kurs: []},
 		{title: 'Minibuss', klasse: 'D1', kurs: []},
 		{title: 'Minibuss m. henger', klasse: 'D1E', kurs: []},
+		{title: 'Buss', klasse: 'D', kurs: []},
 		{title: 'Buss m. henger', klasse: 'DE', kurs: []},
-		{title: 'Traktor', klasse: 'T', kurs: []},
 		{title: 'YSK etterutdanning godstransport', klasse: '', kurs: []},
 		{title: 'YSK etterutdanning persontransport', klasse: '', kurs: []},
 		{title: 'YSK Godstransport YDG', klasse: '', kurs: []}
