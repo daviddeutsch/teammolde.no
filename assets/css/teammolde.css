@@ -6835,7 +6835,7 @@ p {
   font-size: 28px;
   text-transform: uppercase;
   letter-spacing: 0.075em;
-  margin-top: 24px;
+  margin-top: 12px;
   font-weight: 700;
   border: none;
 }
@@ -6857,6 +6857,10 @@ p {
   .btn-primary {
     font-size: 20px;
   }
+}
+.btn-primary.disabled,
+.btn-primary[disabled] {
+  background-color: #888;
 }
 .btn-primary-black {
   background: #000;
@@ -7300,6 +7304,16 @@ table.table-condensed tfoot td {
 }
 .errorbox {
   height: 2em;
+  overflow: hidden;
+}
+.errorbox .label {
+  margin: 0;
+  margin-bottom: 12px;
+  float: left;
+  clear: both;
+}
+.has-success .form-control {
+  border-color: none;
 }
 .modal-header {
   padding: 10px 20px;
