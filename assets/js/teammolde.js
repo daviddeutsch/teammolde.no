@@ -394,14 +394,6 @@ function($scope, $rootScope, $q, $state, $stateParams, appData, bgSVG) {
 
 	$scope.map = {};
 
-	for ( var i = 0; i < list_keys.length; i++ ) {
-		if ( $scope.list[i].klasse !== '' ) {
-			$scope.map['Klasse '+$scope.list[i].klasse] = i;
-		} else {
-			$scope.map[$scope.list[i].title] = i;
-		}
-	}
-
 	$scope.kurs = [];
 
 	var convert = function(item) {
@@ -501,6 +493,14 @@ function($scope, $rootScope, $q, $state, $stateParams, appData, bgSVG) {
 			$scope.list = json;
 
 			list_keys = Object.keys($scope.list);
+
+			for ( var i = 0; i < list_keys.length; i++ ) {
+				if ( $scope.list[i].klasse !== '' ) {
+					$scope.map['Klasse '+$scope.list[i].klasse] = i;
+				} else {
+					$scope.map[$scope.list[i].title] = i;
+				}
+			}
 
 			appData.getPosts('kurs')
 				.then(function(list) {
