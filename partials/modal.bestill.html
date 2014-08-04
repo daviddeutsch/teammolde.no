@@ -79,6 +79,8 @@
 								   id="fodselsdato"
 								   name="fodselsdato"
 								   placeholder="Fødselsdato - DDMMAA"
+								   bs-datepicker
+								   data-date-format="dd-MM-yy"
 								   required
 								>
 						</div>
@@ -141,8 +143,16 @@
 				</div>
 				<div class="modal-footer">
 					<div class="clearfix">
+						<div class="errorbox">
+							<span ng-show="(BestillForm.fornavn.$invalid && BestillForm.fornavn.$dirty) || (BestillForm.etternavn.$invalid && BestillForm.etternavn.$dirty) || (BestillForm.fodselsdato.$invalid && BestillForm.fodselsdato.$dirty)">
+								<span class="label label-warning am-fade" ng-show="BestillForm.fornavn.$error.required || BestillForm.etternavn.$error.required || BestillForm.fodselsdato.$error.required">Make sure to fill out all fields!</span>
+							</span>
+							<span ng-show="BestillForm.epost.$invalid && BestillForm.epost.$dirty">
+								<span class="label label-warning am-fade" ng-show="BestillForm.epost.$error.email || BestillForm.epost.$error.pattern">Please use a valid email address.</span>
+							</span>
+						</div>
+
 						<span ng-show="BestillForm.epost.$invalid && BestillForm.epost.$dirty">
-							<span class="label label-warning" ng-show="BestillForm.epost.$error.required">Please fill out all required fields!</span>
 							<span class="label label-warning" ng-show="BestillForm.epost.$error.email">Please use a valid email address.</span>
 						</span>
 
