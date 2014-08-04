@@ -776,7 +776,7 @@ function($scope, $timeout, wpData) {
 
 				$timeout(function() {
 					$scope.$hide();
-				}, 3000);
+				}, 1000);
 			}, function() {
 				$scope.formstatus = 'error';
 
