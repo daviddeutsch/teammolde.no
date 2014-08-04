@@ -7301,6 +7301,7 @@ table.table-condensed tfoot td {
 .formbox p {
   font-size: 16px;
   color: #555;
+  margin-bottom: 0;
 }
 .errorbox {
   height: 2em;
