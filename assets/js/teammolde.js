@@ -756,13 +756,25 @@ function($scope, $timeout, wpData) {
 			$scope.nonce = nonce;
 		});
 
-	$scope.leadingzero = function(name) {
-		if ( $scope[name] < 10 ) {
-			if ( $scope[name].substr(0,1) !== '0' ) {
-				$scope[name] = '0' + $scope[name];
-			}
+	var leadinzero = function(newVal) {
+		if ( newVal < 10 && (newVal.substr(0,1) !== '0') ) {
+			return '0' + newVal;
+		} else {
+			return newVal;
 		}
 	};
+
+	scope.$watch('fodselsdato_d', function(newVal, oldVal) {
+		if (newVal !== oldVal) scope.fodselsdato_d = leadingzero(newVal);
+	});
+
+	scope.$watch('fodselsdato_m', function(newVal, oldVal) {
+		if (newVal !== oldVal) scope.fodselsdato_m = leadingzero(newVal);
+	});
+
+	scope.$watch('fodselsdato_a', function(newVal, oldVal) {
+		if (newVal !== oldVal) scope.fodselsdato_a = leadingzero(newVal);
+	});
 
 	$scope.submit = function(item, kurs) {
 		$scope.formstatus = 'sending';
