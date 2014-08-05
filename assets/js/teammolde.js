@@ -84,6 +84,11 @@ function ($stateProvider, $urlRouterProvider, $sceProvider)
 			url: '/kontakt',
 			templateUrl: '/partials/kontakt.html'
 		})
+
+		.state('404', {
+			url: '/404',
+			templateUrl: '/partials/404.html'
+		})
 	;
 
 }
