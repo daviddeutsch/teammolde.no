@@ -932,7 +932,7 @@ function ( $q, Tween )
 			.animate({transform: 'translate(-897,-152)'}, 2500, mina.linear)
 			.animate({transform: 'translate(-897,-152)'}, 1500, mina.linear)
 			.animate(
-				{transform: 'translate(3750,-152) scale(-1, 1)'}, 500, mina.linear,
+				{transform: 'translate(3750,-152) scale(-1, 1)'}, 1500, mina.linear,
 				{transform: 'translate(4715,0) scale(-1, 1)'}
 			)
 			.animate({transform: 'matrix(-0.99138551,-0.13097621,-0.13097621,0.99138551,3924.1281,165.74468)'}, 1500, mina.linear)
@@ -946,6 +946,23 @@ function ( $q, Tween )
 			)
 			.hover()
 			.click('priser', {id:'klasse-d'})
+		;
+
+		Tween.get('#traktor')
+			.addClass('hoverable')
+			.sub('#traktor text')
+			.animate({transform: 'translate(1060,0)'}, 30000, mina.linear)
+			.animate(
+				{transform: 'translate(4050,0) scale(-1, 1)'}, 3000, mina.easeinout,
+				{transform: 'translate(-2434,0) scale(-1, 1)'}
+			)
+			.animate({transform: 'translate(3000,0) scale(-1, 1)'}, 30000, mina.easeinout)
+			.animate(
+				{transform: 'translate(0,0) scale(1, 1)'}, 4000, mina.easeinout,
+				{transform: 'translate(0,0) scale(1, 1)'}
+			)
+			.hover()
+			.click('priser', {id:'klasse-t'})
 		;
 	};
 
