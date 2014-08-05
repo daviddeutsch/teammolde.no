@@ -1,87 +1,70 @@
 [
 	{
 		"title": "Trafikalt grunnkurs TG",
-		"klasse": "",
-		"kurs": []
+		"klasse": ""
 	},
 	{
 		"title": "Traktor",
-		"klasse": "T",
-		"kurs": []
+		"klasse": "T"
 	},
 	{
 		"title": "Moped/scooter",
-		"klasse": "AM146",
-		"kurs": []
+		"klasse": "AM146"
 	},
 	{
 		"title": "Personbil",
-		"klasse": "B",
-		"kurs": []
+		"klasse": "B"
 	},
 	{
 		"title": "Personbil - Automat",
-		"klasse": "B - Automat",
-		"kurs": []
+		"klasse": "B - Automat"
 	},
 	{
 		"title": "Personbil m. henger <span class=\"small-text\">(Opptil totalt 4250kg last)</span>",
-		"klasse": "B96",
-		"kurs": []
+		"klasse": "B96"
 	},
 	{
 		"title": "Personbil m. henger",
-		"klasse": "BE",
-		"kurs": []
+		"klasse": "BE"
 	},
 	{
 		"title": "Liten lastebil",
-		"klasse": "C1",
-		"kurs": []
+		"klasse": "C1"
 	},
 	{
 		"title": "Liten lastebil m. henger",
-		"klasse": "C1E",
-		"kurs": []
+		"klasse": "C1E"
 	},
 	{
 		"title": "Stor lastebil",
-		"klasse": "C",
-		"kurs": []
+		"klasse": "C"
 	},
 	{
 		"title": "Minibuss",
-		"klasse": "D1",
-		"kurs": []
+		"klasse": "D1"
 	},
 	{
 		"title": "Minibuss m. henger",
-		"klasse": "D1E",
-		"kurs": []
+		"klasse": "D1E"
 	},
 	{
 		"title": "Buss",
-		"klasse": "D",
-		"kurs": []
+		"klasse": "D"
 	},
 	{
 		"title": "Buss m. henger",
-		"klasse": "DE",
-		"kurs": []
+		"klasse": "DE"
 	},
 	{
 		"title": "YSK etterutdanning godstransport",
-		"klasse": "",
-		"kurs": []
+		"klasse": ""
 	},
 	{
 		"title": "YSK etterutdanning persontransport",
-		"klasse": "",
-		"kurs": []
+		"klasse": ""
 	},
 	{
 		"title": "YSK Godstransport YDG",
-		"klasse": "",
-		"kurs": []
+		"klasse": ""
 	}
 ]

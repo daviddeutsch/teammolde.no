@@ -9,7 +9,7 @@
 		</thead>
 	</table>
 	<div>
-		<div class="table-dock" ng-repeat="item in list" ng-class="{expanded: $index == focus}">
+		<div class="table-dock" ng-repeat="item in list" ng-class="{expanded: $index == focus}" id="{{item.hash}}">
 			<table class="table table-hover" ng-class="{expanded: $index == focus}">
 				<thead>
 					<tr>

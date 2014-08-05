@@ -367,8 +367,8 @@ function($scope, $rootScope, appData, bgSVG) {
 teammoldeApp
 .controller('BestillCtrl',
 [
-'$scope', '$rootScope', '$q', '$state', '$stateParams', 'appData', 'bgSVG',
-function($scope, $rootScope, $q, $state, $stateParams, appData, bgSVG) {
+'$scope', '$rootScope', '$q', '$state', '$stateParams', '$uiViewScroll', 'appData', 'bgSVG',
+function($scope, $rootScope, $q, $state, $stateParams, $uiViewScroll, appData, bgSVG) {
 	$scope.list = [];
 	$scope.content = '';
 
@@ -384,15 +384,11 @@ function($scope, $rootScope, $q, $state, $stateParams, appData, bgSVG) {
 	};
 
 	$scope.set = function( id, item ) {
-		var name = itemhash(item);
-
 		if ( $scope.focus == id ) {
 			$scope.focus = 'unset';
 		} else {
 			$scope.focus = id;
 		}
-
-		$state.go('^', {id: name});
 	};
 
 	var list_keys;
@@ -483,14 +479,6 @@ function($scope, $rootScope, $q, $state, $stateParams, appData, bgSVG) {
 		$scope.list[id].expanded = !$scope.list[id].expanded;
 	};
 
-	if ( $stateParams.id ) {
-		angular.forEach($scope.list, function(item, key){
-			if ( $stateParams.id == itemhash(item) ) {
-				$scope.focus = key;
-			}
-		});
-	}
-
 	appData.getFile('bestill.json')
 		.then(function(json){
 			$rootScope.loading = false;
@@ -500,10 +488,18 @@ function($scope, $rootScope, $q, $state, $stateParams, appData, bgSVG) {
 			list_keys = Object.keys($scope.list);
 
 			for ( var i = 0; i < list_keys.length; i++ ) {
+				$scope.list[i].kurs = [];
+
 				if ( $scope.list[i].klasse !== '' ) {
 					$scope.map['Klasse '+$scope.list[i].klasse] = i;
 				} else {
 					$scope.map[$scope.list[i].title] = i;
+				}
+
+				$scope.list[i].hash = itemhash($scope.list[i]);
+
+				if ( $stateParams.id == $scope.list[i].hash ) {
+					$scope.focus = i;
 				}
 			}
 
