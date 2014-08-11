@@ -966,6 +966,13 @@ function ( $q, Tween )
 			.hover()
 			.click('priser', {id:'klasse-t'})
 		;
+
+		Tween.get('#her-holder')
+			.hover()
+			.click('kontakt')
+		;
+
+
 	};
 
 	this.blur = function( blur ) {
