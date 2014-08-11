@@ -7411,3 +7411,7 @@ form {
   clear: both;
   margin: 24px 0;
 }
+.gmap iframe {
+  width: 100%;
+  border: 2px solid #000;
+}
