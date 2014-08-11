@@ -75,9 +75,9 @@ function ($stateProvider, $urlRouterProvider, $sceProvider)
 			templateUrl: '/partials/elevside.html'
 		})
 
-		.state('manedensbestatt', {
-			url: '/manedensbestatt',
-			templateUrl: '/partials/manedensbestatt.html'
+		.state('yrkessjaforutdanning', {
+			url: '/yrkessjaforutdanning',
+			templateUrl: '/partials/yrkessjaforutdanning.html'
 		})
 
 		.state('kontakt', {
@@ -800,7 +800,9 @@ function ( $q, Tween )
 	var blurred = false;
 
 	this.mobile = function() {
-		angular.element('#background svg').remove();
+		//angular.element('#background svg').remove();
+
+		Snap('#background svg' ).remove();
 
 		angular.element('body').removeClass('bgblur');
 
