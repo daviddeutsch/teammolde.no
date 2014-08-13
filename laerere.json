@@ -18,6 +18,12 @@
 		"phone": "95 11 10 82"
 	},
 	{
+		"name": "Fride Pettersen",
+		"email": "fride@teammolde.no",
+		"profile": "profile_fride.jpg",
+		"phone": "-- -- -- --"
+	},
+	{
 		"name": "Kristian Vaagen",
 		"email": "kristian@teammolde.no",
 		"profile": "profile_kristian.jpg",
@@ -40,5 +46,11 @@
 		"email": "thomas.bronnes@teammolde.no",
 		"profile": "profile_thomas.bronnes.jpg",
 		"phone": "90 94 73 14"
+	},
+	{
+		"name": "Bjørn Arve Amundsen",
+		"email": "bjorn@teammolde.no",
+		"profile": "profile_bjorn.jpg",
+		"phone": "-- -- -- --"
 	}
 ]
