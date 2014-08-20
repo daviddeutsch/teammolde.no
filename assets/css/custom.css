@@ -78,6 +78,11 @@ ul.team-nav li:hover {
     background: #fff;
   }
 }
+@media (max-width: 1200px) {
+  ul.team-nav li {
+    font-size: 18px;
+  }
+}
 @media (max-width: 992px) {
   ul.team-nav li {
     border-left: 1px solid #000;
@@ -86,7 +91,6 @@ ul.team-nav li:hover {
     text-align: center;
     background: #fff;
     padding: 2px 12px;
-    font-size: 18px;
   }
 }
 ul.team-nav li a {
