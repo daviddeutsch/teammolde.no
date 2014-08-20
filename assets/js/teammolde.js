@@ -181,7 +181,7 @@ function ($compile, $rootScope) {
 
 teammoldeApp.filter('eurodate',
 function () {
-	return function ( d ) { return d.match(/(.{4})(.{2})(.{1,2})/ ).reverse().splice(3, 1).join('.'); };
+	return function ( d ) { return d.match(/(.{4})(.{2})(.{1,2})/ ).reverse().slice(0, 3).join('.'); };
 }
 );
 
