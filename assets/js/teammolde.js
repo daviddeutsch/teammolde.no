@@ -234,55 +234,49 @@ function($rootScope, $scope, $timeout, bgSVG, $window) {
 	$scope.bgtype = '';
 	$scope.mobile = false;
 
+	var setClouds = function( state ) {
+		angular.element('#background svg #cloud-left, #background svg #cloud-right').attr(
+			'style', 'display: ' + (state ? 'block' : 'none' ) + ';'
+		);
+	};
+
+	var scaleBg = function( dim ) {
+		angular.element('#background svg #molde').attr(
+			'transform', 'scale('+dim+', '+dim+')'
+		);
+	};
+
+	var offsetBg = function( factor ) {
+		angular.element('#background svg').attr(
+			'style', 'margin-left: -' + ((3500 - $window.innerWidth) / factor) + 'px;'
+		);
+	};
+
+	var ctrlBg = function(dim, factor, state) {
+		if ( typeof state == "undefined" ) {
+			state = true;
+		}
+
+		offsetBg(factor);
+
+		setClouds(state);
+
+		scaleBg(dim);
+	};
+
 	var centerbg = function() {
 		if ( $window.innerWidth > 1620 ) {
-			angular.element('#background svg').attr(
-				'style', 'margin-left: -' + ((3500 - $window.innerWidth) / 2) + 'px;'
-			);
-
-			angular.element('#background svg #cloud-left, #background svg #cloud-right').attr(
-				'style', 'display: block;'
-			);
-
-			angular.element('#background svg #molde').attr(
-				'transform', ''
-			);
+			ctrlBg(1, 2);
 		} else if ( $window.innerWidth <= 1620 && $window.innerWidth > 1380 ) {
-			angular.element('#background svg').attr(
-				'style', 'margin-left: -' + ((3500 - $window.innerWidth) / 3) + 'px;'
-			);
-
-			angular.element('#background svg #cloud-left, #background svg #cloud-right').attr(
-				'style', 'display: block;'
-			);
-
-			angular.element('#background svg #molde').attr(
-				'transform', 'scale(0.78, 0.78)'
-			);
+			ctrlBg(0.78, 3);
 		} else if ( $window.innerWidth <= 1380 && $window.innerWidth > 1120 ) {
-			angular.element('#background svg').attr(
-				'style', 'margin-left: -' + ((3500 - $window.innerWidth) / 3.8) + 'px;'
-			);
-
-			angular.element('#background svg #cloud-left, #background svg #cloud-right').attr(
-				'style', 'display: block;'
-			);
-
-			angular.element('#background svg #molde').attr(
-				'transform', 'scale(0.68, 0.68)'
-			);
+			ctrlBg(0.68, 3.8);
 		} else if ( $window.innerWidth <= 1120 ) {
-			angular.element('#background svg').attr(
-				'style', 'margin-left: -' + ((3500 - $window.innerWidth) / 5) + 'px;'
-			);
+			ctrlBg(0.56, 5);
 
-			angular.element('#background svg #cloud-left, #background svg #cloud-right').attr(
-				'style', 'display: none;'
-			);
-
-			angular.element('#background svg #molde').attr(
-				'transform', 'scale(0.56, 0.56)'
-			);
+			if ( $window.innerWidth <= 768 ) {
+				setClouds(false);
+			}
 		}
 	};
 
