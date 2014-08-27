@@ -240,12 +240,20 @@ function($rootScope, $scope, $timeout, bgSVG, $window) {
 				'style', 'margin-left: -' + ((3500 - $window.innerWidth) / 2) + 'px;'
 			);
 
+			angular.element('#background svg #cloud-left, #background svg #cloud-right').attr(
+				'style', 'display: block;'
+			);
+
 			angular.element('#background svg #molde').attr(
 				'transform', ''
 			);
 		} else if ( $window.innerWidth <= 1620 && $window.innerWidth > 1380 ) {
 			angular.element('#background svg').attr(
 				'style', 'margin-left: -' + ((3500 - $window.innerWidth) / 3) + 'px;'
+			);
+
+			angular.element('#background svg #cloud-left, #background svg #cloud-right').attr(
+				'style', 'display: block;'
 			);
 
 			angular.element('#background svg #molde').attr(
@@ -256,12 +264,20 @@ function($rootScope, $scope, $timeout, bgSVG, $window) {
 				'style', 'margin-left: -' + ((3500 - $window.innerWidth) / 3.8) + 'px;'
 			);
 
+			angular.element('#background svg #cloud-left, #background svg #cloud-right').attr(
+				'style', 'display: block;'
+			);
+
 			angular.element('#background svg #molde').attr(
 				'transform', 'scale(0.68, 0.68)'
 			);
 		} else if ( $window.innerWidth <= 1120 ) {
 			angular.element('#background svg').attr(
 				'style', 'margin-left: -' + ((3500 - $window.innerWidth) / 5) + 'px;'
+			);
+
+			angular.element('#background svg #cloud-left, #background svg #cloud-right').attr(
+				'style', 'display: none;'
 			);
 
 			angular.element('#background svg #molde').attr(
