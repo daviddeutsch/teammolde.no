@@ -274,7 +274,7 @@ function($rootScope, $scope, $timeout, bgSVG, $window) {
 		} else if ( $window.innerWidth <= 1120 ) {
 			ctrlBg(0.56, 5);
 
-			if ( $window.innerWidth <= 768 ) {
+			if ( $window.innerWidth <= 1024 ) {
 				setClouds(false);
 			}
 		}
