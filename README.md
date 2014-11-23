@@ -16,6 +16,6 @@ Of course, all the vaguely copyrightable stuff was left out.
 
 Feel free to check out the end result on the published URLs: [teammolde.no](http://teammolde.no) / [teammolde.imedias.no](http://teammolde.imedias.no) (temp development stub)
 
-# DO NOT DO BUSINESS WITH IMEDIAS.NO
+# DO NOT DO BUSINESS WITH [IMEDIAS.NO](http://imedias.no)
 
 ## NOT IF YOU APPRECIATE BEING PAID IN FULL, THAT IS
