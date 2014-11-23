@@ -1,6 +1,6 @@
 # teammolde.no
 
-Say you're working on a client job for a company in Norway and they have... creative ideas when it comes to paying their invoices. What do you do with the work that you completed?
+Say you're working on a client job for a company in Norway and they have... creative ideas when it comes to paying invoices. What do you do with the work that you completed?
 
 I rather liked this project and made some cool stuff happen, so instead of letting it vanish, I figured I'd instead open the source for anybody who might be interested. That way, it would at least show up in my commit history.
 
@@ -18,4 +18,4 @@ Feel free to check out the end result on the published URLs: [teammolde.no](http
 
 # DO NOT DO BUSINESS WITH [IMEDIAS.NO](http://imedias.no)
 
-## NOT IF YOU APPRECIATE BEING PAID IN FULL, THAT IS
+## NOT IF YOU LIKE BEING PAID IN FULL, THAT IS
